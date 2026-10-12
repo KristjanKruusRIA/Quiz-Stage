@@ -1,4 +1,3 @@
-import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { buildAccessibleCorpus } from '../../../scripts/content/accessibility/bank';
 import { buildEasyExpansionCorpus } from '../../../scripts/content/easyExpansion/bank';
@@ -10,6 +9,7 @@ import { SCIENCE_NATURE_CATEGORIES } from '../../../scripts/content/playability/
 import { PACKS_05_TO_08_CATEGORIES } from '../../../scripts/content/playability/banks/packs05to08';
 import { PACKS_09_TO_12_CATEGORIES } from '../../../scripts/content/playability/banks/packs09to12';
 import { parsePackCsv } from '../../../src/main/content/csvPacks';
+import { readPreRepairContent } from './preRepairContent';
 
 const LANGUAGES = ['en', 'et'] as const;
 
@@ -95,7 +95,7 @@ function generatedAuthorityRows(
     factKey: string;
     subjectKey?: string;
   }>>();
-  const evidenceText = readFileSync(resolve('content', 'evidence', `${batchId}.jsonl`), 'utf8');
+  const evidenceText = readPreRepairContent(resolve('content', 'evidence', `${batchId}.jsonl`));
   for (const line of evidenceText.split(/\r?\n/u).filter((value) => value.trim() !== '')) {
     const record = JSON.parse(line) as Readonly<{
       clueId: string;
@@ -105,7 +105,7 @@ function generatedAuthorityRows(
     evidence.set(record.clueId, record);
   }
 
-  const csv = readFileSync(resolve('content', 'generated', `${batchId}.en-et.csv`), 'utf8');
+  const csv = readPreRepairContent(resolve('content', 'generated', `${batchId}.en-et.csv`));
   return parsePackCsv(csv).rows.filter(({ enabled }) => enabled === 'true').map((row) => {
     const record = evidence.get(row.clue_id);
     if (record === undefined) {

@@ -1,0 +1,1693 @@
+{
+  "batchId": "09-food-drink",
+  "bankSha256": "a82bba84726760ad9c923e8f1d1e29d2a6e22b5b4f7cf18e9af407e9abcbbbc3",
+  "reviewedClueIds": [
+    "built-in-food-drink-all-level-expansion-0001",
+    "built-in-food-drink-all-level-expansion-0002",
+    "built-in-food-drink-all-level-expansion-0003",
+    "built-in-food-drink-all-level-expansion-0004",
+    "built-in-food-drink-all-level-expansion-0005",
+    "built-in-food-drink-all-level-expansion-0006",
+    "built-in-food-drink-all-level-expansion-0007",
+    "built-in-food-drink-all-level-expansion-0008",
+    "built-in-food-drink-all-level-expansion-0009",
+    "built-in-food-drink-all-level-expansion-0010",
+    "built-in-food-drink-all-level-expansion-0011",
+    "built-in-food-drink-all-level-expansion-0012",
+    "built-in-food-drink-all-level-expansion-0013",
+    "built-in-food-drink-all-level-expansion-0014",
+    "built-in-food-drink-all-level-expansion-0015",
+    "built-in-food-drink-all-level-expansion-0016",
+    "built-in-food-drink-all-level-expansion-0017",
+    "built-in-food-drink-all-level-expansion-0018",
+    "built-in-food-drink-all-level-expansion-0019",
+    "built-in-food-drink-all-level-expansion-0020",
+    "built-in-food-drink-all-level-expansion-0021",
+    "built-in-food-drink-all-level-expansion-0022",
+    "built-in-food-drink-all-level-expansion-0023",
+    "built-in-food-drink-all-level-expansion-0024",
+    "built-in-food-drink-all-level-expansion-0025",
+    "built-in-food-drink-all-level-expansion-0026",
+    "built-in-food-drink-all-level-expansion-0027",
+    "built-in-food-drink-all-level-expansion-0028",
+    "built-in-food-drink-all-level-expansion-0029",
+    "built-in-food-drink-all-level-expansion-0030",
+    "built-in-food-drink-all-level-expansion-0031",
+    "built-in-food-drink-all-level-expansion-0032",
+    "built-in-food-drink-all-level-expansion-0033",
+    "built-in-food-drink-all-level-expansion-0034",
+    "built-in-food-drink-all-level-expansion-0035",
+    "built-in-food-drink-all-level-expansion-0036",
+    "built-in-food-drink-all-level-expansion-0037",
+    "built-in-food-drink-all-level-expansion-0038",
+    "built-in-food-drink-all-level-expansion-0039",
+    "built-in-food-drink-all-level-expansion-0040",
+    "built-in-food-drink-all-level-expansion-0041",
+    "built-in-food-drink-all-level-expansion-0042",
+    "built-in-food-drink-all-level-expansion-0043",
+    "built-in-food-drink-all-level-expansion-0044",
+    "built-in-food-drink-all-level-expansion-0045",
+    "built-in-food-drink-all-level-expansion-0046",
+    "built-in-food-drink-all-level-expansion-0047",
+    "built-in-food-drink-all-level-expansion-0048",
+    "built-in-food-drink-all-level-expansion-0049",
+    "built-in-food-drink-all-level-expansion-0050",
+    "built-in-food-drink-all-level-expansion-0051",
+    "built-in-food-drink-all-level-expansion-0052",
+    "built-in-food-drink-all-level-expansion-0053",
+    "built-in-food-drink-all-level-expansion-0054",
+    "built-in-food-drink-all-level-expansion-0055",
+    "built-in-food-drink-all-level-expansion-0056",
+    "built-in-food-drink-all-level-expansion-0057",
+    "built-in-food-drink-all-level-expansion-0058",
+    "built-in-food-drink-all-level-expansion-0059",
+    "built-in-food-drink-all-level-expansion-0060",
+    "built-in-food-drink-all-level-expansion-0061",
+    "built-in-food-drink-all-level-expansion-0062",
+    "built-in-food-drink-all-level-expansion-0063",
+    "built-in-food-drink-all-level-expansion-0064",
+    "built-in-food-drink-all-level-expansion-0065",
+    "built-in-food-drink-all-level-expansion-0066",
+    "built-in-food-drink-all-level-expansion-0067",
+    "built-in-food-drink-all-level-expansion-0068",
+    "built-in-food-drink-all-level-expansion-0069",
+    "built-in-food-drink-all-level-expansion-0070",
+    "built-in-food-drink-all-level-expansion-0071",
+    "built-in-food-drink-all-level-expansion-0072",
+    "built-in-food-drink-all-level-expansion-0073",
+    "built-in-food-drink-all-level-expansion-0074",
+    "built-in-food-drink-all-level-expansion-0075",
+    "built-in-food-drink-all-level-expansion-0076",
+    "built-in-food-drink-all-level-expansion-0077",
+    "built-in-food-drink-all-level-expansion-0078",
+    "built-in-food-drink-all-level-expansion-0079",
+    "built-in-food-drink-all-level-expansion-0080",
+    "built-in-food-drink-all-level-expansion-0081",
+    "built-in-food-drink-all-level-expansion-0082",
+    "built-in-food-drink-all-level-expansion-0083",
+    "built-in-food-drink-all-level-expansion-0084",
+    "built-in-food-drink-all-level-expansion-0085",
+    "built-in-food-drink-all-level-expansion-0086",
+    "built-in-food-drink-all-level-expansion-0087",
+    "built-in-food-drink-all-level-expansion-0088",
+    "built-in-food-drink-all-level-expansion-0089",
+    "built-in-food-drink-all-level-expansion-0090",
+    "built-in-food-drink-all-level-expansion-0091",
+    "built-in-food-drink-all-level-expansion-0092",
+    "built-in-food-drink-all-level-expansion-0093",
+    "built-in-food-drink-all-level-expansion-0094",
+    "built-in-food-drink-all-level-expansion-0095",
+    "built-in-food-drink-all-level-expansion-0096",
+    "built-in-food-drink-all-level-expansion-0097",
+    "built-in-food-drink-all-level-expansion-0098",
+    "built-in-food-drink-all-level-expansion-0099",
+    "built-in-food-drink-all-level-expansion-0100",
+    "built-in-food-drink-all-level-expansion-0101",
+    "built-in-food-drink-all-level-expansion-0102",
+    "built-in-food-drink-all-level-expansion-0103",
+    "built-in-food-drink-all-level-expansion-0104",
+    "built-in-food-drink-all-level-expansion-0105",
+    "built-in-food-drink-all-level-expansion-0106",
+    "built-in-food-drink-all-level-expansion-0107",
+    "built-in-food-drink-all-level-expansion-0108",
+    "built-in-food-drink-all-level-expansion-0109",
+    "built-in-food-drink-all-level-expansion-0110",
+    "built-in-food-drink-all-level-expansion-0111",
+    "built-in-food-drink-all-level-expansion-0112",
+    "built-in-food-drink-all-level-expansion-0113",
+    "built-in-food-drink-all-level-expansion-0114",
+    "built-in-food-drink-all-level-expansion-0115",
+    "built-in-food-drink-all-level-expansion-0116",
+    "built-in-food-drink-all-level-expansion-0117",
+    "built-in-food-drink-all-level-expansion-0118",
+    "built-in-food-drink-all-level-expansion-0119",
+    "built-in-food-drink-all-level-expansion-0120",
+    "built-in-food-drink-all-level-expansion-0121",
+    "built-in-food-drink-all-level-expansion-0122",
+    "built-in-food-drink-all-level-expansion-0123",
+    "built-in-food-drink-all-level-expansion-0124",
+    "built-in-food-drink-all-level-expansion-0125",
+    "built-in-food-drink-all-level-expansion-0126",
+    "built-in-food-drink-all-level-expansion-0127",
+    "built-in-food-drink-all-level-expansion-0128",
+    "built-in-food-drink-all-level-expansion-0129",
+    "built-in-food-drink-all-level-expansion-0130",
+    "built-in-food-drink-all-level-expansion-0131",
+    "built-in-food-drink-all-level-expansion-0132",
+    "built-in-food-drink-all-level-expansion-0133",
+    "built-in-food-drink-all-level-expansion-0134",
+    "built-in-food-drink-all-level-expansion-0135",
+    "built-in-food-drink-all-level-expansion-0136",
+    "built-in-food-drink-all-level-expansion-0137",
+    "built-in-food-drink-all-level-expansion-0138",
+    "built-in-food-drink-all-level-expansion-0139",
+    "built-in-food-drink-all-level-expansion-0140",
+    "built-in-food-drink-all-level-expansion-0141",
+    "built-in-food-drink-all-level-expansion-0142",
+    "built-in-food-drink-all-level-expansion-0143",
+    "built-in-food-drink-all-level-expansion-0144",
+    "built-in-food-drink-all-level-expansion-0145",
+    "built-in-food-drink-all-level-expansion-0146",
+    "built-in-food-drink-all-level-expansion-0147",
+    "built-in-food-drink-all-level-expansion-0148",
+    "built-in-food-drink-all-level-expansion-0149",
+    "built-in-food-drink-all-level-expansion-0150",
+    "built-in-food-drink-all-level-expansion-0151",
+    "built-in-food-drink-all-level-expansion-0152",
+    "built-in-food-drink-all-level-expansion-0153",
+    "built-in-food-drink-all-level-expansion-0154",
+    "built-in-food-drink-all-level-expansion-0155",
+    "built-in-food-drink-all-level-expansion-0156",
+    "built-in-food-drink-all-level-expansion-0157",
+    "built-in-food-drink-all-level-expansion-0158",
+    "built-in-food-drink-all-level-expansion-0159",
+    "built-in-food-drink-all-level-expansion-0160",
+    "built-in-food-drink-all-level-expansion-0161",
+    "built-in-food-drink-all-level-expansion-0162",
+    "built-in-food-drink-all-level-expansion-0163",
+    "built-in-food-drink-all-level-expansion-0164",
+    "built-in-food-drink-all-level-expansion-0165",
+    "built-in-food-drink-all-level-expansion-0166",
+    "built-in-food-drink-all-level-expansion-0167",
+    "built-in-food-drink-all-level-expansion-0168",
+    "built-in-food-drink-all-level-expansion-0169",
+    "built-in-food-drink-all-level-expansion-0170",
+    "built-in-food-drink-all-level-expansion-0171",
+    "built-in-food-drink-all-level-expansion-0172",
+    "built-in-food-drink-all-level-expansion-0173",
+    "built-in-food-drink-all-level-expansion-0174",
+    "built-in-food-drink-all-level-expansion-0175",
+    "built-in-food-drink-all-level-expansion-0176",
+    "built-in-food-drink-all-level-expansion-0177",
+    "built-in-food-drink-all-level-expansion-0178",
+    "built-in-food-drink-all-level-expansion-0179",
+    "built-in-food-drink-all-level-expansion-0180",
+    "built-in-food-drink-all-level-expansion-0181",
+    "built-in-food-drink-all-level-expansion-0182",
+    "built-in-food-drink-all-level-expansion-0183",
+    "built-in-food-drink-all-level-expansion-0184",
+    "built-in-food-drink-all-level-expansion-0185",
+    "built-in-food-drink-all-level-expansion-0186",
+    "built-in-food-drink-all-level-expansion-0187",
+    "built-in-food-drink-all-level-expansion-0188",
+    "built-in-food-drink-all-level-expansion-0189",
+    "built-in-food-drink-all-level-expansion-0190",
+    "built-in-food-drink-all-level-expansion-0191",
+    "built-in-food-drink-all-level-expansion-0192",
+    "built-in-food-drink-all-level-expansion-0193",
+    "built-in-food-drink-all-level-expansion-0194",
+    "built-in-food-drink-all-level-expansion-0195",
+    "built-in-food-drink-all-level-expansion-0196",
+    "built-in-food-drink-all-level-expansion-0197",
+    "built-in-food-drink-all-level-expansion-0198",
+    "built-in-food-drink-all-level-expansion-0199",
+    "built-in-food-drink-all-level-expansion-0200",
+    "built-in-food-drink-all-level-expansion-0201",
+    "built-in-food-drink-all-level-expansion-0202",
+    "built-in-food-drink-all-level-expansion-0203",
+    "built-in-food-drink-all-level-expansion-0204",
+    "built-in-food-drink-all-level-expansion-0205",
+    "built-in-food-drink-all-level-expansion-0206",
+    "built-in-food-drink-all-level-expansion-0207",
+    "built-in-food-drink-all-level-expansion-0208",
+    "built-in-food-drink-all-level-expansion-0209",
+    "built-in-food-drink-all-level-expansion-0210",
+    "built-in-food-drink-all-level-expansion-0211",
+    "built-in-food-drink-all-level-expansion-0212",
+    "built-in-food-drink-all-level-expansion-0213",
+    "built-in-food-drink-all-level-expansion-0214",
+    "built-in-food-drink-all-level-expansion-0215",
+    "built-in-food-drink-all-level-expansion-0216",
+    "built-in-food-drink-all-level-expansion-0217",
+    "built-in-food-drink-all-level-expansion-0218",
+    "built-in-food-drink-all-level-expansion-0219",
+    "built-in-food-drink-all-level-expansion-0220",
+    "built-in-food-drink-all-level-expansion-0221",
+    "built-in-food-drink-all-level-expansion-0222",
+    "built-in-food-drink-all-level-expansion-0223",
+    "built-in-food-drink-all-level-expansion-0224",
+    "built-in-food-drink-all-level-expansion-0225",
+    "built-in-food-drink-all-level-expansion-0226",
+    "built-in-food-drink-all-level-expansion-0227",
+    "built-in-food-drink-all-level-expansion-0228",
+    "built-in-food-drink-all-level-expansion-0229",
+    "built-in-food-drink-all-level-expansion-0230",
+    "built-in-food-drink-all-level-expansion-0231",
+    "built-in-food-drink-all-level-expansion-0232",
+    "built-in-food-drink-all-level-expansion-0233",
+    "built-in-food-drink-all-level-expansion-0234",
+    "built-in-food-drink-all-level-expansion-0235",
+    "built-in-food-drink-all-level-expansion-0236",
+    "built-in-food-drink-all-level-expansion-0237",
+    "built-in-food-drink-all-level-expansion-0238",
+    "built-in-food-drink-all-level-expansion-0239",
+    "built-in-food-drink-all-level-expansion-0240",
+    "built-in-food-drink-all-level-expansion-0241",
+    "built-in-food-drink-all-level-expansion-0242",
+    "built-in-food-drink-all-level-expansion-0243",
+    "built-in-food-drink-all-level-expansion-0244",
+    "built-in-food-drink-all-level-expansion-0245",
+    "built-in-food-drink-all-level-expansion-0246",
+    "built-in-food-drink-all-level-expansion-0247",
+    "built-in-food-drink-all-level-expansion-0248",
+    "built-in-food-drink-all-level-expansion-0249",
+    "built-in-food-drink-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Root, independent Food and Drink reviewer",
+    "reviewedAt": "2026-10-09T12:06:57.481Z",
+    "decision": "approved",
+    "notes": "Independently read all250 question claims against actual cached source passages, with targeted full extracts for source gaps and structured Wikipedia kitchen-brigade positions. Read replacement sources through web tool for oxygen browning, invert sugar, Hasselback potatoes, crêpe cake, butter-cake origin, suhur and kutia. Used the Hofbräu tent food menu for the Oktoberfest snack and BBC material for Paul Hollywood. Rechecked final replacements and scoped contested origin stories explicitly as legends or attributed claims."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Root, independent Food and Drink reviewer",
+    "reviewedAt": "2026-10-09T12:06:57.481Z",
+    "decision": "approved",
+    "notes": "Read all250 bilingual question records, all50 category titles and all old/new collision candidates. Replaced duplicate and reverse-identical facts, removed answer-giving stems and aliases, checked five primary subjects per set and preserved counts/rounds. Corrected city versus coffee-house answer type and accepted both protected traditional-balsamic cities where either is requested."
+  },
+  "translationReview": {
+    "reviewer": "Codex Root, independent Food and Drink reviewer",
+    "reviewedAt": "2026-10-09T12:06:57.481Z",
+    "decision": "approved",
+    "notes": "Read all English/Estonian clues, answers, variants and explanations plus all diagnostics. Repaired personified food constructions, case endings, scope and ingredient translations. Changed bakery currants to dried grapes, clarified foreign kitchen-role names, supplied paired valid aliases, and distinguished muscatel grape flavour from nutmeg. Final diagnostics contain no blocking errors; specific final-field reasons record valid names and translated wording."
+  },
+  "resolvedFindings": [
+    "Replaced repeated onion-tear mechanism with oxygen browning and Maillard reaction with invert sugar; kept bromelain and casein at suitable tiers.",
+    "Replaced croque-madame egg clue with Hasselback potatoes, Opera-cake layers with crêpe cake, hāngī with suhur, and Darjeeling place identity with second-flush muscatel flavour.",
+    "Replaced repeated elBulli/Fat Duck chef identities with culinary-foam cartridge gas and bacon-and-egg ice-cream ingredient.",
+    "Replaced Shabbat identity with kiddush and Christmas Eve date overlap with kutia ingredients; replaced mulled-wine identity with glögg almond accompaniment.",
+    "Replaced Sandwich-name identity with the explicitly legendary cribbage association, Tatin-sister identity with the hotel town, and Suzette dessert identity with Charpentier’s attributed EdwardVII story.",
+    "Replaced Peru/Chile pisco claim reversal with Lenz’s explicitly attributed Quechua bird etymology.",
+    "Removed toshikoshi soba, mille-crêpes, Basque-cake and Porto answer stems from question wording.",
+    "Repaired misleading poppy, ranch origin, Hollywood handshake, Samin Nosrat creator, curry and tea scope; bound actual citations rather than adjacent unsupported claims.",
+    "Corrected serving and cook-role wording, dried currant meaning, rutaceous botanical family, and the city answer Vienna; curated paired accepted variants."
+  ],
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0001:category_name_en",
+      "reason": "Independently reviewed category title “At the Festive Table” → “Pidulaua kombed”. Flagged title-cased words (Festive Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0001:clue_en",
+      "reason": "Independent bilingual field review: “In Britain, which flat fried cakes are traditionally raced in pans on Shrove Tuesday?” → “Milliste lapikute praetud kookidega joostakse Suurbritannias vastlapäeval pannivõistlustel?”. Flagged forms (In Britain, Shrove Tuesday) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0001:explanation_en",
+      "reason": "Independent bilingual field review: “British Shrove Tuesday pancake races involve carrying a pancake in a frying pan.” → “Suurbritannia vastlapäevavõistlustel kantakse pannil pannkooki.”. Flagged forms (British Shrove Tuesday) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0002:category_name_en",
+      "reason": "Independently reviewed category title “At the Festive Table” → “Pidulaua kombed”. Flagged title-cased words (Festive Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0003:category_name_en",
+      "reason": "Independently reviewed category title “At the Festive Table” → “Pidulaua kombed”. Flagged title-cased words (Festive Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0003:clue_en",
+      "reason": "Independent bilingual field review: “Which large bird is the traditional centrepiece of an American Thanksgiving dinner?” → “Millise suure linnu liha on Ameerika tänupüha õhtusöögi traditsiooniline põhiroog?”. Flagged forms (American Thanksgiving) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0003:explanation_en",
+      "reason": "Independent bilingual field review: “Turkey is the traditional centrepiece of American Thanksgiving dinner.” → “Kalkun on Ameerika tänupüha õhtusöögi traditsiooniline põhiroog.”. Flagged forms (American Thanksgiving) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0004:category_name_en",
+      "reason": "Independently reviewed category title “At the Festive Table” → “Pidulaua kombed”. Flagged title-cased words (Festive Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0004:clue_en",
+      "reason": "Independent bilingual field review: “Which orange-filled dessert is especially associated with Thanksgiving in North America?” → “Milline oranži täidisega magustoit seostub Põhja-Ameerikas eriti tänupühaga?”. Flagged forms (North America) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0004:explanation_en",
+      "reason": "Independent bilingual field review: “Pumpkin pie is a customary Thanksgiving dessert in North America.” → “Kõrvitsapirukas on Põhja-Ameerika tavapärane tänupühamagustoit.”. Flagged forms (North America) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0005:category_name_en",
+      "reason": "Independently reviewed category title “At the Festive Table” → “Pidulaua kombed”. Flagged title-cased words (Festive Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0006:category_name_en",
+      "reason": "Independently reviewed category title “Reach for the Right Tool” → “Vali õige köögiriist”. Flagged title-cased words (Right Tool) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0007:category_name_en",
+      "reason": "Independently reviewed category title “Reach for the Right Tool” → “Vali õige köögiriist”. Flagged title-cased words (Right Tool) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0008:category_name_en",
+      "reason": "Independently reviewed category title “Reach for the Right Tool” → “Vali õige köögiriist”. Flagged title-cased words (Right Tool) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0009:category_name_en",
+      "reason": "Independently reviewed category title “Reach for the Right Tool” → “Vali õige köögiriist”. Flagged title-cased words (Right Tool) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0010:category_name_en",
+      "reason": "Independently reviewed category title “Reach for the Right Tool” → “Vali õige köögiriist”. Flagged title-cased words (Right Tool) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0016:category_name_en",
+      "reason": "Independently reviewed category title “Eating Together” → “Koos sööma”. Flagged title-cased words (Eating Together) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0017:category_name_en",
+      "reason": "Independently reviewed category title “Eating Together” → “Koos sööma”. Flagged title-cased words (Eating Together) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0018:category_name_en",
+      "reason": "Independently reviewed category title “Eating Together” → “Koos sööma”. Flagged title-cased words (Eating Together) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0019:accepted_variants_en",
+      "reason": "Independent bilingual field review: “BBQ; Barbeque” → “Barbecue; BBQ”. Flagged forms (BBQ) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0019:category_name_en",
+      "reason": "Independently reviewed category title “Eating Together” → “Koos sööma”. Flagged title-cased words (Eating Together) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0020:category_name_en",
+      "reason": "Independently reviewed category title “Eating Together” → “Koos sööma”. Flagged title-cased words (Eating Together) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0020:clue_en",
+      "reason": "Independent bilingual field review: “Which British light meal often serves small sandwiches, scones and cakes on a tiered stand?” → “Milline Briti kerge eine pakub sageli väikesi võileibu, skoone ja kooke mitmekorruselisel alusel?”. Flagged forms (Which British) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0021:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “À la carte” is correctly used as “à la carte” in Estonian."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0023:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Doggie bag; Leftovers bag” is correctly used as “Doggie bag; Toidujääkide kaasavõtukott” in Estonian."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0023:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Doggy bag” is correctly used as “Doggy bag” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0026:category_name_en",
+      "reason": "Independently reviewed category title “Give It a Dip” → “Kasta sisse”. Flagged title-cased words (Give It) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0027:category_name_en",
+      "reason": "Independently reviewed category title “Give It a Dip” → “Kasta sisse”. Flagged title-cased words (Give It) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0028:category_name_en",
+      "reason": "Independently reviewed category title “Give It a Dip” → “Kasta sisse”. Flagged title-cased words (Give It) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0029:category_name_en",
+      "reason": "Independently reviewed category title “Give It a Dip” → “Kasta sisse”. Flagged title-cased words (Give It) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0030:category_name_en",
+      "reason": "Independently reviewed category title “Give It a Dip” → “Kasta sisse”. Flagged title-cased words (Give It) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0041:category_name_en",
+      "reason": "Independently reviewed category title “What the Cook Does” → “Koka töövõtted”. Flagged title-cased words (Cook Does) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0041:clue_en",
+      "reason": "Independent bilingual field review: “Which Italian expression describes pasta that still offers some resistance when bitten?” → “Milline itaaliakeelne väljend kirjeldab pastat, mis pakub hammustamisel veel kerget vastupanu?”. Flagged forms (Which Italian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0041:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Al dente” is correctly used as “al dente” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0042:category_name_en",
+      "reason": "Independently reviewed category title “What the Cook Does” → “Koka töövõtted”. Flagged title-cased words (Cook Does) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0043:category_name_en",
+      "reason": "Independently reviewed category title “What the Cook Does” → “Koka töövõtted”. Flagged title-cased words (Cook Does) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0044:category_name_en",
+      "reason": "Independently reviewed category title “What the Cook Does” → “Koka töövõtted”. Flagged title-cased words (Cook Does) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0045:category_name_en",
+      "reason": "Independently reviewed category title “What the Cook Does” → “Koka töövõtted”. Flagged title-cased words (Cook Does) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0045:clue_en",
+      "reason": "Independent bilingual field review: “What French cutting term means reducing vegetables to thin matchstick-like strips?” → “Milline prantsuse lõikamistermin tähendab köögiviljade lõikamist õhukesteks tikutaolisteks ribadeks?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0046:category_name_en",
+      "reason": "Independently reviewed category title “Lunch Across Borders” → “Lõunapause üle maailma”. Flagged title-cased words (Lunch Across Borders) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0046:clue_en",
+      "reason": "Independent bilingual field review: “What Japanese packed meal is arranged in a compartmented lunch box?” → “Milline Jaapani kaasa pakitud eine paigutatakse lahtritega lõunakarpi?”. Flagged forms (What Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0047:category_name_en",
+      "reason": "Independently reviewed category title “Lunch Across Borders” → “Lõunapause üle maailma”. Flagged title-cased words (Lunch Across Borders) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0048:category_name_en",
+      "reason": "Independently reviewed category title “Lunch Across Borders” → “Lõunapause üle maailma”. Flagged title-cased words (Lunch Across Borders) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0048:clue_en",
+      "reason": "Independent bilingual field review: “Which Eastern Mediterranean tradition offers a selection of small dishes often served with spirits?” → “Milline Vahemere idaosa traditsioon pakub valikut väikestest roogadest, sageli kangete jookide kõrvale?”. Flagged forms (Which Eastern Mediterranean) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0048:explanation_en",
+      "reason": "Independent bilingual field review: “Meze is a selection of small dishes served as appetisers in the Eastern Mediterranean and nearby regions.” → “Meze on Vahemere idaosas ja lähialadel eelroana pakutav väikeste roogade valik.”. Flagged forms (Eastern Mediterranean) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0049:category_name_en",
+      "reason": "Independently reviewed category title “Lunch Across Borders” → “Lõunapause üle maailma”. Flagged title-cased words (Lunch Across Borders) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0049:clue_en",
+      "reason": "Independent bilingual field review: “What Japanese informal bar serves drinks with a variety of small shared dishes?” → “Milline Jaapani vaba õhkkonnaga baar pakub jooke koos eri väikeste jagatavate roogadega?”. Flagged forms (What Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0050:category_name_en",
+      "reason": "Independently reviewed category title “Lunch Across Borders” → “Lõunapause üle maailma”. Flagged title-cased words (Lunch Across Borders) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0050:clue_en",
+      "reason": "Independent bilingual field review: “Which Swedish meal tradition spreads out numerous hot and cold dishes for guests to choose from?” → “Milline Rootsi einestamistraditsioon seab välja palju sooje ja külmi roogi, mille hulgast külalised valivad?”. Flagged forms (Which Swedish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0060:clue_en",
+      "reason": "Independent bilingual field review: “Which French puff-pastry biscuit resembles a palm leaf or an elephant's ear?” → “Milline Prantsuse lehttainaküpsis meenutab palmilehte või elevandikõrva?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0061:category_name_en",
+      "reason": "Independently reviewed category title “Holiday Sips” → “Pühadejoogid”. Flagged title-cased words (Holiday Sips) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0062:category_name_en",
+      "reason": "Independently reviewed category title “Holiday Sips” → “Pühadejoogid”. Flagged title-cased words (Holiday Sips) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0063:category_name_en",
+      "reason": "Independently reviewed category title “Holiday Sips” → “Pühadejoogid”. Flagged title-cased words (Holiday Sips) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0064:category_name_en",
+      "reason": "Independently reviewed category title “Holiday Sips” → “Pühadejoogid”. Flagged title-cased words (Holiday Sips) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0064:clue_en",
+      "reason": "Independent bilingual field review: “Which Nordic festive drink is often served with raisins and almonds in the cup?” → “Millist Põhjamaade pühadejooki serveeritakse sageli koos rosinate ja mandlitega tassis?”. Flagged forms (Which Nordic) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0065:category_name_en",
+      "reason": "Independently reviewed category title “Holiday Sips” → “Pühadejoogid”. Flagged title-cased words (Holiday Sips) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0065:clue_en",
+      "reason": "Independent bilingual field review: “Which French sparkling wine is mainly made from Chardonnay, Pinot noir and Pinot meunier?” → “Milline Prantsuse vahuvein valmib peamiselt Chardonnay, Pinot noir'i ja Pinot meunier' viinamarjadest?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0066:category_name_en",
+      "reason": "Independently reviewed category title “Coffee-Shop Details” → “Kohviku pisiasjad”. Flagged title-cased words (Coffee-Shop Details) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0067:category_name_en",
+      "reason": "Independently reviewed category title “Coffee-Shop Details” → “Kohviku pisiasjad”. Flagged title-cased words (Coffee-Shop Details) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0068:category_name_en",
+      "reason": "Independently reviewed category title “Coffee-Shop Details” → “Kohviku pisiasjad”. Flagged title-cased words (Coffee-Shop Details) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0068:clue_en",
+      "reason": "Independent bilingual field review: “Which coffee drink combines espresso with smooth microfoam and is associated with Australia and New Zealand?” → “Milline kohvijook ühendab espresso peene piimavahuga ning seostub Austraalia ja Uus-Meremaaga?”. Flagged forms (New Zealand) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0068:explanation_en",
+      "reason": "Independent bilingual field review: “Flat white is an espresso-and-microfoam drink associated with Australian and New Zealand café culture.” → “Flat white ühendab espresso peene piimavahuga ning seostub Austraalia ja Uus-Meremaa kohvikukultuuriga.”. Flagged forms (New Zealand) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0068:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Flat white” is correctly used as “flat white” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0069:category_name_en",
+      "reason": "Independently reviewed category title “Coffee-Shop Details” → “Kohviku pisiasjad”. Flagged title-cased words (Coffee-Shop Details) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0070:category_name_en",
+      "reason": "Independently reviewed category title “Coffee-Shop Details” → “Kohviku pisiasjad”. Flagged title-cased words (Coffee-Shop Details) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0070:clue_en",
+      "reason": "Independent bilingual field review: “Which Italian-derived job title describes a professional who prepares espresso drinks?” → “Milline itaalia päritolu ametinimetus tähistab espressojookide valmistamise spetsialisti?”. Flagged forms (Which Italian-derived) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0071:category_name_en",
+      "reason": "Independently reviewed category title “Alcohol-Free Refreshment” → “Alkoholita kosutus”. Flagged title-cased words (Alcohol-Free Refreshment) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0072:category_name_en",
+      "reason": "Independently reviewed category title “Alcohol-Free Refreshment” → “Alkoholita kosutus”. Flagged title-cased words (Alcohol-Free Refreshment) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0073:category_name_en",
+      "reason": "Independently reviewed category title “Alcohol-Free Refreshment” → “Alkoholita kosutus”. Flagged title-cased words (Alcohol-Free Refreshment) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0074:category_name_en",
+      "reason": "Independently reviewed category title “Alcohol-Free Refreshment” → “Alkoholita kosutus”. Flagged title-cased words (Alcohol-Free Refreshment) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0074:explanation_en",
+      "reason": "Independent bilingual field review: “The British version of barley water typically includes lemon juice and sugar.” → “Briti odraveele lisatakse tavaliselt sidrunimahla ja suhkrut.”. Flagged forms (The British) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0075:category_name_en",
+      "reason": "Independently reviewed category title “Alcohol-Free Refreshment” → “Alkoholita kosutus”. Flagged title-cased words (Alcohol-Free Refreshment) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0075:clue_en",
+      "reason": "Independent bilingual field review: “Which Indian yoghurt drink can be sweet, salty or flavoured with mango?” → “Milline India jogurtijook võib olla magus, soolane või mangoga maitsestatud?”. Flagged forms (Which Indian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0076:category_name_en",
+      "reason": "Independently reviewed category title “Cheers in Good Company” → “Terviseks heas seltskonnas”. Flagged title-cased words (Good Company) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0077:category_name_en",
+      "reason": "Independently reviewed category title “Cheers in Good Company” → “Terviseks heas seltskonnas”. Flagged title-cased words (Good Company) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0077:clue_en",
+      "reason": "Independent bilingual field review: “Which British drinking establishment has a name shortened from public house?” → “Millise Briti joogikoha nimi on lühend väljendist public house?”. Flagged forms (Which British) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0078:category_name_en",
+      "reason": "Independently reviewed category title “Cheers in Good Company” → “Terviseks heas seltskonnas”. Flagged title-cased words (Good Company) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0078:clue_en",
+      "reason": "Independent bilingual field review: “Which baked snack is served beside roast chicken and sausages in Oktoberfest’s Hofbräu tent?” → “Millist küpsetatud suupistet serveeritakse Oktoberfesti Hofbräu telgis praekana ja vorstide kõrval?”. Flagged forms (Oktoberfest’s Hofbräu) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0078:explanation_en",
+      "reason": "Independent bilingual field review: “Pretzels are among the traditional Bavarian foods served in Oktoberfest’s Hofbräu tent.” → “Soolakringlid kuuluvad Oktoberfesti Hofbräu telgis serveeritavate traditsiooniliste Baieri toitude hulka.”. Flagged forms (Oktoberfest’s Hofbräu) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0079:category_name_en",
+      "reason": "Independently reviewed category title “Cheers in Good Company” → “Terviseks heas seltskonnas”. Flagged title-cased words (Good Company) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0079:clue_en",
+      "reason": "Independent bilingual field review: “Which Japanese drink is traditionally served in a small cup called a sakazuki?” → “Millist Jaapani jooki serveeritakse traditsiooniliselt väikesest sakazuki-nimelisest tassist?”. Flagged forms (Which Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0080:category_name_en",
+      "reason": "Independently reviewed category title “Cheers in Good Company” → “Terviseks heas seltskonnas”. Flagged title-cased words (Good Company) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0080:clue_en",
+      "reason": "Independent bilingual field review: “Which Mexican spirit is commonly served around the world as a shot with salt and lime?” → “Millist Mehhiko kanget alkoholi serveeritakse üle maailma sageli pitsina koos soola ja laimiga?”. Flagged forms (Which Mexican) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0081:category_name_en",
+      "reason": "Independently reviewed category title “Where Food Comes From” → “Toidu päritolu”. Flagged title-cased words (Where Food Comes From) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0081:clue_en",
+      "reason": "Independent bilingual field review: “Which Italian city is the home of the pizza-making craft added to UNESCO's intangible heritage list in 2017?” → “Milline Itaalia linn on koduks pitsavalmistamise kunstile, mis kanti 2017. aastal UNESCO vaimse pärandi nimekirja?”. Flagged forms (Which Italian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0082:category_name_en",
+      "reason": "Independently reviewed category title “Where Food Comes From” → “Toidu päritolu”. Flagged title-cased words (Where Food Comes From) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0082:explanation_en",
+      "reason": "Independent bilingual field review: “Traditional Cheddar cheese is made from cows’ milk.” → “Traditsiooniline Cheddari juust tehakse lehmapiimast.”. Flagged forms (Traditional Cheddar) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0083:category_name_en",
+      "reason": "Independently reviewed category title “Where Food Comes From” → “Toidu päritolu”. Flagged title-cased words (Where Food Comes From) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0084:category_name_en",
+      "reason": "Independently reviewed category title “Where Food Comes From” → “Toidu päritolu”. Flagged title-cased words (Where Food Comes From) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0084:clue_en",
+      "reason": "Independent bilingual field review: “Which Burgundy city became a centre of French mustard making in the Middle Ages?” → “Millisest Burgundia linnast kujunes keskajal Prantsuse sinepivalmistamise keskus?”. Flagged forms (Which Burgundy, Middle Ages) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0084:explanation_en",
+      "reason": "Independent bilingual field review: “Dijon became a recognised mustard-making centre during the Middle Ages.” → “Dijonist sai keskajal tuntud sinepivalmistamise keskus.”. Flagged forms (Middle Ages) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0085:category_name_en",
+      "reason": "Independently reviewed category title “Where Food Comes From” → “Toidu päritolu”. Flagged title-cased words (Where Food Comes From) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0086:category_name_en",
+      "reason": "Independently reviewed category title “Small Rituals, Big Flavours” → “Väikesed kombed, suured maitsed”. Flagged title-cased words (Small Rituals, Big Flavours) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0087:category_name_en",
+      "reason": "Independently reviewed category title “Small Rituals, Big Flavours” → “Väikesed kombed, suured maitsed”. Flagged title-cased words (Small Rituals, Big Flavours) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0087:clue_en",
+      "reason": "Independent bilingual field review: “What Spanish name describes the prized toasted rice crust at the bottom of a paella pan?” → “Milline hispaaniakeelne nimi tähistab paellapanni põhja hinnatud röstitud riisikihti?”. Flagged forms (What Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0088:category_name_en",
+      "reason": "Independently reviewed category title “Small Rituals, Big Flavours” → “Väikesed kombed, suured maitsed”. Flagged title-cased words (Small Rituals, Big Flavours) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0088:explanation_en",
+      "reason": "Independent bilingual field review: “Nineteenth-century Japanese cookies near Kyoto contained written fortunes before the American form became widespread.” → “Kyoto ümbruse 19. sajandi Jaapani küpsised sisaldasid kirjalikke ennustusi enne Ameerika variandi levikut.”. Flagged forms (Nineteenth-century Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0089:category_name_en",
+      "reason": "Independently reviewed category title “Small Rituals, Big Flavours” → “Väikesed kombed, suured maitsed”. Flagged title-cased words (Small Rituals, Big Flavours) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0089:clue_en",
+      "reason": "Independent bilingual field review: “What Scottish celebration serves haggis while reciting a poet's Address to a Haggis?” → “Millisel Šoti tähistamisel serveeritakse haggis't luuletaja pöördumist selle roa poole lugedes?”. Flagged forms (What Scottish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0090:category_name_en",
+      "reason": "Independently reviewed category title “Small Rituals, Big Flavours” → “Väikesed kombed, suured maitsed”. Flagged title-cased words (Small Rituals, Big Flavours) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0090:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Bánh chưng” is correctly used as “bánh chưng” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0091:category_name_en",
+      "reason": "Independently reviewed category title “How a Kitchen Earns Its Name” → “Köögi maine sünnib nii”. Flagged title-cased words (Kitchen Earns Its Name) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0091:clue_en",
+      "reason": "Independent bilingual field review: “What French kitchen phrase means preparing and arranging ingredients before cooking begins?” → “Milline prantsuse köögiväljend tähendab koostisosade ettevalmistamist ja paika seadmist enne kokkamist?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0091:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Mise en place” is correctly used as “mise en place” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0092:category_name_en",
+      "reason": "Independently reviewed category title “How a Kitchen Earns Its Name” → “Köögi maine sünnib nii”. Flagged title-cased words (Kitchen Earns Its Name) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0093:category_name_en",
+      "reason": "Independently reviewed category title “How a Kitchen Earns Its Name” → “Köögi maine sünnib nii”. Flagged title-cased words (Kitchen Earns Its Name) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0093:clue_en",
+      "reason": "Independent bilingual field review: “What is the highest restaurant rating in the Michelin Guide, defined as worth a special journey?” → “Milline on Michelini teatmiku kõrgeim restoranihinnang, mida kirjeldatakse kui eraldi reisi väärt?”. Flagged forms (Michelin Guide) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0093:explanation_en",
+      "reason": "Independent bilingual field review: “Three Michelin stars denote exceptional cuisine worth a special journey.” → “Kolm Michelini tärni tähistavad erakordset kööki, mille nimel tasub eraldi reis ette võtta.”. Flagged forms (Three Michelin) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0094:accepted_variants_en",
+      "reason": "Independent bilingual field review: “James Beard Foundation Awards” → “James Beardi fondi auhinnad”. Flagged forms (James Beard Foundation Awards) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0094:category_name_en",
+      "reason": "Independently reviewed category title “How a Kitchen Earns Its Name” → “Köögi maine sünnib nii”. Flagged title-cased words (Kitchen Earns Its Name) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0094:clue_en",
+      "reason": "Independent bilingual field review: “Which annual American culinary honours are often likened to the Academy Awards of the food world?” → “Milliseid iga-aastaseid Ameerika toidumaailma auhindu võrreldakse sageli filmiakadeemia Oscaritega?”. Flagged forms (Academy Awards) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0094:explanation_en",
+      "reason": "Independent bilingual field review: “The James Beard Foundation Awards recognise chefs, restaurateurs, food writers and other culinary professionals.” → “James Beardi fondi auhinnad tunnustavad kokki, restoranipidajaid, toidukirjanikke ja teisi toidumaailma tegijaid.”. Flagged forms (The James Beard Foundation Awards) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0094:response_en",
+      "reason": "Independent bilingual field review: “James Beard Awards” → “James Beardi auhinnad”. Flagged forms (James Beard Awards) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0095:category_name_en",
+      "reason": "Independently reviewed category title “How a Kitchen Earns Its Name” → “Köögi maine sünnib nii”. Flagged title-cased words (Kitchen Earns Its Name) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0095:explanation_en",
+      "reason": "Independent bilingual field review: “Le Cordon Bleu's name translates as the blue ribbon.” → “Le Cordon Bleu nimi tähendab sinist linti.”. Flagged forms (Le Cordon Bleu's) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0095:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Le Cordon Bleu” is correctly used as “Le Cordon Bleu” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0096:category_name_en",
+      "reason": "Independently reviewed category title “Chefs Beyond the Stove” → “Kokad pliidist kaugemal”. Flagged title-cased words (Chefs Beyond) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0096:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Julia Child” is correctly used as “Julia Child” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0097:category_name_en",
+      "reason": "Independently reviewed category title “Chefs Beyond the Stove” → “Kokad pliidist kaugemal”. Flagged title-cased words (Chefs Beyond) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0097:clue_en",
+      "reason": "Independent bilingual field review: “Which Scottish-born chef presented Hell's Kitchen and Kitchen Nightmares?” → “Milline Šotimaal sündinud kokk juhtis saateid Hell's Kitchen ja Kitchen Nightmares?”. Flagged forms (Which Scottish-born) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0097:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Gordon Ramsay” is correctly used as “Gordon Ramsay” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0098:category_name_en",
+      "reason": "Independently reviewed category title “Chefs Beyond the Stove” → “Kokad pliidist kaugemal”. Flagged title-cased words (Chefs Beyond) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0098:clue_en",
+      "reason": "Independent bilingual field review: “Which English baker judged The Great British Bake Off alongside Mary Berry before the programme moved to Channel 4?” → “Milline Inglise pagar oli koos Mary Berryga The Great British Bake Offi kohtunik enne sarja kolimist Channel 4 kanalile?”. Flagged forms (Which English) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0098:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Paul Hollywood” is correctly used as “Paul Hollywood” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0099:category_name_en",
+      "reason": "Independently reviewed category title “Chefs Beyond the Stove” → “Kokad pliidist kaugemal”. Flagged title-cased words (Chefs Beyond) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0099:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Anthony Bourdain” is correctly used as “Anthony Bourdain” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0100:category_name_en",
+      "reason": "Independently reviewed category title “Chefs Beyond the Stove” → “Kokad pliidist kaugemal”. Flagged title-cased words (Chefs Beyond) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0100:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Samin Nosrat” is correctly used as “Samin Nosrat” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0101:clue_en",
+      "reason": "Independent bilingual field review: “Which Milanese festive bake is traditionally hung upside down after baking to prevent collapse?” → “Milline Milano pühadeküpsetis riputatakse pärast küpsetamist tagurpidi, et see kokku ei vajuks?”. Flagged forms (Which Milanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0102:clue_en",
+      "reason": "Independent bilingual field review: “Which British Easter fruitcake is often topped with eleven marzipan balls representing apostles?” → “Millisele Briti lihavõtte-puuviljakoogile pannakse sageli üksteist apostleid tähistavat martsipanipalli?”. Flagged forms (Which British Easter) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0103:clue_en",
+      "reason": "Independent bilingual field review: “Which German city has a historic Stollen festival with a giant version of its Christmas fruit bread?” → “Millises Saksamaa linnas peetakse ajaloolist stollenifestivali hiiglasliku jõulu-puuviljasaiaga?”. Flagged forms (Which German) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0104:clue_en",
+      "reason": "Independent bilingual field review: “Which French Epiphany pastry hides a fève and crowns the diner who finds it?” → “Milline Prantsuse kolmekuningapäeva küpsetis peidab fève'i ning kroonib selle leidnud sööja?”. Flagged forms (Which French Epiphany) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0105:clue_en",
+      "reason": "Independent bilingual field review: “Which Eastern European Easter bread shares its name with the holiday's traditional name?” → “Milline Ida-Euroopa lihavõttesai jagab nime püha traditsioonilise nimetusega?”. Flagged forms (Which Eastern European Easter) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0106:clue_en",
+      "reason": "Independent bilingual field review: “What French thickening base cooks flour with fat before liquid is added?” → “Milline kastmepõhi valmib jahu rasvaga kuumutades ning paksendab vedelikku?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0108:clue_en",
+      "reason": "Independent bilingual field review: “Which French aromatic base usually combines onion, carrot and celery?” → “Milline Prantsuse aromaatne toidupõhi ühendab tavaliselt sibula, porgandi ja selleri?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0109:clue_en",
+      "reason": "Independent bilingual field review: “What French preparation consists of finely chopped mushrooms, onions and herbs sautéed in butter and reduced to a paste?” → “Milline Prantsuse segu koosneb peeneks hakitud seentest, sibulast ja ürtidest, mis hautatakse võis pastaks?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0110:clue_en",
+      "reason": "Independent bilingual field review: “What Italian garnish combines parsley, garlic and lemon zest and traditionally finishes osso buco?” → “Millist Itaalia lisandit valmistatakse petersellist, küüslaugust ja sidrunikoorest ning serveeritakse traditsiooniliselt osso buco juurde?”. Flagged forms (What Italian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0111:category_name_en",
+      "reason": "Independently reviewed category title “A Little Kitchen Chemistry” → “Veidi köögikeemiat”. Flagged title-cased words (Little Kitchen Chemistry) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0112:category_name_en",
+      "reason": "Independently reviewed category title “A Little Kitchen Chemistry” → “Veidi köögikeemiat”. Flagged title-cased words (Little Kitchen Chemistry) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0113:category_name_en",
+      "reason": "Independently reviewed category title “A Little Kitchen Chemistry” → “Veidi köögikeemiat”. Flagged title-cased words (Little Kitchen Chemistry) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0114:category_name_en",
+      "reason": "Independently reviewed category title “A Little Kitchen Chemistry” → “Veidi köögikeemiat”. Flagged title-cased words (Little Kitchen Chemistry) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0115:category_name_en",
+      "reason": "Independently reviewed category title “A Little Kitchen Chemistry” → “Veidi köögikeemiat”. Flagged title-cased words (Little Kitchen Chemistry) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0116:category_name_en",
+      "reason": "Independently reviewed category title “Tea and Coffee Ceremonies” → “Tee- ja kohvikombed”. Flagged title-cased words (Coffee Ceremonies) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0117:category_name_en",
+      "reason": "Independently reviewed category title “Tea and Coffee Ceremonies” → “Tee- ja kohvikombed”. Flagged title-cased words (Coffee Ceremonies) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0118:category_name_en",
+      "reason": "Independently reviewed category title “Tea and Coffee Ceremonies” → “Tee- ja kohvikombed”. Flagged title-cased words (Coffee Ceremonies) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0119:category_name_en",
+      "reason": "Independently reviewed category title “Tea and Coffee Ceremonies” → “Tee- ja kohvikombed”. Flagged title-cased words (Coffee Ceremonies) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0120:category_name_en",
+      "reason": "Independently reviewed category title “Tea and Coffee Ceremonies” → “Tee- ja kohvikombed”. Flagged title-cased words (Coffee Ceremonies) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0120:clue_en",
+      "reason": "Independent bilingual field review: “Which North African hospitality drink typically combines gunpowder green tea, mint and sugar?” → “Milline Põhja-Aafrika külalislahkuse jook ühendab tavaliselt gunpowder-rohelise tee, mündi ja suhkru?”. Flagged forms (Which North African) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0121:explanation_en",
+      "reason": "Independent bilingual field review: “Anton Ego's memory of childhood is awakened by Remy's ratatouille.” → “Remy ratatouille äratab Anton Ego lapsepõlvemälestuse.”. Flagged forms (Anton Ego's) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0121:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Anton Ego” is correctly used as “Anton Ego” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0122:clue_en",
+      "reason": "Independent bilingual field review: “Which Friends character works as a chef and is Ross's sister?” → “Milline Sõprade tegelane töötab kokana ning on Rossi õde?”. Flagged forms (Which Friends) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0122:explanation_en",
+      "reason": "Independent bilingual field review: “Monica Geller is a chef and Ross Geller's sister.” → “Monica Geller on kokk ning Ross Gelleri õde.”. Flagged forms (Ross Geller's) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0122:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Monica Geller” is correctly used as “Monica Geller” in Estonian."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0123:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Bob Belcher” is correctly used as “Bob Belcher” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0124:clue_en",
+      "reason": "Independent bilingual field review: “Which Breaking Bad character uses the Los Pollos Hermanos chicken chain as a business front?” → “Milline Breaking Badi tegelane kasutab kanaeineketti Los Pollos Hermanos oma tegevuse katteks?”. Flagged forms (Which Breaking Bad) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0124:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Gus Fring” is correctly used as “Gus Fring” in Estonian."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0125:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Carmy Berzatto” is correctly used as “Carmy Berzatto” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0126:category_name_en",
+      "reason": "Independently reviewed category title “Dish Names and Styles” → “Roanimed ja valmistusviisid”. Flagged title-cased words (Dish Names) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0126:clue_en",
+      "reason": "Independent bilingual field review: “Which Japanese city is known for a layered okonomiyaki style that commonly includes noodles?” → “Milline Jaapani linn on tuntud kihilise okonomiyaki järgi, mis sisaldab tavaliselt nuudleid?”. Flagged forms (Which Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0127:category_name_en",
+      "reason": "Independently reviewed category title “Dish Names and Styles” → “Roanimed ja valmistusviisid”. Flagged title-cased words (Dish Names) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0127:explanation_en",
+      "reason": "Independent bilingual field review: “Chicken Marengo is named after the Battle of Marengo.” → “Marengo kana on saanud nime Marengo lahingu järgi.”. Flagged forms (Chicken Marengo) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0127:response_en",
+      "reason": "Independent bilingual field review: “Chicken Marengo” → “Marengo kana”. Flagged forms (Chicken Marengo) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0128:category_name_en",
+      "reason": "Independently reviewed category title “Dish Names and Styles” → “Roanimed ja valmistusviisid”. Flagged title-cased words (Dish Names) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0128:clue_en",
+      "reason": "Independent bilingual field review: “Which Swedish baked potatoes are cut into many thin slices that remain joined at the base, creating a fan shape?” → “Millised Rootsi ahjukartulid lõigatakse õhukesteks viiludeks, mis jäävad alt ühendatuks ja moodustavad lehviku?”. Flagged forms (Which Swedish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0129:category_name_en",
+      "reason": "Independently reviewed category title “Dish Names and Styles” → “Roanimed ja valmistusviisid”. Flagged title-cased words (Dish Names) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0129:explanation_en",
+      "reason": "Independent bilingual field review: “Olivier salad is named for Lucien Olivier of Moscow's Hermitage restaurant.” → “Olivier' salat kannab Moskva Ermitaaži restorani koka Lucien Olivier' nime.”. Flagged forms (Moscow's Hermitage) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0130:category_name_en",
+      "reason": "Independently reviewed category title “Dish Names and Styles” → “Roanimed ja valmistusviisid”. Flagged title-cased words (Dish Names) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0130:clue_en",
+      "reason": "Independent bilingual field review: “Which Japanese sushi style scatters toppings across a bowl of seasoned rice rather than rolling them?” → “Milline Jaapani sušistiil laotab lisandid maitsestatud riisikausile, mitte ei rulli neid kokku?”. Flagged forms (Which Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0131:category_name_en",
+      "reason": "Independently reviewed category title “Food for Good Fortune” → “Toit hea õnne nimel”. Flagged title-cased words (Good Fortune) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0131:clue_en",
+      "reason": "Independent bilingual field review: “Which beans are traditionally eaten for good luck on New Year's Day in the southern United States?” → “Milliseid ube süüakse Ameerika Ühendriikide lõunaosas uusaastapäeval hea õnne nimel?”. Flagged forms (New Year's Day, United States) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0131:explanation_en",
+      "reason": "Independent bilingual field review: “Black-eyed peas are associated with southern American New Year good-luck meals.” → “Mustsilmoad seostuvad Ameerika lõunaosa õnnetoova uusaastaeinega.”. Flagged forms (American New Year) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0132:category_name_en",
+      "reason": "Independently reviewed category title “Food for Good Fortune” → “Toit hea õnne nimel”. Flagged title-cased words (Good Fortune) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0132:clue_en",
+      "reason": "Independent bilingual field review: “In a Spanish New Year tradition, which fruit is eaten once for each stroke of midnight?” → “Millist vilja süüakse Hispaania uusaastakombe järgi üks iga südaöölöögi kohta?”. Flagged forms (Spanish New Year) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0132:explanation_en",
+      "reason": "Independent bilingual field review: “Spain's Twelve Grapes tradition eats a grape with each midnight clock stroke.” → “Hispaania kaheteistkümne viinamarja kombes süüakse üks mari iga südaöölöögi ajal.”. Flagged forms (Spain's Twelve Grapes) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0133:category_name_en",
+      "reason": "Independently reviewed category title “Food for Good Fortune” → “Toit hea õnne nimel”. Flagged title-cased words (Good Fortune) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0133:clue_en",
+      "reason": "Independent bilingual field review: “Which pulses traditionally accompany cotechino in an Italian New Year's Eve meal?” → “Milliseid kaunvilju serveeritakse traditsiooniliselt cotechino kõrvale Itaalia vana-aastaõhtu eines?”. Flagged forms (Italian New Year's Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0133:explanation_en",
+      "reason": "Independent bilingual field review: “In Italy, cotechino is traditionally served with lentils on New Year's Eve.” → “Itaalias serveeritakse cotechino't vana-aastaõhtul traditsiooniliselt läätsedega.”. Flagged forms (In Italy, New Year's Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0134:category_name_en",
+      "reason": "Independently reviewed category title “Food for Good Fortune” → “Toit hea õnne nimel”. Flagged title-cased words (Good Fortune) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0134:clue_en",
+      "reason": "Independent bilingual field review: “Which Japanese buckwheat noodles are traditionally eaten on New Year's Eve to symbolise a long life?” → “Milliseid Jaapani tatrajahunuudleid süüakse vana-aastaõhtul traditsiooniliselt pika elu sümbolina?”. Flagged forms (Which Japanese, New Year's Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0134:explanation_en",
+      "reason": "Independent bilingual field review: “Toshikoshi soba is a Japanese New Year's Eve soba-noodle tradition.” → “Toshikoshi soba on Jaapani vana-aastaõhtu sobanuudlite söömise tava.”. Flagged forms (Japanese New Year's Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0135:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Nian gao” is correctly used as “Nian gao” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0135:category_name_en",
+      "reason": "Independently reviewed category title “Food for Good Fortune” → “Toit hea õnne nimel”. Flagged title-cased words (Good Fortune) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0136:category_name_en",
+      "reason": "Independently reviewed category title “Restaurant Vocabulary” → “Restoranisõnavara”. Flagged title-cased words (Restaurant Vocabulary) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0136:clue_en",
+      "reason": "Independent bilingual field review: “What French term names a tiny complimentary bite sent by the chef before the meal?” → “Milline prantsuse termin tähistab koka saadetud väikest tasuta suutäit enne einet?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0137:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Prix fixe; Set menu; Set meal” is correctly used as “Prix fixe; Kindla hinnaga menüü; Komplekteine” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0137:category_name_en",
+      "reason": "Independently reviewed category title “Restaurant Vocabulary” → “Restoranisõnavara”. Flagged title-cased words (Restaurant Vocabulary) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0137:clue_en",
+      "reason": "Independent bilingual field review: “What French menu term describes a fixed-price meal with a limited choice of courses?” → “Milline prantsuse menüütermin kirjeldab kindla hinnaga einet, mille käikude valik on piiratud?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0137:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Table d'hôte” is correctly used as “table d'hôte” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0138:category_name_en",
+      "reason": "Independently reviewed category title “Restaurant Vocabulary” → “Restoranisõnavara”. Flagged title-cased words (Restaurant Vocabulary) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0139:category_name_en",
+      "reason": "Independently reviewed category title “Restaurant Vocabulary” → “Restoranisõnavara”. Flagged title-cased words (Restaurant Vocabulary) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0139:clue_en",
+      "reason": "Independent bilingual field review: “What Japanese dining expression means entrusting the selection of dishes to the chef?” → “Milline Jaapani söögiväljend tähendab roogade valiku usaldamist kokale?”. Flagged forms (What Japanese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0140:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Maître d'; Head waiter; Dining room manager” is correctly used as “Maître d'; Ülemkelner; Restoranisaali juht” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0140:category_name_en",
+      "reason": "Independently reviewed category title “Restaurant Vocabulary” → “Restoranisõnavara”. Flagged title-cased words (Restaurant Vocabulary) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0140:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Maître d'hôtel” is correctly used as “maître d'hôtel” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0145:clue_en",
+      "reason": "Independent bilingual field review: “What French method seals fish or vegetables in a paper parcel so they cook in trapped steam?” → “Milline Prantsuse võte sulgeb kala või köögiviljad paberipakki, et need küpseksid pakki kogunevas aurus?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0146:category_name_en",
+      "reason": "Independently reviewed category title “At the British Tea Table” → “Briti teelauas”. Flagged title-cased words (British Tea Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0146:clue_en",
+      "reason": "Independent bilingual field review: “What West Country light meal centres on tea, scones, jam and clotted cream?” → “Millise ingliskeelse nimega Lääne-Inglismaa kerge eine koosneb teest, skoonidest, moosist ja paksust koorest?”. Flagged forms (What West Country) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0146:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Cream tea” is correctly used as “Cream tea” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0147:category_name_en",
+      "reason": "Independently reviewed category title “At the British Tea Table” → “Briti teelauas”. Flagged title-cased words (British Tea Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0148:category_name_en",
+      "reason": "Independently reviewed category title “At the British Tea Table” → “Briti teelauas”. Flagged title-cased words (British Tea Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0149:category_name_en",
+      "reason": "Independently reviewed category title “At the British Tea Table” → “Briti teelauas”. Flagged title-cased words (British Tea Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0149:clue_en",
+      "reason": "Independent bilingual field review: “Which Derbyshire dessert bakes an egg-and-almond filling over a jam layer in pastry?” → “Millises Derbyshire'i magustoidus on tainapõhjal moosikiht ja selle peal muna-mandlitäidis?”. Flagged forms (Which Derbyshire) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0150:category_name_en",
+      "reason": "Independently reviewed category title “At the British Tea Table” → “Briti teelauas”. Flagged title-cased words (British Tea Table) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0150:clue_en",
+      "reason": "Independent bilingual field review: “Which London-named spiral bun rolls dried fruit and spiced sugar into yeast dough?” → “Milline Londoni kohanimega spiraalne kukkel sisaldab pärmitainasse keeratud kuivatatud puuvilju ja vürtsisuhkrut?”. Flagged forms (Which London-named) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0151:category_name_en",
+      "reason": "Independently reviewed category title “Layers Worth Waiting For” → “Kihid, mida tasub oodata”. Flagged title-cased words (Layers Worth Waiting For) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0151:explanation_en",
+      "reason": "Independent bilingual field review: “Gâteau Basque has a cream or cherry-jam filling enclosed in pastry.” → “Baski kook sisaldab tainasse suletud kreemi- või kirsimoositäidist.”. Flagged forms (Gâteau Basque) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0151:response_en",
+      "reason": "Independent bilingual field review: “Gâteau Basque” → “Baski kook”. Flagged forms (Gâteau Basque) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0152:category_name_en",
+      "reason": "Independently reviewed category title “Layers Worth Waiting For” → “Kihid, mida tasub oodata”. Flagged title-cased words (Layers Worth Waiting For) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0153:category_name_en",
+      "reason": "Independently reviewed category title “Layers Worth Waiting For” → “Kihid, mida tasub oodata”. Flagged title-cased words (Layers Worth Waiting For) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0154:category_name_en",
+      "reason": "Independently reviewed category title “Layers Worth Waiting For” → “Kihid, mida tasub oodata”. Flagged title-cased words (Layers Worth Waiting For) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0155:category_name_en",
+      "reason": "Independently reviewed category title “Layers Worth Waiting For” → “Kihid, mida tasub oodata”. Flagged title-cased words (Layers Worth Waiting For) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0155:clue_en",
+      "reason": "Independent bilingual field review: “Which German cake is built up on a rotating spit so its slices resemble tree rings?” → “Milline Saksa kook küpsetatakse kihtidena pöörleval vardal nii, et viilud meenutavad puu aastarõngaid?”. Flagged forms (Which German) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0156:category_name_en",
+      "reason": "Independently reviewed category title “A Baker's Wider Repertoire” → “Pagari laiem repertuaar”. Flagged title-cased words (Baker's Wider Repertoire) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0156:clue_en",
+      "reason": "Independent bilingual field review: “Which French enriched bread has a particularly high proportion of eggs and butter?” → “Milline Prantsuse rikkalik sai sisaldab eriti palju mune ja võid?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0157:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Cantucci; Biscotti di Prato; Cantuccini” is correctly used as “Cantucci; Biscotti di Prato; Cantuccini” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0157:category_name_en",
+      "reason": "Independently reviewed category title “A Baker's Wider Repertoire” → “Pagari laiem repertuaar”. Flagged title-cased words (Baker's Wider Repertoire) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0157:clue_en",
+      "reason": "Independent bilingual field review: “Which Italian almond biscuits are baked as a loaf, sliced and baked again?” → “Millised Itaalia mandliküpsised küpsetatakse pätsina, viilutatakse ning küpsetatakse uuesti?”. Flagged forms (Which Italian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0158:category_name_en",
+      "reason": "Independently reviewed category title “A Baker's Wider Repertoire” → “Pagari laiem repertuaar”. Flagged title-cased words (Baker's Wider Repertoire) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0158:clue_en",
+      "reason": "Independent bilingual field review: “Which English cake traditionally uses equal amounts of butter, flour, sugar and eggs and inspired the modern butter cake?” → “Milline Inglise kook sisaldab traditsiooniliselt võrdses koguses võid, jahu, suhkrut ja mune ning oli tänapäevase võikoogi eelkäija?”. Flagged forms (Which English) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0159:category_name_en",
+      "reason": "Independently reviewed category title “A Baker's Wider Repertoire” → “Pagari laiem repertuaar”. Flagged title-cased words (Baker's Wider Repertoire) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0160:category_name_en",
+      "reason": "Independently reviewed category title “A Baker's Wider Repertoire” → “Pagari laiem repertuaar”. Flagged title-cased words (Baker's Wider Repertoire) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0160:clue_en",
+      "reason": "Independent bilingual field review: “Which French dessert layers almond or hazelnut meringue with cream or buttercream?” → “Milline Prantsuse magustoit kihitab mandli- või sarapuupähklibeseed kreemi või võikreemiga?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0161:category_name_en",
+      "reason": "Independently reviewed category title “Caffeine Connections” → “Kofeiini seosed”. Flagged title-cased words (Caffeine Connections) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0162:category_name_en",
+      "reason": "Independently reviewed category title “Caffeine Connections” → “Kofeiini seosed”. Flagged title-cased words (Caffeine Connections) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0162:clue_en",
+      "reason": "Independent bilingual field review: “Which South American holly supplies the caffeinated leaves for mate?” → “Milline Lõuna-Ameerika astelpõõsas annab mate jaoks kofeiini sisaldavad lehed?”. Flagged forms (Which South American) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0163:category_name_en",
+      "reason": "Independently reviewed category title “Caffeine Connections” → “Kofeiini seosed”. Flagged title-cased words (Caffeine Connections) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0163:clue_en",
+      "reason": "Independent bilingual field review: “Which Amazonian climbing plant contributes caffeine-rich seeds to soft drinks?” → “Milline Amazonase ronitaim annab karastusjookidele kofeiinirikkaid seemneid?”. Flagged forms (Which Amazonian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0164:category_name_en",
+      "reason": "Independently reviewed category title “Caffeine Connections” → “Kofeiini seosed”. Flagged title-cased words (Caffeine Connections) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0164:clue_en",
+      "reason": "Independent bilingual field review: “Which South American country has been a leading coffee producer since the nineteenth century?” → “Milline Lõuna-Ameerika riik on olnud juhtiv kohvitootja alates 19. sajandist?”. Flagged forms (Which South American) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0165:category_name_en",
+      "reason": "Independently reviewed category title “Caffeine Connections” → “Kofeiini seosed”. Flagged title-cased words (Caffeine Connections) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0165:explanation_en",
+      "reason": "Independent bilingual field review: “The Kaldi legend is set in Ethiopia and tells of a goat herder noticing the stimulating effect of coffee on his flock.” → “Kaldi legend toimub Etioopias ning räägib kitsekarjusest, kes märkas kohvi ergutavat mõju oma loomadele.”. Flagged forms (The Kaldi) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0166:category_name_en",
+      "reason": "Independently reviewed category title “Inside the Drinks Cabinet” → “Joogikapi sees”. Flagged title-cased words (Drinks Cabinet) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0167:category_name_en",
+      "reason": "Independently reviewed category title “Inside the Drinks Cabinet” → “Joogikapi sees”. Flagged title-cased words (Drinks Cabinet) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0167:clue_en",
+      "reason": "Independent bilingual field review: “Which Italian bitter aperitif originally received its red colour from crushed cochineal insects?” → “Milline Itaalia mõru aperitiiv sai algselt punase värvi purustatud košenillitäidest?”. Flagged forms (Which Italian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0168:category_name_en",
+      "reason": "Independently reviewed category title “Inside the Drinks Cabinet” → “Joogikapi sees”. Flagged title-cased words (Drinks Cabinet) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0168:clue_en",
+      "reason": "Independent bilingual field review: “Which Spanish fortified wine includes the dry styles fino and manzanilla?” → “Milline Hispaania kangendatud vein hõlmab kuivi stiile fino ja manzanilla?”. Flagged forms (Which Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0169:category_name_en",
+      "reason": "Independently reviewed category title “Inside the Drinks Cabinet” → “Joogikapi sees”. Flagged title-cased words (Drinks Cabinet) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0169:clue_en",
+      "reason": "Independent bilingual field review: “Which Portuguese fortified wine is made by adding spirit before fermentation finishes, leaving it naturally sweet?” → “Millise Portugali kangendatud veini valmistamisel lisatakse alkoholi enne käärimise lõppu, nii et vein jääb loomulikult magusaks?”. Flagged forms (Which Portuguese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0170:category_name_en",
+      "reason": "Independently reviewed category title “Inside the Drinks Cabinet” → “Joogikapi sees”. Flagged title-cased words (Drinks Cabinet) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0172:clue_en",
+      "reason": "Independent bilingual field review: “What Sikh communal kitchen serves free meals to people regardless of caste, faith or status?” → “Milline sikhide ühisköök pakub tasuta eineid sõltumata kastist, usust või seisusest?”. Flagged forms (What Sikh) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0173:clue_en",
+      "reason": "Independent bilingual field review: “Which Japanese New Year decoration stacks two rice cakes and often crowns them with a citrus fruit?” → “Milline Jaapani uusaastakaunistus asetab kaks riisikooki üksteise peale ning kroonib need sageli tsitrusviljaga?”. Flagged forms (Which Japanese New Year) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0173:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Kagami mochi” is correctly used as “kagami mochi” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0175:clue_en",
+      "reason": "Independent bilingual field review: “Which Lithuanian Christmas Eve meal traditionally avoids meat and contains dishes shared by the family?” → “Milline Leedu jõululaupäeva eine väldib traditsiooniliselt liha ning koosneb perega jagatud roogadest?”. Flagged forms (Which Lithuanian Christmas Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0175:explanation_en",
+      "reason": "Independent bilingual field review: “Kūčios is the traditional Lithuanian Christmas Eve dinner with meatless dishes.” → “Kūčios on traditsiooniline Leedu lihata jõululaupäeva õhtusöök.”. Flagged forms (Lithuanian Christmas Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0176:category_name_en",
+      "reason": "Independently reviewed category title “A French Cook's Instructions” → “Prantsuse koka juhised”. Flagged title-cased words (French Cook's Instructions) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0176:clue_en",
+      "reason": "Independent bilingual field review: “Which French thickener kneads flour into softened butter without cooking it first?” → “Milline Prantsuse paksendussegu valmib võrdsetest osadest võist ja jahust neid enne kastmele lisamist kuumutamata kokku sõtkudes?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0176:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Beurre manié” is correctly used as “beurre manié” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0177:category_name_en",
+      "reason": "Independently reviewed category title “A French Cook's Instructions” → “Prantsuse koka juhised”. Flagged title-cased words (French Cook's Instructions) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0177:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Beurre monté” is correctly used as “beurre monté” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0178:category_name_en",
+      "reason": "Independently reviewed category title “A French Cook's Instructions” → “Prantsuse koka juhised”. Flagged title-cased words (French Cook's Instructions) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0178:clue_en",
+      "reason": "Independent bilingual field review: “What French preparation name commonly describes peeled, deseeded and roughly chopped tomatoes?” → “Milline Prantsuse valmistusnimetus kirjeldab tavaliselt kooritud, seemneteta ja jämedalt hakitud tomateid?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0179:category_name_en",
+      "reason": "Independently reviewed category title “A French Cook's Instructions” → “Prantsuse koka juhised”. Flagged title-cased words (French Cook's Instructions) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0180:category_name_en",
+      "reason": "Independently reviewed category title “A French Cook's Instructions” → “Prantsuse koka juhised”. Flagged title-cased words (French Cook's Instructions) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0180:clue_en",
+      "reason": "Independent bilingual field review: “Which French preparation shapes creamed fish or meat into oval dumplings that are usually poached?” → “Millise Prantsuse roa jaoks vormitakse kala- või lihasegu lusikatega ovaalseks ning sageli pošeeritakse?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0181:category_name_en",
+      "reason": "Independently reviewed category title “The Geography of Flavour” → “Maitsete geograafia”. Flagged title-cased words (The Geography) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0181:clue_en",
+      "reason": "Independent bilingual field review: “Which Scottish island is particularly associated with smoky, peat-flavoured single-malt whiskies?” → “Milline Šotimaa saar seostub eriti suitsuste, turbase maitsega ühelinnaseviskidega?”. Flagged forms (Which Scottish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0182:category_name_en",
+      "reason": "Independently reviewed category title “The Geography of Flavour” → “Maitsete geograafia”. Flagged title-cased words (The Geography) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0182:explanation_en",
+      "reason": "Independent bilingual field review: “Second-flush Darjeeling tea develops a distinctive muscatel flavour with Muscat-like fruitiness.” → “Darjeelingi teisel korjesaagil tekib iseloomulik muscatel-maitse, mis meenutab muskaatviinamarjade puuviljasust.”. Flagged forms (Second-flush Darjeeling) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0183:category_name_en",
+      "reason": "Independently reviewed category title “The Geography of Flavour” → “Maitsete geograafia”. Flagged title-cased words (The Geography) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0183:clue_en",
+      "reason": "Independent bilingual field review: “Which Chinese province gives its name to a numbing pepper that is actually a citrus-family fruit husk?” → “Milline Hiina provints annab nime tuimestavale piprale, mis on tegelikult ruudiliste sugukonna taime viljakest?”. Flagged forms (Which Chinese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0184:category_name_en",
+      "reason": "Independently reviewed category title “The Geography of Flavour” → “Maitsete geograafia”. Flagged title-cased words (The Geography) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0184:clue_en",
+      "reason": "Independent bilingual field review: “Which Spanish region is known for saffron with protected designation of origin status?” → “Milline Hispaania piirkond on tuntud kaitstud päritolunimetusega safrani poolest?”. Flagged forms (Which Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0184:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “La Mancha” is correctly used as “La Mancha” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0185:category_name_en",
+      "reason": "Independently reviewed category title “The Geography of Flavour” → “Maitsete geograafia”. Flagged title-cased words (The Geography) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0185:explanation_en",
+      "reason": "Independent bilingual field review: “Kobe beef comes from Tajima cattle raised in Hyōgo Prefecture.” → “Kobe veiseliha pärineb Hyōgo prefektuuris kasvatatud Tajima veistest.”. Flagged forms (Hyōgo Prefecture) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0190:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Glis glis” is correctly used as “Glis glis” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0191:category_name_en",
+      "reason": "Independently reviewed category title “What a Chef Keeps Handy” → “Mida kokk käepärast hoiab”. Flagged title-cased words (Chef Keeps Handy) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0192:category_name_en",
+      "reason": "Independently reviewed category title “What a Chef Keeps Handy” → “Mida kokk käepärast hoiab”. Flagged title-cased words (Chef Keeps Handy) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0192:clue_en",
+      "reason": "Independent bilingual field review: “Which French-named conical fine-mesh sieve strains sauces and purées until smooth?” → “Milline prantsuse nimega kooniline peensõel kurnab kastmed ja püreed siledaks?”. Flagged forms (Which French-named) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0193:category_name_en",
+      "reason": "Independently reviewed category title “What a Chef Keeps Handy” → “Mida kokk käepärast hoiab”. Flagged title-cased words (Chef Keeps Handy) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0194:category_name_en",
+      "reason": "Independently reviewed category title “What a Chef Keeps Handy” → “Mida kokk käepärast hoiab”. Flagged title-cased words (Chef Keeps Handy) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0195:category_name_en",
+      "reason": "Independently reviewed category title “What a Chef Keeps Handy” → “Mida kokk käepärast hoiab”. Flagged title-cased words (Chef Keeps Handy) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0196:clue_en",
+      "reason": "Independent bilingual field review: “Which French chef wrote Le Guide Culinaire and helped codify modern professional French cookery?” → “Milline Prantsuse kokk kirjutas Le Guide Culinaire'i ja aitas süstematiseerida moodsat professionaalset Prantsuse kööki?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0196:explanation_en",
+      "reason": "Independent bilingual field review: “Escoffier's Le Guide Culinaire codified many classical French culinary methods.” → “Escoffier' Le Guide Culinaire süstematiseeris paljusid klassikalisi Prantsuse kokandusvõtteid.”. Flagged forms (Escoffier's Le Guide Culinaire) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0196:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Auguste Escoffier” is correctly used as “Auguste Escoffier” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0197:clue_en",
+      "reason": "Independent bilingual field review: “Which gas, whose chemical formula is N₂O, powers the siphon cartridges used for Ferran Adrià’s culinary foams?” → “Milline gaas keemilise valemiga N₂O täidab Ferran Adrià kulinaarsete vahtude valmistamisel kasutatud sifoonipadruneid?”. Flagged forms (Ferran Adrià’s) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0198:explanation_en",
+      "reason": "Independent bilingual field review: “Bacon-and-egg ice cream is one of Heston Blumenthal’s signature experimental dishes.” → “Peekoni-munajäätis on üks Heston Blumenthali tuntud eksperimentaalroogi.”. Flagged forms (Heston Blumenthal’s) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0199:clue_en",
+      "reason": "Independent bilingual field review: “Which Danish chef co-founded Noma and became associated with foraging and New Nordic cuisine?” → “Milline Taani kokk oli Kopenhaageni Noma kaasasutaja ning sai tuntuks Põhjamaade kohalikku toorainet ja korilust rõhutava köögiga?”. Flagged forms (Which Danish, New Nordic) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0199:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “René Redzepi” is correctly used as “René Redzepi” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0200:clue_en",
+      "reason": "Independent bilingual field review: “Which American presenter mixed food science with humour in the programme Good Eats?” → “Milline Ameerika saatejuht ühendas saates Good Eats toiduteaduse huumoriga?”. Flagged forms (Which American) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0200:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Alton Brown” is correctly used as “Alton Brown” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0201:category_name_en",
+      "reason": "Independently reviewed category title “Traditions Preserved in a Name” → “Nimes säilinud kombed”. Flagged title-cased words (Traditions Preserved) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0201:clue_en",
+      "reason": "Independent bilingual field review: “Which Austrian city's café culture traditionally lets guests linger over newspapers with a glass of water beside their coffee?” → “Millise Austria linna kohvikukultuur laseb külastajal traditsiooniliselt ajalehte lugedes pikalt istuda, kohvi kõrval veeklaas?”. Flagged forms (Which Austrian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0202:category_name_en",
+      "reason": "Independently reviewed category title “Traditions Preserved in a Name” → “Nimes säilinud kombed”. Flagged title-cased words (Traditions Preserved) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0203:category_name_en",
+      "reason": "Independently reviewed category title “Traditions Preserved in a Name” → “Nimes säilinud kombed”. Flagged title-cased words (Traditions Preserved) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0203:clue_en",
+      "reason": "Independent bilingual field review: “What is the Jewish blessing over a cup of wine that traditionally begins Friday-evening and Saturday-lunch Shabbat meals?” → “Mis nime kannab juudi õnnistus veinikarika kohal, millega traditsiooniliselt alustatakse šabati reedeõhtust ja laupäevast lõunasööki?”. Flagged forms (Saturday-lunch Shabbat) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0204:category_name_en",
+      "reason": "Independently reviewed category title “Traditions Preserved in a Name” → “Nimes säilinud kombed”. Flagged title-cased words (Traditions Preserved) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0204:clue_en",
+      "reason": "Independent bilingual field review: “Which Pacific root-based drink is important in ceremonial gatherings in Fiji and Tonga?” → “Milline Vaikse ookeani piirkonna juurest valmistatud jook on oluline Fidži ja Tonga tseremoniaalsetel koosviibimistel?”. Flagged forms (Which Pacific) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0205:category_name_en",
+      "reason": "Independently reviewed category title “Traditions Preserved in a Name” → “Nimes säilinud kombed”. Flagged title-cased words (Traditions Preserved) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0205:clue_en",
+      "reason": "Independent bilingual field review: “Which Ukrainian Christmas Eve ceremonial dish traditionally combines wheat berries, poppy seeds and honey?” → “Milline Ukraina jõululaupäeva rituaalroog ühendab traditsiooniliselt nisuteri, mooniseemneid ja mett?”. Flagged forms (Which Ukrainian Christmas Eve) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0206:category_name_en",
+      "reason": "Independently reviewed category title “Five Places in a Kitchen Brigade” → “Viis kohta köögibrigaadis”. Flagged title-cased words (Five Places, Kitchen Brigade) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0206:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Garde manger” is correctly used as “Garde manger” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0207:category_name_en",
+      "reason": "Independently reviewed category title “Five Places in a Kitchen Brigade” → “Viis kohta köögibrigaadis”. Flagged title-cased words (Five Places, Kitchen Brigade) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0208:category_name_en",
+      "reason": "Independently reviewed category title “Five Places in a Kitchen Brigade” → “Viis kohta köögibrigaadis”. Flagged title-cased words (Five Places, Kitchen Brigade) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0208:clue_en",
+      "reason": "Independent bilingual field review: “Which French-named kitchen station specialises in fish and seafood?” → “Mis prantsuskeelset nime kannab kala- ja mereanniroogadele spetsialiseerunud köögiamet?”. Flagged forms (Which French-named) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0209:category_name_en",
+      "reason": "Independently reviewed category title “Five Places in a Kitchen Brigade” → “Viis kohta köögibrigaadis”. Flagged title-cased words (Five Places, Kitchen Brigade) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0210:category_name_en",
+      "reason": "Independently reviewed category title “Five Places in a Kitchen Brigade” → “Viis kohta köögibrigaadis”. Flagged title-cased words (Five Places, Kitchen Brigade) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0210:clue_en",
+      "reason": "Independent bilingual field review: “Which French kitchen role moves between stations to cover the duties of absent colleagues?” → “Mis prantsuskeelset nime kannab köögiamet, mille täitja liigub tööjaamade vahel, et asendada puuduvaid kolleege?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0216:category_name_en",
+      "reason": "Independently reviewed category title “History with Every Bite” → “Ajalooga suutäied”. Flagged title-cased words (Every Bite) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0217:category_name_en",
+      "reason": "Independently reviewed category title “History with Every Bite” → “Ajalooga suutäied”. Flagged title-cased words (Every Bite) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0217:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Caesar Cardini” is correctly used as “Caesar Cardini” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0218:category_name_en",
+      "reason": "Independently reviewed category title “History with Every Bite” → “Ajalooga suutäied”. Flagged title-cased words (Every Bite) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0218:explanation_en",
+      "reason": "Independent bilingual field review: “The Hôtel Tatin was in Lamotte-Beuvron, south of Paris.” → “Hôtel Tatin asus Pariisist lõunas Lamotte-Beuvronis.”. Flagged forms (The Hôtel Tatin) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0219:category_name_en",
+      "reason": "Independently reviewed category title “History with Every Bite” → “Ajalooga suutäied”. Flagged title-cased words (Every Bite) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0219:clue_en",
+      "reason": "Independent bilingual field review: “Which Russian noble family lends its name to a beef dish with sour cream?” → “Milline Vene aadliperekond annab nime hapukoorega veiseliharoale?”. Flagged forms (Which Russian) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0219:explanation_en",
+      "reason": "Independent bilingual field review: “Beef Stroganoff's name is associated with the Stroganov family.” → “Veiseliharoa strooganovi nimi seostub Stroganovite perekonnaga.”. Flagged forms (Beef Stroganoff's) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0220:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Albert Edward; Edward the Seventh” is correctly used as “Albert Edward; Edward Seitsmes” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0220:category_name_en",
+      "reason": "Independently reviewed category title “History with Every Bite” → “Ajalooga suutäied”. Flagged title-cased words (Every Bite) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0220:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Edward VII” is correctly used as “Edward VII” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0221:category_name_en",
+      "reason": "Independently reviewed category title “The Science of Serving” → “Serveerimise teadus”. Flagged title-cased words (The Science) are translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0221:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Sous vide” is correctly used as “sous vide” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0222:category_name_en",
+      "reason": "Independently reviewed category title “The Science of Serving” → “Serveerimise teadus”. Flagged title-cased words (The Science) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0223:category_name_en",
+      "reason": "Independently reviewed category title “The Science of Serving” → “Serveerimise teadus”. Flagged title-cased words (The Science) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0224:category_name_en",
+      "reason": "Independently reviewed category title “The Science of Serving” → “Serveerimise teadus”. Flagged title-cased words (The Science) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0225:category_name_en",
+      "reason": "Independently reviewed category title “The Science of Serving” → “Serveerimise teadus”. Flagged title-cased words (The Science) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0226:category_name_en",
+      "reason": "Independently reviewed category title “Ways to Transform Texture” → “Tekstuuri muutmise viisid”. Flagged title-cased words (Transform Texture) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0226:clue_en",
+      "reason": "Independent bilingual field review: “Which French preservation method cooks food slowly in fat, as with duck legs?” → “Milline Prantsuse säilitusvõte küpsetab toitu aeglaselt rasvas, näiteks pardikoibi?”. Flagged forms (Which French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0227:category_name_en",
+      "reason": "Independently reviewed category title “Ways to Transform Texture” → “Tekstuuri muutmise viisid”. Flagged title-cased words (Transform Texture) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0227:clue_en",
+      "reason": "Independent bilingual field review: “Which Chinese preparation coats meat with starch and often egg white to keep it tender during stir-frying?” → “Mis ingliskeelset nime kannab Hiina kokandusvõte, mille puhul liha kaetakse tärklise ja sageli munavalgega, et see vokkides pehme püsiks?”. Flagged forms (Which Chinese) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0228:category_name_en",
+      "reason": "Independently reviewed category title “Ways to Transform Texture” → “Tekstuuri muutmise viisid”. Flagged title-cased words (Transform Texture) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0229:category_name_en",
+      "reason": "Independently reviewed category title “Ways to Transform Texture” → “Tekstuuri muutmise viisid”. Flagged title-cased words (Transform Texture) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0230:category_name_en",
+      "reason": "Independently reviewed category title “Ways to Transform Texture” → “Tekstuuri muutmise viisid”. Flagged title-cased words (Transform Texture) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0231:category_name_en",
+      "reason": "Independently reviewed category title “Serving Time around the World” → “Söögiaeg ümber maailma”. Flagged title-cased words (Serving Time) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0231:clue_en",
+      "reason": "Independent bilingual field review: “What Spanish tradition prolongs conversation at the table after the meal has ended?” → “Milline Hispaania traditsioon jätkab lauavestlust pärast eine lõppemist?”. Flagged forms (What Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0232:category_name_en",
+      "reason": "Independently reviewed category title “Serving Time around the World” → “Söögiaeg ümber maailma”. Flagged title-cased words (Serving Time) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0233:category_name_en",
+      "reason": "Independently reviewed category title “Serving Time around the World” → “Söögiaeg ümber maailma”. Flagged title-cased words (Serving Time) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0233:clue_en",
+      "reason": "Independent bilingual field review: “Which English meal word shares its origin with the French verb for taking soup?” → “Milline ingliskeelne söögikorranimetus jagab päritolu prantsuse tegusõnaga, mis tähendab supi söömist?”. Flagged forms (Which English) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0234:category_name_en",
+      "reason": "Independently reviewed category title “Serving Time around the World” → “Söögiaeg ümber maailma”. Flagged title-cased words (Serving Time) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0234:clue_en",
+      "reason": "Independent bilingual field review: “What Spanish term names a light meal or snack between the main meals, often in the afternoon?” → “Milline hispaania sõna nimetab kerget einet või suupistet põhisöökide vahel, sageli pärastlõunal?”. Flagged forms (What Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0235:category_name_en",
+      "reason": "Independently reviewed category title “Serving Time around the World” → “Söögiaeg ümber maailma”. Flagged title-cased words (Serving Time) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0235:clue_en",
+      "reason": "Independent bilingual field review: “What French term refers to the afternoon snack especially associated with children?” → “Milline prantsuse sõna tähistab eriti lastega seostuvat pärastlõunast suupistet?”. Flagged forms (What French) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0236:category_name_en",
+      "reason": "Independently reviewed category title “The Chef's Measure” → “Koka mõõdupuu”. Flagged title-cased words (The Chef's Measure) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0237:category_name_en",
+      "reason": "Independently reviewed category title “The Chef's Measure” → “Koka mõõdupuu”. Flagged title-cased words (The Chef's Measure) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0238:accepted_variants_en",
+      "reason": "Independent bilingual field review: “Degrees Brix; Brix scale” → “Brixi kraadid; Brixi skaala”. Flagged forms (Degrees Brix) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0238:category_name_en",
+      "reason": "Independently reviewed category title “The Chef's Measure” → “Koka mõõdupuu”. Flagged title-cased words (The Chef's Measure) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0238:explanation_en",
+      "reason": "Independent bilingual field review: “Degrees Brix indicate the mass percentage of sucrose in a sucrose solution.” → “Brixi kraadid väljendavad sahharoosi massiprotsenti sahharoosilahuses.”. Flagged forms (Degrees Brix) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0239:category_name_en",
+      "reason": "Independently reviewed category title “The Chef's Measure” → “Koka mõõdupuu”. Flagged title-cased words (The Chef's Measure) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0240:accepted_variants_en",
+      "reason": "Independent bilingual field review: “Proof; US proof” → “Proof; Proof-aste”. Flagged forms (US) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0240:category_name_en",
+      "reason": "Independently reviewed category title “The Chef's Measure” → “Koka mõõdupuu”. Flagged title-cased words (The Chef's Measure) are translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0240:clue_en",
+      "reason": "Independent bilingual field review: “Which traditional strength measure is twice the alcohol-by-volume percentage in the United States?” → “Milline traditsiooniline kanguse mõõt on Ameerika Ühendriikides alkoholimahuprotsendist kaks korda suurem?”. Flagged forms (United States) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0241:clue_en",
+      "reason": "Independent bilingual field review: “Which beer style's name reflects its historical association with exports to British India?” → “Millise õllestiili nimi viitab ajaloolisele seosele Briti Indiasse eksportimisega?”. Flagged forms (British India) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0241:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “India pale ale” is correctly used as “India pale ale” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0242:clue_en",
+      "reason": "Independent bilingual field review: “What Champagne-making step slowly turns and tilts bottles to move yeast sediment towards the neck?” → “Milline šampanja valmistamise etapp pöörab ja kallutab pudeleid aeglaselt, viies pärmisette kaela poole?”. Flagged forms (What Champagne-making) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0245:clue_en",
+      "reason": "Independent bilingual field review: “Which Greek wine retains a pine-resin flavour descended from the sealing of ancient amphorae?” → “Milline Kreeka vein säilitab männivaigumaitse, mis pärineb antiiksete amforate sulgemise tavast?”. Flagged forms (Which Greek) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0246:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “San Marzano” is correctly used as “San Marzano” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0247:clue_en",
+      "reason": "Independent bilingual field review: “Which Spanish region is especially known for protected paprika dried over oak smoke?” → “Milline Hispaania piirkond on eriti tuntud kaitstud paprikapulbri järgi, mida kuivatatakse tammesuitsus?”. Flagged forms (Which Spanish) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0247:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “La Vera” is correctly used as “La Vera” in Estonian."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0248:clue_en",
+      "reason": "Independent bilingual field review: “Which French-named salt is hand-harvested as a delicate crust from the surface of salt pans?” → “Milline prantsuse nimega sool korjatakse käsitsi õrna koorikuna soolabasseinide pinnalt?”. Flagged forms (Which French-named) use reviewed Estonian names, translated culinary terminology or sentence capitalization; the queried fact is preserved."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0248:response_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Fleur de sel” is correctly used as “fleur de sel” in Estonian."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-food-drink-all-level-expansion-0249:accepted_variants_en",
+      "reason": "Independent full bilingual review: the established culinary term or name “Reggio Emilia; Modena and Reggio Emilia” is correctly used as “Reggio Emilia; Modena ja Reggio Emilia” in Estonian."
+    }
+  ],
+  "artifactHashes": {
+    "authored": "165fa9a995ddbf2d4e833707fcc7c76161040e2ef9abffa2527584e99e14bfa8",
+    "generated": "6f8eaa3fd570aba990b55c9a669a867dd5142914fb2338170282e27472f41d5c",
+    "evidence": "96aad37055ca862ce40c1b048c254eace0601a7178c985f9d88bc8e467706c09"
+  }
+}

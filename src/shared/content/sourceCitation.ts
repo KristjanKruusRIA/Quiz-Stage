@@ -1,6 +1,12 @@
 import { z } from 'zod';
 import { sourceUrlSchema } from './sourceUrl';
 
+export const sourceInspirationSchema = z.strictObject({
+  system: z.literal('OpenTDB'),
+  candidateId: z.string().trim().min(1),
+  license: z.literal('CC-BY-SA-4.0'),
+});
+
 export const storedSourceV1Schema = z.strictObject({
   format: z.literal('quiz-stage-csv-v1'),
   title: z.string().trim().min(1),
@@ -14,6 +20,7 @@ export const storedSourceV2Schema = storedSourceV1Schema.extend({
   format: z.literal('quiz-stage-csv-v2'),
   sourceId: z.string().trim().min(1),
   factualVerifiedAt: z.string().datetime({ offset: true }),
+  inspiration: sourceInspirationSchema.optional(),
 });
 
 export const storedSourceSchema = z.discriminatedUnion('format', [storedSourceV1Schema, storedSourceV2Schema]);

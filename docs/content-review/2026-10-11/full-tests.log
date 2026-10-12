@@ -1,0 +1,191 @@
+
+> quiz-stage-desktop-game@0.1.0 test:run
+> vitest run --configLoader runner
+
+
+ RUN  v4.1.10 C:/Projects/QuizStage
+
+{
+  "sources": [
+    {
+      "url": "https://127.0.0.1/source",
+      "ok": false,
+      "status": null,
+      "retrievedAt": null,
+      "code": "SOURCE_PRIVATE_ADDRESS",
+      "finalUrl": null
+    }
+  ]
+}
+{
+  "sources": [
+    {
+      "url": "https://127.0.0.1/source",
+      "ok": false,
+      "status": null,
+      "retrievedAt": null,
+      "code": "SOURCE_PRIVATE_ADDRESS",
+      "finalUrl": null
+    }
+  ]
+}
+ ❯ |node| tests/unit/content/contentCliCompatibility.test.ts (9 tests | 1 failed) 23040ms
+     × source checker rejects report symlinks and non-file cache destinations before publication 5ms
+ ❯ |node| tests/integration/content/devSeedBuilder.test.ts (6 tests | 1 failed) 827ms
+     × rejects a dangling destination symlink without following or replacing it 3ms
+ ❯ |node| tests/unit/media/mediaService.test.ts (16 tests | 1 failed) 252ms
+     × rejects symlinks and hard links outside the owned directory 10ms
+ ❯ |node| tests/unit/content/evidence.test.ts (15 tests | 1 failed) 46ms
+     × rejects symlink evidence inputs 4ms
+ ❯ |node| tests/unit/release/checksums.test.ts (17 tests | 3 failed) 130ms
+     × rejects a symbolic-link artifact whose canonical path escapes the package root 5ms
+     × emits the declared artifact path for an in-root symbolic link 3ms
+     × rejects a symbolic-link checksum destination without changing its outside target 3ms
+ ❯ |node| tests/integration/security/offlineRenderer.test.ts (15 tests | 1 failed) 17ms
+     × canonicalizes a packaged-shaped renderer root and rejects junction escapes and broken links 6ms
+{"boardClues":1,"categorySets":0,"distinctCategoryNames":0,"finalClues":0,"easySets":0,"mediumSets":0,"hardSets":0,"builtInPacks":1}
+ ❯ |node| tests/unit/content/productionValidator.test.ts (89 tests | 1 failed) 35414ms
+     × atomically merges validation while preserving siblings and rejects symlink destinations 20ms
+ ❯ |node| tests/unit/content/verifyBatch.test.ts (31 tests | 1 failed) 36723ms
+     × rejects a symlinked work report without changing its external target 43ms
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+{"boardClues":11200,"categorySets":2240,"distinctCategoryNames":2240,"finalClues":174,"easySets":907,"mediumSets":667,"hardSets":666,"builtInPacks":15}
+Verified release seed:
+  mode: release
+  board: 11200
+  categorySets: 2240
+  finalClues: 174
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 10 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |node| tests/integration/content/devSeedBuilder.test.ts > development seed builder > rejects a dangling destination symlink without following or replacing it
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-seed-builder-QzqjYl\missing-target.sqlite' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-seed-builder-QzqjYl\dangling.sqlite'
+ ❯ tests/integration/content/devSeedBuilder.test.ts:103:5
+    101|     const directory = temporaryDirectory();
+    102|     const outputPath = join(directory, 'dangling.sqlite');
+    103|     symlinkSync(join(directory, 'missing-target.sqlite'), outputPath, …
+       |     ^
+    104|
+    105|     expect(() => buildDevelopmentSeed(fixturePath, outputPath)).toThro…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯
+
+ FAIL  |node| tests/integration/security/offlineRenderer.test.ts > offline renderer session policy > canonicalizes a packaged-shaped renderer root and rejects junction escapes and broken links
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-offline-policy-JIuBan\outside\missing.html' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-offline-policy-JIuBan\resources\app.asar\.vite\renderer\main_window\broken.html'
+ ❯ tests/integration/security/offlineRenderer.test.ts:47:7
+     45|       symlinkSync(outside, escape, process.platform === 'win32' ? 'jun…
+     46|       const broken = path.join(root, 'broken.html');
+     47|       symlinkSync(path.join(outside, 'missing.html'), broken, 'file');
+       |       ^
+     48|       const blocked = vi.fn();
+     49|       const policy = harness({ isPackaged: true, rendererRoot: root, o…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/10]⎯
+
+ FAIL  |node| tests/unit/content/contentCliCompatibility.test.ts > npm 11 content CLI compatibility > source checker rejects report symlinks and non-file cache destinations before publication
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-source-paths-dw2xz0\target.json' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-source-paths-dw2xz0\report-link.json'
+ ❯ tests/unit/content/contentCliCompatibility.test.ts:209:5
+    207|     writePrivateSourceInput(input);
+    208|     writeFileSync(target, prior);
+    209|     symlinkSync(target, reportLink, 'file');
+       |     ^
+    210|     mkdirSync(cacheDirectory);
+    211|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/10]⎯
+
+ FAIL  |node| tests/unit/content/evidence.test.ts > content evidence > rejects symlink evidence inputs
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\evidence-test-dtpI9h\target.jsonl' -> 'C:\Users\Codex\AppData\Local\Temp\evidence-test-dtpI9h\link.jsonl'
+ ❯ tests/unit/content/evidence.test.ts:172:5
+    170|     const link = resolve(directory, 'link.jsonl');
+    171|     await fs.writeFile(target, `${JSON.stringify(validEvidence)}\n`);
+    172|     await fs.symlink(target, link, 'file');
+       |     ^
+    173|
+    174|     await expect(readEvidenceInputs([link])).rejects.toThrow(/not a sa…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/10]⎯
+
+ FAIL  |node| tests/unit/content/productionValidator.test.ts > validator CLI boundaries and report publication > atomically merges validation while preserving siblings and rejects symlink destinations
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-production-validator-qORNxw\report.json' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-production-validator-qORNxw\linked.json'
+ ❯ tests/unit/content/productionValidator.test.ts:1415:5
+    1413|
+    1414|     const link = join(directory, 'linked.json');
+    1415|     symlinkSync(report, link, 'file');
+       |     ^
+    1416|     expect(() => publishValidationReport(link, { safe: false })).toThr…
+    1417|     expect(JSON.parse(readFileSync(report, 'utf8')).translation.retain…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/10]⎯
+
+ FAIL  |node| tests/unit/content/verifyBatch.test.ts > batch publication boundary > rejects a symlinked work report without changing its external target
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-batch-g0Q7xQ\outside-report.json' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-batch-g0Q7xQ\work\01-history\report.json'
+ ❯ tests/unit/content/verifyBatch.test.ts:361:5
+    359|     const outside = join(root, 'outside-report.json');
+    360|     writeFileSync(outside, 'outside bytes');
+    361|     symlinkSync(outside, reportPath, 'file');
+       |     ^
+    362|
+    363|     await expect(verifyBatch({
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/10]⎯
+
+ FAIL  |node| tests/unit/media/mediaService.test.ts > MediaService > rejects symlinks and hard links outside the owned directory
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-service-9zsjMs\external.wav' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-service-9zsjMs\overrides\opening.wav'
+ ❯ tests/unit/media/mediaService.test.ts:102:5
+    100|     const external = join(root, 'external.wav');
+    101|     writeFileSync(external, readFileSync(join(bundled, 'audio', 'openi…
+    102|     symlinkSync(external, join(overrides, 'opening.wav'));
+       |     ^
+    103|     linkSync(external, join(overrides, 'winner.wav'));
+    104|     const service = new MediaService({ bundledDirectory: bundled, over…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/10]⎯
+
+ FAIL  |node| tests/unit/release/checksums.test.ts > release checksums > rejects a symbolic-link artifact whose canonical path escapes the package root
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-P1Vwff\outside.exe' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-P1Vwff\out\make\installer\QuizStageSetup.exe'
+ ❯ tests/unit/release/checksums.test.ts:122:5
+    120|     createFile(outside, 'outside');
+    121|     mkdirSync(path.dirname(installer), { recursive: true });
+    122|     symlinkSync(outside, installer, 'file');
+       |     ^
+    123|     createFile(path.join(packageRoot, 'portable', 'QuizStage-win32-x64…
+    124|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/10]⎯
+
+ FAIL  |node| tests/unit/release/checksums.test.ts > release checksums > emits the declared artifact path for an in-root symbolic link
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-t1JZqd\out\make\storage\actual.zip' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-t1JZqd\out\make\portable\QuizStage-darwin-arm64.zip'
+ ❯ tests/unit/release/checksums.test.ts:137:5
+    135|     createFile(canonicalArtifact, 'portable');
+    136|     mkdirSync(path.dirname(declaredArtifact), { recursive: true });
+    137|     symlinkSync(canonicalArtifact, declaredArtifact, 'file');
+       |     ^
+    138|
+    139|     const destination = writeReleaseChecksums(releaseTargetForId('maco…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/10]⎯
+
+ FAIL  |node| tests/unit/release/checksums.test.ts > release checksums > rejects a symbolic-link checksum destination without changing its outside target
+Error: EPERM: operation not permitted, symlink 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-QvyM5w\outside-sentinel.txt' -> 'C:\Users\Codex\AppData\Local\Temp\quiz-stage-checksums-QvyM5w\out\make\release-checksums-windows-x64.txt'
+ ❯ tests/unit/release/checksums.test.ts:239:5
+    237|     const destination = path.join(packageRoot, 'release-checksums-wind…
+    238|     createFile(sentinel, 'sentinel\n');
+    239|     symlinkSync(sentinel, destination, 'file');
+       |     ^
+    240|
+    241|     let received: unknown;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/10]⎯
+
+
+ Test Files  8 failed | 128 passed (136)
+      Tests  10 failed | 1436 passed | 8 skipped (1454)
+   Start at  19:56:33
+   Duration  144.79s (transform 5.47s, setup 3.40s, import 20.54s, tests 341.92s, environment 21.63s)
+

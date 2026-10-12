@@ -67,17 +67,24 @@ function parseLocalized(value: string) {
 }
 
 function parseSource(value: string, overrideTitle?: string): EditorSource {
+  const parsed = parseStoredSource(value);
+  const inspiration = parsed?.format === 'quiz-stage-csv-v2' ? parsed.inspiration : undefined;
   if (overrideTitle !== undefined) {
     const override = parseStoredSource(overrideTitle);
-    if (override !== null) return {
-      title: override.title, url: override.url, license: override.license,
-      retrievedAt: override.retrievedAt, translationStatus: override.translationStatus,
-    };
+    if (override !== null) {
+      const overrideInspiration = override.format === 'quiz-stage-csv-v2'
+        ? override.inspiration ?? inspiration : inspiration;
+      return {
+        title: override.title, url: override.url, license: override.license,
+        retrievedAt: override.retrievedAt, translationStatus: override.translationStatus,
+        ...(overrideInspiration === undefined ? {} : { inspiration: overrideInspiration }),
+      };
+    }
   }
-  const parsed = parseStoredSource(value);
   if (parsed !== null) return {
     title: overrideTitle ?? parsed.title, url: parsed.url, license: parsed.license,
     retrievedAt: parsed.retrievedAt, translationStatus: parsed.translationStatus,
+    ...(inspiration === undefined ? {} : { inspiration }),
   };
   return { title: overrideTitle ?? value, url: null, license: null, retrievedAt: null, translationStatus: null };
 }

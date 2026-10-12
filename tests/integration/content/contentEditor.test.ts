@@ -49,6 +49,23 @@ describe('content editor service', () => {
     return { database, repository, editor: new ContentEditorService(database, repository, { now: () => 500 }) };
   }
 
+  it('retains bundled OpenTDB attribution when a host edits the factual citation', () => {
+    const { database, editor } = openEditor();
+    const original = editor.list().packs.find((pack) => pack.ownership === 'bundled')!.categorySets[0];
+    const inspiration = { system: 'OpenTDB', candidateId: 'opentdb:original', license: 'CC-BY-SA-4.0' };
+    database.prepare('UPDATE clues SET source = ? WHERE id = ?').run(JSON.stringify({
+      format: 'quiz-stage-csv-v2', ...BASE_SOURCE, sourceId: 'source:original',
+      factualVerifiedAt: '2026-08-13T12:00:00.000Z', inspiration,
+    }), original.clues[0].id);
+    const current = editor.list().packs.find((pack) => pack.id === original.packId)!.categorySets[0];
+    const edited = toWritableCategorySet(current);
+    edited.clues[0].source.title = 'Host-reviewed factual source';
+    editor.saveCategorySet({ expectedRevision: current.revision, categorySet: edited });
+    const updated = editor.list().packs.find((pack) => pack.id === original.packId)!.categorySets[0];
+    expect(updated.clues[0].source.title).toBe('Host-reviewed factual source');
+    expect(updated.clues[0].source.inspiration).toEqual(inspiration);
+  });
+
   function createCustomCategory(editor: ContentEditorService, name: string) {
     const pack = editor.createPack({ name });
     const category = editor.saveCategorySet({ expectedRevision: pack.revision, categorySet: toWritableCategorySet({

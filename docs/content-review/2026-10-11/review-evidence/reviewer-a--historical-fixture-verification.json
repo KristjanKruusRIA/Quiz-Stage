@@ -1,0 +1,113 @@
+{
+  "verificationId": "historical-content-fixtures-after-reviewed-repairs",
+  "verifiedAt": "2026-10-11",
+  "status": "passed-with-existing-environment-failures",
+  "changes": [
+    "Resolve absolute and relative fixture paths against the repository working directory before matching repair artifacts.",
+    "Restore exact original reviewed records in one pass and retain both current and original SHA-256 checks.",
+    "Historical expansion, retained-clue and accessibility tests read the original reviewed content through the test-only helper.",
+    "The Easy expansion translation-review helper counts only its two eligible translation codes; other validation errors remain blocking.",
+    "A real release-validation regression proves all five obsolete historical source-licence labels remain nonwaivable and their full blocking validation survives report publication."
+  ],
+  "checks": {
+    "focusedHistoricalTests": {
+      "passed": 176,
+      "failed": 0,
+      "groups": {
+        "expansionAndCorpus": 148,
+        "accessibilityAndAuthority": 21,
+        "translationReleaseExceptions": 7
+      }
+    },
+    "fullSuite": {
+      "log": "content/work/2026-10-content-repairs/final-full-tests.log",
+      "nodeOptions": "--max-old-space-size=8192",
+      "files": 136,
+      "passedFiles": 128,
+      "failedFiles": 8,
+      "tests": 1454,
+      "passed": 1436,
+      "failed": 10,
+      "skipped": 8,
+      "durationSeconds": 144.79,
+      "unexpectedFailures": 0,
+      "note": "Every failure is an existing Windows EPERM error while creating a symlink before the security assertion."
+    },
+    "finalReportPersistenceAssertion": {
+      "log": "content/work/2026-10-content-repairs/historical-license-persistence-test.log",
+      "passed": 1,
+      "failed": 0,
+      "excludedByNameFilter": 6,
+      "durationSeconds": 72.65,
+      "timing": "The full suite started before this final test-only assertion was saved. This named focused run started after the assertion was saved. The full suite was not repeated, as directed by the parent."
+    },
+    "typecheckAfterFinalTestEdit": "passed",
+    "lintAfterFinalTestEdit": "passed"
+  },
+  "expectedPermissionFailures": [
+    {
+      "file": "tests/integration/content/devSeedBuilder.test.ts",
+      "test": "rejects a dangling destination symlink without following or replacing it"
+    },
+    {
+      "file": "tests/integration/security/offlineRenderer.test.ts",
+      "test": "canonicalizes a packaged-shaped renderer root and rejects junction escapes and broken links"
+    },
+    {
+      "file": "tests/unit/content/contentCliCompatibility.test.ts",
+      "test": "source checker rejects report symlinks and non-file cache destinations before publication"
+    },
+    {
+      "file": "tests/unit/content/evidence.test.ts",
+      "test": "rejects symlink evidence inputs"
+    },
+    {
+      "file": "tests/unit/content/productionValidator.test.ts",
+      "test": "atomically merges validation while preserving siblings and rejects symlink destinations"
+    },
+    {
+      "file": "tests/unit/content/verifyBatch.test.ts",
+      "test": "rejects a symlinked work report without changing its external target"
+    },
+    {
+      "file": "tests/unit/media/mediaService.test.ts",
+      "test": "rejects symlinks and hard links outside the owned directory"
+    },
+    {
+      "file": "tests/unit/release/checksums.test.ts",
+      "test": "rejects a symbolic-link artifact whose canonical path escapes the package root"
+    },
+    {
+      "file": "tests/unit/release/checksums.test.ts",
+      "test": "emits the declared artifact path for an in-root symbolic link"
+    },
+    {
+      "file": "tests/unit/release/checksums.test.ts",
+      "test": "rejects a symbolic-link checksum destination without changing its outside target"
+    }
+  ],
+  "independentApproval": {
+    "artifact": "content/work/2026-10-content-repairs/reviewer-b/easy-expansion-helper-code-review.json",
+    "sha256": "e3a6c45405652c21ece5f47f071cfbfba9c7f4932a18f4bc14ca2e6a411a0701",
+    "decision": "approved",
+    "findings": [],
+    "files": [
+      {
+        "path": "scripts/content/easyExpansion/reviewTranslationExceptions.ts",
+        "sha256": "816dfea64352a9de11d093527bf42173fe74dc4d216d6aed8a317bd509d0e8ce"
+      },
+      {
+        "path": "tests/unit/content/easyExpansionReleaseExceptions.test.ts",
+        "sha256": "728181e8ef3d6ee3d888d2a676330aed1ca005c8d28900d071799781a9af27b6"
+      },
+      {
+        "path": "tests/unit/content/preRepairContent.ts",
+        "sha256": "baa1148187fdead78c547c4779a62a77936907d6f2b78867230780508b149cd5"
+      },
+      {
+        "path": "tests/unit/content/preRepairContent.test.ts",
+        "sha256": "8af24a28b5b75aa05ec2bfbc1ef1384422642c346bb6b610913c7731a1730439"
+      }
+    ]
+  }
+}

@@ -96,6 +96,11 @@ function expectLicensedMedia(files: string[]): void {
   const mediaDirectory = path.dirname(manifestPath);
   const manifest = mediaManifestSchema.parse(JSON.parse(readFileSync(manifestPath, 'utf8')));
   expect(files).toContain(path.join(mediaDirectory, 'THIRD_PARTY_NOTICES.md'));
+  for (const notice of ['THIRD_PARTY_NOTICES.md', 'LICENSE-CC-BY-SA-4.0.txt']) {
+    const packagedNotice = path.join(path.dirname(mediaDirectory), notice);
+    expect(files).toContain(packagedNotice);
+    expect(readFileSync(packagedNotice)).toEqual(readFileSync(path.join(process.cwd(), 'content', notice)));
+  }
   for (const key of AUDIO_ASSET_KEYS) {
     const entry = manifest.assets[key];
     const digest = createHash('sha256').update(readFileSync(path.join(mediaDirectory, entry.file))).digest('hex');

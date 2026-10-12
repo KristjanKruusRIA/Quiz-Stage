@@ -9,6 +9,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { openDatabase, type DatabaseConnection } from '../../../src/main/persistence/database';
 import { ContentRepository } from '../../../src/main/content/contentRepository';
 import { ContentService } from '../../../src/main/content/contentService';
+import { ContentEditorService } from '../../../src/main/content/contentEditorService';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 import { parseStoredSource } from '../../../src/shared/content/sourceCitation';
 import { buildProductionSeed, reportArtifactPath } from '../../../scripts/content/buildSeed';
@@ -125,7 +126,7 @@ function boardRows(batch: ProductionBatchDefinition, batchIndex: number): CsvRow
     for (const round of ['round-one', 'round-two'] as const) {
       const count = batch.distribution![difficulty][round === 'round-one' ? 'roundOne' : 'roundTwo'];
       for (let offset = 0; offset < count; offset += 1) {
-        const globalSetIndex = batchIndex * 120 + localSetIndex;
+        const globalSetIndex = batchIndex * 170 + localSetIndex;
         for (let tier = 1; tier <= 5; tier += 1) {
           const unique = alphabeticId(globalSetIndex * 5 + tier);
           rows.push({
@@ -436,28 +437,28 @@ describe('evidence-bound production seed infrastructure', () => {
     expect(second.seedSha256).toBe(first.seedSha256);
     expect(readFileSync(secondOutput)).toEqual(readFileSync(firstOutput));
     expect(first.input.sha256).toBe(second.input.sha256);
-    expect(first.input.evidence).toMatchObject({ records: 8374, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
+    expect(first.input.evidence).toMatchObject({ records: 11374, sha256: expect.stringMatching(/^[a-f0-9]{64}$/) });
     const firstReportData = JSON.parse(readFileSync(firstReport, 'utf8'));
     expect(firstReportData.validation).toMatchObject({
       mode: 'release', blocking: false,
     });
     expect(firstReportData.validation.summary).toEqual({
-      boardClues: 8_200,
-      categorySets: 1_640,
-      distinctCategoryNames: 1_640,
+      boardClues: 11_200,
+      categorySets: 2_240,
+      distinctCategoryNames: 2_240,
       finalClues: 174,
-      easySets: 707,
-      mediumSets: 467,
-      hardSets: 466,
+      easySets: 907,
+      mediumSets: 667,
+      hardSets: 666,
       builtInPacks: 15,
     });
     expect(firstReportData.validation).not.toHaveProperty('validation');
     expect(readReleaseInventoryReport(firstReport).validation.summary).toEqual(firstReportData.validation.summary);
     const aboveThreshold = structuredClone(firstReportData);
-    aboveThreshold.validation.summary.boardClues = 8_201;
+    aboveThreshold.validation.summary.boardClues = 11_201;
     writeFileSync(firstReport, `${JSON.stringify(aboveThreshold, null, 2)}\n`);
     expect(() => readReleaseInventoryReport(firstReport)).toThrow(
-      'Release inventory report does not match exact inventory for boardClues: 8201 != 8200',
+      'Release inventory report does not match exact inventory for boardClues: 11201 != 11200',
     );
     writeFileSync(firstReport, `${JSON.stringify(firstReportData, null, 2)}\n`);
 
@@ -473,10 +474,21 @@ describe('evidence-bound production seed infrastructure', () => {
       translationStatus: 'reviewed',
       sourceId: fixture.sample.supportingSource.sourceId,
       factualVerifiedAt: fixture.sample.factualReview.reviewedAt,
+      inspiration: fixture.sample.inspiration,
     });
     expect(database.prepare(
+      "SELECT COUNT(*) FROM clues WHERE json_extract(source, '$.inspiration.system') = 'OpenTDB'",
+    ).pluck().get()).toBe(1200);
+    const credits = new ContentEditorService(database, new ContentRepository(database)).list();
+    const creditedClues = credits.packs.flatMap((pack) => [
+      ...pack.categorySets.flatMap((set) => set.clues), ...pack.finalClues.map((final) => final.clue),
+    ]);
+    expect(creditedClues.filter((clue) => clue.source.inspiration !== undefined)).toHaveLength(1200);
+    expect(creditedClues.find((clue) => clue.id === fixture.sample.clueId)?.source.inspiration)
+      .toEqual(fixture.sample.inspiration);
+    expect(database.prepare(
       "SELECT COUNT(*) FROM clues WHERE json_extract(source, '$.format') = 'quiz-stage-csv-v2'",
-    ).pluck().get()).toBe(8374);
+    ).pluck().get()).toBe(11374);
     expect(database.prepare(
       "SELECT COUNT(*) FROM content_packs WHERE id LIKE 'built-in-%'",
     ).pluck().get()).toBe(15);
@@ -492,13 +504,13 @@ describe('evidence-bound production seed infrastructure', () => {
     database.close();
     connections.splice(connections.indexOf(database), 1);
     expect(inspectSeed(firstOutput, fixture.evidenceByClueId).inventory).toEqual({
-      boardClues: 8_200,
-      categorySets: 1_640,
-      distinctCategoryNames: 1_640,
+      boardClues: 11_200,
+      categorySets: 2_240,
+      distinctCategoryNames: 2_240,
       finalClues: 174,
-      easySets: 707,
-      mediumSets: 467,
-      hardSets: 466,
+      easySets: 907,
+      mediumSets: 667,
+      hardSets: 666,
       builtInPacks: 15,
     });
 
@@ -526,6 +538,12 @@ describe('evidence-bound production seed infrastructure', () => {
 
     const tampered = openDatabase({ filePath: firstOutput });
     connections.push(tampered);
+    const originalSource = tampered.prepare('SELECT source FROM clues WHERE id = ?').pluck().get(fixture.sample.clueId) as string;
+    const missingInspiration = JSON.parse(originalSource);
+    delete missingInspiration.inspiration;
+    tampered.prepare('UPDATE clues SET source = ? WHERE id = ?').run(JSON.stringify(missingInspiration), fixture.sample.clueId);
+    expect(() => inspectSeed(firstOutput, fixture.evidenceByClueId)).toThrow(/v2 evidence citation/i);
+    tampered.prepare('UPDATE clues SET source = ? WHERE id = ?').run(originalSource, fixture.sample.clueId);
     tampered.prepare('UPDATE clues SET source = ? WHERE id = ?').run(JSON.stringify({
       format: 'quiz-stage-csv-v1',
       title: fixture.sample.supportingSource.title,
@@ -562,7 +580,7 @@ describe('evidence-bound production seed infrastructure', () => {
 
     await expect(buildProductionSeed({
       inputs: fixture.inputs, evidence: fixture.evidence, output, report,
-    })).resolves.toMatchObject({ boardClues: 8_200, categorySets: 1_640, finalClues: 174 });
+    })).resolves.toMatchObject({ boardClues: 11_200, categorySets: 2_240, finalClues: 174 });
     expect(JSON.parse(readFileSync(report, 'utf8')).translation.exceptions).toHaveLength(1);
   }, 120_000);
 

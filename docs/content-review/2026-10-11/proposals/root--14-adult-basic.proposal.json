@@ -1,0 +1,498 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-adult-clue-0007",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "This recurring process sheds the lining of the uterus.",
+        "clue_et": "Selle korduva protsessi käigus irdub emaka limaskest."
+      },
+      "reviewNotes": "Remove the sibling pregnancy answer."
+    },
+    {
+      "clueId": "built-in-adult-clue-0010",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Doctors identify this midlife transition after twelve consecutive months without a monthly period.",
+        "clue_et": "Arstid määratlevad selle keskeas toimuva ülemineku pärast kahtteist järjestikust kuud ilma igakuise veritsuseta.",
+        "explanation_en": "Menopause is diagnosed retrospectively after twelve months without a period, when there is no other cause.",
+        "explanation_et": "Menopaus määratletakse tagantjärele pärast kahtteist kuud ilma igakuise veritsuseta, kui sellel pole muud põhjust."
+      },
+      "reviewNotes": "Avoid the sibling menstruation answer in public text."
+    },
+    {
+      "clueId": "built-in-adult-clue-0016",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "This familiar female gamete contains half the usual chromosome set.",
+        "clue_et": "See tuttav emassugurakk sisaldab poolt tavalisest kromosoomistikust."
+      },
+      "reviewNotes": "Remove the sibling male gamete from the question."
+    },
+    {
+      "clueId": "built-in-adult-clue-0017",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Australian mammal has a bill like a duck, webbed feet and a broad flat tail?",
+        "clue_et": "Millisel Austraalia imetajal on pardinokalaadne koon, ujulestadega jalad ja lai lame saba?",
+        "response_en": "Platypus",
+        "response_et": "Nokkloom",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "The platypus is an Australian mammal with a duck-like bill, webbed feet and a broad flat tail.",
+        "explanation_et": "Nokkloom on Austraalia imetaja, kellel on pardinokalaadne koon, ujulestadega jalad ja lai lame saba.",
+        "source_title": "Platypus — Australian Museum",
+        "source_url": "https://australian.museum/learn/animals/mammals/platypus/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "platypus",
+      "reviewNotes": "Replace the complementary two-answer gamete pool with an independently knowable animal; avoid the sibling Egg in all public fields."
+    },
+    {
+      "clueId": "built-in-adult-clue-0077",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "Marriage Story stars Scarlett Johansson and Adam Driver as a couple whose relationship ends.",
+        "explanation_et": "„Marriage Story“ peaosades mängivad Scarlett Johansson ja Adam Driver paari, kelle suhe lõpeb."
+      },
+      "reviewNotes": "Avoid the sibling legal-process answer."
+    },
+    {
+      "clueId": "built-in-adult-clue-0078",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Dustin Hoffman and Meryl Streep starred in this 1979 drama that won the Best Picture Oscar.",
+        "clue_et": "Dustin Hoffman ja Meryl Streep mängisid peaosi selles 1979. aasta draamas, mis võitis parima filmi Oscari.",
+        "explanation_en": "Kramer vs. Kramer won the Best Picture Oscar and depicts parents disputing custody of their son.",
+        "explanation_et": "„Kramer Krameri vastu“ võitis parima filmi Oscari ning kujutab vanemate vaidlust poja hooldusõiguse üle."
+      },
+      "reviewNotes": "Remove the sibling answer from the question and explanation."
+    },
+    {
+      "clueId": "built-in-adult-clue-0095",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What term names a letter ending a romance, historically often sent to a serviceman stationed far from home?",
+        "clue_et": "Kuidas nimetatakse romantilist suhet lõpetavat kirja, mida ajalooliselt saadeti sageli kodust kaugel teenivale sõdurile?"
+      },
+      "reviewNotes": "Remove the inaccurate two-name word-count qualifier."
+    },
+    {
+      "clueId": "built-in-adult-clue-0111",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "A police raid on this Greenwich Village bar in June 1969 sparked an uprising associated with LGBTQ rights.",
+        "clue_et": "Selle Greenwich Village’i baari politseireid 1969. aasta juunis vallandas LGBTQ õigustega seostatud vastuhaku.",
+        "response_en": "Stonewall Inn",
+        "response_et": "Stonewall Inn",
+        "accepted_variants_en": "Stonewall",
+        "accepted_variants_et": "Stonewall",
+        "explanation_en": "The Stonewall Inn was the site of the June 1969 raid that provoked several nights of resistance.",
+        "explanation_et": "Stonewall Innis toimus 1969. aasta juunis politseireid, mis vallandas mitu ööd kestnud vastupanu.",
+        "source_title": "History & Culture — Stonewall National Monument, National Park Service",
+        "source_url": "https://www.nps.gov/ston/learn/historyculture.htm",
+        "source_license": "Public domain (US federal government text; third-party material excluded)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "stonewall-inn",
+      "reviewNotes": "Replace the fully disclosed event name with an independent historical landmark."
+    },
+    {
+      "clueId": "built-in-adult-clue-0122",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What public march celebrates LGBTQ visibility, rights and community?",
+        "clue_et": "Milline avalik rongkäik tähistab LGBTQ nähtavust, õigusi ja kogukonda?"
+      },
+      "reviewNotes": "Remove the sibling flag name."
+    },
+    {
+      "clueId": "built-in-adult-clue-0127",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which comedian appeared on the April 14, 1997 TIME cover under the headline “Yep, I’m gay”?",
+        "clue_et": "Milline koomik ilmus ajakirja TIME 14. aprilli 1997 kaanele pealkirja „Yep, I’m gay“ all?",
+        "explanation_en": "Ellen DeGeneres appeared on that TIME cover. The headline belonged to the magazine, rather than being a quotation from her sitcom character.",
+        "explanation_et": "Ellen DeGeneres ilmus sellele TIME’i kaanele. See oli ajakirja pealkiri, mitte tema komöödiategelase öeldud tsitaat.",
+        "source_title": "Read the Yep, I’m Gay Ellen DeGeneres Interview From 1997 — TIME",
+        "source_url": "https://time.com/4728994/ellen-degeneres-1997-coming-out-cover/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Verified directly against TIME’s retrospective of its own cover."
+    },
+    {
+      "clueId": "built-in-adult-clue-0141",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What term describes allowing same-sex couples to marry on the same terms as other couples?",
+        "clue_et": "Milline mõiste tähendab samasooliste paaride abiellumist teistega samadel tingimustel?"
+      },
+      "reviewNotes": "Remove the invalid locale-dependent word count."
+    },
+    {
+      "clueId": "built-in-adult-clue-0198",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What social event begins after the main concert, awards ceremony or wedding reception has ended?",
+        "clue_et": "Milline koosviibimine algab pärast põhikontserdi, auhinnagala või pulmapeo lõppu?",
+        "explanation_et": "Järelpidu on koosviibimine pärast põhüritust, näiteks kontserti, auhinnagalat või pulmapidu."
+      },
+      "reviewNotes": "Remove the English spelling hint from both locales and correct the explanation typo."
+    },
+    {
+      "clueId": "built-in-adult-clue-0209",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which British organization assigns the U, 12A and 18 film classifications?",
+        "clue_et": "Milline Briti organisatsioon määrab filmidele märgiseid U, 12A ja 18?",
+        "explanation_en": "The British Board of Film Classification assigns age classifications to UK cinema and video releases.",
+        "explanation_et": "Briti filmide klassifikatsiooninõukogu määrab Ühendkuningriigis kino- ja videoteoste vanusemärgiseid."
+      },
+      "reviewNotes": "Remove the sibling PG from all public fields."
+    },
+    {
+      "clueId": "built-in-adult-clue-0235",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "In US movie advertising, what kind of trailer opens with a red approval card and is restricted to placement before R or NC-17 features?",
+        "clue_et": "Milline USA filmitreiler algab punase heakskiidukaardiga ning mida tohib näidata ainult R- või NC-17-reitinguga filmi eel?",
+        "explanation_en": "A red-band trailer is approved for restricted audiences; MPA advertising rules allow it before R or NC-17 features.",
+        "explanation_et": "Punase märgiga treiler on heaks kiidetud piiratud vaatajaskonnale; MPA reklaamireeglite järgi tohib seda näidata R- või NC-17-reitinguga filmi eel.",
+        "source_title": "Resources & FAQ — MPA Film Ratings",
+        "source_url": "https://www.filmratings.com/resources-faq/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Use the primary advertising authority’s actual placement distinction."
+    },
+    {
+      "clueId": "built-in-adult-clue-0265",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which handsome youth in Greek mythology was fatally wounded by a boar and gave English a word for a very attractive man?",
+        "clue_et": "Millist kaunist Kreeka mütoloogia noormeest haavas surmavalt metssiga ning kelle nimest tuli inglise keelde sõna eriti nägusa mehe kohta?",
+        "explanation_en": "Adonis was a beautiful mortal youth killed by a boar in Greek myth. In English, an adonis can mean a very handsome young man.",
+        "explanation_et": "Adonis oli Kreeka mütoloogias kaunis surelik noormees, kelle tappis metssiga. Inglise keeles võib adonis tähendada väga nägusat noormeest."
+      },
+      "reviewNotes": "Remove the sibling goddess from all public fields."
+    },
+    {
+      "clueId": "built-in-adult-clue-0274",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Henri Matisse and André Derain used intense non-natural colors in this early twentieth-century movement.",
+        "clue_et": "Henri Matisse ja André Derain kasutasid selles kahekümnenda sajandi alguse kunstivoolus erksaid ebaloomulikke värve."
+      },
+      "reviewNotes": "Correct the historical-period translation."
+    },
+    {
+      "clueId": "built-in-adult-clue-0252",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which armless ancient Greek statue, discovered on Milos in 1820, is displayed in the Louvre?",
+        "clue_et": "Millist käteta Vana-Kreeka kuju, mis avastati 1820. aastal Miloselt, eksponeeritakse Louvre’is?"
+      },
+      "reviewNotes": "Milos distinguishes this statue from the Winged Victory."
+    },
+    {
+      "clueId": "built-in-adult-clue-0370",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Three synchronized projectors created this deeply curved cinema presentation introduced in 1952.",
+        "clue_et": "Kolm sünkroonitud projektorit lõid selle sügavalt kumera kinoesituse, mis võeti kasutusele 1952. aastal.",
+        "explanation_en": "Cinerama used three synchronized projectors and a deeply curved screen.",
+        "explanation_et": "Cinerama kasutas kolme sünkroonitud projektorit ja sügavalt kumerat ekraani."
+      },
+      "reviewNotes": "Remove the sibling screen-format answer from prompt and explanation."
+    },
+    {
+      "clueId": "built-in-adult-clue-0381",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "A film director guides the actors and the artistic interpretation of the screenplay.",
+        "explanation_et": "Režissöör juhib näitlejaid ja stsenaariumi loomingulist tõlgendust."
+      },
+      "reviewNotes": "Remove the sibling producer answer."
+    },
+    {
+      "clueId": "built-in-adult-clue-0397",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "A satellite dish reflects incoming signals toward a receiver at its focal point.",
+        "explanation_et": "Satelliiditaldrik peegeldab saabuvaid signaale oma fookuspunktis asuva vastuvõtja poole."
+      },
+      "reviewNotes": "Remove the sibling generic receiver name."
+    },
+    {
+      "clueId": "built-in-adult-clue-0409",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which multinational lottery launched in 2004 with France, Spain and the United Kingdom as its initial participating countries?",
+        "clue_et": "Milline mitut riiki hõlmav loterii alustas 2004. aastal Prantsusmaa, Hispaania ja Ühendkuningriigi osalusel?",
+        "source_title": "History — FDJ UNITED",
+        "source_url": "https://www.fdjunited.com/history/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "The operator’s history confirms the launch year and founding countries, distinguishing EuroMillions from Eurojackpot."
+    },
+    {
+      "clueId": "built-in-adult-clue-0418",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What is the highest possible same-suit poker sequence, running from ten through the highest rank?",
+        "clue_et": "Milline on pokkeri kõrgeim sama masti kaardirida, mis ulatub kümnest kõrgeima kaardini?",
+        "explanation_en": "A royal flush is the highest-ranking five-card sequence of a single suit in standard poker.",
+        "explanation_et": "Kuninglik mastirida on tavalises pokkeris kõrgeim viiest sama masti kaardist koosnev rida."
+      },
+      "reviewNotes": "Remove the sibling card name."
+    },
+    {
+      "clueId": "built-in-adult-clue-0434",
+      "batchId": "14-adult",
+      "changes": {
+        "response_et": "Hilisööklubi",
+        "accepted_variants_et": "Pärast sulgemisaega tegutsev klubi",
+        "explanation_en": "An after-hours club remains open for entertainment later than ordinary bars, subject to local rules.",
+        "explanation_et": "Hilisööklubi jääb meelelahutuseks avatuks kauem kui tavapärased baarid, järgides kohalikke reegleid."
+      },
+      "reviewNotes": "Avoid both curfew and closing-time sibling names."
+    },
+    {
+      "clueId": "built-in-adult-clue-0447",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What is the common English name for illegally distilled liquor associated with US Prohibition?",
+        "clue_et": "Milline on USA keeluajaga seostatud ebaseaduslikult destilleeritud alkoholi tavapärane nimetus eesti keeles?"
+      },
+      "reviewNotes": "Ask each locale for its stored ordinary term without an English-only etymology hint."
+    },
+    {
+      "clueId": "built-in-adult-clue-0492",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What broad life period is conventionally associated with approximately the ages of 40 to 60?",
+        "clue_et": "Millist laia eluetappi seostatakse tavaliselt ligikaudu 40.–60. eluaastaga?"
+      },
+      "reviewNotes": "Avoid naming the sibling stage."
+    },
+    {
+      "clueId": "built-in-adult-clue-0075",
+      "batchId": "14-adult",
+      "changes": {
+        "source_license": "CC-BY-SA-4.0"
+      },
+      "reviewNotes": "Replace the meaningless source licence marker with Wikipedia’s actual text licence."
+    },
+    {
+      "clueId": "built-in-adult-clue-0136",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "In LGBTQ culture, pride promotes dignity, rights, self-affirmation and visibility.",
+        "explanation_et": "LGBTQ-kultuuris rõhutab uhkus väärikust, õigusi, eneseväärtustamist ja nähtavust."
+      },
+      "reviewNotes": "Remove the newly detected sibling identity term from the public explanation."
+    },
+    {
+      "clueId": "built-in-adult-clue-0373",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "Blu-ray stores high-definition video on optical discs read with a blue-violet laser.",
+        "explanation_et": "Blu-ray salvestab kõrglahutusega videot optilistele plaatidele, mida loetakse sinakasvioletse laseriga."
+      },
+      "reviewNotes": "Remove the sibling DVD from the public explanation."
+    },
+    {
+      "clueId": "built-in-adult-clue-0401",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "A slot machine is a game of chance with spinning reels that display symbols used to determine a payout.",
+        "explanation_et": "Mänguautomaat on õnnemäng, mille pöörlevatel rullidel olevad sümbolid määravad väljamakse."
+      },
+      "reviewNotes": "Remove the sibling Poker from the list of regional machine names."
+    },
+    {
+      "clueId": "built-in-adult-clue-0491",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "Young adulthood follows adolescence and is often associated with greater independence, work and new relationships.",
+        "explanation_et": "Noor täiskasvanuiga järgneb noorukieale ning sellega seostuvad sageli suurem iseseisvus, töö ja uued suhted."
+      },
+      "reviewNotes": "Do not disclose the newly introduced psychologist answer at tier4."
+    },
+    {
+      "clueId": "built-in-adult-clue-0492",
+      "batchId": "14-adult",
+      "changes": {
+        "explanation_en": "Middle age is a broad life period with varying definitions, often associated with approximately the ages of 40 to 60.",
+        "explanation_et": "Keskealisus on erinevalt määratletav eluetapp, mida seostatakse sageli ligikaudu 40.–60. eluaastaga."
+      },
+      "reviewNotes": "Remove the sibling stage from the public explanation as well as the question."
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-adult-set-023",
+      "batchId": "14-adult",
+      "changes": {
+        "category_name_en": "Pride Events and Milestones",
+        "category_name_et": "Pride’i üritused ja verstapostid"
+      },
+      "reviewNotes": "Broaden the category beyond assembling city-plus-Pride names."
+    },
+    {
+      "categoryId": "built-in-adult-set-031",
+      "batchId": "14-adult",
+      "changes": {
+        "category_name_en": "Performers and Nightclub Stages",
+        "category_name_et": "Esinejad ja ööklubide lavad"
+      },
+      "reviewNotes": "Remove the Cabaret answer from the visible title."
+    },
+    {
+      "categoryId": "built-in-adult-set-004",
+      "batchId": "14-adult",
+      "changes": {
+        "category_name_en": "Living Things and Life Cycles",
+        "category_name_et": "Elusolendid ja elutsüklid"
+      },
+      "reviewNotes": "Independent reviewer C found physical-only Platypus unsuitable under the narrow reproduction title; broader title covers all five subjects."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "ROOT-ADULT-001",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The two disclosure-bearing prompts and the public explanation no longer supply sibling answers."
+    },
+    {
+      "findingId": "ROOT-ADULT-002",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "One gamete clue is retained and the other is replaced by an independent animal fact."
+    },
+    {
+      "findingId": "ROOT-ADULT-003",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "Film clues identify casts and awards without giving the legal-process answer."
+    },
+    {
+      "findingId": "ROOT-ADULT-004",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The question accurately asks for a type of letter."
+    },
+    {
+      "findingId": "ROOT-ADULT-005",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The disclosed Brighton answer is replaced and the theme now includes a distinct historical milestone."
+    },
+    {
+      "findingId": "ROOT-ADULT-006",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The parade prompt does not name the sibling symbol."
+    },
+    {
+      "findingId": "ROOT-ADULT-007",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The question now identifies the magazine cover rather than misquoting the sitcom character."
+    },
+    {
+      "findingId": "ROOT-ADULT-008",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "No word-count constraint remains."
+    },
+    {
+      "findingId": "ROOT-ADULT-009",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "Both locales ask the event rather than its orthography."
+    },
+    {
+      "findingId": "ROOT-ADULT-010",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The British body clue no longer supplies the US rating answer."
+    },
+    {
+      "findingId": "ROOT-ADULT-011",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The clue distinguishes the trailer’s approval and placement rather than the advertised film alone."
+    },
+    {
+      "findingId": "ROOT-ADULT-012",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The youth is identified without naming the sibling goddess."
+    },
+    {
+      "findingId": "ROOT-ADULT-013",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "Both languages use the early twentieth century."
+    },
+    {
+      "findingId": "ROOT-ADULT-014",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The discovery island distinguishes the intended work."
+    },
+    {
+      "findingId": "ROOT-ADULT-017",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "Cinerama is described without the sibling widescreen term."
+    },
+    {
+      "findingId": "ROOT-ADULT-018",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The explanation describes the role without naming another crew answer."
+    },
+    {
+      "findingId": "ROOT-ADULT-019",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The subtype explanation does not expose the antenna answer."
+    },
+    {
+      "findingId": "ROOT-ADULT-020",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "An identifying launch-history fact replaces the ambiguous description."
+    },
+    {
+      "findingId": "ROOT-ADULT-021",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "Neither public field names the sibling ace answer."
+    },
+    {
+      "findingId": "ROOT-ADULT-022",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The public explanation avoids both neighboring definitions."
+    },
+    {
+      "findingId": "ROOT-ADULT-023",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The night-name hint has been removed."
+    },
+    {
+      "findingId": "ROOT-ADULT-024",
+      "status": "fixed",
+      "clueIds": [],
+      "reason": "The question uses an approximate age range without another response."
+    }
+  ]
+}

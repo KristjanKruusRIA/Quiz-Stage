@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { describe, expect, test } from 'vitest';
 import { stringify } from 'csv-stringify/sync';
+import { parse } from 'csv-parse/sync';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
 import { publishBatch } from '../../../scripts/content/publishBatch';
 import { verifyBatch, type BatchVerificationReport } from '../../../scripts/content/verifyBatch';
@@ -109,6 +110,45 @@ function seedAccepted(root: string): Record<string, string> {
   return originals;
 }
 
+function createAppendWork(root: string) {
+  const fixture = createPassingWork(root);
+  const acceptedRoot = join(root, 'accepted');
+  const directory = join(fixture.workRoot, '01-history');
+  const ids = Array.from({ length: 250 }, (_, index) =>
+    `built-in-history-all-level-expansion-${String(index + 1).padStart(4, '0')}`);
+  for (const [file, folder, acceptedName] of [
+    ['authored.csv', 'authored', '01-history.csv'],
+    ['generated.en-et.csv', 'generated', '01-history.en-et.csv'],
+  ]) {
+    const rows = parse<Record<string, string>>(readFileSync(join(directory, file)), { columns: true });
+    rows.forEach((row: Record<string, string>, index: number) => {
+      if (index >= 600) row.clue_id = ids[index - 600];
+      row.source_url = `https://example.test/${index >= 600 ? 'new' : 'old'}`;
+    });
+    if (folder === 'generated') rows[0].accepted_variants_en += ';anotheralias';
+    writeFileSync(join(directory, file), stringify(rows, { columns: CSV_COLUMNS, header: true }));
+    mkdirSync(join(acceptedRoot, 'content', folder), { recursive: true });
+    writeFileSync(join(acceptedRoot, 'content', folder, acceptedName),
+      stringify(rows.slice(0, 600), { columns: CSV_COLUMNS, header: true }));
+  }
+  const records = readFileSync(join(directory, 'evidence.jsonl'), 'utf8').trim().split('\n')
+    .map((line) => JSON.parse(line));
+  const generatedRows = parse<Record<string, string>>(readFileSync(join(directory, 'generated.en-et.csv')), { columns: true });
+  const byAssertion = new Map(records.map((record) => [record.assertion, record]));
+  const reordered = generatedRows.map((row: Record<string, string>) => ({
+    ...byAssertion.get(`${row.response_en} — ${row.explanation_en}`), clueId: row.clue_id,
+    supportingSource: {
+      ...byAssertion.get(`${row.response_en} — ${row.explanation_en}`).supportingSource,
+      url: row.source_url,
+    },
+  }));
+  const serialize = (entries: ContentEvidence[]) => entries.map((record) => `${JSON.stringify(record)}\n`).join('');
+  writeFileSync(join(directory, 'evidence.jsonl'), serialize(reordered));
+  mkdirSync(join(acceptedRoot, 'content/evidence'), { recursive: true });
+  writeFileSync(join(acceptedRoot, 'content/evidence/01-history.jsonl'), serialize(reordered.slice(0, 600)));
+  return { ...fixture, acceptedRoot, ids, directory };
+}
+
 async function passingReport(root: string): Promise<{
   fixture: ReturnType<typeof createPassingWork>;
   reportPath: string;
@@ -123,6 +163,56 @@ async function passingReport(root: string): Promise<{
 }
 
 describe('batch publication boundary', () => {
+  test('verifies and publishes 250 appended questions while binding 600 unchanged accepted records', async () => {
+    const fixture = createAppendWork(mkdtempSync(join(tmpdir(), 'quiz-stage-append-')));
+    const checked: string[] = [];
+    const report = await verifyBatch({
+      batchId: '01-history', workRoot: fixture.workRoot, baselineRoot: fixture.acceptedRoot,
+      translationDiagnosticClueIds: new Set(fixture.ids),
+      sourceDependencies: { ...fixture.sourceDependencies, fetch: async (url) => {
+        checked.push(String(url));
+        return { status: String(url).endsWith('/new') ? 200 : 404, headers: new Headers() };
+      } },
+    });
+    expect(report.kind).toBe('verification');
+    if (report.kind !== 'verification') throw new Error('Expected verification');
+    expect(report.blocking).toBe(false);
+    expect(report.translationDiagnostics.checkedRows).toBe(250);
+    expect(report.acceptedBaselineHashes).not.toBeNull();
+    expect(checked).toEqual(['https://example.test/new']);
+    const baselinePath = join(fixture.acceptedRoot, 'content/generated/01-history.en-et.csv');
+    const baselineBytes = readFileSync(baselinePath);
+    writeFileSync(baselinePath, baselineBytes.toString('utf8').replace('documented', 'changed'));
+    await expect(publishBatch({ batchId: '01-history', workRoot: fixture.workRoot, acceptedRoot: fixture.acceptedRoot }))
+      .rejects.toThrow(/Accepted baseline check failed/u);
+    writeFileSync(baselinePath, baselineBytes);
+    await publishBatch({ batchId: '01-history', workRoot: fixture.workRoot, acceptedRoot: fixture.acceptedRoot });
+    expect(readFileSync(join(fixture.acceptedRoot, 'content/generated/01-history.en-et.csv')))
+      .toEqual(readFileSync(join(fixture.directory, 'generated.en-et.csv')));
+  });
+
+  test('rejects a changed baseline record and blocks an untranslated appended question', async () => {
+    const fixture = createAppendWork(mkdtempSync(join(tmpdir(), 'quiz-stage-append-')));
+    const generatedPath = join(fixture.directory, 'generated.en-et.csv');
+    const original = readFileSync(generatedPath, 'utf8');
+    writeFileSync(generatedPath, original.replace('documented', 'modified'));
+    const options = { batchId: '01-history', workRoot: fixture.workRoot, baselineRoot: fixture.acceptedRoot,
+      translationDiagnosticClueIds: new Set(fixture.ids), sourceDependencies: fixture.sourceDependencies };
+    const changed = await verifyBatch(options);
+    expect(changed).toMatchObject({ blocking: true });
+    if (changed.kind !== 'verification') throw new Error('Expected verification');
+    expect(changed.unresolvedIssues.some((issue) => issue.code === 'ACCEPTED_BASELINE_MISMATCH')).toBe(true);
+    writeFileSync(generatedPath, original);
+    const rows = parse<Record<string, string>>(original, { columns: true });
+    rows[600].clue_et = '';
+    writeFileSync(generatedPath, stringify(rows, { columns: CSV_COLUMNS, header: true }));
+    const untranslated = await verifyBatch(options);
+    expect(untranslated).toMatchObject({ blocking: true });
+    if (untranslated.kind !== 'verification') throw new Error('Expected verification');
+    expect(untranslated.unresolvedIssues.some((issue) => issue.code === 'BLANK_TRANSLATION'
+      && issue.clueId === fixture.ids[0])).toBe(true);
+  });
+
   test('documented npm verify command restores flags and persists the named source cache', () => {
     const root = mkdtempSync(join(tmpdir(), 'quiz-stage-verify-cli-'));
     const fixture = createPassingWork(root);
@@ -329,11 +419,11 @@ describe('batch publication boundary', () => {
     expect(first.blocking).toBe(false);
     expect(second.blocking).toBe(false);
     expect(first.validations.generated.summary).toMatchObject({
-      boardClues: 600,
-      categorySets: 120,
-      easySets: 54,
-      mediumSets: 33,
-      hardSets: 33,
+      boardClues: 850,
+      categorySets: 170,
+      easySets: 70,
+      mediumSets: 50,
+      hardSets: 50,
     });
     expect(first.samples['easy/round-one']).toHaveLength(5);
     expect(firstBytes).toBe(secondBytes);

@@ -1,0 +1,755 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-adult-clue-0343",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which antiques and second-hand market north of Paris includes the Biron market on rue des Rosiers?",
+        "clue_et": "Millise Pariisist põhja pool asuva antiigi- ja vanakraamituru osa on rue des Rosiers’l asuv Bironi turg?",
+        "response_en": "Saint-Ouen flea market",
+        "response_et": "Saint-Oueni kirbuturg",
+        "accepted_variants_en": "Puces de Saint-Ouen;Saint Ouen flea market;Clignancourt flea market",
+        "accepted_variants_et": "Saint-Oueni turg;Clignancourti kirbuturg",
+        "explanation_en": "The Biron market is part of the Paris Saint-Ouen flea market.",
+        "explanation_et": "Bironi turg on Pariisi Saint-Oueni kirbuturu osa.",
+        "source_title": "Marché Biron — Paris je t’aime",
+        "source_url": "https://parisjetaime.com/eng/shopping/marche-biron-p4073",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "saint-ouen-flea-market",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0344",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Ottoman sultan laid the foundations of Istanbul’s Grand Bazaar in 1461?",
+        "clue_et": "Milline Osmanite sultan pani 1461. aastal aluse Istanbuli Suurele basaarile?",
+        "response_en": "Mehmed II",
+        "response_et": "Mehmed II",
+        "accepted_variants_en": "Mehmet II;Mehmed the Conqueror;Fatih Sultan Mehmet",
+        "accepted_variants_et": "Mehmed Vallutaja;Mehmet II",
+        "explanation_en": "The early buildings of the Grand Bazaar were erected under Mehmed II, also known as the Conqueror.",
+        "explanation_et": "Suure basaari varased hooned püstitati Mehmed II ehk Vallutaja ajal.",
+        "source_title": "İstanbul’s Grand Bazaar — GoTürkiye",
+        "source_url": "https://dev.goturkiye.com/branding/press-releases/istanbuls-grand-bazaar-hosts-almost-40-million-visitors-in-2022",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "mehmed-ii",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0345",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which floating market in Ratchaburi takes its name from a canal ordered by King Rama IV?",
+        "clue_et": "Milline Ratchaburi ujuvturg kannab kuningas Rama IV korraldusel rajatud kanali nime?",
+        "response_en": "Damnoen Saduak",
+        "response_et": "Damnoen Saduak",
+        "accepted_variants_en": "Damnoen Saduak Floating Market",
+        "accepted_variants_et": "Damnoen Saduaki ujuvturg",
+        "explanation_en": "Damnoen Saduak Floating Market is on a canal whose construction was initiated by King Rama IV.",
+        "explanation_et": "Damnoen Saduaki ujuvturg asub kanalil, mille rajamise algatas kuningas Rama IV.",
+        "source_title": "Damnoen Saduak Floating Market — Tourism Authority of Thailand",
+        "source_url": "https://www.tourismthailand.org/Attraction/damnoen-saduak-floating-market",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "damnoen-saduak",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0348",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which international organization, established in 1919 to promote social justice at work, received the Nobel Peace Prize in 1969?",
+        "clue_et": "Milline 1919. aastal tööalase sotsiaalse õigluse edendamiseks loodud rahvusvaheline organisatsioon sai 1969. aastal Nobeli rahuauhinna?",
+        "response_en": "International Labour Organization",
+        "response_et": "Rahvusvaheline Tööorganisatsioon",
+        "accepted_variants_en": "ILO;International Labor Organization",
+        "accepted_variants_et": "ILO",
+        "explanation_en": "The International Labour Organization was created in 1919 and received the Nobel Peace Prize fifty years later.",
+        "explanation_et": "Rahvusvaheline Tööorganisatsioon loodi 1919. aastal ning sai viiskümmend aastat hiljem Nobeli rahuauhinna.",
+        "source_title": "The ILO’s Nobel Peace Prize — International Labour Organization",
+        "source_url": "https://www.ilo.org/resource/news/when-morals-become-actions-%E2%80%93-ilo%E2%80%99s-nobel-peace-prize",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "international-labour-organization",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0349",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What name is given to the Chicago labor rally of May 4, 1886, where a bomb exploded during the campaign for an eight-hour working day?",
+        "clue_et": "Mis nime kannab 4. mail 1886 Chicagos toimunud tööliskoosolek, kus kaheksatunnise tööpäeva eest peetud kampaania ajal plahvatas pomm?",
+        "response_en": "Haymarket affair",
+        "response_et": "Haymarketi afäär",
+        "accepted_variants_en": "Haymarket riot;Haymarket massacre;Haymarket",
+        "accepted_variants_et": "Haymarketi rahutused;Haymarket",
+        "explanation_en": "The Haymarket affair followed an eight-hour-day demonstration in Chicago in May 1886.",
+        "explanation_et": "Haymarketi afäär leidis aset kaheksatunnise tööpäeva eest korraldatud meeleavaldusel Chicagos 1886. aasta mais.",
+        "source_title": "Haymarket Martyr’s Monument — National Park Service",
+        "source_url": "https://www.nps.gov/places/haymarket-martyr-s-monument.htm",
+        "source_license": "Public domain (US federal government text; third-party material excluded)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "haymarket-affair",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0350",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which US city gives its name to the 1944 declaration stating that “labour is not a commodity”?",
+        "clue_et": "Milline USA linn annab nime 1944. aasta deklaratsioonile, mille järgi „töö ei ole kaup“?",
+        "response_en": "Philadelphia",
+        "response_et": "Philadelphia",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "The Declaration of Philadelphia was adopted in 1944 and affirmed that labour is not a commodity.",
+        "explanation_et": "Philadelphia deklaratsioon võeti vastu 1944. aastal ning selles kinnitati, et töö ei ole kaup.",
+        "source_title": "The ILO at a Glance — Declaration of Philadelphia",
+        "source_url": "https://webapps.ilo.org/public/english/download/glance.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "philadelphia",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0354",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Austrian-born filmmaker directed the 1927 silent science-fiction epic Metropolis?",
+        "clue_et": "Milline Austrias sündinud filmitegija lavastas 1927. aasta tumm-ulmefilmi „Metropolis“?",
+        "response_en": "Fritz Lang",
+        "response_et": "Fritz Lang",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "Fritz Lang directed Metropolis, released in 1927.",
+        "explanation_et": "Fritz Lang lavastas 1927. aastal linastunud filmi „Metropolis“.",
+        "source_title": "Metropolis — British Film Institute",
+        "source_url": "https://www.bfi.org.uk/lists/10-great-robot-films",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "fritz-lang",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0355",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which French director made the 1967 crime film Le samouraï, starring Alain Delon as Jef Costello?",
+        "clue_et": "Milline Prantsuse režissöör lavastas 1967. aasta krimifilmi „Le samouraï“, milles Alain Delon mängib Jef Costellot?",
+        "response_en": "Jean-Pierre Melville",
+        "response_et": "Jean-Pierre Melville",
+        "accepted_variants_en": "Melville",
+        "accepted_variants_et": "Melville",
+        "explanation_en": "Jean-Pierre Melville directed Le samouraï.",
+        "explanation_et": "Jean-Pierre Melville lavastas filmi „Le samouraï“.",
+        "source_title": "Le samouraï — The Criterion Collection",
+        "source_url": "https://www.criterion.com/films/184-le-samoura",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "jean-pierre-melville",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0359",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which object-based cinema sound format made its film debut with Pixar’s Brave in 2012?",
+        "clue_et": "Milline objektipõhine kinoheliformaat jõudis esimest korda filmipubliku ette Pixari filmiga „Brave“ 2012. aastal?",
+        "response_en": "Dolby Atmos",
+        "response_et": "Dolby Atmos",
+        "accepted_variants_en": "Atmos",
+        "accepted_variants_et": "Atmos",
+        "explanation_en": "Dolby Atmos was first used for Pixar’s 2012 film Brave.",
+        "explanation_et": "Dolby Atmost kasutati esimest korda Pixari 2012. aasta filmis „Brave“.",
+        "source_title": "Why Dolby Atmos — Dolby Laboratories",
+        "source_url": "https://professional.dolby.com/siteassets/content-creation/dolby-atmos/why-dolby-atmos-white-paper.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "dolby-atmos",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0360",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Texas Instruments display technology creates an image using a chip covered with tiny tilting mirrors?",
+        "clue_et": "Milline Texas Instrumentsi kuvamistehnoloogia loob pildi väikeste kallutatavate peeglitega kaetud kiibi abil?",
+        "response_en": "DLP",
+        "response_et": "DLP",
+        "accepted_variants_en": "Digital Light Processing",
+        "accepted_variants_et": "Digital Light Processing",
+        "explanation_en": "Digital Light Processing uses a digital micromirror device to direct light and form an image.",
+        "explanation_et": "Digital Light Processing kasutab valguse suunamiseks ja pildi loomiseks digitaalseid mikropeegleid.",
+        "source_title": "DLP display technology — Texas Instruments",
+        "source_url": "https://www.ti.com/product-category/dlp-products/display-projection-dmds/overview.html?locale=en-US",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "dlp",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0364",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What was the name of Zenith’s wireless television remote introduced in 1956, which used ultrasonic signals?",
+        "clue_et": "Mis nime kandis Zenithi 1956. aastal kasutusele võetud juhtmevaba teleripult, mis kasutas ultrahelisignaale?",
+        "response_en": "Space Command",
+        "response_et": "Space Command",
+        "accepted_variants_en": "Zenith Space Command",
+        "accepted_variants_et": "Zenith Space Command",
+        "explanation_en": "Zenith’s Space Command used ultrasonic signals and went into production in 1956.",
+        "explanation_et": "Zenithi Space Command kasutas ultrahelisignaale ning jõudis tootmisse 1956. aastal.",
+        "source_title": "History of Remote Controls — Zenith / IEEE",
+        "source_url": "https://zenith.com/wp-content/uploads/2013/05/IEEE-Newsletter-on-Remote-Controls.pdf",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "space-command",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0365",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which American inventor built the “image dissector” television transmission tube in 1927?",
+        "clue_et": "Milline Ameerika leiutaja ehitas 1927. aastal televisiooni saateelektrontoru, mida ta nimetas „image dissector“?",
+        "response_en": "Philo Farnsworth",
+        "response_et": "Philo Farnsworth",
+        "accepted_variants_en": "Philo T. Farnsworth;Farnsworth",
+        "accepted_variants_et": "Philo T. Farnsworth;Farnsworth",
+        "explanation_en": "Philo T. Farnsworth built the image dissector in 1927.",
+        "explanation_et": "Philo T. Farnsworth ehitas image dissector’i 1927. aastal.",
+        "source_title": "Experimental Farnsworth image dissector — Smithsonian Institution",
+        "source_url": "https://www.si.edu/object/experimental-farnsworth-image-dissector:nmah_1288388",
+        "source_license": "CC0-1.0 (catalogue metadata; images excluded)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "philo-farnsworth",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0374",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What two-letter name is used for Columbia’s record format introduced in 1948 and played at 33⅓ rpm?",
+        "clue_et": "Millise kahetähelise nimetusega tuntakse Columbia 1948. aastal tutvustatud plaadiformaati, mida mängitakse kiirusega 33⅓ pööret minutis?",
+        "response_en": "LP",
+        "response_et": "LP",
+        "accepted_variants_en": "Long-playing record;Long play",
+        "accepted_variants_et": "Kauamängiv plaat",
+        "explanation_en": "The LP record was introduced by Columbia in 1948 and runs at 33⅓ revolutions per minute.",
+        "explanation_et": "Columbia tutvustas LP-plaati 1948. aastal; see pöörleb kiirusega 33⅓ pööret minutis.",
+        "source_title": "LP record — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/LP_record",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "lp",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0375",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Dutch engineer led the Philips team that developed the Compact Cassette introduced in 1963?",
+        "clue_et": "Milline Hollandi insener juhtis Philipsi meeskonda, mis arendas 1963. aastal tutvustatud Compact Cassette’i?",
+        "response_en": "Lou Ottens",
+        "response_et": "Lou Ottens",
+        "accepted_variants_en": "Ottens",
+        "accepted_variants_et": "Ottens",
+        "explanation_en": "Lou Ottens led the Philips development work that produced the Compact Cassette.",
+        "explanation_et": "Lou Ottens juhtis Philipsis arendustööd, mille tulemusena valmis Compact Cassette.",
+        "source_title": "Lou Ottens, inventor of the cassette tape — Philips",
+        "source_url": "https://www.philips.com/a-w/about/news/archive/standard/news/articles/2021/20210310-lou-ottens-loved-technology-when-he-talked-about-it-his-eyes-would-twinkle.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "lou-ottens",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0379",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which 1979 film was advertised with the line “In space no one can hear you scream”?",
+        "clue_et": "Millist 1979. aasta filmi reklaamiti lausega „In space no one can hear you scream“?",
+        "response_en": "Alien",
+        "response_et": "Tulnukas",
+        "accepted_variants_en": "Alien (1979)",
+        "accepted_variants_et": "Alien;Alien (1979)",
+        "explanation_en": "Alien was promoted with that line in 1979.",
+        "explanation_et": "Filmi „Tulnukas“ reklaamiti selle lausega 1979. aastal.",
+        "source_title": "Alien at 40 — British Film Institute",
+        "source_url": "https://www.bfi.org.uk/features/alien-40-ridley-scott-sigourney-weaver",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "alien",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0380",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which 1999 found-footage horror film used a publicity campaign that made some viewers believe its fictional events were real?",
+        "clue_et": "Milline 1999. aasta leitud filmimaterjali stiilis õudusfilm kasutas reklaamikampaaniat, mis pani osa vaatajaid uskuma, et väljamõeldud sündmused olid päriselt toimunud?",
+        "response_en": "The Blair Witch Project",
+        "response_et": "Blairi nõia projekt",
+        "accepted_variants_en": "Blair Witch Project",
+        "accepted_variants_et": "The Blair Witch Project",
+        "explanation_en": "The Blair Witch Project’s marketing presented its fictional disappearance story as potentially real.",
+        "explanation_et": "„Blairi nõia projekti“ turundus esitas väljamõeldud kadumisloo võimaliku tõsiloona.",
+        "source_title": "The Blair Witch Project — BFI Player",
+        "source_url": "https://player.bfi.org.uk/rentals/film/watch-the-blair-witch-project-1999-online",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "the-blair-witch-project",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0389",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which director received the first BAFTA Fellowship in 1971?",
+        "clue_et": "Milline režissöör sai 1971. aastal esimese BAFTA Fellowship’i elutööauhinna?",
+        "response_en": "Alfred Hitchcock",
+        "response_et": "Alfred Hitchcock",
+        "accepted_variants_en": "Hitchcock",
+        "accepted_variants_et": "Hitchcock",
+        "explanation_en": "Alfred Hitchcock received the inaugural BAFTA Fellowship in 1971.",
+        "explanation_et": "Alfred Hitchcock sai 1971. aastal esimese BAFTA Fellowship’i auhinna.",
+        "source_title": "Full list of BAFTA Fellows — BAFTA",
+        "source_url": "https://www.bafta.org/awards/full-list-of-bafta-fellows/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "alfred-hitchcock",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0390",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Chen Kaige film shared the 1993 Cannes Palme d’Or with Jane Campion’s The Piano?",
+        "clue_et": "Milline Chen Kaige film jagas 1993. aastal Cannes’i Kuldset Palmioksa Jane Campioni filmiga „Klaver“?",
+        "response_en": "Farewell My Concubine",
+        "response_et": "Hüvasti, mu konkubiin",
+        "accepted_variants_en": "Ba wang bie ji;Bawang Bieji",
+        "accepted_variants_et": "Farewell My Concubine;Ba wang bie ji",
+        "explanation_en": "Farewell My Concubine and The Piano jointly won the 1993 Palme d’Or.",
+        "explanation_et": "„Hüvasti, mu konkubiin“ ja „Klaver“ jagasid 1993. aasta Kuldset Palmioksa.",
+        "source_title": "Palme d’or: the 1990s — Festival de Cannes",
+        "source_url": "https://www.festival-cannes.com/en/2020/palme-d-or-the-1990s/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "farewell-my-concubine",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0392",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What genre label groups South Korean television series such as Crash Landing on You and Descendants of the Sun?",
+        "clue_et": "Millise žanrinimetuse alla kuuluvad Lõuna-Korea telesarjad „Crash Landing on You“ ja „Descendants of the Sun“?"
+      },
+      "reviewNotes": "Remove the mechanically supplied components of K-drama; recognition now requires knowing the label."
+    },
+    {
+      "clueId": "built-in-adult-clue-0394",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What genre label is associated with the Scandinavian crime series The Killing and the original The Bridge?",
+        "clue_et": "Millise žanrinimetusega seostatakse Skandinaavia krimisarju „The Killing“ ja „The Bridge“ algversiooni?"
+      },
+      "reviewNotes": "Use representative works rather than a transparent geographical definition."
+    },
+    {
+      "clueId": "built-in-adult-clue-0395",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Japanese public broadcaster began regular television broadcasts in Tokyo in February 1953?",
+        "clue_et": "Milline Jaapani avalik ringhääling alustas Tokyos regulaarseid telesaateid 1953. aasta veebruaris?"
+      },
+      "reviewNotes": "Replace the answer initials supplied in full with an independently knowable broadcasting-history fact."
+    },
+    {
+      "clueId": "built-in-adult-clue-0399",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which communications satellite, launched in July 1962, relayed live television between North America and Europe?",
+        "clue_et": "Milline 1962. aasta juulis startinud sidesatelliit vahendas otsetelepilti Põhja-Ameerika ja Euroopa vahel?",
+        "response_en": "Telstar 1",
+        "response_et": "Telstar 1",
+        "accepted_variants_en": "Telstar;Telstar I",
+        "accepted_variants_et": "Telstar;Telstar I",
+        "explanation_en": "Telstar 1 demonstrated live transatlantic television in 1962.",
+        "explanation_et": "Telstar 1 demonstreeris 1962. aastal Atlandi-ülest televisiooni otseülekannet.",
+        "source_title": "Exploring the Unknown, Volume III — NASA",
+        "source_url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4407-etuv3.pdf",
+        "source_license": "Public domain (US federal government text; third-party material excluded)",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "telstar-1",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0400",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which four-letter acronym names the H.265 video-compression standard that succeeded H.264/AVC?",
+        "clue_et": "Milline neljatäheline lühend tähistab H.264/AVC-le järgnenud videopakkimisstandardit H.265?",
+        "response_en": "HEVC",
+        "response_et": "HEVC",
+        "accepted_variants_en": "High Efficiency Video Coding",
+        "accepted_variants_et": "High Efficiency Video Coding",
+        "explanation_en": "High Efficiency Video Coding is standardized as H.265.",
+        "explanation_et": "High Efficiency Video Coding on standarditud nimega H.265.",
+        "source_title": "H.265: High efficiency video coding — ITU",
+        "source_url": "https://www.itu.int/rec/T-REC-H.265",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "hevc",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0414",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "How many points is a perfect hand worth in cribbage?",
+        "clue_et": "Mitu punkti annab cribbage’i kaardimängus täiuslik käsi?",
+        "response_en": "29",
+        "response_et": "29",
+        "accepted_variants_en": "Twenty-nine;29 points",
+        "accepted_variants_et": "Kakskümmend üheksa;29 punkti",
+        "explanation_en": "The highest-scoring cribbage hand is worth 29 points.",
+        "explanation_et": "Cribbage’i kõrgeima väärtusega käsi annab 29 punkti.",
+        "source_title": "Cribbage Glossary — American Cribbage Congress",
+        "source_url": "https://www.cribbage.org/NewSite/tips/glossary.asp",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "29",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0415",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What tabletop game, improved by Montague Redgrave in an 1871 patent with a spring-powered ball launcher, helped lead to modern pinball?",
+        "clue_et": "Milline lauamäng, mille Montague Redgrave’i 1871. aasta patent täiustas vedruga kuulikäivitajaga, aitas kujundada tänapäevast flipperit?",
+        "response_en": "Bagatelle",
+        "response_et": "Bagatell",
+        "accepted_variants_en": "Parlor bagatelle",
+        "accepted_variants_et": "Bagatelle",
+        "explanation_en": "Redgrave’s Improved Parlor Bagatelle used a spring launcher and an inclined board, features of later pinball games.",
+        "explanation_et": "Redgrave’i täiustatud salongibagatell kasutas vedruga kuulikäivitajat ja kaldlauda, mida kasutati ka hilisemates flipperimängudes.",
+        "source_title": "Innovation Patent Models and Prototypes II — Smithsonian",
+        "source_url": "https://americanhistory.si.edu/explore/exhibitions/inventing-in-america/innovation-prototypes-II",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "bagatelle",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0459",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which ancient Greek word, commonly translated as friendship, contrasts with eros in philosophical discussions of love?",
+        "clue_et": "Millist Vana-Kreeka sõna, mida tõlgitakse sageli sõprusena, eristatakse armastuse filosoofilistes käsitlustes eros’est?",
+        "response_en": "Philia",
+        "response_et": "Philia",
+        "accepted_variants_en": "Philía",
+        "accepted_variants_et": "Filia",
+        "explanation_en": "Philia describes affectionate regard or friendship, with a broader range than modern friendship alone.",
+        "explanation_et": "Philia tähistab kiindumust või sõprust ning selle tähendusväli on laiem kui tänapäevane sõpruse mõiste.",
+        "source_title": "Plato on Friendship and Eros — Stanford Encyclopedia of Philosophy",
+        "source_url": "https://plato.stanford.edu/entries/plato-friendship/index.html",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "philia",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0460",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "What 1956 book by Erich Fromm treats love as an art that requires knowledge and effort?",
+        "clue_et": "Milline Erich Frommi 1956. aasta raamat käsitleb armastust teadmisi ja pingutust nõudva kunstina?",
+        "response_en": "The Art of Loving",
+        "response_et": "Armastuse kunst",
+        "accepted_variants_en": "Art of Loving",
+        "accepted_variants_et": "The Art of Loving",
+        "explanation_en": "Erich Fromm published The Art of Loving in 1956.",
+        "explanation_et": "Erich Fromm avaldas „Armastuse kunsti“ 1956. aastal.",
+        "source_title": "Important Dates — Erich Fromm Institute",
+        "source_url": "https://fromm-online.org/en/life/important-dates/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "the-art-of-loving",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0464",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which American magazine incorrectly predicted that Alfred Landon would defeat Franklin Roosevelt in the 1936 presidential election?",
+        "clue_et": "Milline Ameerika ajakiri ennustas ekslikult, et Alfred Landon võidab Franklin Roosevelti 1936. aasta presidendivalimistel?",
+        "response_en": "The Literary Digest",
+        "response_et": "The Literary Digest",
+        "accepted_variants_en": "Literary Digest",
+        "accepted_variants_et": "Literary Digest",
+        "explanation_en": "The Literary Digest’s 1936 poll predicted a Landon victory, but Roosevelt won.",
+        "explanation_et": "The Literary Digesti 1936. aasta küsitlus ennustas Landoni võitu, kuid võitis Roosevelt.",
+        "source_title": "75 Years Ago, the First Gallup Poll — Gallup",
+        "source_url": "https://news.gallup.com/opinion/polling-matters/169682/years-ago-first-gallup-poll.aspx",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "the-literary-digest",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0465",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which statistician published the 1908 paper The Probable Error of the Mean under the pseudonym “Student”?",
+        "clue_et": "Milline statistik avaldas 1908. aastal artikli „The Probable Error of the Mean“ pseudonüümi „Student“ all?",
+        "response_en": "William Sealy Gosset",
+        "response_et": "William Sealy Gosset",
+        "accepted_variants_en": "William Gosset;Gosset",
+        "accepted_variants_et": "William Gosset;Gosset",
+        "explanation_en": "William Sealy Gosset published under the name Student and developed the distribution used in Student’s t-test.",
+        "explanation_et": "William Sealy Gosset avaldas töid nime Student all ning töötas välja Studenti t-testis kasutatava jaotuse.",
+        "source_title": "Statistics in History — American Statistical Association",
+        "source_url": "https://magazine.amstat.org/blog/2026/01/01/statistics-january/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "william-sealy-gosset",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0479",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which Dutch microscopist described bacteria in material scraped from teeth in a 1683 letter to the Royal Society?",
+        "clue_et": "Milline Hollandi mikroskoobiuurija kirjeldas 1683. aasta kirjas Kuninglikule Seltsile hambakatust leitud baktereid?",
+        "response_en": "Antonie van Leeuwenhoek",
+        "response_et": "Antonie van Leeuwenhoek",
+        "accepted_variants_en": "Antoni van Leeuwenhoek;Leeuwenhoek",
+        "accepted_variants_et": "Antoni van Leeuwenhoek;Leeuwenhoek",
+        "explanation_en": "Leeuwenhoek’s 1683 letter reported observations of bacteria in material from teeth.",
+        "explanation_et": "Leeuwenhoek teatas oma 1683. aasta kirjas hambakatust leitud bakterite vaatlustest.",
+        "source_title": "Letter from Antoni van Leeuwenhoek — Royal Society archive",
+        "source_url": "https://makingscience.royalsociety.org/items/el_l1_69/letter-from-antoni-van-leeuwenhoek-to-francis-aston-dated-at-delft",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "antonie-van-leeuwenhoek",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0480",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which hormone, mainly produced by the pineal gland, conveys information about the daily light-dark cycle?",
+        "clue_et": "Milline peamiselt käbinäärmes toodetav hormoon vahendab teavet ööpäevase valguse ja pimeduse tsükli kohta?",
+        "response_en": "Melatonin",
+        "response_et": "Melatoniin",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "Melatonin is secreted by the pineal gland and helps signal the light-dark cycle.",
+        "explanation_et": "Käbinääre eritab melatoniini, mis aitab vahendada valguse ja pimeduse tsüklit.",
+        "source_title": "Melatonin — Wikipedia; factual verification against Endotext",
+        "source_url": "https://en.wikipedia.org/wiki/Melatonin",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "melatonin",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0494",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which psychologist proposed eight stages of psychosocial development across the lifespan?",
+        "clue_et": "Milline psühholoog pakkus välja kaheksa psühhosotsiaalse arengu etappi kogu elukaare jooksul?",
+        "response_en": "Erik Erikson",
+        "response_et": "Erik Erikson",
+        "accepted_variants_en": "Erikson",
+        "accepted_variants_et": "Erikson",
+        "explanation_en": "Erik Erikson’s theory describes eight stages of psychosocial development.",
+        "explanation_et": "Erik Eriksoni teooria kirjeldab kaheksat psühhosotsiaalse arengu etappi.",
+        "source_title": "Erikson’s eight stages of psychosocial development — APA Dictionary",
+        "source_url": "https://dictionary.apa.org/eriksons-eight-stages-of-psychosocial-development",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "erik-erikson",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0495",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Jeanne Calment’s authenticated lifespan was 164 days beyond how many complete years?",
+        "clue_et": "Jeanne Calmenti tõendatud eluiga oli mitu täisaastat ja lisaks 164 päeva?",
+        "response_en": "122",
+        "response_et": "122",
+        "accepted_variants_en": "One hundred and twenty-two;122 years",
+        "accepted_variants_et": "Sada kakskümmend kaks;122 aastat",
+        "explanation_en": "Guinness World Records records Jeanne Calment’s age as 122 years and 164 days.",
+        "explanation_et": "Guinness World Records kinnitab Jeanne Calmenti vanuseks 122 aastat ja 164 päeva.",
+        "source_title": "Jeanne Calment: The oldest person ever — Guinness World Records",
+        "source_url": "https://www.guinnessworldrecords.com/news/icons/jeanne-calment-the-oldest-person-ever",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "122",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0499",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which British psychiatrist originally developed attachment theory to explain bonds between children and caregivers?",
+        "clue_et": "Milline Briti psühhiaater töötas algselt välja kiindumusteooria laste ja hooldajate vaheliste sidemete selgitamiseks?",
+        "response_en": "John Bowlby",
+        "response_et": "John Bowlby",
+        "accepted_variants_en": "Bowlby",
+        "accepted_variants_et": "Bowlby",
+        "explanation_en": "John Bowlby originally developed attachment theory, which was later expanded by other researchers.",
+        "explanation_et": "John Bowlby töötas algselt välja kiindumusteooria, mida hiljem laiendasid teised uurijad.",
+        "source_title": "Attachment theory — APA Dictionary of Psychology",
+        "source_url": "https://dictionary.apa.org/attachment-theory",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "john-bowlby",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    },
+    {
+      "clueId": "built-in-adult-clue-0500",
+      "batchId": "14-adult",
+      "changes": {
+        "clue_en": "Which psychologist made unconditional positive regard a cornerstone of person-centered therapy?",
+        "clue_et": "Milline psühholoog kujundas tingimusteta positiivsest suhtumisest inimesekeskse teraapia nurgakivi?",
+        "response_en": "Carl Rogers",
+        "response_et": "Carl Rogers",
+        "accepted_variants_en": "Rogers",
+        "accepted_variants_et": "Rogers",
+        "explanation_en": "Carl Rogers emphasized unconditional positive regard in his person-centered approach.",
+        "explanation_et": "Carl Rogers rõhutas oma inimesekeskses lähenemises tingimusteta positiivset suhtumist.",
+        "source_title": "Positive regard — APA Dictionary of Psychology",
+        "source_url": "https://dictionary.apa.org/positive-regard",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "carl-rogers",
+      "reviewNotes": "Replace a transparent definition with an independently identifiable historical, cultural or scientific fact. Original bilingual wording; source is cited for the factual assertion."
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-adult-set-096",
+      "batchId": "14-adult",
+      "changes": {
+        "category_name_en": "The Body Through Life",
+        "category_name_et": "Keha elu jooksul"
+      },
+      "reviewNotes": "Keep the broader body theme coherent after adding two scientific/history clues."
+    },
+    {
+      "categoryId": "built-in-adult-set-069",
+      "batchId": "14-adult",
+      "changes": {
+        "category_name_en": "Markets Around the World",
+        "category_name_et": "Turud üle maailma"
+      },
+      "reviewNotes": "Independent reviewer C found the after-dark limitation contradicted the repaired historical market questions."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "ROOT-ADULT-015",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-adult-clue-0343",
+        "built-in-adult-clue-0344",
+        "built-in-adult-clue-0345"
+      ],
+      "reason": "The three upper tiers now require distinct market-place and history knowledge."
+    },
+    {
+      "findingId": "ROOT-ADULT-016",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-adult-clue-0348",
+        "built-in-adult-clue-0349",
+        "built-in-adult-clue-0350"
+      ],
+      "reason": "Upper tiers now ask independently sourced labor-history facts instead of five everyday definitions."
+    },
+    {
+      "findingId": "ROOT-ADULT-025",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-adult-clue-0343",
+        "built-in-adult-clue-0344",
+        "built-in-adult-clue-0345",
+        "built-in-adult-clue-0348",
+        "built-in-adult-clue-0349",
+        "built-in-adult-clue-0350",
+        "built-in-adult-clue-0354",
+        "built-in-adult-clue-0355",
+        "built-in-adult-clue-0359",
+        "built-in-adult-clue-0360",
+        "built-in-adult-clue-0364",
+        "built-in-adult-clue-0365",
+        "built-in-adult-clue-0374",
+        "built-in-adult-clue-0375",
+        "built-in-adult-clue-0379",
+        "built-in-adult-clue-0380",
+        "built-in-adult-clue-0389",
+        "built-in-adult-clue-0390",
+        "built-in-adult-clue-0392",
+        "built-in-adult-clue-0394",
+        "built-in-adult-clue-0395",
+        "built-in-adult-clue-0399",
+        "built-in-adult-clue-0400",
+        "built-in-adult-clue-0414",
+        "built-in-adult-clue-0415",
+        "built-in-adult-clue-0459",
+        "built-in-adult-clue-0460",
+        "built-in-adult-clue-0464",
+        "built-in-adult-clue-0465",
+        "built-in-adult-clue-0479",
+        "built-in-adult-clue-0480",
+        "built-in-adult-clue-0494",
+        "built-in-adult-clue-0495",
+        "built-in-adult-clue-0499",
+        "built-in-adult-clue-0500"
+      ],
+      "reason": "All fourteen cohort sets retain accessible lower tiers and gain independent factual upper tiers. Letter-assembly clues are removed. Difficulty has editorial calibration; representative-player calibration is still a later empirical step."
+    }
+  ]
+}

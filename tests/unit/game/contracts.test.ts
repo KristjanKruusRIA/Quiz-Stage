@@ -56,7 +56,7 @@ describe('IPC contracts', () => {
 
   it('persists the random seed and hidden Daily Double positions', () => {
     const result = gameStateSchema.safeParse({
-      appVersion: '0.1.1',
+      appVersion: '0.1.2',
       id: 'match-1',
       config: {
         language: 'en', difficulty: 'easy', clueSeconds: 15,
@@ -79,9 +79,9 @@ describe('IPC contracts', () => {
     expect(result.success).toBe(true);
   });
 
-  it('loads a prior snapshot with the new timer and active-lock defaults', () => {
+  it.each(['0.1.0', '0.1.1'] as const)('loads a %s snapshot with the new timer and active-lock defaults', (appVersion) => {
     const result = gameStateSchema.safeParse({
-      appVersion: '0.1.0',
+      appVersion,
       id: 'match-legacy',
       config: {
         language: 'en', difficulty: 'easy', clueSeconds: 15,
@@ -102,7 +102,7 @@ describe('IPC contracts', () => {
 
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.appVersion).toBe('0.1.1');
+      expect(result.data.appVersion).toBe('0.1.2');
       expect(result.data.timer).toEqual({ durationMs: 15000, remainingMs: 15000, startedAt: null, status: 'idle' });
       expect(result.data.activeClue?.lockedTeamId).toBeNull();
     }
@@ -110,7 +110,7 @@ describe('IPC contracts', () => {
 
   it('rejects persisted timer state with more remaining time than its duration', () => {
     const result = gameStateSchema.safeParse({
-      appVersion: '0.1.1',
+      appVersion: '0.1.2',
       id: 'match-invalid-timer',
       config: {
         language: 'en', difficulty: 'easy', clueSeconds: 15,

@@ -1,0 +1,569 @@
+{
+  "reviewer": "a",
+  "reviewType": "Independent review of 12 root findings",
+  "createdAt": "2026-10-09T16:38:19.091Z",
+  "inputFilesRead": [
+    {
+      "file": "root-findings.json",
+      "sha256": "087aa006fcc57ce0d93f98ff8131366164603745d3a60e694be69cf201ebad0c"
+    },
+    {
+      "file": "root-extra-findings.jsonl",
+      "sha256": "03b4d549cde05160eccf6bb8495f091f188e74784af86b3420373e5a23523530"
+    },
+    {
+      "file": "root-source-verification.json",
+      "sha256": "bf865781cb8c4c97e952dbc6f77c2aeabac1a416411b19eac50c6d7fce7d698a"
+    }
+  ],
+  "method": "Read each original frozen bilingual set with every prompt, response, variant and explanation; compare root finding and source-verification override; independently retrieve supporting sources for factual or alternative-answer claims.",
+  "summary": {
+    "findingsChecked": 12,
+    "uniqueFrozenCategoriesRead": 11,
+    "uniqueFrozenCluesRead": 51,
+    "noFindingsRejected": true,
+    "repairCorrectionRequired": [
+      "ROOT-ESTONIA-023"
+    ],
+    "wordingQualifications": [
+      "ROOT-ESTONIA-017",
+      "ROOT-MYTHOLOGY-005"
+    ],
+    "editorialFinding": [
+      "ROOT-MYTHOLOGY-005"
+    ]
+  },
+  "limits": [
+    "This is a targeted 12-finding check, not an external verification of every fact in the 51 unique clues read.",
+    "Official sources were read independently; stored Wikipedia revisions were read where available. The Flora and Pompeii revision links returned retrieval errors; their alternative-answer claims are supported by independent authoritative pages.",
+    "Source list records relevant supporting passages actually read, not every search result or every URL attempted. MPA Appendix G was read through a search-result visual transcription; the PDF text was opened. Screenshot calls yielded no visible pixels and are not counted as visual inspection.",
+    "Human host judgment applies; missing alternatives affect host guidance, not an asserted automatic matching failure.",
+    "Buridan finding is a narrower editorial title-scope concern with historical qualifications, not a wrong response or a claim that all underlying paradoxes postdate antiquity."
+  ],
+  "checks": [
+    {
+      "id": "ROOT-ADULT-011",
+      "categoryId": "built-in-adult-set-047",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-adult-clue-0231",
+        "built-in-adult-clue-0232",
+        "built-in-adult-clue-0233",
+        "built-in-adult-clue-0234",
+        "built-in-adult-clue-0235"
+      ],
+      "assessment": "The prompt describes advertising a restricted film to an appropriate audience, which is also possible with a green-band trailer. It does not specify restricted trailer content. The official handbook separates the advertisement’s content and approval from the advertised film’s rating.",
+      "repairAssessment": "Repair is sound: specify the trailer’s stronger content or restricted-audience approval. Do not imply every R-rated film trailer has a red band.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://www.filmratings.com/wp-content/uploads/2025/08/MPA-Advertising-Handbook-2025.pdf",
+          "evidence": "Read Article II section 5 and Article III trailer provisions. The search result additionally exposed Appendix G green-tag examples for R and NC-17 films.",
+          "role": "opened_primary_pdf_text_and_read_primary_search_result_visual_transcription"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Motion_Picture_Association_film_rating_system",
+          "evidence": "Read trailer-card section, including appropriate-audience wording used by green cards.",
+          "role": "opened_stored_source_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": true,
+      "originalFinding": {
+        "id": "ROOT-ADULT-011",
+        "severity": "important",
+        "code": "UNDERDETERMINED_CLUE",
+        "categoryId": "built-in-adult-set-047",
+        "clueIds": [
+          "built-in-adult-clue-0235"
+        ],
+        "summary": "The red-band-trailer clue does not distinguish it from a green-band trailer.",
+        "reason": "Advertising a restricted film to an age-appropriate audience is not the distinguishing red-band property; green-band previews can also advertise R-rated films. The distinguishing restriction concerns trailer content and approval conditions.",
+        "recommendedRepair": "Specify the preview's restricted content or its approval notice, supported by the MPA trailer rules.",
+        "confidence": "medium",
+        "requiresExternalVerification": true
+      }
+    },
+    {
+      "id": "ROOT-ADULT-014",
+      "categoryId": "built-in-adult-set-051",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-adult-clue-0251",
+        "built-in-adult-clue-0252",
+        "built-in-adult-clue-0253",
+        "built-in-adult-clue-0254",
+        "built-in-adult-clue-0255"
+      ],
+      "assessment": "The Louvre’s Winged Victory of Samothrace is another armless ancient Greek statue on display there, so Venus de Milo is not uniquely identified.",
+      "repairAssessment": "Repair is sound: add discovery on Milos or the Aphrodite identification. Merely adding marble would not distinguish Winged Victory.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://www.louvre.fr/en/explore/the-palace/a-stairway-to-victory",
+          "evidence": "Read Greek-island discovery, statue dating, absent arms and separately displayed hand fragments.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": true,
+      "originalFinding": {
+        "id": "ROOT-ADULT-014",
+        "severity": "important",
+        "code": "UNDERDETERMINED_CLUE",
+        "categoryId": "built-in-adult-set-051",
+        "clueIds": [
+          "built-in-adult-clue-0252"
+        ],
+        "summary": "An armless ancient Greek statue in the Louvre does not uniquely identify Venus de Milo.",
+        "reason": "The Winged Victory of Samothrace also satisfies the supplied description. The clue needs a distinguishing feature, such as discovery on Milos, or the alternative needs explicit acceptance.",
+        "recommendedRepair": "Add the island of discovery or another unique identifying detail without supplying the answer.",
+        "confidence": "medium",
+        "requiresExternalVerification": true,
+        "sources": [
+          {
+            "url": "https://www.louvre.fr/en/explore/the-palace/ideal-greek-beauty",
+            "verification": "Official museum search result confirms Venus lack of arms."
+          },
+          {
+            "url": "https://www.louvre.fr/en/explore/visitor-trails/the-louvre-s-masterpieces/an-uplifting-sight",
+            "verification": "Official museum identifies Winged Victory; full anatomy confirmation still needed."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ADULT-020",
+      "categoryId": "built-in-adult-set-082",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-adult-clue-0406",
+        "built-in-adult-clue-0407",
+        "built-in-adult-clue-0408",
+        "built-in-adult-clue-0409",
+        "built-in-adult-clue-0410"
+      ],
+      "assessment": "Eurojackpot meets the same multinational shared-jackpot description. Eesti Loto explicitly lists participating countries and says prizes are shared across them.",
+      "repairAssessment": "Repair is sound: add an independently verified distinguishing fact or guide the human host to accept both EuroMillions and Eurojackpot.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://eestiloto.zendesk.com/hc/et-ee/articles/15852803719069-Eurojackpoti-m%C3%A4ngujuhend",
+          "evidence": "Read multinational lottery description, participating-country list and common-prize/jackpot provisions.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": true,
+      "originalFinding": {
+        "id": "ROOT-ADULT-020",
+        "severity": "important",
+        "code": "UNDERDETERMINED_CLUE",
+        "categoryId": "built-in-adult-set-082",
+        "clueIds": [
+          "built-in-adult-clue-0409"
+        ],
+        "summary": "The multinational European lottery description permits EuroMillions and Eurojackpot.",
+        "reason": "The only supplied property is shared jackpots across several European countries. This does not distinguish the accepted EuroMillions answer from Eurojackpot.",
+        "recommendedRepair": "Specify a unique participant-country or launch-history fact, or accept both answers explicitly.",
+        "confidence": "medium",
+        "requiresExternalVerification": true
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-015",
+      "categoryId": "built-in-estonia-set-061",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0301",
+        "built-in-estonia-clue-0302",
+        "built-in-estonia-clue-0303",
+        "built-in-estonia-clue-0304",
+        "built-in-estonia-clue-0305"
+      ],
+      "assessment": "Stuudium’s official site expressly describes parents viewing grades and homework and exchanging messages. The same site identifies its developer as OÜ Koodimasin; the government register identifies that company at an Estonian address and links stuudium.com. The broad clue does not isolate eKool.",
+      "repairAssessment": "Repair is sound if it uses a verified distinguishing history or function. Stuudium’s Estonia-development qualification is inferred from the named developer and official Estonian company record, rather than a direct statement of the physical development location.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://stuudium.com/",
+          "evidence": "Read grades/homework, parent information, messages and named developer footer.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://ariregister.rik.ee/eng/company/10728286/O%C3%9C-Koodimasin",
+          "evidence": "Read official company address and stuudium.com website listing.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-015",
+        "severity": "important",
+        "code": "AMBIGUOUS_RESPONSE",
+        "categoryId": "built-in-estonia-set-061",
+        "clueIds": [
+          "built-in-estonia-clue-0303"
+        ],
+        "summary": "The online-school-platform clue does not distinguish eKool from Stuudium.",
+        "reason": "Grades, homework and family messaging are explicitly offered by Stuudium too. The generic supplied facts do not identify just eKool.",
+        "recommendedRepair": "Add a distinctive founding/history fact or accept both platforms.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://stuudium.com/",
+            "verification": "Read the official features page describing student/parent grades, homework and communication."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-017",
+      "categoryId": "built-in-estonia-set-065",
+      "verdict": "confirmed_with_wording_qualification",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0321",
+        "built-in-estonia-clue-0322",
+        "built-in-estonia-clue-0323",
+        "built-in-estonia-clue-0324",
+        "built-in-estonia-clue-0325"
+      ],
+      "assessment": "The completed orbital-technology test in the explanation is unsupported and misleading after ESTCube-2 failed to separate and burned up. The 2023 launch itself happened; carrying a planned plasma-brake experiment is compatible with a failed deployment.",
+      "repairAssessment": "Repair is sound: describe intended experiments and failed deployment. Do not rewrite the finding as never launched, and do not treat the English launch-date prompt alone as false.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency",
+          "evidence": "Read official paragraph distinguishing 2023 launch from failure to separate and destruction on re-entry.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1370717062",
+          "evidence": "Read stored source revision’s launch, failed-deployment and scientific-purpose sections.",
+          "role": "opened_stored_source_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-017",
+        "severity": "important",
+        "code": "FACTUAL_ERROR",
+        "categoryId": "built-in-estonia-set-065",
+        "clueIds": [
+          "built-in-estonia-clue-0321"
+        ],
+        "summary": "ESTCube-2 is described as having tested orbit-removal technology, although it never separated from its launcher.",
+        "reason": "The University of Tartu confirms the2023 satellite failed to separate and burned up on re-entry. Carrying a planned experiment does not establish that the orbital test was performed.",
+        "recommendedRepair": "Change the explanation to the intended experiment and state the launch failure; retain a clearly qualified launch-date prompt.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency",
+            "verification": "Read the official2025 account confirming failure to separate and destruction on re-entry."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-023",
+      "categoryId": "built-in-estonia-set-077",
+      "verdict": "confirmed_with_repair_correction",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0381",
+        "built-in-estonia-clue-0382",
+        "built-in-estonia-clue-0383",
+        "built-in-estonia-clue-0384",
+        "built-in-estonia-clue-0385"
+      ],
+      "assessment": "The park’s 1910 conservation ancestry is not its national-park designation: Vilsandi became a national park in 1993; the Environmental Board names Lahemaa, founded in 1971, as the oldest.",
+      "repairAssessment": "Prefer retaining Vilsandi and asking which western island names the park descended from the 1910 Vaika bird sanctuary. Changing only the answer to Lahemaa is invalid because the prompt still asks for a western island and the category is Estonian Islands.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://kaitsealad.ee/en/protected-areas/vilsandi-national-park/about-national-park",
+          "evidence": "Read 1910 sanctuary origin and 1993 national-park renaming.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://kaitsealad.ee/en/news/lahemaa-national-park-celebrates-its-55th-anniversary",
+          "evidence": "Read oldest-national-park designation and 1 June 1971 founding date.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": true,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-023",
+        "severity": "important",
+        "code": "FACTUAL_ERROR",
+        "categoryId": "built-in-estonia-set-077",
+        "clueIds": [
+          "built-in-estonia-clue-0383"
+        ],
+        "summary": "Vilsandi is wrongly called Estonia’s oldest national park.",
+        "reason": "Vaika protection began1910, but Vilsandi became a national park1993; Lahemaa became one1971. The explanation confuses protected-area ancestry with national-park designation.",
+        "recommendedRepair": "Ask about the Vaika reserve or correct the oldest-national-park answer to Lahemaa.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://kaitsealad.ee/en/protected-areas/vilsandi-national-park/about-national-park",
+            "verification": "Official Environmental Board sources corroborated by reviewer-a; also https://kaitsealad.ee/en/news/lahemaa-national-park-celebrates-its-55th-anniversary."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-026",
+      "categoryId": "built-in-estonia-set-089",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0441",
+        "built-in-estonia-clue-0442",
+        "built-in-estonia-clue-0443",
+        "built-in-estonia-clue-0444",
+        "built-in-estonia-clue-0445"
+      ],
+      "assessment": "Levadia’s own history gives Tallinn, green-and-white colours and multiple national titles. It therefore satisfies every identifying property in Flora’s prompt.",
+      "repairAssessment": "Repair is sound: Flora’s 1990 founding is already in its explanation and would distinguish it from Levadia’s 1998 founding. Verify that date against a Flora source before publishing the revised clue.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://fcilevadia.ee/en/history/",
+          "evidence": "Read current club overview and colours, 1998 founding, repeated national championships and Tallinn history.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-026",
+        "severity": "important",
+        "code": "AMBIGUOUS_RESPONSE",
+        "categoryId": "built-in-estonia-set-089",
+        "clueIds": [
+          "built-in-estonia-clue-0443"
+        ],
+        "summary": "Green-and-white Tallinn club with numerous titles also describes Levadia.",
+        "reason": "Levadia’s official history confirms every supplied property, so Flora is not uniquely identifiable.",
+        "recommendedRepair": "Add Flora’s1990 founding fact or accept Levadia too.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://fcilevadia.ee/en/history/",
+            "verification": "Official club history gives Tallinn, green/white colours and multiple national championships."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-028",
+      "categoryId": "built-in-estonia-set-089",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0441",
+        "built-in-estonia-clue-0442",
+        "built-in-estonia-clue-0443",
+        "built-in-estonia-clue-0444",
+        "built-in-estonia-clue-0445"
+      ],
+      "assessment": "Rapla’s official June 2025 statement says its representative team would not participate in either the 2025/26 Estonian-Latvian league or Estonian top league. The stored Wikipedia revision also states the withdrawal and lists that season in tier 2.",
+      "repairAssessment": "Repair is sound: use a verified prior season or another sourced club fact. Recheck the retained founding-date explanation separately; season correction alone does not establish that date.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://www.raplakk.ee/rapla-korvpallikool-ei-osale-eesti-lati-korvpalliliigas-ja-eesti-meistriliigas-hooajal-2025-2026/",
+          "evidence": "Read official withdrawal decision, reasons and lower-division intention.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://en.wikipedia.org/w/index.php?oldid=1356705505",
+          "evidence": "Read June 2025 withdrawal and 2025–26 tier-2 table.",
+          "role": "opened_stored_source_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-028",
+        "severity": "important",
+        "code": "FACTUAL_ERROR",
+        "categoryId": "built-in-estonia-set-089",
+        "clueIds": [
+          "built-in-estonia-clue-0445"
+        ],
+        "summary": "Rapla is described as competing in the2025–26 top division after withdrawing.",
+        "reason": "The club’s June2025 announcement explicitly states it will not enter the2025/26 Estonian-Latvian or Estonian top leagues.",
+        "recommendedRepair": "Use a season when Rapla participated or replace the clue with another independently sourced club fact.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://www.raplakk.ee/rapla-korvpallikool-ei-osale-eesti-lati-korvpalliliigas-ja-eesti-meistriliigas-hooajal-2025-2026/",
+            "verification": "Read official club withdrawal announcement."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-ESTONIA-032",
+      "categoryId": "built-in-estonia-set-095",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-estonia-clue-0471",
+        "built-in-estonia-clue-0472",
+        "built-in-estonia-clue-0473",
+        "built-in-estonia-clue-0474",
+        "built-in-estonia-clue-0475"
+      ],
+      "assessment": "Both prompts print Glögi/glögi, and both language variant lists accept that word. The official event description explicitly glosses glögi as mulled wine. This is direct answer disclosure rather than merely an accessible first-tier clue.",
+      "repairAssessment": "Prefer remove the event name and ask a substantive winter-drink fact. A clearly framed translation question could retain it, but merely removing the alias without changing the task should not be presented as a robust difficulty repair.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://visitestonia.com/en/hiiumaas-glogi-cafe-day",
+          "evidence": "Read event description defining glögi as mulled wine.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-ESTONIA-032",
+        "severity": "important",
+        "code": "ACCEPTED_RESPONSE_IN_PROMPT",
+        "categoryId": "built-in-estonia-set-095",
+        "clueIds": [
+          "built-in-estonia-clue-0471"
+        ],
+        "summary": "The mulled-wine clue gives its accepted Glögi variant in the event name.",
+        "reason": "Glögi Café Day/glögikohvikute päev exposes Glögi, an explicit accepted response.",
+        "recommendedRepair": "Remove the alias for a translation question or describe the winter event without giving the drink name.",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "ROOT-FINALS-001",
+      "categoryId": "built-in-finals-final-set-0001",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-finals-final-0001"
+      ],
+      "assessment": "Herculaneum also was buried by Vesuvius in 79 CE and preserved beneath volcanic deposits. The single-clue final has no prompt detail that distinguishes Pompeii.",
+      "repairAssessment": "Repair is sound: specify a verified Pompeii feature or accept Herculaneum too. Avoid replacing volcanic material with ash alone as the distinguishing feature.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://ercolano.cultura.gov.it/the-story/?lang=en",
+          "evidence": "Read official archaeological-park account of Herculaneum’s burial by the 79 CE eruption and later excavations.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-FINALS-001",
+        "severity": "important",
+        "code": "AMBIGUOUS_RESPONSE",
+        "categoryId": "built-in-finals-final-set-0001",
+        "clueIds": [
+          "built-in-finals-final-0001"
+        ],
+        "summary": "The buried Roman city clue also identifies Herculaneum.",
+        "reason": "Vesuvius, AD79 and preservation beneath volcanic material describe Herculaneum as well as Pompeii. The category title does not distinguish them.",
+        "recommendedRepair": "Add a Pompeii-specific identifying detail or accept Herculaneum too.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://ercolano.cultura.gov.it/the-story/?lang=en",
+            "verification": "Official archaeological park history confirms the Roman city was buried in the79AD eruption."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-004",
+      "categoryId": "built-in-mythology-religion-philosophy-set-140",
+      "verdict": "confirmed",
+      "confidence": "high",
+      "reviewedClueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0096",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0097",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0098",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0099",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0100"
+      ],
+      "assessment": "Leucippus fits matter composed of indivisible particles moving through empty space. SEP explicitly attributes atoms, void and perpetual motion to him and discusses how his contribution overlaps with Democritus.",
+      "repairAssessment": "Repair is sound: add a genuinely distinguishing Democritus identity detail or accept Leucippus. A qualifier such as ancient Greek would not resolve this.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://plato.stanford.edu/entries/leucippus/",
+          "evidence": "Read metaphysics section on solid atoms/void, indivisibility and continuous motion.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Democritus",
+          "evidence": "Read discussion of overlapping attribution to Leucippus and Democritus.",
+          "role": "opened_stored_source_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": false,
+      "originalFinding": {
+        "id": "ROOT-MYTHOLOGY-004",
+        "severity": "important",
+        "code": "AMBIGUOUS_RESPONSE",
+        "categoryId": "built-in-mythology-religion-philosophy-set-140",
+        "clueIds": [
+          "built-in-mythology-religion-philosophy-all-level-expansion-0100"
+        ],
+        "summary": "The atomist-philosopher clue does not distinguish Democritus from Leucippus.",
+        "reason": "Leucippus is also associated with indivisible atoms moving in void. No distinguishing date, teacher relation or title is supplied.",
+        "recommendedRepair": "Add a uniquely identifying Democritus detail or accept Leucippus.",
+        "confidence": "high",
+        "sources": [
+          {
+            "url": "https://plato.stanford.edu/entries/leucippus/",
+            "verification": "Stanford Encyclopedia of Philosophy entry consulted for the relevant philosopher and historical context."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ROOT-MYTHOLOGY-005",
+      "categoryId": "built-in-mythology-religion-philosophy-set-166",
+      "verdict": "editorial_confirmed_with_historical_qualification",
+      "confidence": "medium",
+      "reviewedClueIds": [
+        "built-in-mythology-religion-philosophy-all-level-expansion-0226",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0227",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0228",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0229",
+        "built-in-mythology-religion-philosophy-all-level-expansion-0230"
+      ],
+      "assessment": "The familiar donkey/two-hay-piles image is traditionally called Buridan’s ass and sits awkwardly under an explicitly ancient category title. Its conceptual antecedents reach Aristotle, so the issue is title scope, not a wrong donkey answer. SEP says this particular example is absent from Buridan’s own writings and was likely a later parody.",
+      "repairAssessment": "Broadening the title to Philosophical Images of the Human Condition is a sound modest repair. Phrase the reason as a later image traditionally associated with medieval Buridan; do not claim the exact donkey illustration was invented by him or securely date it to the medieval period.",
+      "externalSourcesActuallyRead": [
+        {
+          "url": "https://plato.stanford.edu/entries/buridan/",
+          "evidence": "Read ethics section: donkey between equidistant hay piles; absent from Buridan’s writings; later-parody explanation; Aristotelian antecedents.",
+          "role": "opened_authoritative_page_and_read_relevant_text"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Buridan%27s_ass",
+          "evidence": "Read historical antecedents, non-occurrence in Buridan’s own writings and later versions.",
+          "role": "opened_stored_source_and_read_relevant_text"
+        }
+      ],
+      "sourceVerificationOverridePresent": true,
+      "originalFinding": {
+        "id": "ROOT-MYTHOLOGY-005",
+        "severity": "important",
+        "code": "CATEGORY_COHERENCE",
+        "categoryId": "built-in-mythology-religion-philosophy-set-166",
+        "clueIds": [
+          "built-in-mythology-religion-philosophy-all-level-expansion-0229"
+        ],
+        "summary": "The Ancient Images category includes the medieval Buridan’s-ass paradox.",
+        "reason": "The stored source describes Buridan’s ass, associated with the14th-century philosopher; ancient antecedents do not make this specific named paradox an exclusively ancient example.",
+        "recommendedRepair": "Broaden the title to philosophical images or replace the medieval example.",
+        "confidence": "editorial",
+        "sources": [
+          {
+            "url": "https://plato.stanford.edu/entries/buridan/",
+            "verification": "Stanford Encyclopedia of Philosophy entry consulted for the relevant philosopher and historical context."
+          }
+        ]
+      }
+    }
+  ]
+}

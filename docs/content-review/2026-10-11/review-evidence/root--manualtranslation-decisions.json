@@ -1,0 +1,230 @@
+[
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0017",
+    "reason": "Platypus and nokkloom identify the same animal; duck-like bill, webbed feet and flattened tail are parallel physical hints."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0075",
+    "reason": "The clue explicitly requests the English endearment Darling in both languages; retaining that English target is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0077",
+    "reason": "The current EN/ET pair preserves the proper name or title Marriage Story / Marriage Story. Its prose and category title Breaking Up in Culture and Law / Lahkuminek kultuuris ja õiguses are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0078",
+    "reason": "Kramer vs. Kramer and Kramer Krameri vastu are the same film title, conventionally localized with the surname inflected."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0111",
+    "reason": "The current EN/ET pair preserves the proper name or title Stonewall Inn / Stonewall Inn. Its prose and category title Pride Events and Milestones / Pride’i üritused ja verstapostid are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0112",
+    "reason": "Madrid Pride and Madridi Pride name the same event; Madridi is the Estonian genitive of Madrid."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0113",
+    "reason": "The current EN/ET pair preserves the proper name or title Amsterdam Pride / Amsterdam Pride. Its prose and category title Pride Events and Milestones / Pride’i üritused ja verstapostid are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0114",
+    "reason": "São Paulo Pride is an event name retained in both languages; Brazilian place-name and event descriptions are translated with ordinary Estonian inflections."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0114",
+    "reason": "São Paulo Pride is an event name retained in both languages; Brazilian place-name and event descriptions are translated with ordinary Estonian inflections."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0115",
+    "reason": "The current EN/ET pair preserves the proper name or title Pride Toronto / Pride Toronto. Its prose and category title Pride Events and Milestones / Pride’i üritused ja verstapostid are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0127",
+    "reason": "The current EN/ET pair preserves the proper name or title Ellen DeGeneres / Ellen DeGeneres. Its prose and category title Voices That Changed the Conversation / Vestlust muutnud hääled are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0152",
+    "reason": "Cabaret and Kabaree name the same musical film; generic title localization is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0153",
+    "reason": "The current EN/ET pair preserves the proper name or title The Comedy Store / The Comedy Store. Its prose and category title Performers and Nightclub Stages / Esinejad ja ööklubide lavad are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0154",
+    "reason": "The current EN/ET pair preserves the proper name or title The Second City / The Second City. Its prose and category title Performers and Nightclub Stages / Esinejad ja ööklubide lavad are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0155",
+    "reason": "CBGB remains the same venue acronym in both versions; the expanded English club name is a proper title rather than untranslated prose."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0209",
+    "reason": "BBFC remains the same British classification-board acronym; translated institutional description and scope are equivalent."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0235",
+    "reason": "Red band trailer and punase märgiga treiler are equivalent localized labels; English MPA rating initials stay unchanged."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0344",
+    "reason": "Mehmed II, Mehmet II and Fatih Sultan Mehmet identify the same Ottoman ruler; Mehmed Vallutaja is the Estonian equivalent of Mehmed the Conqueror."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0344",
+    "reason": "Mehmed II, Mehmet II and Fatih Sultan Mehmet identify the same Ottoman ruler; Mehmed Vallutaja is the Estonian equivalent of Mehmed the Conqueror."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0345",
+    "reason": "Damnoen Saduak remains the market place-name; Damnoen Saduaki ujuvturg uses the Estonian genitive and translated market noun."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0345",
+    "reason": "Damnoen Saduak remains the market place-name; Damnoen Saduaki ujuvturg uses the Estonian genitive and translated market noun."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0348",
+    "reason": "International Labour Organization and Rahvusvaheline Tööorganisatsioon are equivalent official organization names; ILO stays the shared accepted acronym."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0350",
+    "reason": "The current EN/ET pair preserves the proper name or title Philadelphia / Philadelphia. Its prose and category title Rights at Work / Õigused tööl are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0354",
+    "reason": "The current EN/ET pair preserves the proper name or title Fritz Lang / Fritz Lang. Its prose and category title From Cinema to Streaming / Kinost voogedastuseni are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0354",
+    "reason": "The current EN/ET pair preserves the proper name or title Fritz Lang / Fritz Lang. Its prose and category title From Cinema to Streaming / Kinost voogedastuseni are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0355",
+    "reason": "Jean-Pierre Melville remains the same director; Le Samouraï is the original film title in both versions."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0355",
+    "reason": "Jean-Pierre Melville remains the same director; Le Samouraï is the original film title in both versions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0359",
+    "reason": "Dolby Atmos is a technical product name kept in both languages; Brave is a film title and the localized explanation preserves the introduction date."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0359",
+    "reason": "Dolby Atmos is a technical product name kept in both languages; Brave is a film title and the localized explanation preserves the introduction date."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0360",
+    "reason": "DLP and Digital Light Processing are standard technical names retained in both languages; the micromirror mechanism is translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0360",
+    "reason": "DLP and Digital Light Processing are standard technical names retained in both languages; the micromirror mechanism is translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0364",
+    "reason": "The current EN/ET pair preserves the proper name or title Space Command / Space Command. Its prose and category title How We Watched at Home / Kuidas me kodus vaatasime are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0365",
+    "reason": "Philo Farnsworth and accepted Philo T. Farnsworth identify the same inventor; image dissector is explicitly his named tube and receives an Estonian possessive suffix where used."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0365",
+    "reason": "Philo Farnsworth and accepted Philo T. Farnsworth identify the same inventor; image dissector is explicitly his named tube and receives an Estonian possessive suffix where used."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0375",
+    "reason": "Lou Ottens remains the same engineer; Compact Cassette is a product-format title, inflected in Estonian prose."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0375",
+    "reason": "Lou Ottens remains the same engineer; Compact Cassette is a product-format title, inflected in Estonian prose."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0380",
+    "reason": "The Blair Witch Project and Blairi nõia projekt are the same film title; each version also accepts the original English title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0389",
+    "reason": "The current EN/ET pair preserves the proper name or title Alfred Hitchcock / Alfred Hitchcock. Its prose and category title Awards Night / Auhinnaõhtu are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0390",
+    "reason": "Farewell My Concubine and Hüvasti, mu konkubiin name the same film; Jane Campion’s The Piano is localized as Klaver. Ba wang bie ji is an accepted romanized original title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0392",
+    "reason": "K-drama and K-draama are equivalent genre labels with normal Estonian spelling."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0395",
+    "reason": "NHK is the same public broadcaster acronym; English institutional expansion and the Japanese original refer to that same broadcaster."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0399",
+    "reason": "Telstar 1 and accepted Telstar I are a satellite proper name; place names are translated without changing the 1962 transmission fact."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0399",
+    "reason": "Telstar 1 and accepted Telstar I are a satellite proper name; place names are translated without changing the 1962 transmission fact."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0400",
+    "reason": "HEVC and its standard expansion High Efficiency Video Coding intentionally remain unchanged technical identifiers."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0409",
+    "reason": "EuroMillions is a lottery brand retained in both languages; France, Spain and United Kingdom are translated place names with matching 2004 scope."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0447",
+    "reason": "Moonshine and puskar are familiar language-specific terms for illicitly distilled liquor; both prompts explicitly request their language’s customary term."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0460",
+    "reason": "The Art of Loving and Armastuse kunst are equivalent titles of Fromm’s 1956 book; both accept the original English title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0464",
+    "reason": "The Literary Digest is a magazine title kept in both languages; Landon and Roosevelt receive only Estonian case endings."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0464",
+    "reason": "The Literary Digest is a magazine title kept in both languages; Landon and Roosevelt receive only Estonian case endings."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0465",
+    "reason": "The current EN/ET pair preserves the proper name or title William Sealy Gosset / William Sealy Gosset. Its prose and category title Survey Basics / Küsitluse põhitõed are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0479",
+    "reason": "Antonie/Antoni van Leeuwenhoek variants are equivalent accepted spellings; Royal Society is translated as Kuninglik Selts and the 1683 dental-plaque observation remains identical."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0479",
+    "reason": "Antonie/Antoni van Leeuwenhoek variants are equivalent accepted spellings; Royal Society is translated as Kuninglik Selts and the 1683 dental-plaque observation remains identical."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0494",
+    "reason": "The current EN/ET pair preserves the proper name or title Erik Erikson / Erik Erikson. Its prose and category title Milestones and Life Transitions / Eluetapid ja üleminekud are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0495",
+    "reason": "Both versions require 122 complete years plus the stated 164 days; numeric answer and written-out alternatives are equivalent, and Guinness World Records is a brand name."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-adult-clue-0499",
+    "reason": "The current EN/ET pair preserves the proper name or title John Bowlby / John Bowlby. Its prose and category title Healthy Relationships / Terved suhted are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0499",
+    "reason": "The current EN/ET pair preserves the proper name or title John Bowlby / John Bowlby. Its prose and category title Healthy Relationships / Terved suhted are translated; retaining the named person, venue or product as the answer is intentional."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-adult-clue-0500",
+    "reason": "The current EN/ET pair preserves the proper name or title Carl Rogers / Carl Rogers. Its prose and category title Healthy Relationships / Terved suhted are translated; retaining the named person, venue or product as the answer is intentional."
+  }
+]

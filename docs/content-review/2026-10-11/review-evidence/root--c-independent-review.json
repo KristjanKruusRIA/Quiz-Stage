@@ -1,0 +1,37 @@
+{
+  "author": "C",
+  "reviewer": "Codex Root, independent content reviewer",
+  "reviewedAt": "2026-10-11T16:14:53.984Z",
+  "status": "approved",
+  "proposalFiles": [
+    {
+      "path": "reviewer-c/proposal.json",
+      "sha256": "bb0fa9b93909eae5537a5052531ba6d4ce89e3436d644748a03d8cc9293c6fde"
+    }
+  ],
+  "scope": {
+    "questionPatches": 155,
+    "categoriesRead": 114,
+    "siblingQuestionsRead": 554
+  },
+  "checks": {
+    "factual": "Read all affected sets and checked new primary-source observations, revised familiar identifications, chronology and qualifiers. Source retrieval restrictions are recorded separately, rather than treated as factual verification.",
+    "translation": "Compared every EN/ET question, response, accepted variant and explanation in each affected category. Required parallel Palm/TiVo hints, corrected inflected own-answer denomination word and dated Tallink scope.",
+    "independence": "Read all five-question sets including revealed explanations; tea oxidation enumeration replaced by tea bag; weekday enumeration broken by Janus/January; generic robot/orbiting-object targets disambiguated.",
+    "difficulty": "Reviewed identifiable lower-tier cues and more specific higher-tier targets while preserving assigned difficulty and tiers. Editorial calibration is not a representative player study.",
+    "attribution": "Reviewed per-source title/URL/licence, genuine copyright terms, Wikipedia CC licences and historical OpenTDB candidate provenance. Original factual wording avoids copying restricted passages."
+  },
+  "resolvedFindings": [
+    "Fufu unsupported originally-made timeline removed",
+    "Tea closed oxidation pool broken",
+    "Generic technology class names clarified",
+    "Palm Pilot and TiVo distinguished from equally valid competing products",
+    "Inflected Estonian own-answer and sibling-answer words removed",
+    "Tallink operation date bound to October2026",
+    "Named-god weekday enumeration replaced with broader calendar category"
+  ],
+  "limitations": [
+    "No empirical player difficulty study",
+    "Some primary sites block automated direct retrieval; indexed primary excerpts and reviewer observations are identified honestly"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "reviewer": "repair_content_b",
+  "reviewedAt": "2026-10-11T17:00:31.051237+00:00",
+  "decision": "approved",
+  "checks": [
+    "correctness",
+    "security",
+    "scope",
+    "regression coverage"
+  ],
+  "artifacts": [
+    {
+      "path": "scripts/content/easyExpansion/reviewTranslationExceptions.ts",
+      "sha256": "816dfea64352a9de11d093527bf42173fe74dc4d216d6aed8a317bd509d0e8ce"
+    },
+    {
+      "path": "tests/unit/content/easyExpansionReleaseExceptions.test.ts",
+      "sha256": "728181e8ef3d6ee3d888d2a676330aed1ca005c8d28900d071799781a9af27b6"
+    },
+    {
+      "path": "tests/unit/content/preRepairContent.ts",
+      "sha256": "baa1148187fdead78c547c4779a62a77936907d6f2b78867230780508b149cd5"
+    },
+    {
+      "path": "tests/unit/content/preRepairContent.test.ts",
+      "sha256": "8af24a28b5b75aa05ec2bfbc1ef1384422642c346bb6b610913c7731a1730439"
+    }
+  ],
+  "findings": [],
+  "observations": [
+    "The production change filters the fixed438 exception-count input to exactly the two eligible translation codes. Exact count295+143, exception IDs, expected Easy clue membership and accepted review bindings remain enforced.",
+    "The helper publishes only the translation exception field. publishValidationReport performs a top-level merge preserving validation and unrelated report fields; fresh validation still treats INVALID_SOURCE_LICENSE as nonwaivable.",
+    "readPreRepairContent verifies the current accepted afterSHA, restores every exact unique afterRaw to beforeRaw record, and verifies the resulting beforeSHA. Missing, duplicate, changed or inconsistent deltas fail; it returns bytes without changing content files.",
+    "The test reconstructs the actual frozen8374-row historical phase in temporary files from verified pre-repair bytes and original baseline IDs. Historical catalog/threshold mocks are local to this historical test; current-bank validation is unchanged.",
+    "The regression applies all approved438 translation IDs and attempted generic/per-clue licence waiver IDs, then proves exactly five INVALID_SOURCE_LICENSE errors remain blocking and are absent from the exception list.",
+    "The added persistence assertion seeds the temporary report with that actual five-error blocking validation, reruns the real helper, and compares the whole preserved validation object plus the five blocking errors.",
+    "Existing manifest-binding, artifact-byte tamper, rerun stability and concurrent-report guards remain tested."
+  ],
+  "tests": [
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/preRepairContent.test.ts tests/unit/content/easyExpansionReleaseExceptions.test.ts",
+      "exitCode": 0,
+      "filesPassed": 2,
+      "testsPassed": 9,
+      "durationSeconds": 89.74,
+      "note": "Before the test-only persistence assertion was added; helper and reconstruction files had their current final bytes. Main test file then had SHAec19f1e91615583e51c6a570c1e33f6a09d03e83ddd9fb7bbc43e7162bd350c8."
+    },
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/easyExpansionReleaseExceptions.test.ts -t 'keeps historical licence errors blocking'",
+      "exitCode": 0,
+      "filesPassed": 1,
+      "testsPassed": 1,
+      "testsSkippedByNameFilter": 6,
+      "durationSeconds": 79.28,
+      "note": "Current final test SHA728181e8ef3d6ee3d888d2a676330aed1ca005c8d28900d071799781a9af27b6; actual fresh blocking validation and the added publication-preservation assertion both passed. NODE_OPTIONS=--max-old-space-size=8192 for these historical large-data tests."
+    }
+  ],
+  "reviewerModifiedTargetFiles": false
+}

@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-history-accessible-corpus-003",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "What black fossil fuel heated many Industrial Revolution furnaces?",
+        "clue_et": "Milline must fossiilkütus kuumutas paljusid tööstusrevolutsiooni ahje?",
+        "explanation_en": "Abundant coal supplied concentrated energy for ironmaking and other industrial processes.",
+        "explanation_et": "Rohkesti leiduv kivisüsi andis rauatootmisele ja teistele tööstusprotsessidele suure energiatihedusega kütuse."
+      },
+      "reviewNotes": "Remove the sibling Steam answer from both public fields."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-005",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Their railway carried both scheduled passengers and freight between the two cities.",
+        "explanation_et": "Nende linnade vaheline raudtee vedas nii regulaarseid reisijaid kui ka kaupa."
+      },
+      "reviewNotes": "Remove the sibling power source from the public explanation."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-027",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Its parallel inscriptions gave Jean-François Champollion a crucial key to deciphering ancient Egyptian writing.",
+        "explanation_et": "Selle paralleelsed raidkirjad andsid Jean-François Champollionile Vana-Egiptuse kirja dešifreerimiseks olulise võtme."
+      },
+      "reviewNotes": "Do not print the sibling script name."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-049",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which light plant-fibre cloth was widely used for ancient Egyptian clothing and mummy wrappings?",
+        "clue_et": "Millist kerget taimsetest kiududest kangast kasutati Vana-Egiptuses laialdaselt rõivasteks ja muumiate mähkimiseks?"
+      },
+      "reviewNotes": "Remove the Estonian self-answer flax/linen stem, keeping the historical use that identifies the textile."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-054",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "The marble temple stands on the Acropolis and was dedicated to Athena.",
+        "explanation_et": "Marmortempel asub Akropolil ning oli pühendatud Athenale."
+      },
+      "reviewNotes": "Remove the sibling city from the public explanation."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-060",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Roman troops built and guarded the barrier during Hadrian’s reign.",
+        "explanation_et": "Rooma sõdurid ehitasid ja valvasid tõket Hadrianuse valitsemisajal."
+      },
+      "reviewNotes": "Remove the sibling ruler-title answer."
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-067",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Raising it cut off access to the gateway across a defensive ditch.",
+        "explanation_et": "Selle ülestõstmine katkestas juurdepääsu väravale üle kaitsekraavi."
+      },
+      "reviewNotes": "Remove the sibling moat answer."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-011",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which ancient city in northwestern Anatolia was the capital of the Hellenistic Attalid dynasty?",
+        "clue_et": "Milline muistne Loode-Anatoolia linn oli hellenistliku Attaliidide dünastia pealinn?",
+        "response_en": "Pergamon",
+        "response_et": "Pergamon",
+        "accepted_variants_en": "Pergamum",
+        "accepted_variants_et": "Pergamum",
+        "explanation_en": "Pergamon was the capital of the Attalid dynasty and a major Hellenistic centre of learning.",
+        "explanation_et": "Pergamon oli Attaliidide dünastia pealinn ja tähtis hellenistlik õpetuskeskus.",
+        "source_title": "Pergamon — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Pergamon",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Replace the capital/library city reuse with an independently identifiable Hellenistic capital.",
+      "subjectKey": "history:pergamon",
+      "sourceVerification": [
+        {
+          "url": "https://whc.unesco.org/en/list/1457",
+          "observation": "UNESCO identifies Pergamon as the capital of the Hellenistic Attalid dynasty and a major learning centre; original bilingual question wording."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-032",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which medieval West African ruler’s pilgrimage made his wealth famous across the Mediterranean world?",
+        "clue_et": "Millise keskaegse Lääne-Aafrika valitseja palverännak tegi tema rikkuse kuulsaks kogu Vahemere maailmas?"
+      },
+      "reviewNotes": "Remove the sibling present-day country name."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-114",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "What name is given to Berlin’s assurance of support to Vienna even if action risked a wider war?",
+        "clue_et": "Mis nime kandis Berliini kinnitus toetada Viini isegi siis, kui tegutsemine võis põhjustada laiema sõja?"
+      },
+      "reviewNotes": "Use the existing supported assurance fact without naming the sibling kingdom."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-141",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Two European powers secretly planned spheres of influence in lands of which empire in the Sykes–Picot Agreement?",
+        "clue_et": "Millise impeeriumi aladele kavandasid kaks Euroopa suurriiki Sykes–Picot’ leppes salaja mõjusfääre?"
+      },
+      "reviewNotes": "Name the agreement rather than the sibling European power."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-147",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which leader declared that Ghana’s freedom was meaningless unless linked to the liberation of the whole continent?",
+        "clue_et": "Milline juht kuulutas, et Ghana vabadus on mõttetu, kui see pole seotud kogu mandri vabanemisega?"
+      },
+      "reviewNotes": "Remove the sibling continent from the paraphrased statement."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-177",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which commander invaded Italy by crossing the Alps with elephants during the Second Punic War?",
+        "clue_et": "Milline väejuht tungis teise Puunia sõja ajal Itaaliasse, ületades Alpid koos elevantidega?"
+      },
+      "reviewNotes": "Use the existing invasion fact without revealing the opposing city-state."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-237",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which MP led the parliamentary campaign against the slave trade at Westminster?",
+        "clue_et": "Milline parlamendisaadik juhtis Westminsteris orjakaubanduse vastast kampaaniat?"
+      },
+      "reviewNotes": "Remove the sibling national answer while retaining the parliamentary context."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-267",
+      "batchId": "01-history",
+      "changes": {
+        "clue_et": "Millise atolli lähedal aitas liitlaste koodimurdmine Jaapani laevastikule varitsuse korraldada?"
+      },
+      "reviewNotes": "Remove the sibling country acronym from the Estonian question."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-270",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_et": "Merejalaväelased heiskasid lipu Suribachi mäel."
+      },
+      "reviewNotes": "Remove the sibling country acronym from the Estonian explanation."
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0173",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "In which city did medieval craft associations evolve into organisations called livery companies?",
+        "clue_et": "Millises linnas kujunesid keskaegsetest käsitööühendustest ühendused, mida kutsutakse livery company’deks?"
+      },
+      "reviewNotes": "Replace the sibling guild term with its general description."
+    },
+    {
+      "clueId": "built-in-geography-playable-corpus-020",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "The Pedja flows through which small Estonian county capital?",
+        "clue_et": "Millist väikest Eesti maakonnalinna läbib Pedja jõgi?"
+      },
+      "reviewNotes": "Remove the sibling city name; the river and county-capital status independently identify Jõgeva."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-148",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which European country is famous for polders reclaimed from water?",
+        "clue_et": "Milline Euroopa riik on tuntud veekogudelt tagasi võidetud poldermaade poolest?"
+      },
+      "reviewNotes": "Remove the sibling lake synonym."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-160",
+      "batchId": "02-geography",
+      "changes": {
+        "explanation_en": "Aurora australis is the southern counterpart of the northern aurora, caused by charged particles in Earth’s upper atmosphere.",
+        "explanation_et": "Lõunatuled on põhjapoolsete virmaliste lõunapoolne vaste, mille tekitavad Maa ülakihtides laetud osakesed."
+      },
+      "reviewNotes": "Remove the exact sibling hemisphere answer."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-109",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which famous high-altitude lake lies on the border of Peru and Bolivia?",
+        "clue_et": "Milline kuulus kõrgmäestikujärv asub Peruu ja Boliivia piiril?",
+        "explanation_en": "Lake Titicaca occupies a high basin between Peru and Bolivia.",
+        "explanation_et": "Titicaca järv asub kõrges mäestikunõos Peruu ja Boliivia vahel."
+      },
+      "reviewNotes": "Remove the neighboring mountain range from the public question and explanation."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-126",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which Germanic language native to southern Africa is spoken in South Africa and Namibia?",
+        "clue_et": "Milline Lõuna-Aafrikast pärit germaani keel on kasutusel Lõuna-Aafrika Vabariigis ja Namiibias?",
+        "explanation_en": "Afrikaans is a major language of South Africa and Namibia.",
+        "explanation_et": "Afrikaani keel on Lõuna-Aafrikas ja Namiibias laialt kasutusel."
+      },
+      "reviewNotes": "Remove the sibling language from both public fields, retaining native region and language-family identification."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-127",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which Uralic language is spoken by most people in Budapest?",
+        "clue_et": "Millist uurali keelt räägib enamik Budapesti elanikke?"
+      },
+      "reviewNotes": "Use the capital-city association without printing the native-name alias or the Estonian self-answer country stem."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-128",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which language spoken in Istanbul and Ankara has used a Latin-based alphabet since 1928?",
+        "clue_et": "Millist İstanbulis ja Ankaras räägitavat keelt kirjutatakse alates 1928. aastast ladina tähestikul põhinevas kirjas?"
+      },
+      "reviewNotes": "Replace the country stem that prints the answer in Estonian with independently recognizable cities."
+    },
+    {
+      "clueId": "built-in-geography-accessible-corpus-130",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_et": "Milline läänegermaani keel on Madalmaade peamine ametlik keel?"
+      },
+      "reviewNotes": "Use Madalmaad rather than the self-answer Hollandi stem."
+    },
+    {
+      "clueId": "built-in-geography-all-level-expansion-0092",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "Which country borders the enclaves of Ceuta and Melilla in North Africa?",
+        "clue_et": "Milline riik piirneb Ceuta ja Melilla enklaavidega Põhja-Aafrikas?",
+        "explanation_en": "Morocco borders both North African enclaves, Ceuta and Melilla.",
+        "explanation_et": "Maroko piirneb mõlema Põhja-Aafrika enklaaviga, Ceuta ja Melillaga."
+      },
+      "reviewNotes": "Remove the sibling Spain answer; the two enclaves independently identify the country. Remove the sibling Spain answer from the explanation too."
+    },
+    {
+      "clueId": "built-in-geography-all-level-expansion-0149",
+      "batchId": "02-geography",
+      "changes": {
+        "clue_en": "What great sand desert is known by the Arabic name Rub al-Khali?",
+        "clue_et": "Milline suur liivakõrb ulatub üle Saudi Araabia lõunaosa ning Omaani, Araabia Ühendemiraatide ja Jeemeni alade?",
+        "explanation_en": "The Empty Quarter is the English name of the vast sand desert Rub al-Khali.",
+        "explanation_et": "Rub al-Khali on suur liivakõrb, mida inglise keeles kutsutakse Empty Quarter’iks."
+      },
+      "reviewNotes": "Remove the sibling peninsula name; English asks the translated name, Estonian needs an independently identifying clue."
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0156",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which medieval trading alliance linked merchants from Lübeck with trading posts in Novgorod, London and Bergen?",
+        "clue_et": "Milline keskaegne kaubandusliit ühendas Lübecki kaupmehi Novgorodi, Londoni ja Bergeni kaubakontoritega?",
+        "response_en": "The Hanseatic League",
+        "response_et": "Hansaliit",
+        "accepted_variants_en": "Hansa;Hanse",
+        "accepted_variants_et": "Hansa",
+        "explanation_en": "The Hanseatic League connected northern European merchants and towns; its trading posts supported long-distance commerce.",
+        "explanation_et": "Hansaliit ühendas Põhja-Euroopa kaupmehi ja linnu; selle kaubakontorid toetasid kaugkaubandust.",
+        "source_title": "The Hanse — Europäisches Hansemuseum permanent exhibition",
+        "source_url": "https://www.hansemuseum.eu/en/exhibition/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Independent reviewer B identified the Dutch company response as giving the English company answer core. Replace that target with a separately identified medieval alliance; broad trade title and all identities preserved. Original bilingual wording, no copied museum text.",
+      "sourceVerification": [
+        {
+          "url": "https://www.hansemuseum.eu/en/exhibition/",
+          "observation": "Read indexed primary museum exhibition text: Lübeck trade with Novgorod; London Steelyard and Bergen kontor. Direct web open timed out, so no direct-fetch success claimed."
+        },
+        {
+          "url": "https://www.hansemuseum.eu/en/",
+          "observation": "Primary museum description identifies Hanse as medieval trading network and Lübeck as an important alliance trading partner. No open licence grant identified; reserved terms recorded."
+        }
+      ],
+      "subjectKey": "entity:hanseatic-league",
+      "factFamily": "hanseatic-league:medieval-trade-posts"
+    }
+  ],
+  "categories": [],
+  "resolutions": []
+}

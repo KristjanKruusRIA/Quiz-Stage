@@ -39,6 +39,8 @@ fieldset > label { display: flex; align-items: center; gap: var(--space-1); }
 .settings-screen section > div label { display: block; }
 .settings-screen section > label { display: flex; align-items: center; gap: var(--space-1); }
 .settings-screen > button { justify-self: start; }
+.content-credits { min-width: 0; overflow-wrap: anywhere; }
+.content-credits ul { max-height: 50vh; overflow-y: auto; }
 .home-screen { min-height: 100vh; min-height: 100dvh; display: grid; align-content: center; gap: var(--space-4); }
 .home-screen > header, .home-actions, .home-screen > .muted, .home-screen > [role='alert'] {
   width: min(31rem, 100%);

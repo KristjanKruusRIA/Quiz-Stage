@@ -1,0 +1,314 @@
+[
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-014",
+    "reason": "Coriander and koriander are the customary English and Estonian herb names. North American cilantro is retained as an explicitly identified regional leaf name; it is not an unlocalized sentence."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-accessible-corpus-030",
+    "reason": "Emmental and emmental name the same Swiss cheese; the Emme valley is the same place in both prompts. Lowercase Estonian food-name spelling and translated Swiss description do not change identity."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-playable-corpus-332",
+    "reason": "Fufu is the same West African preparation in both versions. Cassava/maniokk, plantain/jahubanaan and cocoyam/taro are translated ingredient names; both explanations describe current pounding of cooked starches and make no origin-timeline claim."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0027",
+    "reason": "Tahini and tahiini name sesame-seed paste; the Estonian form uses conventional vowel spelling. Both prompts identify grinding sesame seeds."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0060",
+    "reason": "Palmier is a French biscuit name retained as a culinary loan in Estonian; French/Prantsuse and puff pastry/lehttainas are translated descriptions of the same palm-leaf-shaped biscuit."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-food-drink-all-level-expansion-0169",
+    "reason": "Port and portvein identify the same Portuguese fortified wine; Estonian adds the generic wine noun. Both versions specify spirit added before fermentation finishes, retaining natural sweetness."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-accessible-corpus-004",
+    "reason": "GPU is the English initialism for a graphics processing unit; graafikaprotsessor is the corresponding Estonian chip name and GPU remains an accepted identifier. Both prompts describe graphics calculations and rendering."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-020",
+    "reason": "PNG is an international file-format identifier retained in both languages, alongside GIF and the translated alpha-channel description; the format name is not prose requiring translation."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-accessible-corpus-092",
+    "reason": "Samuel Morse is the same inventor in both languages; translated dot-and-dash and name-bearing-code descriptions preserve the clue. A personal name intentionally remains unchanged."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-092",
+    "reason": "Samuel Morse is the same inventor in both languages; translated dot-and-dash and name-bearing-code descriptions preserve the clue. A personal name intentionally remains unchanged."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-accessible-corpus-093",
+    "reason": "James Dyson is the same inventor; British/Briti and bagless-vacuum descriptions translate the surrounding prose. His brand surname and personal name remain unchanged intentionally."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-093",
+    "reason": "James Dyson is the same inventor; British/Briti and bagless-vacuum descriptions translate the surrounding prose. His brand surname and personal name remain unchanged intentionally."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-accessible-corpus-094",
+    "reason": "Grace Hopper and COBOL are stable personal and technical identifiers; both prompts describe early compilers and her subsequent COBOL work in translated prose."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-094",
+    "reason": "Grace Hopper and COBOL are stable personal and technical identifiers; both prompts describe early compilers and her subsequent COBOL work in translated prose."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-accessible-corpus-095",
+    "reason": "Steve Jobs, Apple, Macintosh, iPod and iPhone are personal, corporate and product names retained intentionally; the co-founder and associated-product hints are translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-playable-corpus-008",
+    "reason": "PalmPilot and Graffiti are product/system names preserved intentionally. Both prompts identify a stylus, Graffiti shorthand and first Pilot models in 1996; Estonian Piloti is a grammatical case form."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-playable-corpus-010",
+    "reason": "Motorola StarTAC is the same model name in both languages; the folded clamshell above the display and 1996 launch are parallel translated clues."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-playable-corpus-010",
+    "reason": "Motorola StarTAC is the same model name in both languages; the folded clamshell above the display and 1996 launch are parallel translated clues."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-playable-corpus-025",
+    "reason": "TiVo is a brand name preserved exactly. Both prompts give the 1999 home-recording launch and the same legs, antennae and smiling logo; technical descriptions are translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-technology-inventions-playable-corpus-218",
+    "reason": "Telstar 1 is the same satellite identifier in both versions. Both prompts give 1962 transatlantic live television and the ground-station visibility constraint."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-playable-corpus-311",
+    "reason": "First website and esimene veebisait name the same first online publication. CERN, Tim Berners-Lee, NeXT and World Wide Web are intentionally retained proper technical names, with ordinary Estonian case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0126",
+    "reason": "ENIAC is the same computer acronym in both languages; University of Pennsylvania/Pennsylvania ülikool, US Army/USA armee and the 1946 dedication are parallel localized descriptions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-technology-inventions-all-level-expansion-0134",
+    "reason": "Daemon and deemon are the corresponding Unix background-process terms. James Clerk Maxwell retains his identity with an Estonian possessive ending; both prompts cite the same imaginary sorting-agent thought experiment."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-accessible-corpus-065",
+    "reason": "World Trade Organization and Maailma Kaubandusorganisatsioon are equivalent institution names; WTO is the shared English initialism requested by both Geneva/global-trade-rule clues."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-accessible-corpus-108",
+    "reason": "Midsummer Day and jaanipäev identify the Estonian 24 June holiday explicitly requested in both versions; this is a localized holiday name, not a changed date or country."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-accessible-corpus-110",
+    "reason": "Bastille Day and Bastille’ päev name the same French 14 July holiday. Paris/Pariis and the 1789 prison-fortress event are the same translated historical hints."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-accessible-corpus-119",
+    "reason": "Baltic Assembly and Balti Assamblee are equivalent institution names. Both clues specify cooperation among parliamentarians of the three Baltic states."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-politics-economics-society-playable-corpus-091",
+    "reason": "New Coke is the historical branded replacement name retained in both versions; Coca-Cola and Classic are product names. Both prose versions identify the 1985 formula replacement and restoration."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-politics-economics-society-playable-corpus-094",
+    "reason": "Samsung Galaxy Note 7 is the same branded model retained in both versions. Both prompts refer to the 2016 battery overheating/fire problem affecting original and replacement units."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-playable-corpus-205",
+    "reason": "Johnny Canuck is the same Canadian character name in both languages; both prompts preserve the 1869 cartoon, Second World War return and Vancouver NHL hockey-logo clues."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-politics-economics-society-playable-corpus-205",
+    "reason": "Johnny Canuck is the same Canadian character name in both languages; both prompts preserve the 1869 cartoon, Second World War return and Vancouver NHL hockey-logo clues."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-politics-economics-society-playable-corpus-243",
+    "reason": "The Colbert Report is the official programme title preserved in both languages. Stephen Colbert, Comedy Central and 2005–2014 remain identical anchors; both describe the title’s silent final T."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0141",
+    "reason": "Chancellor and kantsler are conventional corresponding office titles; Germany/Saksamaa and federal government/föderaalvalitsus preserve the requested office."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0143",
+    "reason": "Doge and doodž are the English/Italian and Estonian forms of the elected Venetian ruler’s title, with the same historic republic scope."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0144",
+    "reason": "Grand Duke and suurhertsog are equivalent sovereign titles. Luxembourg/Luksemburg and the distinction from a king are translated consistently."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0156",
+    "reason": "United Kingdom and Ühendkuningriik are the same country name; Westminster and London are retained/localized with Estonian case endings, while both prompts preserve the non-codified constitutional description."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-003",
+    "reason": "Athena is the same goddess name in both languages; Greek/Kreeka, wisdom/tarkus and birth from her father’s head are equivalent translated hints."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-053",
+    "reason": "King Midas and kuningas Midas differ only by the translated royal title. Both prompts identify the wish for a touch that turns things to gold."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-055",
+    "reason": "Robin Hood and Merry Men are established legendary names retained in both versions, with Sherwood/Sherwoodi grammatical inflection and translated outlaw-archer description."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-accessible-corpus-055",
+    "reason": "Robin Hood and Merry Men are established legendary names retained in both versions, with Sherwood/Sherwoodi grammatical inflection and translated outlaw-archer description."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-062",
+    "reason": "Rainbow and vikerkaar are corresponding common nouns. Genesis/Esimene Moosese raamat and God/Jumal are localized religious references describing the same post-flood covenant sign."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-109",
+    "reason": "The Eucharist and armulaud name the same Christian rite. Last Supper/viimne õhtusöömaaeg and shared bread and wine are equivalent localized clues."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-118",
+    "reason": "Mecca and Meka are conventional English and Estonian forms of the same city. Kaaba remains unchanged and Saudi Arabian/Saudi Araabia and ritual-prayer descriptions are translated."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-124",
+    "reason": "Samsara and sansaar are corresponding borrowed religious terms for the death/rebirth cycle; both prompts explicitly ask for the Sanskrit-derived concept in Indian religions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-130",
+    "reason": "The Noble Eightfold Path and õilis kaheksaosaline tee are equivalent Buddhist names. Both prompts list the same eight components in the same order with translated terminology."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-133",
+    "reason": "The Five Ks and viis K-d are the equivalent collective Sikh label; kesh, kangha, kara, kachera and kirpan retain their proper ritual-item names with Estonian inflections."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-141",
+    "reason": "The Bible and Piibel name the same scripture; Old/New Testaments and Vana/Uus Testament are conventional translated division names."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-148",
+    "reason": "Synagogue and sünagoog are conventional corresponding nouns for a Jewish communal house. Torah/Toora is localized and prayer, study, assembly and communal reading are parallel."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-149",
+    "reason": "Mandir is a Sanskrit-derived religious term intentionally retained in Estonian; the Hindu-house-of-worship definition is translated in both versions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-151",
+    "reason": "Socrates and Sokrates are conventional English and Estonian transliterations of the same Athenian philosopher; dialogue and absence-of-authored-books hints are equivalent."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-accessible-corpus-153",
+    "reason": "Aristotle and Aristoteles are conventional English and Estonian forms; Alexander the Great/Aleksander Suur and Lyceum/Lykeion are localized names for the same pupil and institution."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-013",
+    "reason": "Both prompts explicitly require the deity plus an English weekday. Odin remains the deity’s name and Wednesday intentionally stays English; and/ja is translated, rather than silently changing the requested weekday language."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-015",
+    "reason": "Both prompts require a deity and an English weekday. Týr remains the same deity and Tuesday intentionally stays English; and/ja is translated and the one-handed/Old English-counterpart hints match."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-244",
+    "reason": "Cottingley Fairies and Cottingley haldjad name the same photographic series, with its place name retained and fairies translated. The cousins’ names, Yorkshire, 1917 and hoax description match."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-276",
+    "reason": "March and märts are corresponding month names; Martius and Mars are the same Latin etymological anchors, with ordinary Estonian case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-292",
+    "reason": "Adiós is the explicitly requested Spanish farewell retained in both languages; its to-God/Jumala-juurde etymology and departure context are translated."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-293",
+    "reason": "Shalom is the explicitly requested Hebrew word retained in both languages. Both clues give peace/well-being and greeting/parting uses without a supplied farewell alias."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-294",
+    "reason": "Salaam is the same Arabic-origin greeting term retained in both languages; both prompts explain its peace meaning in translated prose."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-307",
+    "reason": "Uppsala University and Uppsala ülikool are the same institution; University is translated. Sixtus IV, Jakob Ulvsson and 1477 are preserved with ordinary Estonian case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-playable-corpus-329",
+    "reason": "World Vision is an organization’s official English brand name retained intentionally. Bob Pierce and 1950 identify the same founder/date, and Christian relief/development/child-focused scope is translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-playable-corpus-329",
+    "reason": "World Vision is an organization’s official English brand name retained intentionally. Bob Pierce and 1950 identify the same founder/date, and Christian relief/development/child-focused scope is translated."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-easy-expansion-005",
+    "reason": "Vesta is the same Roman goddess; Roman/Rooma and the sacred state fire and priestesses are equivalent translated mythological descriptions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-easy-expansion-056",
+    "reason": "Halal is the explicitly requested Arabic-derived menu term retained in Estonian. Both prompts describe food permitted under Islamic rules."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-easy-expansion-066",
+    "reason": "River Styx and Styx name the same Greek underworld river; English includes the generic River noun while Estonian asks for a river in the prompt."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-easy-expansion-091",
+    "reason": "Carpe diem is the Latin expression intentionally retained. Both prompts explicitly permit the Latin phrase or its established language-specific meaning, in accordance with the qualified host-answer policy."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-easy-expansion-092",
+    "reason": "Tabula rasa is the Latin expression retained intentionally; both prompts define an erased writing surface/fresh start and permit the Latin phrase or an established translated meaning."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-easy-expansion-093",
+    "reason": "Status quo is a Latin-derived expression retained intentionally; both prompts describe unchanged conditions and explicitly allow the established English or Estonian meaning."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-easy-expansion-094",
+    "reason": "Et cetera is the Latin expression retained in both languages. Both versions explicitly request the two-word phrase or its three-letter abbreviation; surrounding list-continuation prose is translated."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-mythology-religion-philosophy-easy-expansion-095",
+    "reason": "Bona fide is the Latin-derived expression retained intentionally; both prompts describe authenticity/honesty and allow the phrase or its established English/Estonian meaning."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0100",
+    "reason": "Democritus/Demokritos and Leucippus/Leukippos are corresponding conventional Greek philosopher transliterations. Or/või and the either-one answer policy are parallel, as are the fifth-century-BC atomist hints."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0189",
+    "reason": "Mandorla is a borrowed Italian art-history term kept in Estonian; capitalization changes only. Both definitions describe the whole-body almond-shaped aureola."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0226",
+    "reason": "Chariot and kaarik are corresponding vehicle nouns. Plato/Platon and Phaedrus/Phaidros are conventional localized author/work names; both give a driver and two winged horses."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-mythology-religion-philosophy-all-level-expansion-0228",
+    "reason": "Ring and sõrmus are corresponding object nouns. Plato’s Republic/Platoni Riik and Gyges/Gyges with Estonian genitive are localized references to the same invisibility thought experiment."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0056",
+    "reason": "The Thinker and Mõtleja are corresponding Rodin sculpture titles; Le Penseur is its French title intentionally accepted unchanged. The Gates of Hell/Põrguväravad and Auguste Rodin identify the same origin in translated prose."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-finals-final-0056",
+    "reason": "The Thinker and Mõtleja are corresponding Rodin sculpture titles; Le Penseur is its French title intentionally accepted unchanged. The Gates of Hell/Põrguväravad and Auguste Rodin identify the same origin in translated prose."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0126",
+    "reason": "The Newcomen steam engine and Newcomeni aurumasin identify the same earlier engine; Newcomeni is Estonian genitive and engine is translated. Both versions ask which design Watt improved with a separate condenser."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0129",
+    "reason": "The euro and Euro identify the same shared currency; EUR remains the same international code. Both prompts preserve the 1999 accounting and 2002 cash introduction dates."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0142",
+    "reason": "The Egyptian Book of the Dead and Egiptuse surnuteraamat are equivalent conventional titles for the Egyptian funerary collection. New Kingdom/Uus riik, selected papyrus spells and coming-forth-by-day meaning are parallel."
+  }
+]

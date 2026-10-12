@@ -50,23 +50,32 @@ export function createPackageTemporaryDirectory(prefix: string): OwnedPackageTem
 }
 
 export function removePackageTemporaryDirectory(owned: OwnedPackageTemporaryDirectory): void {
-  let stats;
-  try {
-    stats = lstatSync(owned.path);
-  } catch (error: unknown) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return;
-    throw error;
+  for (let attempt = 0; ; attempt += 1) {
+    let stats;
+    try {
+      stats = lstatSync(owned.path);
+    } catch (error: unknown) {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') return;
+      throw error;
+    }
+    const resolved = validatedPackageTemporaryDirectory(owned.path);
+    if (
+      stats.isSymbolicLink()
+      || stats.dev !== owned.dev
+      || stats.ino !== owned.ino
+      || resolved !== owned.path
+    ) {
+      throw new Error(`PACKAGE_TEMP_DIRECTORY_IDENTITY_CHANGED:${owned.path}`);
+    }
+    try {
+      rmSync(resolved, { recursive: true, force: true });
+      return;
+    } catch (error: unknown) {
+      const code = (error as NodeJS.ErrnoException).code;
+      if (attempt >= 50 || (code !== 'EPERM' && code !== 'EBUSY' && code !== 'ENOTEMPTY')) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 200);
+    }
   }
-  const resolved = validatedPackageTemporaryDirectory(owned.path);
-  if (
-    stats.isSymbolicLink()
-    || stats.dev !== owned.dev
-    || stats.ino !== owned.ino
-    || resolved !== owned.path
-  ) {
-    throw new Error(`PACKAGE_TEMP_DIRECTORY_IDENTITY_CHANGED:${owned.path}`);
-  }
-  rmSync(resolved, { recursive: true, force: true });
 }
 
 export function archiveExtractionCommand(

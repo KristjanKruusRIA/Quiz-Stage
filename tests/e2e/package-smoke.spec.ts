@@ -292,6 +292,8 @@ if (packagedSmokeEnabled) test('runs a complete two-team win sequence without ex
     }
 
     reportPackagedSmokeProgress('final');
+    await expect(page.getByRole('heading', { name: 'Final category', exact: true })).toBeVisible({ timeout: 30_000 });
+    await expect(page.getByRole('spinbutton', { name: /Final wager for/ }).first()).toBeVisible({ timeout: 30_000 });
     for (const input of await page.getByRole('spinbutton', { name: /Final wager for/ }).all()) {
       if (await input.isVisible()) {
         await input.fill('0');

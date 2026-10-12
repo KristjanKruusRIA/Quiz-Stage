@@ -1,0 +1,748 @@
+{
+  "version": 1,
+  "reviewer": "repair_content_b",
+  "reviewedAt": "2026-10-11T16:22:24.231052Z",
+  "decision": "approved",
+  "checks": [
+    "factual",
+    "translation",
+    "independence",
+    "difficulty",
+    "attribution"
+  ],
+  "approvals": [
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/01-history-proposals.json",
+      "proposalSha256": "180c4f9709f1e0f08355750553af0c79456e3680cdc63f4772f649094b1e61e6",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-history-accessible-corpus-011",
+        "built-in-history-accessible-corpus-016",
+        "built-in-history-accessible-corpus-098",
+        "built-in-history-accessible-corpus-099",
+        "built-in-history-playable-corpus-004",
+        "built-in-history-playable-corpus-064",
+        "built-in-history-playable-corpus-071",
+        "built-in-history-playable-corpus-076",
+        "built-in-history-playable-corpus-077",
+        "built-in-history-accessible-corpus-113",
+        "built-in-history-playable-corpus-116",
+        "built-in-history-playable-corpus-109",
+        "built-in-history-playable-corpus-097",
+        "built-in-history-playable-corpus-240",
+        "built-in-history-playable-corpus-085",
+        "built-in-history-playable-corpus-296",
+        "built-in-history-playable-corpus-182",
+        "built-in-history-playable-corpus-197",
+        "built-in-history-playable-corpus-198",
+        "built-in-history-playable-corpus-214",
+        "built-in-history-all-level-expansion-0118",
+        "built-in-history-all-level-expansion-0120",
+        "built-in-history-all-level-expansion-0143",
+        "built-in-history-accessible-corpus-044"
+      ],
+      "changedCategoryIds": [],
+      "completeSetContexts": [
+        {
+          "batchId": "01-history",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/01-history.json",
+          "sha256": "036adeac3f88aadbfa918e7b80f7a20b90e3755e24fc49b3a2794377f3a0108c",
+          "setIds": [
+            "built-in-history-set-030",
+            "built-in-history-set-035",
+            "built-in-history-set-043",
+            "built-in-history-set-053",
+            "built-in-history-set-074",
+            "built-in-history-set-001",
+            "built-in-history-set-010",
+            "built-in-history-set-012",
+            "built-in-history-set-018",
+            "built-in-history-set-039",
+            "built-in-history-set-052",
+            "built-in-history-set-002",
+            "built-in-history-set-009",
+            "built-in-history-set-032",
+            "built-in-history-set-079",
+            "built-in-history-set-086",
+            "built-in-history-set-088",
+            "built-in-history-set-099",
+            "built-in-history-set-015",
+            "built-in-history-set-022",
+            "built-in-history-set-028",
+            "built-in-history-set-036",
+            "built-in-history-set-080",
+            "built-in-history-set-082",
+            "built-in-history-set-041",
+            "built-in-history-set-045",
+            "built-in-history-set-059",
+            "built-in-history-set-067",
+            "built-in-history-set-090",
+            "built-in-history-set-056",
+            "built-in-history-set-075",
+            "built-in-history-set-144",
+            "built-in-history-set-149",
+            "built-in-history-set-152",
+            "built-in-history-set-155"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in 35 projected affected sets. Removed repeated facts and supplied sibling identities remain independently identifiable. Nanna/Suen/Sin, Civil Rights Act, Alfred Nobel and new Pergamon/Hanseatic anchors were checked against primary institutional material. Reviewed title scope and recognizable lower-tier on-ramps."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/02-geography-proposals.json",
+      "proposalSha256": "febe7ffe1a200d66752f86b8fa1c633f01e4c3a9c33868c5e8e096a0ad53421d",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-geography-playable-corpus-006",
+        "built-in-geography-accessible-corpus-014",
+        "built-in-geography-accessible-corpus-097",
+        "built-in-geography-accessible-corpus-098",
+        "built-in-geography-accessible-corpus-099",
+        "built-in-geography-accessible-corpus-100",
+        "built-in-geography-playable-corpus-172",
+        "built-in-geography-playable-corpus-173",
+        "built-in-geography-playable-corpus-174",
+        "built-in-geography-playable-corpus-177",
+        "built-in-geography-playable-corpus-217",
+        "built-in-geography-playable-corpus-219",
+        "built-in-geography-playable-corpus-220",
+        "built-in-geography-playable-corpus-005"
+      ],
+      "changedCategoryIds": [
+        "built-in-geography-set-065"
+      ],
+      "completeSetContexts": [
+        {
+          "batchId": "02-geography",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/02-geography.json",
+          "sha256": "77f80258380b55b4db81d630ca0ba9b77589a2c0a505afb6f7cb1f6203488ac1",
+          "setIds": [
+            "built-in-geography-set-000",
+            "built-in-geography-set-005",
+            "built-in-geography-set-014",
+            "built-in-geography-set-011",
+            "built-in-geography-set-018",
+            "built-in-geography-set-057",
+            "built-in-geography-set-065",
+            "built-in-geography-set-074",
+            "built-in-geography-set-094",
+            "built-in-geography-set-016",
+            "built-in-geography-set-020",
+            "built-in-geography-set-078",
+            "built-in-geography-set-139",
+            "built-in-geography-set-150"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in all14 projected affected sets, including all four Nordic replacement answers, Estonian waters, language identity anchors, lake borders and Vilsandi designation. No remaining exhaustive country/water-body pool. Standard geographic Estonian names, scope and aliases match. Original source terms are retained; newly sourced replacements have dated primary verification records."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/03-science-nature-proposals.json",
+      "proposalSha256": "898f15fc9d44b7ca9ac5ccfb7a2895da959134cb2b1337358e7965771c1f6f7f",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-science-nature-accessible-corpus-003",
+        "built-in-science-nature-accessible-corpus-004",
+        "built-in-science-nature-accessible-corpus-005",
+        "built-in-science-nature-accessible-corpus-007",
+        "built-in-science-nature-accessible-corpus-008",
+        "built-in-science-nature-accessible-corpus-009",
+        "built-in-science-nature-accessible-corpus-010",
+        "built-in-science-nature-playable-corpus-056",
+        "built-in-science-nature-accessible-corpus-056",
+        "built-in-science-nature-accessible-corpus-058",
+        "built-in-science-nature-accessible-corpus-082",
+        "built-in-science-nature-accessible-corpus-092",
+        "built-in-science-nature-accessible-corpus-097",
+        "built-in-science-nature-accessible-corpus-100",
+        "built-in-science-nature-accessible-corpus-108",
+        "built-in-science-nature-accessible-corpus-124",
+        "built-in-science-nature-playable-corpus-277",
+        "built-in-science-nature-playable-corpus-307",
+        "built-in-science-nature-playable-corpus-308",
+        "built-in-science-nature-playable-corpus-309",
+        "built-in-science-nature-playable-corpus-310",
+        "built-in-science-nature-all-level-expansion-0052",
+        "built-in-science-nature-all-level-expansion-0056",
+        "built-in-science-nature-all-level-expansion-0102",
+        "built-in-science-nature-all-level-expansion-0104",
+        "built-in-science-nature-all-level-expansion-0157",
+        "built-in-science-nature-all-level-expansion-0159",
+        "built-in-science-nature-all-level-expansion-0169",
+        "built-in-science-nature-accessible-corpus-154",
+        "built-in-science-nature-accessible-corpus-168",
+        "built-in-science-nature-accessible-corpus-169",
+        "built-in-science-nature-accessible-corpus-017",
+        "built-in-science-nature-accessible-corpus-025",
+        "built-in-science-nature-accessible-corpus-034",
+        "built-in-science-nature-accessible-corpus-045",
+        "built-in-science-nature-playable-corpus-019",
+        "built-in-science-nature-playable-corpus-049",
+        "built-in-science-nature-playable-corpus-065",
+        "built-in-science-nature-playable-corpus-098",
+        "built-in-science-nature-accessible-corpus-053",
+        "built-in-science-nature-accessible-corpus-071",
+        "built-in-science-nature-accessible-corpus-078",
+        "built-in-science-nature-accessible-corpus-088",
+        "built-in-science-nature-accessible-corpus-112",
+        "built-in-science-nature-accessible-corpus-113",
+        "built-in-science-nature-accessible-corpus-114",
+        "built-in-science-nature-playable-corpus-184",
+        "built-in-science-nature-playable-corpus-205",
+        "built-in-science-nature-playable-corpus-228",
+        "built-in-science-nature-playable-corpus-241",
+        "built-in-science-nature-playable-corpus-311",
+        "built-in-science-nature-all-level-expansion-0122",
+        "built-in-science-nature-all-level-expansion-0136",
+        "built-in-science-nature-accessible-corpus-085"
+      ],
+      "changedCategoryIds": [
+        "built-in-science-nature-set-013",
+        "built-in-science-nature-set-014",
+        "built-in-science-nature-set-061",
+        "built-in-science-nature-set-085",
+        "built-in-science-nature-set-096"
+      ],
+      "completeSetContexts": [
+        {
+          "batchId": "03-science-nature",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/03-science-nature.json",
+          "sha256": "8c4ae6a2a54fa4ffdbd9b89e94081544b08db35a390101d1d9be4a29e2e98af6",
+          "setIds": [
+            "built-in-science-nature-set-004",
+            "built-in-science-nature-set-011",
+            "built-in-science-nature-set-013",
+            "built-in-science-nature-set-014",
+            "built-in-science-nature-set-016",
+            "built-in-science-nature-set-034",
+            "built-in-science-nature-set-040",
+            "built-in-science-nature-set-084",
+            "built-in-science-nature-set-035",
+            "built-in-science-nature-set-043",
+            "built-in-science-nature-set-045",
+            "built-in-science-nature-set-046",
+            "built-in-science-nature-set-067",
+            "built-in-science-nature-set-018",
+            "built-in-science-nature-set-019",
+            "built-in-science-nature-set-023",
+            "built-in-science-nature-set-026",
+            "built-in-science-nature-set-027",
+            "built-in-science-nature-set-028",
+            "built-in-science-nature-set-029",
+            "built-in-science-nature-set-030",
+            "built-in-science-nature-set-051",
+            "built-in-science-nature-set-085",
+            "built-in-science-nature-set-094",
+            "built-in-science-nature-set-064",
+            "built-in-science-nature-set-083",
+            "built-in-science-nature-set-091",
+            "built-in-science-nature-set-096",
+            "built-in-science-nature-set-055",
+            "built-in-science-nature-set-061",
+            "built-in-science-nature-set-062",
+            "built-in-science-nature-set-131",
+            "built-in-science-nature-set-132",
+            "built-in-science-nature-set-141",
+            "built-in-science-nature-set-145",
+            "built-in-science-nature-set-148",
+            "built-in-science-nature-set-152",
+            "built-in-science-nature-set-154"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in all38 projected affected sets, then reread final deltas for014/027/046. Checked scientific distinctions, broad-answer alternatives and no repeated closed planet/state/layer pool. Independent primary NASA and Nobel evidence confirms Io and graphene. Jupiter citation corrected; Graphene removes supplied Nitinol alloy alias; Dragonflies removes the necessarily repeated beetle group. Familiar anchors preserve Easy playability; advanced mechanisms retain upper-tier identifying knowledge."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/04-literature-language-proposals.json",
+      "proposalSha256": "488d0259fa7640c5aeca90175519d167649705c87669323a61ac2cd56e7de640",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-literature-language-accessible-corpus-167",
+        "built-in-literature-language-accessible-corpus-168",
+        "built-in-literature-language-accessible-corpus-169",
+        "built-in-literature-language-accessible-corpus-170",
+        "built-in-literature-language-accessible-corpus-035",
+        "built-in-literature-language-playable-corpus-020",
+        "built-in-literature-language-playable-corpus-051",
+        "built-in-literature-language-accessible-corpus-110",
+        "built-in-literature-language-accessible-corpus-114",
+        "built-in-literature-language-playable-corpus-117",
+        "built-in-literature-language-playable-corpus-127",
+        "built-in-literature-language-playable-corpus-173",
+        "built-in-literature-language-playable-corpus-210",
+        "built-in-literature-language-playable-corpus-201",
+        "built-in-literature-language-playable-corpus-202",
+        "built-in-literature-language-playable-corpus-205",
+        "built-in-literature-language-all-level-expansion-0183",
+        "built-in-literature-language-accessible-corpus-157",
+        "built-in-literature-language-accessible-corpus-158",
+        "built-in-literature-language-accessible-corpus-165",
+        "built-in-literature-language-accessible-corpus-042",
+        "built-in-literature-language-accessible-corpus-043",
+        "built-in-literature-language-accessible-corpus-087",
+        "built-in-literature-language-accessible-corpus-088",
+        "built-in-literature-language-accessible-corpus-090",
+        "built-in-literature-language-playable-corpus-086",
+        "built-in-literature-language-playable-corpus-111",
+        "built-in-literature-language-easy-expansion-042",
+        "built-in-literature-language-all-level-expansion-0016",
+        "built-in-literature-language-all-level-expansion-0141",
+        "built-in-literature-language-all-level-expansion-0188",
+        "built-in-literature-language-playable-corpus-106"
+      ],
+      "changedCategoryIds": [
+        "built-in-literature-language-set-152"
+      ],
+      "completeSetContexts": [
+        {
+          "batchId": "04-literature-language",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/04-literature-language.json",
+          "sha256": "9cf7364b7d919c6dbbd40f5e75fca3fa29f1147f7469fd667c53808fc49ec90d",
+          "setIds": [
+            "built-in-literature-language-set-006",
+            "built-in-literature-language-set-022",
+            "built-in-literature-language-set-032",
+            "built-in-literature-language-set-090",
+            "built-in-literature-language-set-093",
+            "built-in-literature-language-set-010",
+            "built-in-literature-language-set-073",
+            "built-in-literature-language-set-030",
+            "built-in-literature-language-set-092",
+            "built-in-literature-language-set-094",
+            "built-in-literature-language-set-013",
+            "built-in-literature-language-set-039",
+            "built-in-literature-language-set-040",
+            "built-in-literature-language-set-041",
+            "built-in-literature-language-set-043",
+            "built-in-literature-language-set-019",
+            "built-in-literature-language-set-075",
+            "built-in-literature-language-set-084",
+            "built-in-literature-language-set-109",
+            "built-in-literature-language-set-124",
+            "built-in-literature-language-set-149",
+            "built-in-literature-language-set-152",
+            "built-in-literature-language-set-157",
+            "built-in-literature-language-set-158"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in all23 projected affected sets (initial12 plus11 final residual sets). Checked story identities, canonically published Estonian titles and original-title aliases, borrowed-word target scope, Calvino/Cortazar structure and motif-vs-tale classifications. Replacement memoir and autobiography identify independent books/authors. Nabokov chronology was independently corroborated with primary Society chronology. Semantic Kui flag was read in its complete unchanged five-poem context and is grammar, not the Kipling title."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/13-finals-proposals.json",
+      "proposalSha256": "9798994059749a34b8277d70cfbae830670bb37b9ff5c7bf4a2376a417e67663",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-finals-final-0001"
+      ],
+      "changedCategoryIds": [],
+      "completeSetContexts": [
+        {
+          "batchId": "13-finals",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/13-finals.json",
+          "sha256": "fb8d1c8283702d443a08d9cef0b76226658cbd74ed7e36e5384f0039170ca34e",
+          "setIds": [
+            "built-in-finals-final-set-0001"
+          ]
+        }
+      ],
+      "observations": [
+        "Read both languages, response variants and explanation of final0001. AD79/Vesuvius plus the casts and Villa of the Mysteries identify Pompeii distinctly from Herculaneum. Archaeological park primary descriptions independently corroborate the named Pompeii features. The question remains a recognizable Easy final and the source metadata accurately distinguishes the Wikipedia stored citation from primary corroboration."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/reviewer-a/15-estonia-proposals.json",
+      "proposalSha256": "f0dd6ebe03706dd159d66bf8477fa5ee9ad5174bab7b34c6fc7dbd4fc176bf74",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-estonia-clue-0001",
+        "built-in-estonia-clue-0010",
+        "built-in-estonia-clue-0011",
+        "built-in-estonia-clue-0012",
+        "built-in-estonia-clue-0013",
+        "built-in-estonia-clue-0014",
+        "built-in-estonia-clue-0056",
+        "built-in-estonia-clue-0060",
+        "built-in-estonia-clue-0109",
+        "built-in-estonia-clue-0006",
+        "built-in-estonia-clue-0033",
+        "built-in-estonia-clue-0124",
+        "built-in-estonia-clue-0150",
+        "built-in-estonia-clue-0138",
+        "built-in-estonia-clue-0151",
+        "built-in-estonia-clue-0152",
+        "built-in-estonia-clue-0153",
+        "built-in-estonia-clue-0154",
+        "built-in-estonia-clue-0155",
+        "built-in-estonia-clue-0163",
+        "built-in-estonia-clue-0216",
+        "built-in-estonia-clue-0255",
+        "built-in-estonia-clue-0292",
+        "built-in-estonia-clue-0281",
+        "built-in-estonia-clue-0303",
+        "built-in-estonia-clue-0315",
+        "built-in-estonia-clue-0321",
+        "built-in-estonia-clue-0327",
+        "built-in-estonia-clue-0335",
+        "built-in-estonia-clue-0348",
+        "built-in-estonia-clue-0342",
+        "built-in-estonia-clue-0345",
+        "built-in-estonia-clue-0349",
+        "built-in-estonia-clue-0356",
+        "built-in-estonia-clue-0383",
+        "built-in-estonia-clue-0427",
+        "built-in-estonia-clue-0435",
+        "built-in-estonia-clue-0443",
+        "built-in-estonia-clue-0444",
+        "built-in-estonia-clue-0445",
+        "built-in-estonia-clue-0457",
+        "built-in-estonia-clue-0461",
+        "built-in-estonia-clue-0470",
+        "built-in-estonia-clue-0471",
+        "built-in-estonia-clue-0477",
+        "built-in-estonia-clue-0483",
+        "built-in-estonia-clue-0488",
+        "built-in-estonia-clue-0417",
+        "built-in-estonia-clue-0409",
+        "built-in-estonia-clue-0410",
+        "built-in-estonia-clue-0419",
+        "built-in-estonia-clue-0420",
+        "built-in-estonia-clue-0479",
+        "built-in-estonia-clue-0480",
+        "built-in-estonia-clue-0464",
+        "built-in-estonia-clue-0465",
+        "built-in-estonia-clue-0499",
+        "built-in-estonia-clue-0500",
+        "built-in-estonia-clue-0354",
+        "built-in-estonia-clue-0355",
+        "built-in-estonia-clue-0009"
+      ],
+      "changedCategoryIds": [
+        "built-in-estonia-set-012",
+        "built-in-estonia-set-031",
+        "built-in-estonia-set-038",
+        "built-in-estonia-set-082",
+        "built-in-estonia-set-096"
+      ],
+      "completeSetContexts": [
+        {
+          "batchId": "15-estonia",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/15-estonia.json",
+          "sha256": "618a309124a0a21fdb0083a4408e5fef407311bc88624a62df49bd8e19dc9bf7",
+          "setIds": [
+            "built-in-estonia-set-001",
+            "built-in-estonia-set-002",
+            "built-in-estonia-set-003",
+            "built-in-estonia-set-007",
+            "built-in-estonia-set-012",
+            "built-in-estonia-set-022",
+            "built-in-estonia-set-025",
+            "built-in-estonia-set-028",
+            "built-in-estonia-set-030",
+            "built-in-estonia-set-031",
+            "built-in-estonia-set-033",
+            "built-in-estonia-set-038",
+            "built-in-estonia-set-044",
+            "built-in-estonia-set-051",
+            "built-in-estonia-set-057",
+            "built-in-estonia-set-059",
+            "built-in-estonia-set-061",
+            "built-in-estonia-set-063",
+            "built-in-estonia-set-065",
+            "built-in-estonia-set-066",
+            "built-in-estonia-set-067",
+            "built-in-estonia-set-069",
+            "built-in-estonia-set-070",
+            "built-in-estonia-set-071",
+            "built-in-estonia-set-072",
+            "built-in-estonia-set-077",
+            "built-in-estonia-set-082",
+            "built-in-estonia-set-084",
+            "built-in-estonia-set-086",
+            "built-in-estonia-set-087",
+            "built-in-estonia-set-089",
+            "built-in-estonia-set-092",
+            "built-in-estonia-set-093",
+            "built-in-estonia-set-094",
+            "built-in-estonia-set-095",
+            "built-in-estonia-set-096",
+            "built-in-estonia-set-097",
+            "built-in-estonia-set-098",
+            "built-in-estonia-set-100"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in all38 projected affected sets; reread every late delta. Confirmed corrected first-film title question omits title components, Easy1441 tradition identifies Tallinn without disputed priority, EKA2018 adapts Rauaniit factory, Eurovision sibling no longer names Tallinn, historical Clevon anchor uses its partner press release, and Kadripäev aliases preserve identical numeric facts. Reviewed broadened answers, compound/grammar meanings, sports medal distinctions, independent culture/food/local-landmark replacements, and actual source licences. Primary EKA history and ECB Finland coin motif independently corroborated."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    },
+    {
+      "proposalPath": "content/work/2026-10-content-repairs/root/01-02-residual.proposal.json",
+      "proposalSha256": "3faae8a34a06a47629ae4c51d5b066477e8eaa8086ead4f39137cca46935d61b",
+      "reviewer": "repair_content_b",
+      "decision": "approved",
+      "checks": [
+        "factual",
+        "translation",
+        "independence",
+        "difficulty",
+        "attribution"
+      ],
+      "changedClueIds": [
+        "built-in-history-accessible-corpus-003",
+        "built-in-history-accessible-corpus-005",
+        "built-in-history-accessible-corpus-027",
+        "built-in-history-accessible-corpus-049",
+        "built-in-history-accessible-corpus-054",
+        "built-in-history-accessible-corpus-060",
+        "built-in-history-accessible-corpus-067",
+        "built-in-history-playable-corpus-011",
+        "built-in-history-playable-corpus-032",
+        "built-in-history-playable-corpus-114",
+        "built-in-history-playable-corpus-141",
+        "built-in-history-playable-corpus-147",
+        "built-in-history-playable-corpus-177",
+        "built-in-history-playable-corpus-237",
+        "built-in-history-playable-corpus-267",
+        "built-in-history-playable-corpus-270",
+        "built-in-history-all-level-expansion-0173",
+        "built-in-geography-playable-corpus-020",
+        "built-in-geography-accessible-corpus-148",
+        "built-in-geography-accessible-corpus-160",
+        "built-in-geography-accessible-corpus-109",
+        "built-in-geography-accessible-corpus-126",
+        "built-in-geography-accessible-corpus-127",
+        "built-in-geography-accessible-corpus-128",
+        "built-in-geography-accessible-corpus-130",
+        "built-in-geography-all-level-expansion-0092",
+        "built-in-geography-all-level-expansion-0149",
+        "built-in-history-all-level-expansion-0156"
+      ],
+      "changedCategoryIds": [],
+      "completeSetContexts": [
+        {
+          "batchId": "01-history",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/01-history.json",
+          "sha256": "036adeac3f88aadbfa918e7b80f7a20b90e3755e24fc49b3a2794377f3a0108c",
+          "setIds": [
+            "built-in-history-set-030",
+            "built-in-history-set-035",
+            "built-in-history-set-043",
+            "built-in-history-set-053",
+            "built-in-history-set-074",
+            "built-in-history-set-001",
+            "built-in-history-set-010",
+            "built-in-history-set-012",
+            "built-in-history-set-018",
+            "built-in-history-set-039",
+            "built-in-history-set-052",
+            "built-in-history-set-002",
+            "built-in-history-set-009",
+            "built-in-history-set-032",
+            "built-in-history-set-079",
+            "built-in-history-set-086",
+            "built-in-history-set-088",
+            "built-in-history-set-099",
+            "built-in-history-set-015",
+            "built-in-history-set-022",
+            "built-in-history-set-028",
+            "built-in-history-set-036",
+            "built-in-history-set-080",
+            "built-in-history-set-082",
+            "built-in-history-set-041",
+            "built-in-history-set-045",
+            "built-in-history-set-059",
+            "built-in-history-set-067",
+            "built-in-history-set-090",
+            "built-in-history-set-056",
+            "built-in-history-set-075",
+            "built-in-history-set-144",
+            "built-in-history-set-149",
+            "built-in-history-set-152",
+            "built-in-history-set-155"
+          ]
+        },
+        {
+          "batchId": "02-geography",
+          "path": "content/work/2026-10-content-repairs/reviewer-b/independent-review/02-geography.json",
+          "sha256": "77f80258380b55b4db81d630ca0ba9b77589a2c0a505afb6f7cb1f6203488ac1",
+          "setIds": [
+            "built-in-geography-set-000",
+            "built-in-geography-set-005",
+            "built-in-geography-set-014",
+            "built-in-geography-set-011",
+            "built-in-geography-set-018",
+            "built-in-geography-set-057",
+            "built-in-geography-set-065",
+            "built-in-geography-set-074",
+            "built-in-geography-set-094",
+            "built-in-geography-set-016",
+            "built-in-geography-set-020",
+            "built-in-geography-set-078",
+            "built-in-geography-set-139",
+            "built-in-geography-set-150"
+          ]
+        }
+      ],
+      "observations": [
+        "Read all five EN/ET questions, responses, variants and public explanations in 35 projected affected sets. Removed repeated facts and supplied sibling identities remain independently identifiable. Nanna/Suen/Sin, Civil Rights Act, Alfred Nobel and new Pergamon/Hanseatic anchors were checked against primary institutional material. Reviewed title scope and recognizable lower-tier on-ramps.",
+        "Read all five EN/ET questions, responses, variants and public explanations in all14 projected affected sets, including all four Nordic replacement answers, Estonian waters, language identity anchors, lake borders and Vilsandi designation. No remaining exhaustive country/water-body pool. Standard geographic Estonian names, scope and aliases match. Original source terms are retained; newly sourced replacements have dated primary verification records."
+      ],
+      "limits": "Independent manual review of complete projected affected sets and proposal verification records, plus selected primary factual rechecks; this does not claim a new successful live fetch of every existing citation. No automatic response rejection is assumed; human host judges spoken answers."
+    }
+  ],
+  "primaryRechecks": [
+    {
+      "url": "https://whc.unesco.org/en/list/1457/",
+      "observation": "Primary UNESCO describes Pergamon as the Hellenistic Attalid dynasty capital; independently read for the new root replacement."
+    },
+    {
+      "url": "https://www.hansemuseum.eu/en/exhibition/",
+      "observation": "Independently read indexed primary museum exhibition text identifying Lübeck trade with Novgorod, London Steelyard and Bergen kontor; it corroborates the new independent trade answer."
+    },
+    {
+      "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/nannasuen/",
+      "observation": "Independently read primary academic page: Sumerian Nanna and Akkadian Suen/Sin are the moon god and Ur patron. Earlier attempted /index.html URL was inaccessible; indexed canonical page succeeded."
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/civil-rights-act",
+      "observation": "Independently read National Archives act description and enrolled law:1964 public accommodations and employment nondiscrimination."
+    },
+    {
+      "url": "https://www.nobelprize.org/alfred-nobel/",
+      "observation": "Independently read primary Nobel organisation timeline: signed final will27November1895; prizes first awarded1901. Earlier direct will-page attempt failed, current organisation page was verified."
+    },
+    {
+      "url": "https://www.orderofmalta.int/history/",
+      "observation": "Independently read official order hospital origins and pilgrims; author verification supplies later Malta milestone."
+    },
+    {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/facts/",
+      "observation": "Independently read NASA statement that Io is most volcanically active solar-system world and its gravitational tidal heating."
+    },
+    {
+      "url": "https://www.nobelprize.org/uploads/2018/06/popular-physicsprize2010-1.pdf",
+      "observation": "Independently read Nobel primary popular scientific description: graphene single carbon layer, hexagonal lattice, electrical conductivity/strength and2010 physics prize."
+    },
+    {
+      "url": "https://nabokovsociety.org/life/chronology",
+      "observation": "Independently read Society1951 publication chronology: Conclusive Evidence in USA, Speak Memory in England that November."
+    },
+    {
+      "url": "https://www.artun.ee/en/academy/about/history/",
+      "observation": "Independently read EKA institutional history: founded1914, acquired Rauaniit factory2013, adapted its complex and moved into premises2018."
+    },
+    {
+      "url": "https://www.ecb.europa.eu/euro/coins/2euro/html/index.en.html",
+      "observation": "Independently read ECB Finland entry: ordinary2euro motif cloudberries and flowers by Raimo Heino."
+    },
+    {
+      "url": "https://pompeiisites.org/en/houses/",
+      "observation": "Independently read official park list of Pompeii Villa of the Mysteries and cast exhibition; primary park timeline/AD79 material corroborates distinctive city identification."
+    }
+  ],
+  "resolvedReviewIssues": [
+    {
+      "clueId": "built-in-history-playable-corpus-141",
+      "resolution": "Remove former empire in1916 wartime SykesPicot wording."
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-177",
+      "resolution": "ET direct object Alpid corrected."
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0156",
+      "resolution": "Supplied English EastIndiaCompany answer replaced with primary-supported HanseaticLeague."
+    },
+    {
+      "clueId": "built-in-estonia-clue-0010",
+      "resolution": "Title no longer printed as translated plot; cinematographer credit accurately qualified."
+    },
+    {
+      "clueId": "built-in-estonia-clue-0006",
+      "resolution": "Easy city identification replaces obscure decade; tradition qualified without disputed priority."
+    },
+    {
+      "clueId": "built-in-estonia-clue-0009",
+      "resolution": "Followingyearcontest location no longer reveals new Tallinn sibling."
+    },
+    {
+      "clueId": "built-in-estonia-clue-0281",
+      "resolution": "Campus is adapted Rauaniit factory, not wholly purpose-built."
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-007",
+      "resolution": "Source now directly supports Jupiter GreatRedSpot fact."
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-065",
+      "resolution": "Graphene independent material replaces supplied Nitinol chemical-name alias."
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-085",
+      "resolution": "Dragonflies independent group replaces beetle answer printed by Firefly."
+    }
+  ]
+}

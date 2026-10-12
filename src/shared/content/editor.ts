@@ -3,6 +3,7 @@ import { CSV_COLUMNS } from './csvColumns';
 import { contentIdSchema, contentReportRecordSchema, localizedTextSchema } from './schema';
 import { sourceUrlSchema } from './sourceUrl';
 import { hasValidAcceptedResponseEscapes } from './acceptedResponses';
+import { sourceInspirationSchema } from './sourceCitation';
 
 const text = z.string().trim().min(1);
 const revisionSchema = z.string().min(1);
@@ -15,6 +16,7 @@ export const editorSourceSchema = z.strictObject({
   license: text.nullable(),
   retrievedAt: z.string().date().nullable(),
   translationStatus: z.enum(['untranslated', 'machine', 'reviewed']).nullable(),
+  inspiration: sourceInspirationSchema.optional(),
 });
 
 export const editorClueSchema = z.strictObject({

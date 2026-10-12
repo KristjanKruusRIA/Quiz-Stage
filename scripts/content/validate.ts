@@ -11,6 +11,7 @@ import { serializeStoredSource } from '../../src/shared/content/sourceCitation';
 import { validatePack, type ParsedCsvRow, type ParsedPack } from '../../src/main/content/csvPacks';
 import { readCsvInputs } from './readCsv';
 import { assertEasyExpansionReviewBindings } from './easyExpansion/reviewBinding';
+import { assertAllDifficultyExpansionReviewBindings } from './allDifficultyExpansionReviewBinding';
 import { contentEvidenceSchema, readEvidenceInputs, type ContentEvidence } from './evidence';
 import { findNearDuplicatePairs } from './nearDuplicate';
 import { answerFamiliesDifferNumerically, differsNumerically } from './numericTranslation';
@@ -19,6 +20,8 @@ import {
 } from './productionBatches';
 import { RELEASE_COMPOSITION_THRESHOLDS, RELEASE_THRESHOLDS, type ReleaseSummary } from './releaseThresholds';
 import { restoreNpmRunArgs } from './npmCliCompatibility';
+import { assertReviewedInputHashes, loadContentRepairReview, repairReviewedTranslationIds, reviewedEvidenceHash } from './contentRepairReview';
+import { answerDisclosureId, findAnswerDisclosures } from './answerDisclosures';
 
 export type ValidationMode = 'batch' | 'release';
 export type ValidationSeverity = 'error' | 'warning';
@@ -53,6 +56,8 @@ export interface ProductionValidationOptions {
   mode: ValidationMode;
   allowMissingEt?: boolean;
   reviewedExceptionIds?: readonly string[];
+  checkAnswerDisclosures?: boolean;
+  approvedAnswerDisclosures?: ReadonlyMap<string, string>;
   evidenceByClueId?: ReadonlyMap<string, ContentEvidence>;
   batch?: ProductionBatchDefinition;
 }
@@ -235,6 +240,8 @@ export const NON_WAIVABLE_CODES: ReadonlySet<string> = new Set([
   'OPENTDB_COMPOSITION',
   'PLACEHOLDER_CONTENT',
   'CATEGORY_SUBJECT_DIVERSITY',
+  'ANSWER_DISCLOSURE_REVIEW_REQUIRED',
+  'INVALID_SOURCE_LICENSE',
 ]);
 
 function normalizeText(value: string): string {
@@ -391,6 +398,9 @@ export function validateProductionContent(
     } else if (!isHttpsSource(row.source_url)) {
       add({ file, row: row.rowNumber, code: 'SOURCE_URL_NOT_HTTPS', severity: 'error', message: 'Source URL must use HTTPS without credentials' });
     }
+      if (/^(?:source|official product page|reference-only|citation-only\/no-open-license)$/iu.test(row.source_license.trim())) {
+        add({ file, row: row.rowNumber, code: 'INVALID_SOURCE_LICENSE', severity: 'error', message: 'Source attribution must identify actual licence or copyright terms' });
+      }
     if (OFFICIAL_ARCHIVE_HOSTS.has(sourceHost(row.source_url) ?? '')) {
       add({ file, row: row.rowNumber, code: 'OFFICIAL_ARCHIVE_HOST', severity: 'error', message: 'Official-show clue archive sources are forbidden' });
     }
@@ -604,6 +614,27 @@ export function validateProductionContent(
 
   for (const [categoryId, group] of categoryRows) {
     const first = group[0];
+    if (options.checkAnswerDisclosures) {
+      const flags = findAnswerDisclosures({
+        id: categoryId, name: { en: first.row.category_name_en, et: first.row.category_name_et },
+        questions: group.map(({ row }) => ({
+          id: row.clue_id,
+          prompt: { en: row.clue_en, et: row.clue_et },
+          response: { en: row.response_en, et: row.response_et },
+          variants: { en: row.accepted_variants_en, et: row.accepted_variants_et },
+          explanation: { en: row.explanation_en, et: row.explanation_et },
+        })),
+      });
+      for (const flag of flags) {
+        const id = answerDisclosureId(flag);
+        const reason = options.approvedAnswerDisclosures?.get(id);
+        if (reason?.trim()) {
+          exceptionMap.set(id, { id, code: 'ANSWER_DISCLOSURE_REVIEW_REQUIRED', clueId: flag.exposedClueId, reason });
+        } else {
+          add({ file: first.file, row: first.row.rowNumber, code: 'ANSWER_DISCLOSURE_REVIEW_REQUIRED', severity: 'error', message: `${id}: public ${flag.field} contains answer or alias ${flag.answer}; review the complete category` });
+        }
+      }
+    }
     const normalizedName = normalizeText(first.row.category_name_en);
     const priorName = categoryNames.get(normalizedName);
     if (normalizedName !== '' && priorName !== undefined && priorName.id !== categoryId) {
@@ -877,14 +908,15 @@ export function reviewedIdsFromReport(
   path: string,
   options: { repositoryRoot?: string } = {},
 ): string[] {
+  const finish = (ids: string[] = []) => repairReviewedTranslationIds(ids, options.repositoryRoot ?? '.');
   const stat = lstatSync(resolve(path), { throwIfNoEntry: false });
-  if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()) return [];
+  if (stat === undefined || stat.isSymbolicLink() || !stat.isFile()) return finish();
   const report: unknown = JSON.parse(readFileSync(path, 'utf8'));
-  if (report === null || typeof report !== 'object') return [];
+  if (report === null || typeof report !== 'object') return finish();
   const translation = (report as { translation?: unknown }).translation;
-  if (translation === null || typeof translation !== 'object') return [];
+  if (translation === null || typeof translation !== 'object') return finish();
   const values = (translation as { exceptions?: unknown }).exceptions;
-  if (!Array.isArray(values)) return [];
+  if (!Array.isArray(values)) return finish();
   const reviewed = values.filter((item): item is {
     id: string; status: string; reviewerReason: string; reviewBinding?: unknown;
   } =>
@@ -894,7 +926,13 @@ export function reviewedIdsFromReport(
     && typeof (item as { reviewerReason?: unknown }).reviewerReason === 'string'
     && (item as { reviewerReason: string }).reviewerReason.trim() !== '');
   assertEasyExpansionReviewBindings(reviewed, options.repositoryRoot ?? '.');
-  return reviewed.map(({ id }) => id);
+    assertAllDifficultyExpansionReviewBindings(reviewed, options.repositoryRoot ?? '.');
+    const ids = new Set(reviewed.map(({ id }) => id));
+    for (const { id } of reviewed) {
+      const match = /^(UNCHANGED_TRANSLATION|SUSPICIOUS_PROPER_NOUN_CHANGE):(built-in-[a-z-]+-all-level-expansion-\d{4}):(?:category_name_en|clue_en|response_en|explanation_en|accepted_variants_en)$/u.exec(id);
+      if (match !== null) ids.add(`translation:${match[1]}:${match[2]}`);
+    }
+    return finish([...ids]);
 }
 
 export async function runValidationCli(
@@ -910,9 +948,16 @@ export async function runValidationCli(
   const evidenceByClueId = preloadedEvidence ?? (options.evidence.length === 0
     ? undefined
     : await readEvidenceInputs(options.evidence));
+  const productionContent = options.mode === 'release' && inputs.some(input => /^content\/(?:authored|generated)\//u.test(input.file));
+  if (productionContent) {
+    assertReviewedInputHashes(inputs, reviewedEvidenceHash(evidenceByClueId ?? new Map()), process.cwd());
+  }
+  const repairReview = productionContent ? loadContentRepairReview(process.cwd()) : undefined;
   const result = validateProductionContent(inputs, {
     mode: options.mode, allowMissingEt: options.allowMissingEt,
     reviewedExceptionIds: reviewedIdsFromReport(options.report, { repositoryRoot: process.cwd() }),
+    checkAnswerDisclosures: productionContent,
+    approvedAnswerDisclosures: new Map(repairReview?.answerDisclosureExceptions.map(item => [item.id, item.reason])),
     ...(evidenceByClueId === undefined ? {} : { evidenceByClueId }),
     ...(options.batchId === undefined ? {} : { batch: getProductionBatch(options.batchId) }),
   });

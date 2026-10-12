@@ -1,0 +1,1674 @@
+{
+  "batchId": "11-politics-economics-society",
+  "bankSha256": "3bc9233b96f5b64eeeebbb406c8dbad289d793389656c80e7b8e5737f3182bfa",
+  "reviewedClueIds": [
+    "built-in-politics-economics-society-all-level-expansion-0001",
+    "built-in-politics-economics-society-all-level-expansion-0002",
+    "built-in-politics-economics-society-all-level-expansion-0003",
+    "built-in-politics-economics-society-all-level-expansion-0004",
+    "built-in-politics-economics-society-all-level-expansion-0005",
+    "built-in-politics-economics-society-all-level-expansion-0006",
+    "built-in-politics-economics-society-all-level-expansion-0007",
+    "built-in-politics-economics-society-all-level-expansion-0008",
+    "built-in-politics-economics-society-all-level-expansion-0009",
+    "built-in-politics-economics-society-all-level-expansion-0010",
+    "built-in-politics-economics-society-all-level-expansion-0011",
+    "built-in-politics-economics-society-all-level-expansion-0012",
+    "built-in-politics-economics-society-all-level-expansion-0013",
+    "built-in-politics-economics-society-all-level-expansion-0014",
+    "built-in-politics-economics-society-all-level-expansion-0015",
+    "built-in-politics-economics-society-all-level-expansion-0016",
+    "built-in-politics-economics-society-all-level-expansion-0017",
+    "built-in-politics-economics-society-all-level-expansion-0018",
+    "built-in-politics-economics-society-all-level-expansion-0019",
+    "built-in-politics-economics-society-all-level-expansion-0020",
+    "built-in-politics-economics-society-all-level-expansion-0021",
+    "built-in-politics-economics-society-all-level-expansion-0022",
+    "built-in-politics-economics-society-all-level-expansion-0023",
+    "built-in-politics-economics-society-all-level-expansion-0024",
+    "built-in-politics-economics-society-all-level-expansion-0025",
+    "built-in-politics-economics-society-all-level-expansion-0026",
+    "built-in-politics-economics-society-all-level-expansion-0027",
+    "built-in-politics-economics-society-all-level-expansion-0028",
+    "built-in-politics-economics-society-all-level-expansion-0029",
+    "built-in-politics-economics-society-all-level-expansion-0030",
+    "built-in-politics-economics-society-all-level-expansion-0031",
+    "built-in-politics-economics-society-all-level-expansion-0032",
+    "built-in-politics-economics-society-all-level-expansion-0033",
+    "built-in-politics-economics-society-all-level-expansion-0034",
+    "built-in-politics-economics-society-all-level-expansion-0035",
+    "built-in-politics-economics-society-all-level-expansion-0036",
+    "built-in-politics-economics-society-all-level-expansion-0037",
+    "built-in-politics-economics-society-all-level-expansion-0038",
+    "built-in-politics-economics-society-all-level-expansion-0039",
+    "built-in-politics-economics-society-all-level-expansion-0040",
+    "built-in-politics-economics-society-all-level-expansion-0041",
+    "built-in-politics-economics-society-all-level-expansion-0042",
+    "built-in-politics-economics-society-all-level-expansion-0043",
+    "built-in-politics-economics-society-all-level-expansion-0044",
+    "built-in-politics-economics-society-all-level-expansion-0045",
+    "built-in-politics-economics-society-all-level-expansion-0046",
+    "built-in-politics-economics-society-all-level-expansion-0047",
+    "built-in-politics-economics-society-all-level-expansion-0048",
+    "built-in-politics-economics-society-all-level-expansion-0049",
+    "built-in-politics-economics-society-all-level-expansion-0050",
+    "built-in-politics-economics-society-all-level-expansion-0051",
+    "built-in-politics-economics-society-all-level-expansion-0052",
+    "built-in-politics-economics-society-all-level-expansion-0053",
+    "built-in-politics-economics-society-all-level-expansion-0054",
+    "built-in-politics-economics-society-all-level-expansion-0055",
+    "built-in-politics-economics-society-all-level-expansion-0056",
+    "built-in-politics-economics-society-all-level-expansion-0057",
+    "built-in-politics-economics-society-all-level-expansion-0058",
+    "built-in-politics-economics-society-all-level-expansion-0059",
+    "built-in-politics-economics-society-all-level-expansion-0060",
+    "built-in-politics-economics-society-all-level-expansion-0061",
+    "built-in-politics-economics-society-all-level-expansion-0062",
+    "built-in-politics-economics-society-all-level-expansion-0063",
+    "built-in-politics-economics-society-all-level-expansion-0064",
+    "built-in-politics-economics-society-all-level-expansion-0065",
+    "built-in-politics-economics-society-all-level-expansion-0066",
+    "built-in-politics-economics-society-all-level-expansion-0067",
+    "built-in-politics-economics-society-all-level-expansion-0068",
+    "built-in-politics-economics-society-all-level-expansion-0069",
+    "built-in-politics-economics-society-all-level-expansion-0070",
+    "built-in-politics-economics-society-all-level-expansion-0071",
+    "built-in-politics-economics-society-all-level-expansion-0072",
+    "built-in-politics-economics-society-all-level-expansion-0073",
+    "built-in-politics-economics-society-all-level-expansion-0074",
+    "built-in-politics-economics-society-all-level-expansion-0075",
+    "built-in-politics-economics-society-all-level-expansion-0076",
+    "built-in-politics-economics-society-all-level-expansion-0077",
+    "built-in-politics-economics-society-all-level-expansion-0078",
+    "built-in-politics-economics-society-all-level-expansion-0079",
+    "built-in-politics-economics-society-all-level-expansion-0080",
+    "built-in-politics-economics-society-all-level-expansion-0081",
+    "built-in-politics-economics-society-all-level-expansion-0082",
+    "built-in-politics-economics-society-all-level-expansion-0083",
+    "built-in-politics-economics-society-all-level-expansion-0084",
+    "built-in-politics-economics-society-all-level-expansion-0085",
+    "built-in-politics-economics-society-all-level-expansion-0086",
+    "built-in-politics-economics-society-all-level-expansion-0087",
+    "built-in-politics-economics-society-all-level-expansion-0088",
+    "built-in-politics-economics-society-all-level-expansion-0089",
+    "built-in-politics-economics-society-all-level-expansion-0090",
+    "built-in-politics-economics-society-all-level-expansion-0091",
+    "built-in-politics-economics-society-all-level-expansion-0092",
+    "built-in-politics-economics-society-all-level-expansion-0093",
+    "built-in-politics-economics-society-all-level-expansion-0094",
+    "built-in-politics-economics-society-all-level-expansion-0095",
+    "built-in-politics-economics-society-all-level-expansion-0096",
+    "built-in-politics-economics-society-all-level-expansion-0097",
+    "built-in-politics-economics-society-all-level-expansion-0098",
+    "built-in-politics-economics-society-all-level-expansion-0099",
+    "built-in-politics-economics-society-all-level-expansion-0100",
+    "built-in-politics-economics-society-all-level-expansion-0101",
+    "built-in-politics-economics-society-all-level-expansion-0102",
+    "built-in-politics-economics-society-all-level-expansion-0103",
+    "built-in-politics-economics-society-all-level-expansion-0104",
+    "built-in-politics-economics-society-all-level-expansion-0105",
+    "built-in-politics-economics-society-all-level-expansion-0106",
+    "built-in-politics-economics-society-all-level-expansion-0107",
+    "built-in-politics-economics-society-all-level-expansion-0108",
+    "built-in-politics-economics-society-all-level-expansion-0109",
+    "built-in-politics-economics-society-all-level-expansion-0110",
+    "built-in-politics-economics-society-all-level-expansion-0111",
+    "built-in-politics-economics-society-all-level-expansion-0112",
+    "built-in-politics-economics-society-all-level-expansion-0113",
+    "built-in-politics-economics-society-all-level-expansion-0114",
+    "built-in-politics-economics-society-all-level-expansion-0115",
+    "built-in-politics-economics-society-all-level-expansion-0116",
+    "built-in-politics-economics-society-all-level-expansion-0117",
+    "built-in-politics-economics-society-all-level-expansion-0118",
+    "built-in-politics-economics-society-all-level-expansion-0119",
+    "built-in-politics-economics-society-all-level-expansion-0120",
+    "built-in-politics-economics-society-all-level-expansion-0121",
+    "built-in-politics-economics-society-all-level-expansion-0122",
+    "built-in-politics-economics-society-all-level-expansion-0123",
+    "built-in-politics-economics-society-all-level-expansion-0124",
+    "built-in-politics-economics-society-all-level-expansion-0125",
+    "built-in-politics-economics-society-all-level-expansion-0126",
+    "built-in-politics-economics-society-all-level-expansion-0127",
+    "built-in-politics-economics-society-all-level-expansion-0128",
+    "built-in-politics-economics-society-all-level-expansion-0129",
+    "built-in-politics-economics-society-all-level-expansion-0130",
+    "built-in-politics-economics-society-all-level-expansion-0131",
+    "built-in-politics-economics-society-all-level-expansion-0132",
+    "built-in-politics-economics-society-all-level-expansion-0133",
+    "built-in-politics-economics-society-all-level-expansion-0134",
+    "built-in-politics-economics-society-all-level-expansion-0135",
+    "built-in-politics-economics-society-all-level-expansion-0136",
+    "built-in-politics-economics-society-all-level-expansion-0137",
+    "built-in-politics-economics-society-all-level-expansion-0138",
+    "built-in-politics-economics-society-all-level-expansion-0139",
+    "built-in-politics-economics-society-all-level-expansion-0140",
+    "built-in-politics-economics-society-all-level-expansion-0141",
+    "built-in-politics-economics-society-all-level-expansion-0142",
+    "built-in-politics-economics-society-all-level-expansion-0143",
+    "built-in-politics-economics-society-all-level-expansion-0144",
+    "built-in-politics-economics-society-all-level-expansion-0145",
+    "built-in-politics-economics-society-all-level-expansion-0146",
+    "built-in-politics-economics-society-all-level-expansion-0147",
+    "built-in-politics-economics-society-all-level-expansion-0148",
+    "built-in-politics-economics-society-all-level-expansion-0149",
+    "built-in-politics-economics-society-all-level-expansion-0150",
+    "built-in-politics-economics-society-all-level-expansion-0151",
+    "built-in-politics-economics-society-all-level-expansion-0152",
+    "built-in-politics-economics-society-all-level-expansion-0153",
+    "built-in-politics-economics-society-all-level-expansion-0154",
+    "built-in-politics-economics-society-all-level-expansion-0155",
+    "built-in-politics-economics-society-all-level-expansion-0156",
+    "built-in-politics-economics-society-all-level-expansion-0157",
+    "built-in-politics-economics-society-all-level-expansion-0158",
+    "built-in-politics-economics-society-all-level-expansion-0159",
+    "built-in-politics-economics-society-all-level-expansion-0160",
+    "built-in-politics-economics-society-all-level-expansion-0161",
+    "built-in-politics-economics-society-all-level-expansion-0162",
+    "built-in-politics-economics-society-all-level-expansion-0163",
+    "built-in-politics-economics-society-all-level-expansion-0164",
+    "built-in-politics-economics-society-all-level-expansion-0165",
+    "built-in-politics-economics-society-all-level-expansion-0166",
+    "built-in-politics-economics-society-all-level-expansion-0167",
+    "built-in-politics-economics-society-all-level-expansion-0168",
+    "built-in-politics-economics-society-all-level-expansion-0169",
+    "built-in-politics-economics-society-all-level-expansion-0170",
+    "built-in-politics-economics-society-all-level-expansion-0171",
+    "built-in-politics-economics-society-all-level-expansion-0172",
+    "built-in-politics-economics-society-all-level-expansion-0173",
+    "built-in-politics-economics-society-all-level-expansion-0174",
+    "built-in-politics-economics-society-all-level-expansion-0175",
+    "built-in-politics-economics-society-all-level-expansion-0176",
+    "built-in-politics-economics-society-all-level-expansion-0177",
+    "built-in-politics-economics-society-all-level-expansion-0178",
+    "built-in-politics-economics-society-all-level-expansion-0179",
+    "built-in-politics-economics-society-all-level-expansion-0180",
+    "built-in-politics-economics-society-all-level-expansion-0181",
+    "built-in-politics-economics-society-all-level-expansion-0182",
+    "built-in-politics-economics-society-all-level-expansion-0183",
+    "built-in-politics-economics-society-all-level-expansion-0184",
+    "built-in-politics-economics-society-all-level-expansion-0185",
+    "built-in-politics-economics-society-all-level-expansion-0186",
+    "built-in-politics-economics-society-all-level-expansion-0187",
+    "built-in-politics-economics-society-all-level-expansion-0188",
+    "built-in-politics-economics-society-all-level-expansion-0189",
+    "built-in-politics-economics-society-all-level-expansion-0190",
+    "built-in-politics-economics-society-all-level-expansion-0191",
+    "built-in-politics-economics-society-all-level-expansion-0192",
+    "built-in-politics-economics-society-all-level-expansion-0193",
+    "built-in-politics-economics-society-all-level-expansion-0194",
+    "built-in-politics-economics-society-all-level-expansion-0195",
+    "built-in-politics-economics-society-all-level-expansion-0196",
+    "built-in-politics-economics-society-all-level-expansion-0197",
+    "built-in-politics-economics-society-all-level-expansion-0198",
+    "built-in-politics-economics-society-all-level-expansion-0199",
+    "built-in-politics-economics-society-all-level-expansion-0200",
+    "built-in-politics-economics-society-all-level-expansion-0201",
+    "built-in-politics-economics-society-all-level-expansion-0202",
+    "built-in-politics-economics-society-all-level-expansion-0203",
+    "built-in-politics-economics-society-all-level-expansion-0204",
+    "built-in-politics-economics-society-all-level-expansion-0205",
+    "built-in-politics-economics-society-all-level-expansion-0206",
+    "built-in-politics-economics-society-all-level-expansion-0207",
+    "built-in-politics-economics-society-all-level-expansion-0208",
+    "built-in-politics-economics-society-all-level-expansion-0209",
+    "built-in-politics-economics-society-all-level-expansion-0210",
+    "built-in-politics-economics-society-all-level-expansion-0211",
+    "built-in-politics-economics-society-all-level-expansion-0212",
+    "built-in-politics-economics-society-all-level-expansion-0213",
+    "built-in-politics-economics-society-all-level-expansion-0214",
+    "built-in-politics-economics-society-all-level-expansion-0215",
+    "built-in-politics-economics-society-all-level-expansion-0216",
+    "built-in-politics-economics-society-all-level-expansion-0217",
+    "built-in-politics-economics-society-all-level-expansion-0218",
+    "built-in-politics-economics-society-all-level-expansion-0219",
+    "built-in-politics-economics-society-all-level-expansion-0220",
+    "built-in-politics-economics-society-all-level-expansion-0221",
+    "built-in-politics-economics-society-all-level-expansion-0222",
+    "built-in-politics-economics-society-all-level-expansion-0223",
+    "built-in-politics-economics-society-all-level-expansion-0224",
+    "built-in-politics-economics-society-all-level-expansion-0225",
+    "built-in-politics-economics-society-all-level-expansion-0226",
+    "built-in-politics-economics-society-all-level-expansion-0227",
+    "built-in-politics-economics-society-all-level-expansion-0228",
+    "built-in-politics-economics-society-all-level-expansion-0229",
+    "built-in-politics-economics-society-all-level-expansion-0230",
+    "built-in-politics-economics-society-all-level-expansion-0231",
+    "built-in-politics-economics-society-all-level-expansion-0232",
+    "built-in-politics-economics-society-all-level-expansion-0233",
+    "built-in-politics-economics-society-all-level-expansion-0234",
+    "built-in-politics-economics-society-all-level-expansion-0235",
+    "built-in-politics-economics-society-all-level-expansion-0236",
+    "built-in-politics-economics-society-all-level-expansion-0237",
+    "built-in-politics-economics-society-all-level-expansion-0238",
+    "built-in-politics-economics-society-all-level-expansion-0239",
+    "built-in-politics-economics-society-all-level-expansion-0240",
+    "built-in-politics-economics-society-all-level-expansion-0241",
+    "built-in-politics-economics-society-all-level-expansion-0242",
+    "built-in-politics-economics-society-all-level-expansion-0243",
+    "built-in-politics-economics-society-all-level-expansion-0244",
+    "built-in-politics-economics-society-all-level-expansion-0245",
+    "built-in-politics-economics-society-all-level-expansion-0246",
+    "built-in-politics-economics-society-all-level-expansion-0247",
+    "built-in-politics-economics-society-all-level-expansion-0248",
+    "built-in-politics-economics-society-all-level-expansion-0249",
+    "built-in-politics-economics-society-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:22:51.694500Z",
+    "decision": "approved",
+    "notes": "Independently read all 250 bilingual questions and the actual supporting paragraphs from preserved research-c/sources and research-b/reviewer-sources snapshots. Conducted targeted primary-source checks for economic/legal Estonian terms, WHO, Sen, hawala and Open University broadcasts. Read all global collision candidates, including Finals, and searched the global existing-facts baseline for reversed and hinted facts; repaired repeated predicates rather than merely reversing question direction."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:22:51.694500Z",
+    "decision": "approved",
+    "notes": "Read all 250 clues, answers, variants, explanations and 50 category pairs. Checked five distinct primary subjects, accessible Easy claims, canonical Medium/Hard connections, clear askable facts, answer leakage and stable historical specificity; replaced true duplicate facts and repaired category scope."
+  },
+  "translationReview": {
+    "reviewer": "Codex Expansion Reviewer B",
+    "reviewedAt": "2026-10-09T13:22:51.694500Z",
+    "decision": "approved",
+    "notes": "Read every English/Estonian clue, response, accepted variant, explanation and category name. Corrected natural Estonian wording, foreign-word etymology scope and professional terms. Reviewed every remaining diagnostic warning in its complete bilingual context and recorded specific exception decisions; final diagnostics have no blocking errors."
+  },
+  "resolvedFindings": [
+    "0005: replaced Town crier with Parking meter, verified against actual Parking meter passage.",
+    "0011: replaced Westminster system with Cabinet, verified against actual Cabinet (government) passage.",
+    "0014: replaced Direct democracy with Theocracy, verified against actual Theocracy passage.",
+    "0033: replaced Carnival with April Fools' Day, verified against actual April Fools' Day passage.",
+    "0053: replaced Layaway with Money-back guarantee, verified against actual Money-back guarantee passage.",
+    "0057: replaced International Labour Organization with Olive tree, verified against actual Flag of the United Nations passage.",
+    "0059: replaced Food and Agriculture Organization with World Food Programme, verified against actual World Food Programme passage.",
+    "0060: replaced World Trade Organization with United Nations peacekeepers, verified against actual United Nations peacekeeping passage.",
+    "0068: replaced Salary with Bonus, verified against actual Bonus payment passage.",
+    "0084: replaced Witness stand with Police tape, verified against actual Barricade tape passage.",
+    "0102: replaced Moustache with Purple Heart, verified against actual Purple Heart passage.",
+    "0124: replaced Panama Canal with California Gold Rush, verified against actual Panama Canal Railway passage.",
+    "0125: replaced Cape of Good Hope with Strait of Dover, verified against actual Strait of Dover passage.",
+    "0126: replaced Diaspora with Expatriate, verified against actual Expatriate passage.",
+    "0137: replaced Trading pit with Ticker symbol, verified against actual Ticker symbol passage.",
+    "0138: replaced Bull market with Blue-chip stock, verified against actual Blue chip (stock market) passage.",
+    "0150: replaced Stonewall Inn with Wall Street, verified against actual Wall Street passage.",
+    "0183: replaced Adam Smith with Price elasticity of demand, verified against actual Price elasticity of demand passage.",
+    "0184: replaced Comparative advantage with Deadweight loss, verified against actual Deadweight loss passage.",
+    "0233: replaced Arrow's impossibility theorem with Borda count, verified against actual Borda count passage.",
+    "0001: corrected bilingual copy or narrowed the factual claim.",
+    "0006: corrected bilingual copy or narrowed the factual claim.",
+    "0017: corrected bilingual copy or narrowed the factual claim.",
+    "0031: corrected bilingual copy or narrowed the factual claim.",
+    "0036: corrected bilingual copy or narrowed the factual claim.",
+    "0045: corrected bilingual copy or narrowed the factual claim.",
+    "0051: corrected bilingual copy or narrowed the factual claim.",
+    "0067: corrected bilingual copy or narrowed the factual claim.",
+    "0069: corrected bilingual copy or narrowed the factual claim.",
+    "0070: corrected bilingual copy or narrowed the factual claim.",
+    "0073: corrected bilingual copy or narrowed the factual claim.",
+    "0078: corrected bilingual copy or narrowed the factual claim.",
+    "0081: corrected bilingual copy or narrowed the factual claim.",
+    "0087: corrected bilingual copy or narrowed the factual claim.",
+    "0090: corrected bilingual copy or narrowed the factual claim.",
+    "0111: corrected bilingual copy or narrowed the factual claim.",
+    "0121: corrected bilingual copy or narrowed the factual claim.",
+    "0123: corrected bilingual copy or narrowed the factual claim.",
+    "0128: corrected bilingual copy or narrowed the factual claim.",
+    "0129: corrected bilingual copy or narrowed the factual claim.",
+    "0130: corrected bilingual copy or narrowed the factual claim.",
+    "0135: corrected bilingual copy or narrowed the factual claim.",
+    "0136: corrected bilingual copy or narrowed the factual claim.",
+    "0145: corrected bilingual copy or narrowed the factual claim.",
+    "0148: corrected bilingual copy or narrowed the factual claim.",
+    "0152: corrected bilingual copy or narrowed the factual claim.",
+    "0155: corrected bilingual copy or narrowed the factual claim.",
+    "0156: corrected bilingual copy or narrowed the factual claim.",
+    "0163: corrected bilingual copy or narrowed the factual claim.",
+    "0177: corrected bilingual copy or narrowed the factual claim.",
+    "0188: corrected bilingual copy or narrowed the factual claim.",
+    "0189: corrected bilingual copy or narrowed the factual claim.",
+    "0198: corrected bilingual copy or narrowed the factual claim.",
+    "0200: corrected bilingual copy or narrowed the factual claim.",
+    "0201: corrected bilingual copy or narrowed the factual claim.",
+    "0203: corrected bilingual copy or narrowed the factual claim.",
+    "0205: corrected bilingual copy or narrowed the factual claim.",
+    "0214: corrected bilingual copy or narrowed the factual claim.",
+    "0218: corrected bilingual copy or narrowed the factual claim.",
+    "0219: corrected bilingual copy or narrowed the factual claim.",
+    "0222: corrected bilingual copy or narrowed the factual claim.",
+    "0224: corrected bilingual copy or narrowed the factual claim.",
+    "0227: corrected bilingual copy or narrowed the factual claim.",
+    "0241: corrected bilingual copy or narrowed the factual claim.",
+    "0242: corrected bilingual copy or narrowed the factual claim.",
+    "0245: corrected bilingual copy or narrowed the factual claim.",
+    "Final copy review clarified British car-boot-sale and bank-holiday labels with natural Estonian descriptive glosses; corrected false source-word etymology implications, legal and economic terminology, passive grammar and category coherence.",
+    "Read complete supporting source passages for all 250 claims. Replaced 21 misleading redirect headings with actual cached article headings and corrected Traffic bollard and Market liquidity disambiguation citations.",
+    "Verified Estonian heaolukadu, priisõitja and lihtveksel against primary Estonian Finance Ministry/Tartu University material; verified WHO emblem, Sen entitlement analysis, hawala settlement and BBC Open University teaching against primary institutional passages.",
+    "Checked single-peaked preferences in the median-voter claim and corrected protection-against-double-jeopardy wording; kept all 250 fixed IDs and author evidence intact."
+  ],
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0001:category_name_en",
+      "reason": "Kategooria „Objects on the Public Street” sisuliselt õige eestikeelne pealkiri on „Esemed avalikul tänaval”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0002:category_name_en",
+      "reason": "Kategooria „Objects on the Public Street” sisuliselt õige eestikeelne pealkiri on „Esemed avalikul tänaval”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0003:category_name_en",
+      "reason": "Kategooria „Objects on the Public Street” sisuliselt õige eestikeelne pealkiri on „Esemed avalikul tänaval”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0004:category_name_en",
+      "reason": "Kategooria „Objects on the Public Street” sisuliselt õige eestikeelne pealkiri on „Esemed avalikul tänaval”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0005:category_name_en",
+      "reason": "Kategooria „Objects on the Public Street” sisuliselt õige eestikeelne pealkiri on „Esemed avalikul tänaval”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0016:category_name_en",
+      "reason": "Kategooria „The Names on the Street Map” sisuliselt õige eestikeelne pealkiri on „Nimed tänavakaardil”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0017:category_name_en",
+      "reason": "Kategooria „The Names on the Street Map” sisuliselt õige eestikeelne pealkiri on „Nimed tänavakaardil”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0017:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What French-derived street name describes a broad avenue that may be lined with trees?” ja eestikeelse välja „Milline prantsuse päritolu tänavanimetus tähistab laia puiesteed, mille ääres võivad kasvada puud?” kogu tähendust. Märgitud „What French-derived” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0018:category_name_en",
+      "reason": "Kategooria „The Names on the Street Map” sisuliselt õige eestikeelne pealkiri on „Nimed tänavakaardil”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0019:category_name_en",
+      "reason": "Kategooria „The Names on the Street Map” sisuliselt õige eestikeelne pealkiri on „Nimed tänavakaardil”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0020:category_name_en",
+      "reason": "Kategooria „The Names on the Street Map” sisuliselt õige eestikeelne pealkiri on „Nimed tänavakaardil”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0021:category_name_en",
+      "reason": "Kategooria „People We Depend On” sisuliselt õige eestikeelne pealkiri on „Inimesed, kellele toetume”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0022:category_name_en",
+      "reason": "Kategooria „People We Depend On” sisuliselt õige eestikeelne pealkiri on „Inimesed, kellele toetume”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0023:category_name_en",
+      "reason": "Kategooria „People We Depend On” sisuliselt õige eestikeelne pealkiri on „Inimesed, kellele toetume”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0024:category_name_en",
+      "reason": "Kategooria „People We Depend On” sisuliselt õige eestikeelne pealkiri on „Inimesed, kellele toetume”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0025:category_name_en",
+      "reason": "Kategooria „People We Depend On” sisuliselt õige eestikeelne pealkiri on „Inimesed, kellele toetume”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0026:category_name_en",
+      "reason": "Kategooria „The Character of a Constitution” sisuliselt õige eestikeelne pealkiri on „Põhiseaduse iseloom”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0026:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which language was used to write King John's Magna Carta, as with many medieval legal documents?” ja eestikeelse välja „Milline keel oli kasutusel kuningas Johni Magna Carta kirjutamisel, nagu paljudes keskaegsetes õigusdokumentides?” kogu tähendust. Märgitud „King John's Magna Carta” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0026:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Latin was used to write King John's Magna Carta, as with many medieval legal documents.” ja eestikeelse välja „Ladina keel oli kasutusel kuningas Johni Magna Carta kirjutamisel, nagu paljudes keskaegsetes õigusdokumentides.” kogu tähendust. Märgitud „King John's Magna Carta” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0027:category_name_en",
+      "reason": "Kategooria „The Character of a Constitution” sisuliselt õige eestikeelne pealkiri on „Põhiseaduse iseloom”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0027:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „United States Constitution begins with the famous words We the People.” ja eestikeelse välja „USA põhiseadus algab tuntud sõnadega We the People.” kogu tähendust. Märgitud „United States Constitution” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0027:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „United States Constitution” ja eestikeelse välja „USA põhiseadus” kogu tähendust. Märgitud „United States Constitution” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0028:category_name_en",
+      "reason": "Kategooria „The Character of a Constitution” sisuliselt õige eestikeelne pealkiri on „Põhiseaduse iseloom”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0029:category_name_en",
+      "reason": "Kategooria „The Character of a Constitution” sisuliselt õige eestikeelne pealkiri on „Põhiseaduse iseloom”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0030:category_name_en",
+      "reason": "Kategooria „The Character of a Constitution” sisuliselt õige eestikeelne pealkiri on „Põhiseaduse iseloom”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0031:category_name_en",
+      "reason": "Kategooria „A City Marks the Calendar” sisuliselt õige eestikeelne pealkiri on „Linn tähistab kalendrit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0031:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Chicago dyes its river green for Saint Patrick's Day.” ja eestikeelse välja „Chicagos värvitakse jõgi püha Patricku päeva puhul roheliseks.” kogu tähendust. Märgitud „Saint Patrick's Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0031:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Saint Patrick's Day” ja eestikeelse välja „püha Patricku päev” kogu tähendust. Märgitud „Saint Patrick's Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0032:category_name_en",
+      "reason": "Kategooria „A City Marks the Calendar” sisuliselt õige eestikeelne pealkiri on „Linn tähistab kalendrit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0032:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This British observance commemorates the failure of the Gunpowder Plot with fires and fireworks. What is its name?” ja eestikeelse välja „See Briti tähtpäev meenutab püssirohuvandenõu nurjumist lõkete ja ilutulestikuga. Mis on selle nimi?” kogu tähendust. Märgitud „This British”, „Gunpowder Plot” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0032:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Bonfire Night commemorates the failure of the Gunpowder Plot with fires and fireworks.” ja eestikeelse välja „Lõkkeöö meenutab püssirohuvandenõu nurjumist lõkete ja ilutulestikuga.” kogu tähendust. Märgitud „Bonfire Night”, „Gunpowder Plot” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0032:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Bonfire Night” ja eestikeelse välja „lõkkeöö” kogu tähendust. Märgitud „Bonfire Night” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0033:category_name_en",
+      "reason": "Kategooria „A City Marks the Calendar” sisuliselt õige eestikeelne pealkiri on „Linn tähistab kalendrit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0033:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „April Fools' Day is observed on the first of April with pranks and hoaxes.” ja eestikeelse välja „Naljapäeval, aprilli esimesel päeval, tehakse vempe ja naljapettusi.” kogu tähendust. Märgitud „April Fools' Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0033:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „April Fools' Day” ja eestikeelse välja „naljapäev” kogu tähendust. Märgitud „April Fools' Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0034:category_name_en",
+      "reason": "Kategooria „A City Marks the Calendar” sisuliselt õige eestikeelne pealkiri on „Linn tähistab kalendrit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0035:category_name_en",
+      "reason": "Kategooria „A City Marks the Calendar” sisuliselt õige eestikeelne pealkiri on „Linn tähistab kalendrit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0035:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which Japanese custom brings people together to admire blossoms, especially cherry flowers?” ja eestikeelse välja „Milline Jaapani komme toob inimesed kokku õisi, eriti kirsiõisi imetlema?” kogu tähendust. Märgitud „Which Japanese” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0041:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What British leader received the Nobel Prize in Literature for historical writing and speeches?” ja eestikeelse välja „Milline Briti juht sai ajalookirjutiste ja kõnede eest Nobeli kirjandusauhinna?” kogu tähendust. Märgitud „What British”, „Nobel Prize” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0041:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Winston Churchill received the Nobel Prize in Literature for historical writing and speeches.” ja eestikeelse välja „Winston Churchill sai ajalookirjutiste ja kõnede eest Nobeli kirjandusauhinna.” kogu tähendust. Märgitud „Nobel Prize” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0041:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Winston Churchill” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0042:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Identify the South African leader that titled his autobiography Long Walk to Freedom.” ja eestikeelse välja „Nimeta Lõuna-Aafrika juht, kes andis oma autobiograafiale pealkirja Long Walk to Freedom.” kogu tähendust. Märgitud „South African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0042:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Nelson Mandela” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0043:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which US president often used a wheelchair after an illness left his legs paralysed?” ja eestikeelse välja „Milline USA president kasutas sageli ratastooli pärast haigust, mis jättis tema jalad halvatuks?” kogu tähendust. Märgitud „Which US” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0043:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Franklin D. Roosevelt” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0044:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Name the German leader that worked in quantum chemistry before entering politics after the Berlin Wall fell.” ja eestikeelse välja „Nimeta Saksa juht, kes töötas kvantkeemia alal enne Berliini müüri langemise järel poliitikasse astumist.” kogu tähendust. Märgitud „Berlin Wall” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0044:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Angela Merkel worked in quantum chemistry before entering politics after the Berlin Wall fell.” ja eestikeelse välja „Angela Merkel töötas kvantkeemia alal enne Berliini müüri langemise järel poliitikasse astumist.” kogu tähendust. Märgitud „Berlin Wall” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0044:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Angela Merkel” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0045:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This Czech leader wrote The Garden Party before becoming a dissident and president. Who is he?” ja eestikeelse välja „See Tšehhi juht kirjutas enne dissidendiks ja presidendiks saamist näidendi The Garden Party. Kes see on?” kogu tähendust. Märgitud „This Czech” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0045:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Václav Havel” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0046:category_name_en",
+      "reason": "Kategooria „Buildings with a Public Job” sisuliselt õige eestikeelne pealkiri on „Avaliku ülesandega hooned”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0047:category_name_en",
+      "reason": "Kategooria „Buildings with a Public Job” sisuliselt õige eestikeelne pealkiri on „Avaliku ülesandega hooned”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0048:category_name_en",
+      "reason": "Kategooria „Buildings with a Public Job” sisuliselt õige eestikeelne pealkiri on „Avaliku ülesandega hooned”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0049:category_name_en",
+      "reason": "Kategooria „Buildings with a Public Job” sisuliselt õige eestikeelne pealkiri on „Avaliku ülesandega hooned”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0050:category_name_en",
+      "reason": "Kategooria „Buildings with a Public Job” sisuliselt õige eestikeelne pealkiri on „Avaliku ülesandega hooned”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0051:category_name_en",
+      "reason": "Kategooria „A Shop's Little Promises” sisuliselt õige eestikeelne pealkiri on „Kaupluse väikesed lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0052:category_name_en",
+      "reason": "Kategooria „A Shop's Little Promises” sisuliselt õige eestikeelne pealkiri on „Kaupluse väikesed lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0053:category_name_en",
+      "reason": "Kategooria „A Shop's Little Promises” sisuliselt õige eestikeelne pealkiri on „Kaupluse väikesed lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0054:category_name_en",
+      "reason": "Kategooria „A Shop's Little Promises” sisuliselt õige eestikeelne pealkiri on „Kaupluse väikesed lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0055:category_name_en",
+      "reason": "Kategooria „A Shop's Little Promises” sisuliselt õige eestikeelne pealkiri on „Kaupluse väikesed lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0056:category_name_en",
+      "reason": "Kategooria „Institutions and Their Clues” sisuliselt õige eestikeelne pealkiri on „Institutsioonid ja nende tunnused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0056:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Name the UN agency that uses the snake-bearing staff of Asclepius in its emblem to represent medical work.” ja eestikeelse välja „Nimeta ÜRO asutus, mis kasutab meditsiinitöö tähistamiseks oma embleemis Asklepiose maoga saua.” kogu tähendust. Märgitud „UN” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0056:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „World Health Organization uses the snake-bearing staff of Asclepius in its emblem to represent medical work.” ja eestikeelse välja „Maailma Terviseorganisatsioon kasutab meditsiinitöö tähistamiseks oma embleemis Asklepiose maoga saua.” kogu tähendust. Märgitud „World Health Organization” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0056:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „World Health Organization” ja eestikeelse välja „Maailma Terviseorganisatsioon” kogu tähendust. Märgitud „World Health Organization” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0057:category_name_en",
+      "reason": "Kategooria „Institutions and Their Clues” sisuliselt õige eestikeelne pealkiri on „Institutsioonid ja nende tunnused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0057:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which tree supplies the branches surrounding the world map on the United Nations emblem?” ja eestikeelse välja „Millise puu oksad ümbritsevad ÜRO embleemil maailmakaarti?” kogu tähendust. Märgitud „United Nations” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0057:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Olive branches surround the United Nations world map as a symbol of peace.” ja eestikeelse välja „ÜRO embleemi maailmakaarti ümbritsevad rahu sümboliseerivad oliivipuuoksad.” kogu tähendust. Märgitud „United Nations” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0058:category_name_en",
+      "reason": "Kategooria „Institutions and Their Clues” sisuliselt õige eestikeelne pealkiri on „Institutsioonid ja nende tunnused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0059:category_name_en",
+      "reason": "Kategooria „Institutions and Their Clues” sisuliselt õige eestikeelne pealkiri on „Institutsioonid ja nende tunnused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0059:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which United Nations food-aid organisation received the Nobel Peace Prize in 2020?” ja eestikeelse välja „Milline ÜRO toiduabiorganisatsioon sai 2020. aastal Nobeli rahuauhinna?” kogu tähendust. Märgitud „Which United Nations”, „Nobel Peace Prize” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0059:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „The World Food Programme received the 2020 Nobel Peace Prize for its work against hunger and the use of food as a weapon of war.” ja eestikeelse välja „Maailma Toiduprogramm sai 2020. aasta Nobeli rahuauhinna nälja ning toidu sõjarelvana kasutamise vastase töö eest.” kogu tähendust. Märgitud „The World Food Programme”, „Nobel Peace Prize” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0059:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „World Food Programme” ja eestikeelse välja „Maailma Toiduprogramm” kogu tähendust. Märgitud „World Food Programme” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0060:category_name_en",
+      "reason": "Kategooria „Institutions and Their Clues” sisuliselt õige eestikeelne pealkiri on „Institutsioonid ja nende tunnused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0060:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which international forces are nicknamed the Blue Helmets because of their distinctive headgear?” ja eestikeelse välja „Milliseid rahvusvahelisi vägesid kutsutakse iseloomuliku peakatte järgi sinikiivriteks?” kogu tähendust. Märgitud „Blue Helmets” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0060:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „United Nations peacekeepers wear blue helmets or berets alongside their national uniforms.” ja eestikeelse välja „ÜRO rahuvalvajad kannavad oma riigi vormiriietuse juurde siniseid kiivreid või barette.” kogu tähendust. Märgitud „United Nations” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0060:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „United Nations peacekeepers” ja eestikeelse välja „ÜRO rahuvalvajad” kogu tähendust. Märgitud „United Nations” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0061:category_name_en",
+      "reason": "Kategooria „Members Have Their Say” sisuliselt õige eestikeelne pealkiri on „Liikmed saavad sõna”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0062:category_name_en",
+      "reason": "Kategooria „Members Have Their Say” sisuliselt õige eestikeelne pealkiri on „Liikmed saavad sõna”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0063:category_name_en",
+      "reason": "Kategooria „Members Have Their Say” sisuliselt õige eestikeelne pealkiri on „Liikmed saavad sõna”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0064:category_name_en",
+      "reason": "Kategooria „Members Have Their Say” sisuliselt õige eestikeelne pealkiri on „Liikmed saavad sõna”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0065:category_name_en",
+      "reason": "Kategooria „Members Have Their Say” sisuliselt õige eestikeelne pealkiri on „Liikmed saavad sõna”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0066:category_name_en",
+      "reason": "Kategooria „Words That Went to Work” sisuliselt õige eestikeelne pealkiri on „Tööellu jõudnud sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0067:category_name_en",
+      "reason": "Kategooria „Words That Went to Work” sisuliselt õige eestikeelne pealkiri on „Tööellu jõudnud sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0068:category_name_en",
+      "reason": "Kategooria „Words That Went to Work” sisuliselt õige eestikeelne pealkiri on „Tööellu jõudnud sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0069:category_name_en",
+      "reason": "Kategooria „Words That Went to Work” sisuliselt õige eestikeelne pealkiri on „Tööellu jõudnud sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0069:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which English term for inability to repay debts derives from Italian words meaning broken bank?” ja eestikeelse välja „Milline ingliskeelne maksejõuetuse termin pärineb itaalia sõnadest, mis tähendavad katkist panka?” kogu tähendust. Märgitud „Which English” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0070:category_name_en",
+      "reason": "Kategooria „Words That Went to Work” sisuliselt õige eestikeelne pealkiri on „Tööellu jõudnud sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0070:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which French loanword describes a person who starts a business and takes on its financial risks?” ja eestikeelse välja „Milline prantsuse laensõna tähistab inglise keeles inimest, kes alustab ettevõtet ja võtab selle rahalised riskid enda kanda?” kogu tähendust. Märgitud „Which French” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0071:category_name_en",
+      "reason": "Kategooria „Everyday Financial Vocabulary” sisuliselt õige eestikeelne pealkiri on „Igapäevane rahasõnavara”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0072:category_name_en",
+      "reason": "Kategooria „Everyday Financial Vocabulary” sisuliselt õige eestikeelne pealkiri on „Igapäevane rahasõnavara”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0073:category_name_en",
+      "reason": "Kategooria „Everyday Financial Vocabulary” sisuliselt õige eestikeelne pealkiri on „Igapäevane rahasõnavara”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0074:category_name_en",
+      "reason": "Kategooria „Everyday Financial Vocabulary” sisuliselt õige eestikeelne pealkiri on „Igapäevane rahasõnavara”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0075:category_name_en",
+      "reason": "Kategooria „Everyday Financial Vocabulary” sisuliselt õige eestikeelne pealkiri on „Igapäevane rahasõnavara”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0076:category_name_en",
+      "reason": "Kategooria „What Money Shows” sisuliselt õige eestikeelne pealkiri on „Mida raha kujutab”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0077:category_name_en",
+      "reason": "Kategooria „What Money Shows” sisuliselt õige eestikeelne pealkiri on „Mida raha kujutab”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0078:category_name_en",
+      "reason": "Kategooria „What Money Shows” sisuliselt õige eestikeelne pealkiri on „Mida raha kujutab”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0079:category_name_en",
+      "reason": "Kategooria „What Money Shows” sisuliselt õige eestikeelne pealkiri on „Mida raha kujutab”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0079:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What Japanese currency shares the crossed-Y sign with the Chinese yuan?” ja eestikeelse välja „Milline Jaapani valuuta jagab Hiina jüaaniga kriipsutatud Y-märki?” kogu tähendust. Märgitud „What Japanese” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0080:category_name_en",
+      "reason": "Kategooria „What Money Shows” sisuliselt õige eestikeelne pealkiri on „Mida raha kujutab”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0086:category_name_en",
+      "reason": "Kategooria „Public Places with a Story” sisuliselt õige eestikeelne pealkiri on „Looga avalikud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0086:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This London location is associated with open-air speeches and debate in Hyde Park. What is its name?” ja eestikeelse välja „See Londoni paik seostub vabaõhukõnede ja väitlusega Hyde Parkis. Mis on selle nimi?” kogu tähendust. Märgitud „This London” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0086:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Speakers' Corner” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0087:category_name_en",
+      "reason": "Kategooria „Public Places with a Story” sisuliselt õige eestikeelne pealkiri on „Looga avalikud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0087:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Central Park” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0088:category_name_en",
+      "reason": "Kategooria „Public Places with a Story” sisuliselt õige eestikeelne pealkiri on „Looga avalikud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0088:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Identify the Chicago public space that contains the reflective Cloud Gate sculpture and Frank Gehry's Jay Pritzker Pavilion.” ja eestikeelse välja „Nimeta Chicago avalik paik, mis hõlmab peegeldavat Cloud Gate'i skulptuuri ja Frank Gehry Jay Pritzkeri paviljoni.” kogu tähendust. Märgitud „Frank Gehry's Jay Pritzker Pavilion” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0088:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Millennium Park contains the reflective Cloud Gate sculpture and Frank Gehry's Jay Pritzker Pavilion.” ja eestikeelse välja „Millennium Park hõlmab peegeldavat Cloud Gate'i skulptuuri ja Frank Gehry Jay Pritzkeri paviljoni.” kogu tähendust. Märgitud „Frank Gehry's Jay Pritzker Pavilion” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0088:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Millennium Park” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0089:category_name_en",
+      "reason": "Kategooria „Public Places with a Story” sisuliselt õige eestikeelne pealkiri on „Looga avalikud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0089:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which capital city combines Lúcio Costa's urban plan with major public buildings by Oscar Niemeyer?” ja eestikeelse välja „Milline pealinn ühendab Lúcio Costa linnaplaani Oscar Niemeyeri suurte avalike hoonetega?” kogu tähendust. Märgitud „Lúcio Costa's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0089:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Brasília combines Lúcio Costa's urban plan with major public buildings by Oscar Niemeyer.” ja eestikeelse välja „Brasília ühendab Lúcio Costa linnaplaani Oscar Niemeyeri suurte avalike hoonetega.” kogu tähendust. Märgitud „Lúcio Costa's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0090:category_name_en",
+      "reason": "Kategooria „Public Places with a Story” sisuliselt õige eestikeelne pealkiri on „Looga avalikud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0091:category_name_en",
+      "reason": "Kategooria „Names above the Shop Door” sisuliselt õige eestikeelne pealkiri on „Nimed kaupluse ukse kohal”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0092:category_name_en",
+      "reason": "Kategooria „Names above the Shop Door” sisuliselt õige eestikeelne pealkiri on „Nimed kaupluse ukse kohal”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0093:category_name_en",
+      "reason": "Kategooria „Names above the Shop Door” sisuliselt õige eestikeelne pealkiri on „Nimed kaupluse ukse kohal”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0093:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which sportswear company combines founder Adolf Dassler's nickname with the start of his surname?” ja eestikeelse välja „Milline spordirõivafirma ühendab asutaja Adolf Dassleri hüüdnime tema perekonnanime algusega?” kogu tähendust. Märgitud „Adolf Dassler's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0093:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Adidas combines founder Adolf Dassler's nickname with the start of his surname.” ja eestikeelse välja „Adidas ühendab asutaja Adolf Dassleri hüüdnime tema perekonnanime algusega.” kogu tähendust. Märgitud „Adolf Dassler's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0094:category_name_en",
+      "reason": "Kategooria „Names above the Shop Door” sisuliselt õige eestikeelne pealkiri on „Nimed kaupluse ukse kohal”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0095:category_name_en",
+      "reason": "Kategooria „Names above the Shop Door” sisuliselt õige eestikeelne pealkiri on „Nimed kaupluse ukse kohal”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0095:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This retail company was named after a vast South American river after briefly being called Cadabra. What is its name?” ja eestikeelse välja „See kaubandusfirma sai pärast lühiajalist Cadabra nime suure Lõuna-Ameerika jõe järgi nime. Mis on selle nimi?” kogu tähendust. Märgitud „South American” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0095:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Amazon was named after a vast South American river after briefly being called Cadabra.” ja eestikeelse välja „Amazon sai pärast lühiajalist Cadabra nime suure Lõuna-Ameerika jõe järgi nime.” kogu tähendust. Märgitud „South American” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0096:category_name_en",
+      "reason": "Kategooria „How Society Sees Itself” sisuliselt õige eestikeelne pealkiri on „Kuidas ühiskond ennast näeb”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0097:category_name_en",
+      "reason": "Kategooria „How Society Sees Itself” sisuliselt õige eestikeelne pealkiri on „Kuidas ühiskond ennast näeb”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0098:category_name_en",
+      "reason": "Kategooria „How Society Sees Itself” sisuliselt õige eestikeelne pealkiri on „Kuidas ühiskond ennast näeb”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0099:category_name_en",
+      "reason": "Kategooria „How Society Sees Itself” sisuliselt õige eestikeelne pealkiri on „Kuidas ühiskond ennast näeb”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0100:category_name_en",
+      "reason": "Kategooria „How Society Sees Itself” sisuliselt õige eestikeelne pealkiri on „Kuidas ühiskond ennast näeb”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0102:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which United States military decoration honours service members wounded or killed in enemy action?” ja eestikeelse välja „Millise USA sõjalise aumärgiga tunnustatakse vaenlase tegevuse tõttu haavatud või hukkunud sõjaväelasi?” kogu tähendust. Märgitud „Which United States” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0102:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „The Purple Heart recognises members of the US military wounded or killed under its qualifying service conditions.” ja eestikeelse välja „Purple Heart ehk Purpursüda antakse USA sõjaväelastele, kes on selle aumärgi tingimustele vastavas teenistuses haavata saanud või hukkunud.” kogu tähendust. Märgitud „The Purple Heart” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0105:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Lord Byron” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0106:category_name_en",
+      "reason": "Kategooria „Companies before Their Famous Product” sisuliselt õige eestikeelne pealkiri on „Firmad enne kuulsat toodet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0106:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Name the vehicle maker that grew out of Sakichi Toyoda's automatic-loom business.” ja eestikeelse välja „Nimeta sõidukitootja, mis kasvas välja Sakichi Toyoda automaatkangastelgede ettevõttest.” kogu tähendust. Märgitud „Sakichi Toyoda's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0106:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Toyota grew out of Sakichi Toyoda's automatic-loom business.” ja eestikeelse välja „Toyota kasvas välja Sakichi Toyoda automaatkangastelgede ettevõttest.” kogu tähendust. Märgitud „Sakichi Toyoda's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0107:category_name_en",
+      "reason": "Kategooria „Companies before Their Famous Product” sisuliselt õige eestikeelne pealkiri on „Firmad enne kuulsat toodet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0108:category_name_en",
+      "reason": "Kategooria „Companies before Their Famous Product” sisuliselt õige eestikeelne pealkiri on „Firmad enne kuulsat toodet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0109:category_name_en",
+      "reason": "Kategooria „Companies before Their Famous Product” sisuliselt õige eestikeelne pealkiri on „Firmad enne kuulsat toodet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0109:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Identify the South Korean company that began as a trading business before becoming known for electronics.” ja eestikeelse välja „Nimeta Lõuna-Korea firma, mis alustas kaubandusettevõttena enne elektroonikaga tuntuks saamist.” kogu tähendust. Märgitud „South Korean” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0110:category_name_en",
+      "reason": "Kategooria „Companies before Their Famous Product” sisuliselt õige eestikeelne pealkiri on „Firmad enne kuulsat toodet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0110:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which German vehicle maker began with aircraft engines before expanding into motorcycles and cars?” ja eestikeelse välja „Milline Saksa sõidukitootja alustas lennukimootoritega enne mootorrataste ja autode juurde laienemist?” kogu tähendust. Märgitud „Which German” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0111:category_name_en",
+      "reason": "Kategooria „University Customs and Words” sisuliselt õige eestikeelne pealkiri on „Ülikooli kombed ja sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0112:category_name_en",
+      "reason": "Kategooria „University Customs and Words” sisuliselt õige eestikeelne pealkiri on „Ülikooli kombed ja sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0112:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Alma mater” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0113:category_name_en",
+      "reason": "Kategooria „University Customs and Words” sisuliselt õige eestikeelne pealkiri on „Ülikooli kombed ja sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0114:category_name_en",
+      "reason": "Kategooria „University Customs and Words” sisuliselt õige eestikeelne pealkiri on „Ülikooli kombed ja sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0115:category_name_en",
+      "reason": "Kategooria „University Customs and Words” sisuliselt õige eestikeelne pealkiri on „Ülikooli kombed ja sõnad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0116:category_name_en",
+      "reason": "Kategooria „Cities Change Their Shape” sisuliselt õige eestikeelne pealkiri on „Linnad muudavad kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0117:category_name_en",
+      "reason": "Kategooria „Cities Change Their Shape” sisuliselt õige eestikeelne pealkiri on „Linnad muudavad kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0118:category_name_en",
+      "reason": "Kategooria „Cities Change Their Shape” sisuliselt õige eestikeelne pealkiri on „Linnad muudavad kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0119:category_name_en",
+      "reason": "Kategooria „Cities Change Their Shape” sisuliselt õige eestikeelne pealkiri on „Linnad muudavad kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0120:category_name_en",
+      "reason": "Kategooria „Cities Change Their Shape” sisuliselt õige eestikeelne pealkiri on „Linnad muudavad kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0121:category_name_en",
+      "reason": "Kategooria „Routes That Moved Commerce” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutanud teed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0121:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Ferdinand von Richthofen popularised the modern term Silk Road in the nineteenth century; the routes themselves were much older.” ja eestikeelse välja „Ferdinand von Richthofen populariseeris üheksateistkümnendal sajandil Siiditee nime; kaubateed ise olid märksa vanemad.” kogu tähendust. Märgitud „Silk Road” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0121:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Silk Road” ja eestikeelse välja „Siiditee” kogu tähendust. Märgitud „Silk Road” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0122:category_name_en",
+      "reason": "Kategooria „Routes That Moved Commerce” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutanud teed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0122:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which merchant association maintained the Steelyard trading base beside London's River Thames?” ja eestikeelse välja „Milline kaupmeeste ühendus pidas Londoni Thamesi kaldal Steelyardi kaubanduskeskust?” kogu tähendust. Märgitud „London's River Thames” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0122:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Hanseatic League maintained the Steelyard trading base beside London's River Thames.” ja eestikeelse välja „Hansa Liit pidas Londoni Thamesi kaldal Steelyardi kaubanduskeskust.” kogu tähendust. Märgitud „Hanseatic League”, „London's River Thames” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0122:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Hanseatic League” ja eestikeelse välja „Hansa Liit” kogu tähendust. Märgitud „Hanseatic League” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0123:category_name_en",
+      "reason": "Kategooria „Routes That Moved Commerce” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutanud teed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0123:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Suez Canal operates at sea level without the locks needed to cross a higher inland lake.” ja eestikeelse välja „Suessi kanal toimib merepinnal ilma kõrgema siseveekogu ületamiseks vajalike lüüsideta.” kogu tähendust. Märgitud „Suez Canal” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0123:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Suez Canal” ja eestikeelse välja „Suessi kanal” kogu tähendust. Märgitud „Suez Canal” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0124:category_name_en",
+      "reason": "Kategooria „Routes That Moved Commerce” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutanud teed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0124:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which American gold rush increased demand for the Panama railway as a shortcut between the Atlantic and Pacific?” ja eestikeelse välja „Milline Ameerika kullapalavik suurendas nõudlust Panama raudtee kui Atlandi ja Vaikse ookeani vahelise otsetee järele?” kogu tähendust. Märgitud „Which American” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0124:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „The California Gold Rush increased traffic across Panama and helped motivate construction of the railway.” ja eestikeelse välja „California kullapalavik suurendas liiklust läbi Panama ja aitas ajendada raudtee ehitamist.” kogu tähendust. Märgitud „The California Gold Rush” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0124:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „California Gold Rush” ja eestikeelse välja „California kullapalavik” kogu tähendust. Märgitud „California Gold Rush” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0125:category_name_en",
+      "reason": "Kategooria „Routes That Moved Commerce” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutanud teed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0125:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „The Strait of Dover is the narrowest part of the English Channel and carries ferries between Dover and Calais.” ja eestikeelse välja „Doveri väin on La Manche'i kitsaim osa ning seda ületavad Doveri ja Calais' vahelised praamid.” kogu tähendust. Märgitud „The Strait”, „English Channel” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0126:category_name_en",
+      "reason": "Kategooria „People Leave and Stay Connected” sisuliselt õige eestikeelne pealkiri on „Inimesed lahkuvad ja hoiavad sidet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0127:category_name_en",
+      "reason": "Kategooria „People Leave and Stay Connected” sisuliselt õige eestikeelne pealkiri on „Inimesed lahkuvad ja hoiavad sidet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0128:category_name_en",
+      "reason": "Kategooria „People Leave and Stay Connected” sisuliselt õige eestikeelne pealkiri on „Inimesed lahkuvad ja hoiavad sidet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0129:category_name_en",
+      "reason": "Kategooria „People Leave and Stay Connected” sisuliselt õige eestikeelne pealkiri on „Inimesed lahkuvad ja hoiavad sidet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0130:category_name_en",
+      "reason": "Kategooria „People Leave and Stay Connected” sisuliselt õige eestikeelne pealkiri on „Inimesed lahkuvad ja hoiavad sidet”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0131:category_name_en",
+      "reason": "Kategooria „The Clock and Civic Life” sisuliselt õige eestikeelne pealkiri on „Kell ja avalik elu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0132:category_name_en",
+      "reason": "Kategooria „The Clock and Civic Life” sisuliselt õige eestikeelne pealkiri on „Kell ja avalik elu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0132:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This British holiday term became established through legislation proposed by John Lubbock. What is its name?” ja eestikeelse välja „Milline ingliskeelne Briti riigipühade nimetus juurdus John Lubbocki esitatud seaduse kaudu?” kogu tähendust. Märgitud „This British” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0133:category_name_en",
+      "reason": "Kategooria „The Clock and Civic Life” sisuliselt õige eestikeelne pealkiri on „Kell ja avalik elu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0134:category_name_en",
+      "reason": "Kategooria „The Clock and Civic Life” sisuliselt õige eestikeelne pealkiri on „Kell ja avalik elu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0135:category_name_en",
+      "reason": "Kategooria „The Clock and Civic Life” sisuliselt õige eestikeelne pealkiri on „Kell ja avalik elu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0136:category_name_en",
+      "reason": "Kategooria „The Language of the Trading Floor” sisuliselt õige eestikeelne pealkiri on „Börsipõranda keel”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0136:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What narrow paper record once carried printed share prices and later became confetti for New York parades?” ja eestikeelse välja „Milline kitsas paberlint kandis kunagi trükitud aktsiahindu ja muutus hiljem New Yorgi paraadide konfetiks?” kogu tähendust. Märgitud „New York” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0137:category_name_en",
+      "reason": "Kategooria „The Language of the Trading Floor” sisuliselt õige eestikeelne pealkiri on „Börsipõranda keel”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0138:category_name_en",
+      "reason": "Kategooria „The Language of the Trading Floor” sisuliselt õige eestikeelne pealkiri on „Börsipõranda keel”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0139:category_name_en",
+      "reason": "Kategooria „The Language of the Trading Floor” sisuliselt õige eestikeelne pealkiri on „Börsipõranda keel”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0140:category_name_en",
+      "reason": "Kategooria „The Language of the Trading Floor” sisuliselt õige eestikeelne pealkiri on „Börsipõranda keel”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0141:category_name_en",
+      "reason": "Kategooria „Titles from Different Governments” sisuliselt õige eestikeelne pealkiri on „Eri valitsuste tiitlid”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0141:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What German office title names Germany's head of federal government?” ja eestikeelse välja „Milline Saksa ametinimetus tähistab Saksamaa föderaalvalitsuse juhti?” kogu tähendust. Märgitud „What German” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0142:category_name_en",
+      "reason": "Kategooria „Titles from Different Governments” sisuliselt õige eestikeelne pealkiri on „Eri valitsuste tiitlid”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0143:category_name_en",
+      "reason": "Kategooria „Titles from Different Governments” sisuliselt õige eestikeelne pealkiri on „Eri valitsuste tiitlid”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0143:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which historic office title named the elected leader of the Venetian Republic?” ja eestikeelse välja „Milline ajalooline ametinimetus tähistas Veneetsia vabariigi valitud juhti?” kogu tähendust. Märgitud „Venetian Republic” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0143:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Doge named the elected leader of the Venetian Republic.” ja eestikeelse välja „Doodž tähistas Veneetsia vabariigi valitud juhti.” kogu tähendust. Märgitud „Venetian Republic” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0144:category_name_en",
+      "reason": "Kategooria „Titles from Different Governments” sisuliselt õige eestikeelne pealkiri on „Eri valitsuste tiitlid”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0144:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Grand Duke is used by Luxembourg's sovereign rather than king.” ja eestikeelse välja „Suurhertsog on kasutusel Luksemburgi valitsejal kuninga asemel.” kogu tähendust. Märgitud „Grand Duke” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0144:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Grand Duke” ja eestikeelse välja „suurhertsog” kogu tähendust. Märgitud „Grand Duke” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0145:category_name_en",
+      "reason": "Kategooria „Titles from Different Governments” sisuliselt õige eestikeelne pealkiri on „Eri valitsuste tiitlid”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0146:category_name_en",
+      "reason": "Kategooria „Places That Became Social Symbols” sisuliselt õige eestikeelne pealkiri on „Ühiskondlikeks sümboliteks saanud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0146:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Identify the New York island that had its first immigrant inspection station destroyed by fire before a replacement opened in 1900.” ja eestikeelse välja „Nimeta New Yorgi saar, mis kaotas esimese sisserändajate kontrollijaama tulekahjus enne seda, kui 1900. aastal avati asendushoone.” kogu tähendust. Märgitud „New York” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0146:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Ellis Island” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0147:category_name_en",
+      "reason": "Kategooria „Places That Became Social Symbols” sisuliselt õige eestikeelne pealkiri on „Ühiskondlikeks sümboliteks saanud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0147:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which South African island takes its Dutch name from seals despite becoming famous for a political prison?” ja eestikeelse välja „Milline Lõuna-Aafrika saar saab oma hollandikeelse nime hüljeste järgi hoolimata poliitvanglaga kuulsaks saamisest?” kogu tähendust. Märgitud „Which South African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0147:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Robben Island” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0148:category_name_en",
+      "reason": "Kategooria „Places That Became Social Symbols” sisuliselt õige eestikeelne pealkiri on „Ühiskondlikeks sümboliteks saanud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0148:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Tempelhofer Feld” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0149:category_name_en",
+      "reason": "Kategooria „Places That Became Social Symbols” sisuliselt õige eestikeelne pealkiri on „Ühiskondlikeks sümboliteks saanud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0149:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This New York town hosted a women's-rights convention that issued a Declaration of Sentiments. What is its name?” ja eestikeelse välja „See New Yorgi osariigi linn võõrustas naiste õiguste konverentsi, mis avaldas õiguste deklaratsiooni Declaration of Sentiments. Mis on selle nimi?” kogu tähendust. Märgitud „This New York” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0149:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Seneca Falls” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0150:category_name_en",
+      "reason": "Kategooria „Places That Became Social Symbols” sisuliselt õige eestikeelne pealkiri on „Ühiskondlikeks sümboliteks saanud paigad”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0150:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which Manhattan street takes its name from a defensive barrier that once marked the edge of the Dutch settlement?” ja eestikeelse välja „Milline Manhattani tänav sai nime kaitserajatise järgi, mis kunagi piiras Hollandi asulat?” kogu tähendust. Märgitud „Which Manhattan” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0150:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Wall Street” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0156:category_name_en",
+      "reason": "Kategooria „Constitutions Take Different Forms” sisuliselt õige eestikeelne pealkiri on „Põhiseadused võtavad eri kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0156:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „United Kingdom has a constitution spread across statutes, conventions and other sources rather than one codified document.” ja eestikeelse välja „Ühendkuningriigi põhiseadus koosneb seadustest, tavadest ja muudest allikatest.” kogu tähendust. Märgitud „United Kingdom” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0156:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „United Kingdom” ja eestikeelse välja „Ühendkuningriik” kogu tähendust. Märgitud „United Kingdom” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0157:category_name_en",
+      "reason": "Kategooria „Constitutions Take Different Forms” sisuliselt õige eestikeelne pealkiri on „Põhiseadused võtavad eri kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0157:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This constitutional title was chosen for West Germany's constitution to emphasise its initially provisional character. What is its name?” ja eestikeelse välja „See põhiseaduslik pealkiri valiti Lääne-Saksamaa põhiseadusele selle algselt ajutise iseloomu rõhutamiseks. Mis on selle nimi?” kogu tähendust. Märgitud „West Germany's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0157:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Basic Law was chosen for West Germany's constitution to emphasise its initially provisional character.” ja eestikeelse välja „Põhiseadus Grundgesetz valiti Lääne-Saksamaa põhiseadusele selle algselt ajutise iseloomu rõhutamiseks.” kogu tähendust. Märgitud „Basic Law”, „West Germany's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0157:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Basic Law” ja eestikeelse välja „põhiseadus Grundgesetz” kogu tähendust. Märgitud „Basic Law” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0158:category_name_en",
+      "reason": "Kategooria „Constitutions Take Different Forms” sisuliselt õige eestikeelne pealkiri on „Põhiseadused võtavad eri kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0159:category_name_en",
+      "reason": "Kategooria „Constitutions Take Different Forms” sisuliselt õige eestikeelne pealkiri on „Põhiseadused võtavad eri kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0160:category_name_en",
+      "reason": "Kategooria „Constitutions Take Different Forms” sisuliselt õige eestikeelne pealkiri on „Põhiseadused võtavad eri kuju”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0160:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „South Africa adopted a post-apartheid constitution whose equality clause explicitly includes sexual orientation.” ja eestikeelse välja „Lõuna-Aafrika võttis pärast apartheidi vastu põhiseaduse, mille võrdsusklausel nimetab selgelt seksuaalset sättumust.” kogu tähendust. Märgitud „South Africa” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0160:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „South Africa” ja eestikeelse välja „Lõuna-Aafrika” kogu tähendust. Märgitud „South Africa” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0161:category_name_en",
+      "reason": "Kategooria „Leaders beyond Their Office” sisuliselt õige eestikeelne pealkiri on „Juhid väljaspool ametit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0162:category_name_en",
+      "reason": "Kategooria „Leaders beyond Their Office” sisuliselt õige eestikeelne pealkiri on „Juhid väljaspool ametit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0162:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What South African leader received his English first name from a teacher after being born Rolihlahla?” ja eestikeelse välja „Milline Lõuna-Aafrika juht sai inglispärase eesnime õpetajalt pärast sündimist Rolihlahla nimega?” kogu tähendust. Märgitud „What South African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0162:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Nelson Mandela” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0163:category_name_en",
+      "reason": "Kategooria „Leaders beyond Their Office” sisuliselt õige eestikeelne pealkiri on „Juhid väljaspool ametit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0163:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Abraham Lincoln” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0164:category_name_en",
+      "reason": "Kategooria „Leaders beyond Their Office” sisuliselt õige eestikeelne pealkiri on „Juhid väljaspool ametit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0164:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which Indian leader has a birthday marked as Children's Day in India?” ja eestikeelse välja „Milline India juht on seotud India lastepäevaga, mida tähistatakse tema sünnipäeval?” kogu tähendust. Märgitud „Which Indian”, „Children's Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0164:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Jawaharlal Nehru has a birthday marked as Children's Day in India.” ja eestikeelse välja „Jawaharlal Nehru on seotud India lastepäevaga, mida tähistatakse tema sünnipäeval.” kogu tähendust. Märgitud „Children's Day” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0164:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Jawaharlal Nehru” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0165:category_name_en",
+      "reason": "Kategooria „Leaders beyond Their Office” sisuliselt õige eestikeelne pealkiri on „Juhid väljaspool ametit”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0165:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Mahatma Gandhi” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0166:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „International Monetary Fund was planned at Bretton Woods to support international monetary cooperation.” ja eestikeelse välja „Rahvusvaheline Valuutafond kavandati Bretton Woodsis rahvusvahelise rahandusalase koostöö toetamiseks.” kogu tähendust. Märgitud „International Monetary Fund” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0166:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „International Monetary Fund” ja eestikeelse välja „Rahvusvaheline Valuutafond” kogu tähendust. Märgitud „International Monetary Fund” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0167:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Identify the financial institution that made its first loan to France for reconstruction after the Second World War.” ja eestikeelse välja „Nimeta rahandusasutus, mis andis esimese laenu Prantsusmaale Teise maailmasõja järgseks ülesehitamiseks.” kogu tähendust. Märgitud „Second World War” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0167:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „World Bank made its first loan to France for reconstruction after the Second World War.” ja eestikeelse välja „Maailmapank andis esimese laenu Prantsusmaale Teise maailmasõja järgseks ülesehitamiseks.” kogu tähendust. Märgitud „World Bank”, „Second World War” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0167:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „World Bank” ja eestikeelse välja „Maailmapank” kogu tähendust. Märgitud „World Bank” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0168:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which economic organisation grew out of the European body that coordinated Marshall Plan aid?” ja eestikeelse välja „Milline majandusorganisatsioon kasvas välja Euroopa asutusest, mis koordineeris Marshalli plaani abi?” kogu tähendust. Märgitud „Marshall Plan” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0168:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „OECD grew out of the European body that coordinated Marshall Plan aid.” ja eestikeelse välja „OECD kasvas välja Euroopa asutusest, mis koordineeris Marshalli plaani abi.” kogu tähendust. Märgitud „Marshall Plan” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0169:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Name the security organisation that grew from the conference process that produced the Helsinki Final Act.” ja eestikeelse välja „Nimeta julgeolekuorganisatsioon, mis kasvas välja konverentsiprotsessist, mis andis Helsingi lõppakti.” kogu tähendust. Märgitud „Helsinki Final Act” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0169:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „OSCE grew from the conference process that produced the Helsinki Final Act.” ja eestikeelse välja „OSCE kasvas välja konverentsiprotsessist, mis andis Helsingi lõppakti.” kogu tähendust. Märgitud „Helsinki Final Act” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0170:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This European organisation created the human-rights convention supervised by the Strasbourg court. What is its name?” ja eestikeelse välja „See Euroopa organisatsioon lõi inimõiguste konventsiooni, mille täitmist jälgib Strasbourgi kohus. Mis on selle nimi?” kogu tähendust. Märgitud „This European” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0171:category_name_en",
+      "reason": "Kategooria „Citizens Shape the Decision” sisuliselt õige eestikeelne pealkiri on „Kodanikud kujundavad otsust”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0172:category_name_en",
+      "reason": "Kategooria „Citizens Shape the Decision” sisuliselt õige eestikeelne pealkiri on „Kodanikud kujundavad otsust”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0173:category_name_en",
+      "reason": "Kategooria „Citizens Shape the Decision” sisuliselt õige eestikeelne pealkiri on „Kodanikud kujundavad otsust”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0174:category_name_en",
+      "reason": "Kategooria „Citizens Shape the Decision” sisuliselt õige eestikeelne pealkiri on „Kodanikud kujundavad otsust”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0175:category_name_en",
+      "reason": "Kategooria „Citizens Shape the Decision” sisuliselt õige eestikeelne pealkiri on „Kodanikud kujundavad otsust”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0176:category_name_en",
+      "reason": "Kategooria „Working Words from History” sisuliselt õige eestikeelne pealkiri on „Töösõnad ajaloost”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0176:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which Romantic poet defended the Luddites in the House of Lords against proposals for harsh punishment?” ja eestikeelse välja „Milline romantiline luuletaja kaitses lordide kojas ludiite karmide karistuste ettepanekute eest?” kogu tähendust. Märgitud „Which Romantic” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0176:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Lord Byron” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0177:category_name_en",
+      "reason": "Kategooria „Working Words from History” sisuliselt õige eestikeelne pealkiri on „Töösõnad ajaloost”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0178:category_name_en",
+      "reason": "Kategooria „Working Words from History” sisuliselt õige eestikeelne pealkiri on „Töösõnad ajaloost”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0179:category_name_en",
+      "reason": "Kategooria „Working Words from History” sisuliselt õige eestikeelne pealkiri on „Töösõnad ajaloost”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0180:category_name_en",
+      "reason": "Kategooria „Working Words from History” sisuliselt õige eestikeelne pealkiri on „Töösõnad ajaloost”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0181:category_name_en",
+      "reason": "Kategooria „Economic Ideas with Consequences” sisuliselt õige eestikeelne pealkiri on „Tagajärgedega majandusideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0182:category_name_en",
+      "reason": "Kategooria „Economic Ideas with Consequences” sisuliselt õige eestikeelne pealkiri on „Tagajärgedega majandusideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0183:category_name_en",
+      "reason": "Kategooria „Economic Ideas with Consequences” sisuliselt õige eestikeelne pealkiri on „Tagajärgedega majandusideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0184:category_name_en",
+      "reason": "Kategooria „Economic Ideas with Consequences” sisuliselt õige eestikeelne pealkiri on „Tagajärgedega majandusideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0185:category_name_en",
+      "reason": "Kategooria „Economic Ideas with Consequences” sisuliselt õige eestikeelne pealkiri on „Tagajärgedega majandusideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0186:category_name_en",
+      "reason": "Kategooria „The Theatre of Parliament” sisuliselt õige eestikeelne pealkiri on „Parlamendi teater”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0187:category_name_en",
+      "reason": "Kategooria „The Theatre of Parliament” sisuliselt õige eestikeelne pealkiri on „Parlamendi teater”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0187:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What British parliamentary seat recalls the historic importance of the wool trade in the House of Lords?” ja eestikeelse välja „Milline Briti parlamendi iste meenutab lordide kojas villakaubanduse ajaloolist tähtsust?” kogu tähendust. Märgitud „What British” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0188:category_name_en",
+      "reason": "Kategooria „The Theatre of Parliament” sisuliselt õige eestikeelne pealkiri on „Parlamendi teater”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0189:category_name_en",
+      "reason": "Kategooria „The Theatre of Parliament” sisuliselt õige eestikeelne pealkiri on „Parlamendi teater”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0190:category_name_en",
+      "reason": "Kategooria „The Theatre of Parliament” sisuliselt õige eestikeelne pealkiri on „Parlamendi teater”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0191:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Lloyd's of London” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0192:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Edmond Halley” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0197:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which historic British coin was named for the West African region associated with gold used to mint it?” ja eestikeelse välja „Milline ajalooline Briti münt sai nime Lääne-Aafrika piirkonna järgi, kust pärines selle vermimisega seostatud kuld?” kogu tähendust. Märgitud „West African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0197:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Guinea was named for the West African region associated with gold used to mint it.” ja eestikeelse välja „Gini sai nime Lääne-Aafrika piirkonna järgi, kust pärines selle vermimisega seostatud kuld.” kogu tähendust. Märgitud „West African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0199:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This African currency takes its name from the Witwatersrand ridge associated with gold mining. What is its name?” ja eestikeelse välja „See Aafrika valuuta saab nime kullakaevandamisega seotud Witwatersrandi kõrgendiku järgi. Mis on selle nimi?” kogu tähendust. Märgitud „This African” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0201:category_name_en",
+      "reason": "Kategooria „Public Life and Moral Choice” sisuliselt õige eestikeelne pealkiri on „Avalik elu ja moraalne valik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0202:category_name_en",
+      "reason": "Kategooria „Public Life and Moral Choice” sisuliselt õige eestikeelne pealkiri on „Avalik elu ja moraalne valik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0203:category_name_en",
+      "reason": "Kategooria „Public Life and Moral Choice” sisuliselt õige eestikeelne pealkiri on „Avalik elu ja moraalne valik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0204:category_name_en",
+      "reason": "Kategooria „Public Life and Moral Choice” sisuliselt õige eestikeelne pealkiri on „Avalik elu ja moraalne valik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0204:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Civil Disobedience grew from Thoreau's refusal to support government policies through a poll tax.” ja eestikeelse välja „Kodanikuallumatus kasvas välja Thoreau keeldumisest valitsuse poliitikat isikumaksu abil toetada.” kogu tähendust. Märgitud „Civil Disobedience” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0204:response_en",
+      "reason": "Kontrollisin ingliskeelse välja „Civil Disobedience” ja eestikeelse välja „Kodanikuallumatus” kogu tähendust. Märgitud „Civil Disobedience” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0205:category_name_en",
+      "reason": "Kategooria „Public Life and Moral Choice” sisuliselt õige eestikeelne pealkiri on „Avalik elu ja moraalne valik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0207:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „This economic metaphor appears in Adam Smith's writing to describe unintended effects of self-interested action. What is its name?” ja eestikeelse välja „See majandusmetafoor esineb Adam Smithi kirjutistes omakasupüüdliku tegevuse tahtmatute tagajärgede kirjeldamiseks. Mis on selle nimi?” kogu tähendust. Märgitud „Adam Smith's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0207:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „Invisible hand appears in Adam Smith's writing to describe unintended effects of self-interested action.” ja eestikeelse välja „Nähtamatu käsi esineb Adam Smithi kirjutistes omakasupüüdliku tegevuse tahtmatute tagajärgede kirjeldamiseks.” kogu tähendust. Märgitud „Adam Smith's” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0208:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „John Maynard Keynes” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0209:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „E. F. Schumacher” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0210:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which Indian economist argued that famine depends on people's access and entitlement to food, not simply the total amount available?” ja eestikeelse välja „Milline India majandusteadlane leidis, et näljahäda sõltub inimeste ligipääsust toidule ja õigusest sellele, mitte lihtsalt toidu koguhulgast?” kogu tähendust. Märgitud „Which Indian” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0210:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Amartya Sen” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0211:category_name_en",
+      "reason": "Kategooria „The Reasoning behind Legal Rules” sisuliselt õige eestikeelne pealkiri on „Õigusreeglite taga olev mõttekäik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0211:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Habeas corpus” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0212:category_name_en",
+      "reason": "Kategooria „The Reasoning behind Legal Rules” sisuliselt õige eestikeelne pealkiri on „Õigusreeglite taga olev mõttekäik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0212:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Mens rea” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0213:category_name_en",
+      "reason": "Kategooria „The Reasoning behind Legal Rules” sisuliselt õige eestikeelne pealkiri on „Õigusreeglite taga olev mõttekäik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0214:category_name_en",
+      "reason": "Kategooria „The Reasoning behind Legal Rules” sisuliselt õige eestikeelne pealkiri on „Õigusreeglite taga olev mõttekäik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0215:category_name_en",
+      "reason": "Kategooria „The Reasoning behind Legal Rules” sisuliselt õige eestikeelne pealkiri on „Õigusreeglite taga olev mõttekäik”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0215:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Stare decisis” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0216:category_name_en",
+      "reason": "Kategooria „When Citizens Watch Power” sisuliselt õige eestikeelne pealkiri on „Kui kodanikud jälgivad võimu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0217:category_name_en",
+      "reason": "Kategooria „When Citizens Watch Power” sisuliselt õige eestikeelne pealkiri on „Kui kodanikud jälgivad võimu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0218:category_name_en",
+      "reason": "Kategooria „When Citizens Watch Power” sisuliselt õige eestikeelne pealkiri on „Kui kodanikud jälgivad võimu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0219:category_name_en",
+      "reason": "Kategooria „When Citizens Watch Power” sisuliselt õige eestikeelne pealkiri on „Kui kodanikud jälgivad võimu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0220:category_name_en",
+      "reason": "Kategooria „When Citizens Watch Power” sisuliselt õige eestikeelne pealkiri on „Kui kodanikud jälgivad võimu”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0221:category_name_en",
+      "reason": "Kategooria „New Ways to Finance an Idea” sisuliselt õige eestikeelne pealkiri on „Uued viisid idee rahastamiseks”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0222:category_name_en",
+      "reason": "Kategooria „New Ways to Finance an Idea” sisuliselt õige eestikeelne pealkiri on „Uued viisid idee rahastamiseks”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0222:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „Which British rock band's fans funded its American tour through an early online crowdfunding campaign?” ja eestikeelse välja „Millise Briti rokkbändi Ameerika tuuri rahastasid fännid varase internetipõhise ühisrahastuskampaaniaga?” kogu tähendust. Märgitud „Which British” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0223:category_name_en",
+      "reason": "Kategooria „New Ways to Finance an Idea” sisuliselt õige eestikeelne pealkiri on „Uued viisid idee rahastamiseks”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0224:category_name_en",
+      "reason": "Kategooria „New Ways to Finance an Idea” sisuliselt õige eestikeelne pealkiri on „Uued viisid idee rahastamiseks”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0225:category_name_en",
+      "reason": "Kategooria „New Ways to Finance an Idea” sisuliselt õige eestikeelne pealkiri on „Uued viisid idee rahastamiseks”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0225:clue_en",
+      "reason": "Kontrollisin ingliskeelse välja „What Bangladeshi bank has a name drawn from a word meaning rural or village?” ja eestikeelse välja „Milline Bangladeshi pank kannab nime, mis lähtub maapiirkonda või küla tähistavast sõnast?” kogu tähendust. Märgitud „What Bangladeshi” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0225:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Grameen Bank” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0226:category_name_en",
+      "reason": "Kategooria „Connections People Carry” sisuliselt õige eestikeelne pealkiri on „Inimeste kantud sidemed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0227:category_name_en",
+      "reason": "Kategooria „Connections People Carry” sisuliselt õige eestikeelne pealkiri on „Inimeste kantud sidemed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0228:category_name_en",
+      "reason": "Kategooria „Connections People Carry” sisuliselt õige eestikeelne pealkiri on „Inimeste kantud sidemed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0229:category_name_en",
+      "reason": "Kategooria „Connections People Carry” sisuliselt õige eestikeelne pealkiri on „Inimeste kantud sidemed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0230:category_name_en",
+      "reason": "Kategooria „Connections People Carry” sisuliselt õige eestikeelne pealkiri on „Inimeste kantud sidemed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0231:category_name_en",
+      "reason": "Kategooria „The Logic of Election Systems” sisuliselt õige eestikeelne pealkiri on „Valimissüsteemide loogika”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0232:category_name_en",
+      "reason": "Kategooria „The Logic of Election Systems” sisuliselt õige eestikeelne pealkiri on „Valimissüsteemide loogika”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0233:category_name_en",
+      "reason": "Kategooria „The Logic of Election Systems” sisuliselt õige eestikeelne pealkiri on „Valimissüsteemide loogika”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0233:explanation_en",
+      "reason": "Kontrollisin ingliskeelse välja „The Borda count awards points for ballot rankings and selects the candidate with the highest total.” ja eestikeelse välja „Borda meetod annab punkte valija eelistusjärjestuse järgi ning võidab suurima punktisumma kogunud kandidaat.” kogu tähendust. Märgitud „The Borda” on eestindatud nimekuju, tõlgitud nimetus või küsimuse alguse suurte tähtedega üldkeelend; eestikeelne tekst säilitab samad isikud, asutused, kohad ja küsitud seose."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0234:category_name_en",
+      "reason": "Kategooria „The Logic of Election Systems” sisuliselt õige eestikeelne pealkiri on „Valimissüsteemide loogika”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0235:category_name_en",
+      "reason": "Kategooria „The Logic of Election Systems” sisuliselt õige eestikeelne pealkiri on „Valimissüsteemide loogika”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0236:category_name_en",
+      "reason": "Kategooria „Promises That Move Trade” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutavad lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0237:category_name_en",
+      "reason": "Kategooria „Promises That Move Trade” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutavad lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0238:category_name_en",
+      "reason": "Kategooria „Promises That Move Trade” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutavad lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0239:category_name_en",
+      "reason": "Kategooria „Promises That Move Trade” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutavad lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0240:category_name_en",
+      "reason": "Kategooria „Promises That Move Trade” sisuliselt õige eestikeelne pealkiri on „Kaubandust liigutavad lubadused”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0241:category_name_en",
+      "reason": "Kategooria „Ideas That Changed the Classroom” sisuliselt õige eestikeelne pealkiri on „Klassiruumi muutnud ideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0242:category_name_en",
+      "reason": "Kategooria „Ideas That Changed the Classroom” sisuliselt õige eestikeelne pealkiri on „Klassiruumi muutnud ideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0243:category_name_en",
+      "reason": "Kategooria „Ideas That Changed the Classroom” sisuliselt õige eestikeelne pealkiri on „Klassiruumi muutnud ideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0244:category_name_en",
+      "reason": "Kategooria „Ideas That Changed the Classroom” sisuliselt õige eestikeelne pealkiri on „Klassiruumi muutnud ideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0244:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Open University” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0245:category_name_en",
+      "reason": "Kategooria „Ideas That Changed the Classroom” sisuliselt õige eestikeelne pealkiri on „Klassiruumi muutnud ideed”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-politics-economics-society-all-level-expansion-0245:response_en",
+      "reason": "Rahvusvaheline pärisnimi või ladinakeelne termin „Paulo Freire” säilitab eesti tekstis sama kirjapildi; lugesin selle küsimuse ja selgituse ning kontrollisin tähenduse vastavust."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0246:category_name_en",
+      "reason": "Kategooria „Reading Population Data” sisuliselt õige eestikeelne pealkiri on „Rahvastikuandmete tõlgendamine”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0247:category_name_en",
+      "reason": "Kategooria „Reading Population Data” sisuliselt õige eestikeelne pealkiri on „Rahvastikuandmete tõlgendamine”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0248:category_name_en",
+      "reason": "Kategooria „Reading Population Data” sisuliselt õige eestikeelne pealkiri on „Rahvastikuandmete tõlgendamine”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0249:category_name_en",
+      "reason": "Kategooria „Reading Population Data” sisuliselt õige eestikeelne pealkiri on „Rahvastikuandmete tõlgendamine”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-politics-economics-society-all-level-expansion-0250:category_name_en",
+      "reason": "Kategooria „Reading Population Data” sisuliselt õige eestikeelne pealkiri on „Rahvastikuandmete tõlgendamine”. Inglise pealkirja suurtähed tekitasid pärisnimehoiatuse; küsimuste teemad vastavad mõlema keele pealkirjale."
+    }
+  ],
+  "artifactHashes": {
+    "authored": "e8e33b04fdc3cb9f54aea8414ec476818455ec71a56750244b1bdabfffed8951",
+    "generated": "ddfa46cd7255a44a7e2cb6836535b2d198941496d4821d43ed62e9f528cb6b3a",
+    "evidence": "f7719e55949a31a25b5ab52993f511284528067834f25c1e2d81dc0dfed32d11"
+  }
+}

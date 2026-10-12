@@ -1,20 +1,20 @@
 export const RELEASE_THRESHOLDS = {
-  boardClues: 8_200,
-  categorySets: 1_640,
-  distinctCategoryNames: 1_640,
+  boardClues: 11_200,
+  categorySets: 2_240,
+  distinctCategoryNames: 2_240,
   finalClues: 174,
-  easySets: 707,
-  mediumSets: 467,
-  hardSets: 466,
+  easySets: 907,
+  mediumSets: 667,
+  hardSets: 666,
   builtInPacks: 15,
 } as const;
 
 export const RELEASE_COMPOSITION_THRESHOLDS = {
-  boardClues: { easy: 3_535, medium: 2_335, hard: 2_330 },
+  boardClues: { easy: 4_535, medium: 3_335, hard: 3_330 },
   categorySets: {
-    easy: { roundOne: 354, roundTwo: 353 },
-    medium: { roundOne: 233, roundTwo: 234 },
-    hard: { roundOne: 233, roundTwo: 233 },
+    easy: { roundOne: 454, roundTwo: 453 },
+    medium: { roundOne: 333, roundTwo: 334 },
+    hard: { roundOne: 333, roundTwo: 333 },
   },
   finalClues: { easy: 58, medium: 58, hard: 58 },
 } as const;

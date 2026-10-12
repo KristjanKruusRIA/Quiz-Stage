@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
 import type { AudioSettings } from '../../../shared/media/contracts';
 import type { AppearanceSettings } from '../../../shared/settings/appearance';
+import type { EditorLibrary } from '../../../shared/content/editor';
 import { useI18n } from '../../i18n';
+import { ContentCredits } from './ContentCredits';
 
 interface SettingsScreenProps {
   settings: AudioSettings;
@@ -10,6 +12,7 @@ interface SettingsScreenProps {
   onSave: (settings: AudioSettings) => Promise<void>;
   onSaveAppearance?: (settings: AppearanceSettings) => Promise<void>;
   onBack: () => void;
+  loadContent?: () => Promise<EditorLibrary>;
 }
 
 const volumeFields = [
@@ -19,7 +22,7 @@ const volumeFields = [
   ['crowd', 'settings.crowd'],
 ] as const;
 
-export function SettingsScreen({ settings, appearance = { version: 1, reducedMotion: false, revision: 0 }, settingsRevision = 0, onSave, onSaveAppearance, onBack }: SettingsScreenProps) {
+export function SettingsScreen({ settings, appearance = { version: 1, reducedMotion: false, revision: 0 }, settingsRevision = 0, onSave, onSaveAppearance, onBack, loadContent }: SettingsScreenProps) {
   const { t } = useI18n();
   const [draft, setDraft] = useState({ current: settings, revision: settingsRevision, dirty: false, pending: null as AudioSettings | null });
   const [appearanceDraft, setAppearanceDraft] = useState({
@@ -94,6 +97,7 @@ export function SettingsScreen({ settings, appearance = { version: 1, reducedMot
         disabled={appearanceDraft.pendingRevision !== null || onSaveAppearance === undefined}
         onChange={(event) => saveAppearance({ ...appearanceDraft.current, reducedMotion: event.target.checked })} />{t('settings.reducedMotion')}</label>
     </section>
+    <ContentCredits loadContent={loadContent} />
     {error ? <p role="alert">{t('settings.saveError')}</p> : null}
     <button type="button" onClick={onBack}>{t('common.back')}</button>
   </main>;
