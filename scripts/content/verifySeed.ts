@@ -184,7 +184,8 @@ export function inspectSeed(
         || source.retrievedAt !== evidence.supportingSource.retrievedAt
         || source.translationStatus !== 'reviewed'
         || source.sourceId !== evidence.supportingSource.sourceId
-        || source.factualVerifiedAt !== evidence.factualReview.reviewedAt) {
+        || source.factualVerifiedAt !== evidence.factualReview.reviewedAt
+        || JSON.stringify(source.inspiration ?? null) !== JSON.stringify(evidence.inspiration)) {
         throw new Error(`Seed clue ${row.id} does not contain its exact v2 evidence citation`);
       }
       consumedEvidence.add(row.id);

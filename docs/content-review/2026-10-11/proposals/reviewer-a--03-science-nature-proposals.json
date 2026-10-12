@@ -1,0 +1,1169 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-003",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What force keeps the planets in orbit around the Sun?",
+        "clue_et": "Milline jõud hoiab planeete Päikese ümber orbiidil?",
+        "response_en": "Gravity",
+        "response_et": "Gravitatsioon",
+        "accepted_variants_en": "Gravitational force;gravitation",
+        "accepted_variants_et": "Gravitatsioonijõud;raskusjõud",
+        "explanation_en": "The Sun's gravitational attraction bends the paths of the moving planets into orbits.",
+        "explanation_et": "Päikese gravitatsiooniline tõmme painutab liikuvate planeetide teed orbiitideks.",
+        "source_title": "Gravity — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Gravity",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-001: replace a third planet identity with an independent physical force. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/sun/facts/",
+          "observation": "NASA states the Sun's gravity keeps the planets and smaller objects in orbit."
+        }
+      ],
+      "subjectKey": "force:gravity",
+      "factFamily": "science:solar-orbital-gravity"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-004",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What name is given to the small rocky worlds of the Solar System's main belt, such as Vesta?",
+        "clue_et": "Kuidas nimetatakse Päikesesüsteemi peavööndi väikesi kiviseid taevakehi, näiteks Vestat?",
+        "response_en": "Asteroids",
+        "response_et": "Asteroidid",
+        "accepted_variants_en": "Asteroid;minor planets",
+        "accepted_variants_et": "Asteroid;väikeplaneedid",
+        "explanation_en": "These rocky bodies orbit the Sun; many are found in the main belt.",
+        "explanation_et": "Need kivised taevakehad tiirlevad ümber Päikese ning paljud asuvad peavööndis.",
+        "source_title": "Asteroid — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Asteroid",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-001: replace Venus identity with a recognisable different object class. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/solar-system/asteroids/4-vesta/",
+          "observation": "NASA identifies Vesta as a major asteroid in the main belt."
+        }
+      ],
+      "subjectKey": "class:asteroids",
+      "factFamily": "science:main-belt-rocky-bodies"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-005",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What term describes planets made mainly of rock and metal, with solid surfaces rather than deep gaseous envelopes?",
+        "clue_et": "Kuidas nimetatakse peamiselt kivimist ja metallist koosnevaid tahke pinnaga planeete, erinevalt paksu gaasikihiga hiidplaneetidest?",
+        "explanation_en": "These planets have solid rocky surfaces and are also called rocky planets.",
+        "explanation_et": "Neil planeetidel on tahke kivine pind ning neid nimetatakse ka kiviplaneetideks."
+      },
+      "reviewNotes": "A-SCI-001: remove the printed four-planet answer pool from prompt and explanation; only two planet identities remain.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-007",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which giant planet has the long-lived storm known as the Great Red Spot?",
+        "clue_et": "Millisel hiidplaneedil möllab pikaealine torm nimega Suur Punane Laik?",
+        "explanation_en": "The Great Red Spot is a vast storm in the planet's atmosphere.",
+        "explanation_et": "Suur Punane Laik on tohutu torm selle planeedi atmosfääris.",
+        "source_title": "Jupiter — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Jupiter",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-002: retain Jupiter identity through a familiar independent atmospheric feature, removing moon names that would disclose the new tier3 answer. Independent source review: replace the old Galilean-moons citation with Jupiter, which directly supports the atmospheric storm fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/jupiter/jupiter-facts/",
+          "observation": "NASA identifies Jupiter's Great Red Spot as a long-lived giant storm."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jupiter",
+          "observation": "Current Jupiter article describes Great Red Spot, with CC BY-SA 4.0 text footer; verified 2026-10-11."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-008",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which moon is the most volcanically active world in the Solar System?",
+        "clue_et": "Milline kuu on Päikesesüsteemi kõige vulkaanilisem taevakeha?",
+        "response_en": "Io",
+        "response_et": "Io",
+        "accepted_variants_en": "Jupiter's moon Io",
+        "accepted_variants_et": "Jupiteri kuu Io",
+        "explanation_en": "Tidal stretching generates heat inside the moon and fuels its many active volcanoes.",
+        "explanation_et": "Loodelised deformatsioonid tekitavad kuu sisemuses soojust ning toidavad selle arvukaid aktiivseid vulkaane.",
+        "source_title": "Io (moon) — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Io_(moon)",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-002: replace an outer-planet identity with a moon; omit its parent planet's name from public text to protect tier2. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/facts/",
+          "observation": "NASA identifies Io as the Solar System's most volcanically active world and explains tidal heating."
+        }
+      ],
+      "subjectKey": "moon:io",
+      "factFamily": "science:io-volcanism"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-009",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which gas, with the formula CH4, contributes to the blue appearance of distant giant planets by absorbing red light?",
+        "clue_et": "Milline gaas valemiga CH4 aitab anda kaugetele hiidplaneetidele sinaka välimuse, neelates punast valgust?",
+        "response_en": "Methane",
+        "response_et": "Metaan",
+        "accepted_variants_en": "Methane gas",
+        "accepted_variants_et": "Metaangaas",
+        "explanation_en": "The gas absorbs red wavelengths, helping to produce the blue colour seen from outside the atmosphere.",
+        "explanation_et": "Gaas neelab punaseid lainepikkusi ning aitab tekitada atmosfäärist väljastpoolt nähtava sinaka värvuse.",
+        "source_title": "Methane — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Methane",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-002 and A-SCI-003: replace ambiguous Neptune identity with the atmospheric constituent, so no Uranus/Neptune choice or exhaustive outer-planet pool remains. The printed formula CH4 is not an accepted alias. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/neptune/neptune-facts/",
+          "observation": "NASA identifies methane as contributing to the blue appearance of both ice giants."
+        },
+        {
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Methane",
+          "observation": "PubChem records methane's formula as CH4."
+        }
+      ],
+      "subjectKey": "chemical:methane",
+      "factFamily": "science:ice-giant-atmospheric-methane"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-010",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What planetary class has interiors richer in compounds such as water and ammonia than the gas giants?",
+        "clue_et": "Millise planeediklassi sisemuses on gaasihiidudest rohkem ühendeid, näiteks vett ja ammoniaaki?",
+        "explanation_en": "This class differs in bulk composition from giants dominated by hydrogen and helium.",
+        "explanation_et": "Selle klassi üldkoostis erineb peamiselt vesinikust ja heeliumist koosnevate hiidplaneetide omast."
+      },
+      "reviewNotes": "A-SCI-002: remove the printed planet identities and avoid naming the sibling methane answer.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-056",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "A viable seed fails to germinate even when water, light and temperature are suitable, until a biological block is overcome. What is this state called?",
+        "clue_et": "Elujõuline seeme ei idane isegi sobiva vee, valguse ja temperatuuri korral enne, kui bioloogiline takistus kaob. Kuidas seda seisundit nimetatakse?",
+        "explanation_en": "Dormant seeds need a dormancy-breaking process before they can germinate under otherwise suitable conditions.",
+        "explanation_et": "Puhkeolekus seemned vajavad enne idanemist puhkeolekut lõpetavat protsessi, kuigi muud tingimused on juba sobivad."
+      },
+      "reviewNotes": "A-SCI-004: distinguish true seed dormancy from environmentally imposed quiescence.",
+      "sourceVerification": [
+        {
+          "url": "https://brahmsonline.kew.org/Content/Projects/msbp/resources/Training/13b-Germination-testing-dormancy.pdf",
+          "observation": "Kew defines dormant seeds as seeds that do not germinate under favourable conditions and describes dormancy-breaking treatments."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-056",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which speckled, coarse-grained rock forms from slowly cooled underground magma and contains quartz, feldspar and mica?",
+        "clue_et": "Milline täpiline jämedateraline kivim tekib maa-aluse magma aeglasel jahtumisel ning sisaldab kvartsi, päevakivi ja vilku?"
+      },
+      "reviewNotes": "A-SCI-005: add the characteristic mineral composition missing from the rock identity.",
+      "sourceVerification": [
+        {
+          "url": "https://pubs.usgs.gov/gip/acidrain/glossary.html",
+          "observation": "USGS defines granite as a speckled, coarse-grained igneous rock composed of quartz, feldspar and mica."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-058",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which mineral made of carbon ranks 10, the highest value, on the Mohs hardness scale?",
+        "clue_et": "Milline süsinikust koosnev mineraal on Mohsi kõvadusskaalal kõrgeimal, 10. astmel?",
+        "response_en": "Diamond",
+        "response_et": "Teemant",
+        "accepted_variants_en": "Diamond crystal",
+        "accepted_variants_et": "Teemantkristall",
+        "explanation_en": "Its tightly bonded carbon structure gives it exceptional resistance to scratching.",
+        "explanation_et": "Selle tihedalt seotud süsinikstruktuur annab erakordse vastupidavuse kriimustamisele.",
+        "source_title": "Diamond — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Diamond",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Whole-set independence for A-SCI-005: replace the quartz clue, whose answer must now appear in granite's composition; it also formerly named granite in its prompt. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://4cs.gia.edu/en-us/blog/why-are-diamonds-so-hard-3/",
+          "observation": "GIA identifies diamond as carbon and assigns it 10 on the Mohs scale."
+        }
+      ],
+      "subjectKey": "mineral:diamond",
+      "factFamily": "science:diamond-hardness"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-082",
+      "batchId": "03-science-nature",
+      "changes": {
+        "accepted_variants_en": "Adult butterfly;moth;adult moth",
+        "accepted_variants_et": "Valmikliblikas;ööliblikas;päevaliblikas",
+        "explanation_en": "Both butterflies and moths develop from caterpillars through a pupal stage into winged adults.",
+        "explanation_et": "Nii päeva- kui ka ööliblikad arenevad röövikust nukustaadiumi kaudu tiivuliseks valmikuks."
+      },
+      "reviewNotes": "A-SCI-006: accept moth as well as butterfly for the current broad life-cycle question.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nhm.ac.uk/discover/spotlight-madagascan-moon-moth.html",
+          "observation": "NHM describes a moth's development from caterpillar through pupa to adult."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-092",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which familiar group of toothed marine mammals includes bottlenose species and is often seen leaping beside ships?",
+        "clue_et": "Millisesse tuttavasse hammastega mereimetajate rühma kuulub harilik afaliin, kelle sugulasi näeb sageli laevade kõrval veest välja hüppamas?",
+        "explanation_en": "Members of this group breathe air with lungs and regularly return to the surface.",
+        "explanation_et": "Selle rühma loomad hingavad kopsudega õhku ning tõusevad korrapäraselt pinnale."
+      },
+      "reviewNotes": "A-SCI-007: select dolphins through named species rather than a blowhole trait shared by other cetaceans; use the established Estonian afaliin name rather than an improvised spinner translation.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/spinner-dolphin",
+          "observation": "NOAA identifies spinner dolphins and refers to bottlenose dolphins in the same dolphin context."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-097",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which legless, scaly reptile lacks movable eyelids and external ear openings?",
+        "clue_et": "Millisel jalgadeta soomustega roomajal puuduvad liikuvad silmalaud ja välised kõrvaavad?"
+      },
+      "reviewNotes": "A-SCI-008: add the eyelid and ear features distinguishing snakes from familiar legless lizards.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nhm.ac.uk/discover/snakes-senses-stretchy-jaws-deadly-venom.html",
+          "observation": "NHM contrasts snakes' lack of movable eyelids and external ear openings with their lizard relatives."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-100",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which large semi-aquatic reptile usually has a V-shaped snout and visible upper and lower teeth when its mouth is closed?",
+        "clue_et": "Millisel suurel poolveelisel roomajal on tavaliselt V-kujuline koon ning suletud suu korral nähtavad nii ülemised kui ka alumised hambad?"
+      },
+      "reviewNotes": "A-SCI-008: distinguish a crocodile from an alligator using the snout and visible lower teeth.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nationalzoo.si.edu/animals/news/how-long-can-alligator-hold-its-breath-and-other-questions-answered",
+          "observation": "Smithsonian explains crocodile/alligator snout and tooth differences, including both rows visible on a closed crocodile mouth."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-108",
+      "batchId": "03-science-nature",
+      "changes": {
+        "accepted_variants_en": "Electrical rubber;rubber insulation;plastic;PVC;polyvinyl chloride",
+        "accepted_variants_et": "Kummiisolatsioon;kummkate;plast;plastik;PVC;polüvinüülkloriid",
+        "explanation_en": "Rubber and plastics such as PVC resist electric current and are used as insulating coatings on wires.",
+        "explanation_et": "Kumm ja plastid, näiteks PVC, takistavad elektrivoolu ning neid kasutatakse juhtmete isoleeriva kattena."
+      },
+      "reviewNotes": "A-SCI-009: include the common plastic/PVC answers permitted by the prompt.",
+      "sourceVerification": [
+        {
+          "url": "https://cabletechsupport.southwire.com/cablespec/download_cable/?cable=47450&country=US",
+          "observation": "Southwire specifies PVC insulation and a flexible PVC jacket on appliance and service cords."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-124",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which naturalist explained natural selection in his 1859 book \"On the Origin of Species\"?",
+        "clue_et": "Milline loodusteadlane selgitas looduslikku valikut oma 1859. aasta raamatus „Liikide tekkimine“?"
+      },
+      "reviewNotes": "A-SCI-010: add the book and year to distinguish Darwin from Wallace.",
+      "sourceVerification": [
+        {
+          "url": "https://www.rmg.co.uk/stories/ocean/charles-darwin-one-britains-most-celebrated-naturalists",
+          "observation": "Royal Museums Greenwich dates Darwin's Origin of Species to 1859 and identifies its natural-selection theory."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-277",
+      "batchId": "03-science-nature",
+      "changes": {
+        "accepted_variants_en": "Crab;lobster;clawed lobster",
+        "accepted_variants_et": "Krabid;homaar;homaarid;merivähk"
+      },
+      "reviewNotes": "A-SCI-011: accept the concrete lobster alternative that shares limb autotomy and regeneration, rather than adding a broad-body feature requiring a new fact.",
+      "sourceVerification": [
+        {
+          "url": "https://www.fisheries.noaa.gov/national/outreach-and-education/fun-facts-about-luscious-lobsters",
+          "observation": "NOAA explicitly documents reflex amputation and regeneration of lobster claws and walking legs."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-307",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which gas forms an atmospheric shield that absorbs much of the Sun's harmful ultraviolet radiation?",
+        "clue_et": "Milline gaas moodustab atmosfääris kaitsekihi, mis neelab suure osa Päikese kahjulikust ultraviolettkiirgusest?",
+        "response_en": "Ozone",
+        "response_et": "Osoon",
+        "accepted_variants_en": "O3;ozone gas",
+        "accepted_variants_et": "O3;osoonikiht",
+        "explanation_en": "Molecules containing three oxygen atoms absorb much of the incoming ultraviolet radiation.",
+        "explanation_et": "Kolmest hapnikuaatomist koosnevad molekulid neelavad suure osa saabuvast ultraviolettkiirgusest.",
+        "source_title": "Ozone — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Ozone",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-012: replace a second ordered layer identity with an atmospheric gas. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://csl.noaa.gov/assessments/ozone/2018/downloads/twentyquestions/Q2.pdf",
+          "observation": "NOAA states that stratospheric ozone absorbs solar ultraviolet radiation."
+        }
+      ],
+      "subjectKey": "chemical:ozone",
+      "factFamily": "science:ozone-uv-absorption"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-308",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What instrument measures atmospheric pressure and can use a column of mercury or a sealed metal capsule?",
+        "clue_et": "Milline õhurõhku mõõtev instrument võib kasutada elavhõbedasammast või suletud metallkapslit?",
+        "response_en": "A barometer",
+        "response_et": "Baromeeter",
+        "accepted_variants_en": "Barometer",
+        "accepted_variants_et": "Õhurõhumõõtja",
+        "explanation_en": "A mercury column or a pressure-sensitive capsule responds to changes in air pressure.",
+        "explanation_et": "Elavhõbedasammas või rõhutundlik kapsel reageerib õhurõhu muutustele.",
+        "source_title": "Barometer — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Barometer",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-012: replace a layer identity with an independent measurement instrument. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.noaa.gov/jetstream/ll-pressure",
+          "observation": "NOAA describes barometers measuring air pressure and a mercury-column design."
+        }
+      ],
+      "subjectKey": "instrument:barometer",
+      "factFamily": "science:atmospheric-pressure-measurement"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-309",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What luminous polar-sky phenomenon occurs when energetic charged particles excite gases high in the atmosphere?",
+        "clue_et": "Milline helendav polaaralade taevanähtus tekib, kui suure energiaga laetud osakesed ergastavad atmosfääri ülaosas gaase?",
+        "response_en": "An aurora",
+        "response_et": "Virmalised",
+        "accepted_variants_en": "Aurora borealis;aurora australis;northern lights;southern lights;polar lights",
+        "accepted_variants_et": "Põhjavalgus;polaarvalgus;aurora",
+        "explanation_en": "The excited atmospheric particles release energy as light, producing glowing curtains and arcs.",
+        "explanation_et": "Ergastatud atmosfääriosakesed vabastavad energiat valgusena, tekitades helendavaid kardinaid ja kaari.",
+        "source_title": "Aurora — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Aurora",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-012: replace a layer identity with an optical phenomenon. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://science.nasa.gov/sun/auroras/",
+          "observation": "NASA explains auroral light from energetic-particle interactions with atmospheric gases."
+        }
+      ],
+      "subjectKey": "phenomenon:aurora",
+      "factFamily": "science:polar-auroral-light"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-310",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What effect caused by Earth's rotation deflects large-scale moving air to the right in the Northern Hemisphere and to the left in the Southern Hemisphere?",
+        "clue_et": "Milline Maa pöörlemisest tingitud efekt kallutab suuremastaabilist õhuliikumist põhjapoolkeral paremale ja lõunapoolkeral vasakule?",
+        "response_en": "The Coriolis effect",
+        "response_et": "Coriolisi efekt",
+        "accepted_variants_en": "Coriolis force;Coriolis deflection",
+        "accepted_variants_et": "Coriolisi jõud;Coriolisi mõju",
+        "explanation_en": "Rotation makes moving air follow curved paths relative to Earth's surface.",
+        "explanation_et": "Pöörlemise tõttu liigub õhk maapinna suhtes mööda kõverjoonelisi trajektoore.",
+        "source_title": "Coriolis force — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Coriolis_force",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-SCI-012: replace the last unused layer with an independent upper-tier circulation mechanism. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://oceanservice.noaa.gov/education/tutorial_currents/04currents1.html",
+          "observation": "NOAA describes the direction of large-scale atmospheric deflection in both hemispheres."
+        }
+      ],
+      "subjectKey": "effect:coriolis",
+      "factFamily": "science:rotational-air-deflection"
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0052",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which toothless mammal of Central and South America uses a long snout and sticky tongue to eat ants and termites?",
+        "clue_et": "Milline Kesk- ja Lõuna-Ameerika hammasteta imetaja kasutab sipelgate ja termiitide söömiseks pikka koonu ja kleepuvat keelt?"
+      },
+      "reviewNotes": "A-SCI-013: add New World geography to exclude echidnas and pangolins.",
+      "sourceVerification": [
+        {
+          "url": "https://nationalzoo.si.edu/animals/giant-anteater",
+          "observation": "Smithsonian records giant anteaters' Central/South American range, long snout and tongue, and lack of teeth."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0056",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which familiar crop in the nightshade family supplies underground stem tubers with sprouting \"eyes\", used to make French fries?",
+        "clue_et": "Milline maavitsaliste hulka kuuluv tuttav põllukultuur annab idanevate „silmadega“ maa-aluseid varremugulaid, mida süüakse keedetult, praetult või püree kujul?"
+      },
+      "reviewNotes": "A-SCI-014: add the nightshade family, tuber eyes and familiar culinary context to distinguish potato from Jerusalem artichoke; ET avoids a compound containing kartul. Kew confirms Solanaceae membership (https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A821337-1/general-information), verified 2026-10-11.",
+      "sourceVerification": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-potatoes",
+          "observation": "UMN identifies potato tubers and their eyes producing new shoots."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0102",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which small kangaroo-like desert rodent of North Africa and Asia jumps on long hind legs and balances with a long tail?",
+        "clue_et": "Milline väike kängurutaoline Põhja-Aafrika ja Aasia kõrbenäriline hüppab pikkadel tagajalgadel ning tasakaalustab end pika sabaga?"
+      },
+      "reviewNotes": "A-SCI-015: distinguish the Old World jerboa from North American kangaroo rats and southern African springhares.",
+      "sourceVerification": [
+        {
+          "url": "https://animaldiversity.org/accounts/Jaculus_orientalis/",
+          "observation": "The University of Michigan's ADW identifies the greater Egyptian jerboa in North Africa and adjacent western Asia."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0104",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which torpedo-shaped cephalopod has eight arms and two longer feeding tentacles and moves by forcing water through a siphon?",
+        "clue_et": "Milline torpeedokujuline peajalgne, kellel on kaheksa haaret ja kaks pikemat püügikombitsat, liigub sifooni kaudu vett välja surudes?"
+      },
+      "reviewNotes": "A-SCI-015: add body shape and arm/tentacle count to distinguish squid from octopus and cuttlefish.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nhm.ac.uk/discover/fantastic-flyers-animals-that-fly-in-surprising-ways.html",
+          "observation": "NHM describes a torpedo-shaped squid and siphon propulsion."
+        },
+        {
+          "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives",
+          "observation": "Smithsonian describes squid's eight arms and two tentacles, unlike octopus's eight arms alone."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0157",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What is the cooler-than-usual phase of surface water in the central and eastern equatorial Pacific?",
+        "clue_et": "Kuidas nimetatakse ekvatoriaalse Vaikse ookeani kesk- ja idaosa pinnavee tavalisest jahedamat faasi?",
+        "explanation_en": "In this phase, surface waters in the central and eastern equatorial Pacific are cooler than average.",
+        "explanation_et": "Selles faasis on ekvatoriaalse Vaikse ookeani kesk- ja idaosa pinnavesi keskmisest jahedam."
+      },
+      "reviewNotes": "A-SCI-016: remove trade winds from both prompt and explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0159",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What near-equatorial belt of low pressure and converging surface air is associated with rising air and frequent heavy rain?",
+        "clue_et": "Milline ekvaatorilähedane madalrõhuvöönd, kuhu maapinnalähedane õhk kokku voolab, seostub tõusva õhu ja sagedaste tugevate vihmadega?",
+        "explanation_en": "Surface air converges and rises in this tropical belt, helping form tall clouds and heavy rain.",
+        "explanation_et": "Maapinnalähedane õhk koondub ja tõuseb selles troopilises vööndis, soodustades kõrgete pilvede ja tugeva vihma teket."
+      },
+      "reviewNotes": "A-SCI-016: remove the sibling wind name from prompt and explanation while retaining the zone's defining weather.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0169",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Who first produced and detected radio waves experimentally in the 1880s, confirming a predicted form of electromagnetic radiation?",
+        "clue_et": "Kes tekitas ja tuvastas 1880. aastatel esimesena katseliselt raadiolaineid, kinnitades elektromagnetkiirguse ennustatud vormi olemasolu?",
+        "explanation_en": "His spark-gap experiments demonstrated that radio waves behaved as electromagnetic waves.",
+        "explanation_et": "Tema sädemikuga tehtud katsed näitasid, et raadiolained käituvad elektromagnetlainetena."
+      },
+      "reviewNotes": "A-SCI-017: remove Maxwell from both public fields; keep Hertz's experimental accomplishment.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-154",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What fine powder made by seed plants transports their male genetic material?",
+        "clue_et": "Milline seemnetaimede toodetud peen pulber kannab nende isasgeneetilist materjali?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling cell name while preserving pollen's reproductive role.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-168",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What are smaller seismic tremors that follow the main shock in the same area called?",
+        "clue_et": "Kuidas nimetatakse väiksemaid seismilisi tõukeid, mis järgnevad samas piirkonnas põhitõukele?",
+        "explanation_en": "Aftershocks occur as the crust adjusts following the initial strong movement in a seismic sequence.",
+        "explanation_et": "Järeltõuked tekivad siis, kui maakoor pärast seismilise sarja esimest tugevat liikumist kohaneb."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling earthquake name from the prompt and public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-169",
+      "batchId": "03-science-nature",
+      "changes": {
+        "explanation_en": "Subduction carries one tectonic plate into the mantle beneath another at a convergent boundary.",
+        "explanation_et": "Subduktsioon viib ühe laama teise all vahevöösse koonduvate laamade piiril."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Keep the plate-motion fact without naming the sibling ground-shaking event.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-017",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which constellation is recognised by three stars in a short straight belt?",
+        "clue_et": "Millise tähtkuju tunneb ära kolmest tähest koosneva sirge vöö järgi?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the accepted Hunter/Kütt alias from the question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-025",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which sensory system helps the body detect head movement and orientation for balance?",
+        "clue_et": "Milline meelesüsteem aitab kehal tasakaalu hoidmiseks tajuda pea liikumist ja asendit?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the location that explicitly names the sibling hearing organs.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-034",
+      "batchId": "03-science-nature",
+      "changes": {
+        "explanation_en": "The liver produces bile that disperses fats into small droplets to aid digestion.",
+        "explanation_et": "Maks toodab sappi, mis hajutab rasvad väikesteks piiskadeks ja toetab seedimist."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling small-intestine name from the public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-045",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which fastener has a helical thread and tightens as it is turned?",
+        "clue_et": "Millisel kinnitusvahendil on spiraalne keere ning see kinnitub pööramisel?",
+        "explanation_en": "The helical thread converts rotation into forward movement and can hold objects together.",
+        "explanation_et": "Spiraalne keere muudab pööramise edasiliikumiseks ja saab esemeid koos hoida."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Describe the screw's own thread/motion without naming the sibling inclined plane.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-019",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What is a three-base sequence in the genetic code that specifies an amino acid or a stop signal called?",
+        "clue_et": "Kuidas nimetatakse geneetilise koodi kolmest alusest koosnevat järjestust, mis määrab aminohappe või lõpetamissignaali?",
+        "explanation_en": "The genetic code is read in three-base units called codons.",
+        "explanation_et": "Geneetilist koodi loetakse kolmest alusest koosnevate üksuste ehk koodonitena."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove messengerRNA and nucleotide sibling names; preserve the three-base coding fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-049",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which planet-detection technique looks for a small, repeated dip in a star’s brightness as a planet crosses in front?",
+        "clue_et": "Milline planeetide avastamise meetod otsib tähe heleduses väikest korduvat langust, kui planeet liigub tähe eest läbi?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling exoplanet term while keeping the transit mechanism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-065",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which material is a single-atom-thick sheet of carbon arranged in a hexagonal pattern, whose study won the 2010 Nobel Prize in Physics?",
+        "clue_et": "Milline materjal koosneb ühe aatomikihi paksusest kuusnurkselt paiknevast süsinikust ning mille uurimise eest anti 2010. aasta Nobeli füüsikaauhind?",
+        "response_en": "Graphene",
+        "response_et": "Grafeen",
+        "accepted_variants_en": "",
+        "accepted_variants_et": "",
+        "explanation_en": "Its thin carbon lattice combines high electrical conductivity with remarkable mechanical strength.",
+        "explanation_et": "Selle õhuke süsinikvõre ühendab hea elektrijuhtivuse erakordse mehaanilise tugevusega.",
+        "source_title": "Graphene — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Graphene",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Extra lexical review: replace umbrella Alloy, which necessarily appeared in sibling explanations, with recognizable materials trivia independent of metal-mixture definitions. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.kva.se/app/uploads/2010/10/globalassets-priser-nobel-2010-popfyen10.pdf",
+          "observation": "Royal Swedish Academy's 2010 popular information describes single-atom-thick hexagonal carbon lattice and high electrical conductivity/strength; PDF opened and verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Graphene",
+          "observation": "Current page and CC BY-SA 4.0 text notice verified 2026-10-11."
+        }
+      ],
+      "subjectKey": "material:graphene",
+      "factFamily": "science:graphene-carbon-lattice"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-098",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What fatty insulating substance wraps many axons and greatly increases the speed of their electrical signals?",
+        "clue_et": "Milline rasvarikas isoleeriv aine ümbritseb paljusid aksoneid ja suurendab märgatavalt nende elektrisignaalide kiirust?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling action-potential alias nerveimpulse without changing the physiological fact.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-053",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which broad mid-latitude climate zone often has four distinct seasons?",
+        "clue_et": "Millises keskmiste laiuste laias kliimavöötmes on sageli neli selget aastaaega?",
+        "explanation_en": "Temperate climates occupy middle latitudes and often show marked seasonal changes.",
+        "explanation_et": "Parasvöötme kliima valitseb keskmistel laiustel ning seal esineb sageli selgeid hooajalisi muutusi."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Use latitude and seasons without printing two sibling climate-zone answers.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-071",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which vast tropical forest extends across Brazil, Peru, Colombia and other South American countries?",
+        "clue_et": "Milline ulatuslik troopiline mets laiub Brasiilias, Peruus, Colombias ja teistes Lõuna-Ameerika riikides?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the accepted Amazonas basin-name hint from the forest question.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-078",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which plant part supports the leaves and transports water upward?",
+        "clue_et": "Milline taimeosa kannab lehti ja juhib vett ülespoole?",
+        "explanation_en": "A plant stem supports leaves and contains tissues that transport water through the plant.",
+        "explanation_et": "Taimevars kannab lehti ning sisaldab kudesid, mis juhivad vett läbi taime."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling root name from prompt and explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-088",
+      "batchId": "03-science-nature",
+      "changes": {
+        "explanation_en": "Many owls have excellent low-light vision and sensitive hearing that help them hunt at night.",
+        "explanation_et": "Paljudel öökullidel on suurepärane hämaras nägemine ja tundlik kuulmine, mis aitavad neil öösel jahti pidada."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Explain nocturnal hunting without naming the sibling body covering.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-112",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which non-flammable gas, lighter than air, is commonly used to fill floating party balloons?",
+        "clue_et": "Millise õhust kergema mittesüttiva gaasiga täidetakse sageli hõljuvaid peoõhupalle?",
+        "response_en": "Helium",
+        "response_et": "Heelium",
+        "accepted_variants_en": "He",
+        "accepted_variants_et": "He",
+        "explanation_en": "Helium is less dense than air and does not burn, making it useful for balloons.",
+        "explanation_et": "Heelium on õhust väiksema tihedusega ega põle, mistõttu sobib see õhupallidesse.",
+        "source_title": "Helium — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Helium",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Break the three-state closed answer pool with an independent, recognizable balloon-gas fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://periodic-table.rsc.org/element/2/helium",
+          "observation": "RSC identifies lighter-than-air helium and balloon use; helium is a chemically inert noble gas Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "element:helium",
+      "factFamily": "science:helium:balloons"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-113",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which silvery metal, once common in thermometers, is liquid at ordinary room temperature?",
+        "clue_et": "Milline hõbedane metall, mida kasutati varem sageli termomeetrites, on tavalisel toatemperatuuril vedel?",
+        "response_en": "Mercury",
+        "response_et": "Elavhõbe",
+        "accepted_variants_en": "Quicksilver;Hg",
+        "accepted_variants_et": "Hg",
+        "explanation_en": "Mercury melts at about −39°C, so it is liquid at room temperature. Many former uses have declined because the element is toxic.",
+        "explanation_et": "Elavhõbe sulab umbes −39 °C juures, mistõttu on see toatemperatuuril vedel. Paljud varasemad kasutusalad on aine mürgisuse tõttu vähenenud.",
+        "source_title": "Mercury (element) — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Mercury_(element)",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Break the closed state-name pool with a familiar independent element fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://periodic-table.rsc.org/element/80/mercury",
+          "observation": "RSC gives liquid at20C, silvery appearance, melting point−38.829C, former thermometer use and toxicity Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "element:mercury",
+      "factFamily": "science:mercury:room-temperature-liquid"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-114",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What process makes dry ice turn directly into vapour without forming a puddle?",
+        "clue_et": "Millise protsessi käigus muutub kuivjää otse auruks, tekitamata vedelikuloiku?",
+        "response_en": "Sublimation",
+        "response_et": "Sublimeerumine",
+        "accepted_variants_en": "Subliming",
+        "accepted_variants_et": "Sublimatsioon",
+        "explanation_en": "Sublimation bypasses the intermediate liquid phase. Dry ice, made of carbon dioxide, undergoes this process at ordinary atmospheric pressure.",
+        "explanation_et": "Sublimeerumine jätab vahele vedela oleku. Süsinikdioksiidist kuivjää läbib selle protsessi tavalisel õhurõhul.",
+        "source_title": "Sublimation — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Sublimation_(phase_transition)",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Use an independent dry-ice change-of-state fact without naming the retained solid-state response. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://periodic-table.rsc.org/element/80/mercury",
+          "observation": "RSC periodic-table glossary defines sublimation as direct transition bypassing liquid Verified2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Sublimation_(phase_transition)",
+          "observation": "Article identifies dry-ice carbon dioxide as the familiar example at normal atmospheric pressure; text CC-BY-SA-4.0 Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "process:sublimation",
+      "factFamily": "science:dry-ice:sublimation"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-184",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which numbered hypersensitivity reaction is immediate, mediated by IgE antibodies, and responsible for hay fever?",
+        "clue_et": "Milline nummerdatud ülitundlikkusreaktsioon on vahetu, IgE-antikehade vahendatud ning põhjustab heinapalavikku?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the named sibling systemic reaction while retaining IgE/immediate/hay-fever identifiers.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-205",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What hook-shaped radar reflectivity signature forms when a rotating storm wraps precipitation around its central updraft and can signal tornado potential?",
+        "clue_et": "Milline konksukujuline radari peegeldussignatuur tekib siis, kui pöörlev torm mähib sademed ümber oma keskse tõusuvoolu, ning võib viidata tornaadoohule?"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the sibling mesocyclone name; preserve the radar shape and physical mechanism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-228",
+      "batchId": "03-science-nature",
+      "changes": {
+        "explanation_en": "This external spore-producing cell is characteristic of the fungal group Basidiomycota.",
+        "explanation_et": "See välispinnal eoseid tekitav rakk on iseloomulik kandseente ehk Basidiomycota rühmale."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the named sibling puffball example from the explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-241",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which treatment passes a patient’s blood through a filter outside the body when the kidneys cannot remove enough wastes and excess water?",
+        "clue_et": "Millise ravi käigus juhitakse patsiendi veri läbi kehavälise filtri, kui neerud ei suuda piisavalt jääkaineid ja liigset vett eemaldada?",
+        "response_en": "Hemodialysis",
+        "response_et": "Hemodialüüs",
+        "accepted_variants_en": "Haemodialysis;Dialysis",
+        "accepted_variants_et": "Dialüüs;Vere dialüüs",
+        "explanation_en": "Hemodialysis uses an external filter to remove wastes and excess fluid, after which the blood returns to the body.",
+        "explanation_et": "Hemodialüüs kasutab jääkainete ja liigse vedeliku eemaldamiseks kehavälist filtrit, mille järel veri naaseb organismi.",
+        "source_title": "Hemodialysis — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Hemodialysis",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Replace the umbrella anatomical-unit question named by all four siblings with a recognizable treatment fact; preserve the kidney/filter theme. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+          "observation": "NIDDK describes hemodialysis as blood passing through an external filter, with wastes and extra water removed and blood returned Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "treatment:hemodialysis",
+      "factFamily": "science:hemodialysis:external-filter"
+    },
+    {
+      "clueId": "built-in-science-nature-playable-corpus-311",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What coloured arc appears when sunlight is refracted and reflected inside water droplets in the air?",
+        "clue_et": "Milline värviline kaar tekib, kui päikesevalgus murdub ja peegeldub õhus olevates veepiiskades?",
+        "response_en": "A rainbow",
+        "response_et": "Vikerkaar",
+        "accepted_variants_en": "Rainbow",
+        "accepted_variants_et": "Vikerkaarekaar",
+        "explanation_en": "Light bends as it enters and leaves the droplets and reflects inside them. Different wavelengths emerge in different directions, producing the coloured arc.",
+        "explanation_et": "Valgus murdub piiskadesse sisenedes ja neist väljudes ning peegeldub nende sees. Eri lainepikkused väljuvad eri suundades ja tekitavad värvilise kaare.",
+        "source_title": "Rainbow — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Rainbow",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Replace the umbrella rain question exposed by freezingrain with a familiar independent water-droplet optical fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects/rainbows",
+          "observation": "Met Office explains refraction, internal reflection and colour separation in water droplets Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "phenomenon:rainbow",
+      "factFamily": "science:rainbow:droplet-optics"
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0122",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What kind of front forms when faster-moving colder air catches a warmer boundary and lifts warm air away from the ground?",
+        "clue_et": "Milline front tekib, kui kiiremini liikuv külmem õhk jõuab soojema piirpinna järele ning tõstab sooja õhu maapinnalt üles?",
+        "explanation_en": "An occluded front forms as a faster-moving boundary lifts a warm air mass away from the surface.",
+        "explanation_et": "Oklusioonifront tekib siis, kui kiiremini liikuv piirpind tõstab sooja õhumassi maapinnalt üles."
+      },
+      "reviewNotes": "Additional lexical disclosure review: Remove the named coldfront sibling from question and public explanation while preserving the occlusion mechanism.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-science-nature-all-level-expansion-0136",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "What term describes the variety of living organisms, including variation within species and among species?",
+        "clue_et": "Milline mõiste tähistab elusorganismide mitmekesisust, sealhulgas erinevusi nii liikide sees kui ka liikide vahel?",
+        "response_en": "Biodiversity",
+        "response_et": "Elurikkus",
+        "accepted_variants_en": "Biological diversity",
+        "accepted_variants_et": "Bioloogiline mitmekesisus",
+        "explanation_en": "Biodiversity includes genetic variation and differences among living species. It can be studied at different scales, from a local habitat to the whole planet.",
+        "explanation_et": "Elurikkus hõlmab geneetilisi erinevusi ja elusliikide mitmekesisust. Seda saab uurida eri mõõtkavades, kohalikust elupaigast kogu planeedini.",
+        "source_title": "Biodiversity — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Biodiversity",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Additional lexical disclosure review: Replace the umbrella population definition named by community/carryingcapacity with a familiar separate ecology concept. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.cbd.int/convention/articles?a=cbd-02",
+          "observation": "CBD Article2 defines biological diversity to include variation within and between species Verified2026-10-11."
+        }
+      ],
+      "subjectKey": "concept:biodiversity",
+      "factFamily": "science:biodiversity:variety-of-life"
+    },
+    {
+      "clueId": "built-in-science-nature-accessible-corpus-085",
+      "batchId": "03-science-nature",
+      "changes": {
+        "clue_en": "Which long-bodied flying insects hunt over ponds, have large eyes and usually hold both pairs of transparent wings spread out at rest?",
+        "clue_et": "Millised pika kehaga lendavad putukad jahivad tiikide kohal, on suurte silmadega ja hoiavad puhates tavaliselt mõlemat paari läbipaistvaid tiibu laiali?",
+        "response_en": "Dragonflies",
+        "response_et": "Kiilid",
+        "accepted_variants_en": "Dragonfly;Anisoptera",
+        "accepted_variants_et": "Kiil;Eristiivalised",
+        "explanation_en": "Their young develop in water, where they are predators; the adults catch other insects in flight.",
+        "explanation_et": "Nende noorjärgud arenevad vees ja on seal röövloomad; valmikud püüavad teisi putukaid lennult.",
+        "source_title": "Dragonfly — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Dragonfly",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "subjectKey": "animal:dragonfly",
+      "factFamily": "science:dragonfly-wings-aquatic-young",
+      "reviewNotes": "Independent whole-set review: replace umbrella Beetles, necessarily disclosed by firefly's correct taxonomic wording, with a recognizable independent insect. The spread-at-rest feature distinguishes the wing posture from typical damselflies. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nhm.ac.uk/discover/dragonflies-the-ultimate-hunters.html",
+          "observation": "Museum's entomology feature describes long body, large eyes, two pairs of transparent wings, aquatic predatory young and adults hunting in flight; verified 2026-10-11."
+        },
+        {
+          "url": "https://www.nhm.ac.uk/discover/rainbow-nature-life-in-blue.html",
+          "observation": "Museum contrasts typical damselfly wings closed at rest with dragonflies; current search excerpt verified 2026-10-11."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Dragonfly",
+          "observation": "Current article supports morphology and lifecycle; CC BY-SA 4.0 text notice verified 2026-10-11."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-science-nature-set-013",
+      "batchId": "03-science-nature",
+      "changes": {
+        "category_name_en": "Rocky Worlds and Their Neighbours",
+        "category_name_et": "Kivised maailmad ja nende naabrid"
+      },
+      "reviewNotes": "A-SCI-001: broaden the set beyond exhaustive inner-planet identities."
+    },
+    {
+      "categoryId": "built-in-science-nature-set-014",
+      "batchId": "03-science-nature",
+      "changes": {
+        "category_name_en": "Giants, Moons and Distant Worlds",
+        "category_name_et": "Hiidplaneedid, kuud ja kauged maailmad"
+      },
+      "reviewNotes": "A-SCI-002: broad topic with two planet identities, a moon, an atmospheric gas and a planetary class."
+    },
+    {
+      "categoryId": "built-in-science-nature-set-061",
+      "batchId": "03-science-nature",
+      "changes": {
+        "category_name_en": "Weather and the Air Above Us",
+        "category_name_et": "Ilm ja õhk meie kohal"
+      },
+      "reviewNotes": "A-SCI-012: retain the troposphere identity and mix a gas, instrument, optical phenomenon and circulation mechanism."
+    },
+    {
+      "categoryId": "built-in-science-nature-set-085",
+      "batchId": "03-science-nature",
+      "changes": {
+        "category_name_en": "Matter, Materials and Changes",
+        "category_name_et": "Aine, materjalid ja muutused"
+      },
+      "reviewNotes": "Additional lexical disclosure: broaden the title to fit independent state, element and phase-change facts after breaking the three-state closed pool."
+    },
+    {
+      "categoryId": "built-in-science-nature-set-096",
+      "batchId": "03-science-nature",
+      "changes": {
+        "category_name_en": "Kidneys and Blood Filtration",
+        "category_name_et": "Neerud ja vere filtreerimine"
+      },
+      "reviewNotes": "Additional lexical disclosure: the treatment and four microscopic filtering structures remain a coherent broad kidney category."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "A-SCI-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-001",
+        "built-in-science-nature-accessible-corpus-002",
+        "built-in-science-nature-accessible-corpus-003",
+        "built-in-science-nature-accessible-corpus-004",
+        "built-in-science-nature-accessible-corpus-005"
+      ],
+      "reason": "Broadened inner-world topic, kept two planet identities and removed all four-planet enumeration text."
+    },
+    {
+      "findingId": "A-SCI-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-006",
+        "built-in-science-nature-accessible-corpus-007",
+        "built-in-science-nature-accessible-corpus-008",
+        "built-in-science-nature-accessible-corpus-009",
+        "built-in-science-nature-accessible-corpus-010"
+      ],
+      "reason": "Broadened outer-world topic with moon and gas answers; retained only two planet identities and removed enumeration."
+    },
+    {
+      "findingId": "A-SCI-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-009"
+      ],
+      "reason": "Replaced the ambiguous Neptune identity with methane, so Uranus is no longer an excluded valid planet."
+    },
+    {
+      "findingId": "A-SCI-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-playable-corpus-056"
+      ],
+      "reason": "Specified failure to germinate under otherwise suitable conditions."
+    },
+    {
+      "findingId": "A-SCI-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-056"
+      ],
+      "reason": "Added diagnostic composition and replaced the now-disclosed quartz sibling with diamond."
+    },
+    {
+      "findingId": "A-SCI-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-082"
+      ],
+      "reason": "Added moth to English acceptance and aligned public explanations in both languages."
+    },
+    {
+      "findingId": "A-SCI-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-092"
+      ],
+      "reason": "Specified dolphin species instead of the generic cetacean blowhole trait."
+    },
+    {
+      "findingId": "A-SCI-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-097",
+        "built-in-science-nature-accessible-corpus-100"
+      ],
+      "reason": "Added snake eyelid/ear and crocodile tooth/snout distinctions."
+    },
+    {
+      "findingId": "A-SCI-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-108"
+      ],
+      "reason": "Accepted the valid plastic/PVC wire-coating alternatives."
+    },
+    {
+      "findingId": "A-SCI-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-accessible-corpus-124"
+      ],
+      "reason": "Added Darwin's 1859 book to distinguish Wallace."
+    },
+    {
+      "findingId": "A-SCI-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-playable-corpus-277"
+      ],
+      "reason": "Accepted lobster as a correct shared-autotomy alternative."
+    },
+    {
+      "findingId": "A-SCI-012",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-playable-corpus-306",
+        "built-in-science-nature-playable-corpus-307",
+        "built-in-science-nature-playable-corpus-308",
+        "built-in-science-nature-playable-corpus-309",
+        "built-in-science-nature-playable-corpus-310"
+      ],
+      "reason": "Replaced the exhaustive atmospheric-layer pool with independent gas, instrument, phenomenon and force answers."
+    },
+    {
+      "findingId": "A-SCI-013",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-all-level-expansion-0052"
+      ],
+      "reason": "Added Central/South American geography to distinguish anteaters."
+    },
+    {
+      "findingId": "A-SCI-014",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-all-level-expansion-0056"
+      ],
+      "reason": "Added tuber eyes and culinary context to select potato."
+    },
+    {
+      "findingId": "A-SCI-015",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-all-level-expansion-0102",
+        "built-in-science-nature-all-level-expansion-0104"
+      ],
+      "reason": "Added Old World geography for jerboa and body/appendage features for squid."
+    },
+    {
+      "findingId": "A-SCI-016",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-all-level-expansion-0157",
+        "built-in-science-nature-all-level-expansion-0158",
+        "built-in-science-nature-all-level-expansion-0159"
+      ],
+      "reason": "Removed trade-wind answer terminology from both siblings' prompts and explanations."
+    },
+    {
+      "findingId": "A-SCI-017",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-science-nature-all-level-expansion-0168",
+        "built-in-science-nature-all-level-expansion-0169"
+      ],
+      "reason": "Removed Maxwell from Hertz's prompt and public explanation."
+    }
+  ]
+}

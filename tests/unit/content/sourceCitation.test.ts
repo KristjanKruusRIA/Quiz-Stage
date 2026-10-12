@@ -36,11 +36,21 @@ describe('stored source citations', () => {
     expect(sourceCitation(JSON.stringify(v2))).toBe(v2.title);
   });
 
+  it('round-trips OpenTDB inspiration separately from the factual citation', () => {
+    const inspired = {
+      ...v2,
+      inspiration: { system: 'OpenTDB' as const, candidateId: 'opentdb:42', license: 'CC-BY-SA-4.0' as const },
+    };
+    expect(parseStoredSource(serializeStoredSource(inspired))).toEqual(inspired);
+    expect(sourceCitation(JSON.stringify(inspired))).toBe(v2.title);
+  });
+
   it.each([
     [{ ...v1, format: 'quiz-stage-csv-v2' }],
     [{ ...v2, sourceId: '' }],
     [{ ...v2, factualVerifiedAt: '2026-08-13' }],
     [{ ...v2, unexpected: true }],
+    [{ ...v2, inspiration: { system: 'OpenTDB', candidateId: '', license: 'CC-BY-SA-4.0' } }],
   ])('rejects incomplete or non-strict v2 citations', (candidate) => {
     expect(parseStoredSource(JSON.stringify(candidate))).toBeNull();
   });

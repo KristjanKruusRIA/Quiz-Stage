@@ -1,0 +1,139 @@
+{
+  "reviewer": "b",
+  "scope": "Independent attribution and report-generator spot-check",
+  "productionEdits": false,
+  "checkedAt": "2026-10-09",
+  "checks": [
+    {
+      "id": "GLOBAL-ATTRIBUTION-001",
+      "verdict": "supported with stated configuration-only limit",
+      "evidence": [
+        "forge.config.ts:79 extraResource contains two content databases and resources/media; ignore whitelist permits .vite and better-sqlite3 only.",
+        "sourceCitation.ts:38-40 returns stored title; gameCoordinator.ts:505-519 maps canonical source through it; PublicClue.tsx:15-17 renders source text on reveal.",
+        "CategorySetEditor.tsx:153 onward displays source URL and licence. Content notices and CC licence file are under content, outside packaging whitelist."
+      ],
+      "limit": "No new installer or asar archive inspected. No legal conclusion about every original fact being an adaptation."
+    },
+    {
+      "id": "GLOBAL-ATTRIBUTION-002",
+      "verdict": "independently confirmed metadata gap",
+      "evidence": [
+        "Read-only seed has 11374 clues with no missing/extra snapshot IDs.",
+        "1200 evidence records have origin openTdbInspired with OpenTDB candidate IDs; none of their seed source objects includes its candidate ID.",
+        "OpenTDB API page explicitly declares CC BY-SA 4.0."
+      ],
+      "limit": "Missing inspiration metadata does not itself prove copyrighted wording was copied."
+    },
+    {
+      "id": "GLOBAL-ATTRIBUTION-003",
+      "verdict": "independently confirmed placeholders",
+      "evidence": [
+        "Exact placeholders are built-in-adult-clue-0075 and built-in-adult-clue-0460, both source. Four compared fields agree between snapshot/evidence/seed."
+      ],
+      "limit": "APA definition was not independently verified in this spot-check; root's factual-verification caveat should remain."
+    },
+    {
+      "id": "GLOBAL-ATTRIBUTION-004",
+      "verdict": "independently confirmed classification inconsistency",
+      "evidence": [
+        "built-in-politics-economics-society-easy-expansion-086 is origin compatibleOpen and recorded licence CC-BY-NC-SA-4.0. Its recorded source is the stated EPALE page."
+      ],
+      "limit": "Source's current terms and authored-clue derivation were not independently determined; existing wording correctly calls for an audit rather than asserting infringement."
+    },
+    {
+      "id": "COUNTS",
+      "verdict": "passed independently",
+      "evidence": {
+        "categories": 2414,
+        "questions": 11374,
+        "fiveQuestionBoardCategories": 2240,
+        "singleQuestionFinals": 174,
+        "seedRows": 11374,
+        "missingSeedClueIds": 0,
+        "extraSeedClueIds": 0,
+        "comparedCitationFieldMismatches": 0,
+        "openTdbInspiredRecords": 1200,
+        "inspirationCandidateIdsPresentInSeed": 0
+      },
+      "comparedFields": [
+        "title",
+        "url",
+        "license",
+        "retrievedAt"
+      ]
+    },
+    {
+      "id": "LEGAL_WORDING",
+      "verdict": "appropriately bounded",
+      "evidence": [
+        "Global findings distinguish factual support from inspiration, facts from adapted expression, and content share-alike from all application code.",
+        "CC BY-SA deed specifies attribution/licence/change notices and share-alike for adaptations; reasonable form of attribution is allowed. CC guidance distinguishes recommended TASL practice from the exact 4.0 title requirement."
+      ]
+    },
+    {
+      "id": "REVIEW_LIMITS",
+      "verdict": "selective factual checking is honestly described",
+      "evidence": [
+        "Generator does not claim all 11374 facts independently web-verified.",
+        "No new packaged application/player study or production repairs are claimed.",
+        "requiresExternalVerification is now true for B-049/B-051/B-052/B-053/B-054/B-080."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "SPOTCHECK-B-001",
+      "priority": "medium",
+      "file": "content/work/2026-10-deep-content-review/consolidate-review.cjs",
+      "summary": "Consolidated coverage discards reviewer source ledgers and caveats.",
+      "reason": "coverageRecords retains category fields initially, but coverageMap reconstitutes each category without externalSourcesActuallyRead. Final coverage only keeps three generic limits, discarding each file's specific external-source limitations. That loses durable evidence about what was actually read and which candidate facts remain unconfirmed.",
+      "recommendedRepair": "Preserve per-category externalSourcesActuallyRead plus deduplicated reviewer/global source ledgers and limits in the published coverage artifact."
+    },
+    {
+      "id": "SPOTCHECK-B-002",
+      "priority": "low",
+      "file": "content/work/2026-10-deep-content-review/consolidate-review.cjs",
+      "summary": "Backlog source rendering drops some reviewers' actual observations.",
+      "reason": "Source fallback checks observation, verification, role and notes, but reviewer B sources use evidence or supports, and one uses singular note. The JSON retains those fields, but the Markdown substitutes a generic consult-JSON sentence.",
+      "recommendedRepair": "Add source.evidence, source.supports and source.note to fallback chain, or normalize source schemas before rendering."
+    },
+    {
+      "id": "SPOTCHECK-B-003",
+      "priority": "low",
+      "file": "content/work/2026-10-deep-content-review/audit-metadata.cjs",
+      "summary": "Missing-seed safeguard is implicit rather than enforced.",
+      "reason": "Audit walks existing seed rows and detects unknown IDs, but does not assert every frozen question is in seed. Independent spot-check confirms zero missing/extra IDs in this run, so this does not invalidate current counts.",
+      "recommendedRepair": "Check both directions of seed/snapshot clue-ID equality and persist missing/extra counts."
+    },
+    {
+      "id": "SPOTCHECK-B-004",
+      "priority": "low",
+      "file": "content/work/2026-10-deep-content-review/consolidate-review.cjs",
+      "summary": "Validation should explicitly bind totals and seed to the metadata check.",
+      "reason": "The generator verifies snapshot/CSV/evidence hashes and coverage completeness but does not explicitly assert unique snapshot category/clue IDs, totals against manifest, or unchanged seed hash from the metadata audit. Artifact validation records current seed hash rather than comparing it with an audit-time hash. Independent current counts and seed metadata passed, so this is a safeguard improvement.",
+      "recommendedRepair": "Assert snapshot uniqueness and manifest totals; persist audit seed hash and compare immediately before generation."
+    }
+  ],
+  "graphEvidence": [
+    "CLI search_graph found sourceCitation/CategorySetEditor/PublicClue; get_code_snippet read modules/functions; trace_path showed sourceCitation inbound to toCanonicalClue. Initial regex-style file-pattern search returned no symbols, so name-pattern search was used."
+  ],
+  "externalSourcesActuallyRead": [
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "observation": "Read deed attribution, modification, share-alike and public-domain/exception terms."
+    },
+    {
+      "url": "https://opentdb.com/api_config.php",
+      "observation": "Read API licence statement."
+    },
+    {
+      "url": "https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution",
+      "observation": "Read TASL recommendation and 4.0 title-optional distinction."
+    }
+  ],
+  "limits": [
+    "No production files changed; only ignored reviewer-b scratch outputs written.",
+    "No installer inspection, copyright derivation analysis of all questions, or current EPALE terms determination.",
+    "Global code/data checks were read-only and independent of prior approvals."
+  ]
+}

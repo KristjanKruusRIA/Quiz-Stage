@@ -1,0 +1,594 @@
+[
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-003",
+    "reason": "Industrial Revolution is translated tööstusrevolutsioon; Coal and Kivisüsi are the same fossil fuel. The capitalization heuristic has mistaken an ordinary translated historical term for a lost name."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-011",
+    "reason": "Neil Armstrong is a personal name and is correctly identical in both answer fields. The lunar-surface question is fully translated."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-027",
+    "reason": "The Rosetta Stone is conventionally Rosetta kivi in Estonian; the English article is absent in Estonian. Vana-Egiptuse and kreeka accurately translate ancient Egyptian and Greek."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-044",
+    "reason": "Mu isamaa on minu arm is the original Estonian song title and is correctly retained in the English answer. Lydia Koidula's becomes Lydia Koidula sõnadele, Gustav Ernesaks is inflected Ernesaksa, and Song Festival is laulupeo; the same composer, poet and festival are identified."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-044",
+    "reason": "Mu isamaa on minu arm is the original Estonian song title and is correctly retained in the English answer. Lydia Koidula's becomes Lydia Koidula sõnadele, Gustav Ernesaks is inflected Ernesaksa, and Song Festival is laulupeo; the same composer, poet and festival are identified."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-054",
+    "reason": "The Parthenon is Parthenon in Estonian without the English article. Acropolis becomes Akropolil and Athena becomes Athenale through normal Estonian place-name spelling and case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-060",
+    "reason": "Hadrian's Wall is translated Hadrianuse vall; the accepted Hadrianuse müür is also a real Estonian rendering. Both prompts ask for the Roman frontier fortification in northern Britain."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-098",
+    "reason": "The Civil Rights Act of 1964 is translated 1964. aasta kodanikuõiguste seadus. US becomes USA; both prompts preserve the year and the law's bans on racial discrimination in public accommodations and employment."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-099",
+    "reason": "The March on Washington is Washingtoni marss; Lincoln Memorial is Lincolni memoriaal. The original speech title I Have a Dream is retained in both prompts and both preserve the 1963 event."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-accessible-corpus-113",
+    "reason": "Simón Bolívar is a personal name and retains its accents in both languages. South American becomes Lõuna-Ameerika and the Liberator becomes Vabastaja; the same independence leader is described."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-accessible-corpus-113",
+    "reason": "Simón Bolívar is a personal name and retains its accents in both languages. South American becomes Lõuna-Ameerika and the Liberator becomes Vabastaja; the same independence leader is described."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-004",
+    "reason": "The Great Ziggurat of Ur is rendered Uri suur astmiktempel, a translation of the monument description. Nanna is the same deity name in both answers."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-011",
+    "reason": "Hellenistic Attalid dynasty is hellenistliku Attaliidide dünastia; Anatolia is Anatoolia. Pergamon remains the city name in both answers."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-032",
+    "reason": "Mansa Musa is a personal name and is correctly identical in both answer fields. West African is translated Lääne-Aafrika; the pilgrimage and wealth clue keeps the same meaning."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-032",
+    "reason": "Mansa Musa is a personal name and is correctly identical in both answer fields. West African is translated Lääne-Aafrika; the pilgrimage and wealth clue keeps the same meaning."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-064",
+    "reason": "Fatehpur Sikri is the unchanged city name in both languages. Mughal capital becomes Mogulite pealinn; late sixteenth century becomes 16. sajandi lõpul without changing the period."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-071",
+    "reason": "Galileo Galilei is a personal name and is correctly identical in both answer fields. Roman Inquisition is Rooma inkvisitsioon; Earth-centred and Sun-centred become Maa-keskset and Päikese-keskset."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-071",
+    "reason": "Galileo Galilei is a personal name and is correctly identical in both answer fields. Roman Inquisition is Rooma inkvisitsioon; Earth-centred and Sun-centred become Maa-keskset and Päikese-keskset."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-077",
+    "reason": "The Peace of Westphalia is conventionally Vestfaali rahu and Thirty Years' War is Kolmekümneaastane sõda. Münster and Osnabrück remain identifiable with Estonian case endings; both prompts preserve 1648."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-085",
+    "reason": "Mary Wollstonecraft is a personal name and remains unchanged. The English original book title A Vindication of the Rights of Woman is also retained alongside the Estonian descriptive rendering Naiste õiguste õigustus; the prompt asks about equal education in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-097",
+    "reason": "Leopold II and Léopold II identify the same Belgian monarch; the Estonian answer uses the accented French form. Congo Free State is Kongo Vaba Riik and Belgian king is Belgia kuningas."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-109",
+    "reason": "Chartist is translated tšartistide in the prompt. Universal male suffrage is üldine meeste valimisõigus, and both prompts preserve adulthood and the absence of a property requirement."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-116",
+    "reason": "Leon Trotsky is conventionally Lev Trotski in Estonian. Bolshevik, Red Army and Russian Civil War become bolševike, Punaarmee and Venemaa kodusõda, with the same leader and conflict."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-141",
+    "reason": "Ottoman Empire is Osmanite riik. Sykes–Picot Agreement becomes Sykes–Picot’ lepe, preserving both surnames; Two European powers becomes kaks Euroopa suurriiki and is not an omitted name."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-147",
+    "reason": "Kwame Nkrumah is a personal name and is correctly retained in both answer fields. The Ghanaian independence quotation is paraphrased consistently in both prompts."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-177",
+    "reason": "Second Punic War is translated teine Puunia sõda and Alps is Alpid. Hannibal is unchanged in both answer fields; both prompts retain the crossing with elephants and invasion of Italy."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-182",
+    "reason": "Pax Romana is the Latin historical term requested by both prompts and is correctly identical in the answers. Roman Empire is Rooma keisririik; What Latin name becomes Millise ladinakeelse nimega."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-182",
+    "reason": "Pax Romana is the Latin historical term requested by both prompts and is correctly identical in the answers. Roman Empire is Rooma keisririik; What Latin name becomes Millise ladinakeelse nimega."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-197",
+    "reason": "The Knights Hospitaller is conventionally Johanniitide ordu; the accepted Püha Johannese ordu is another real name for the same order. Both prompts retain care for sick pilgrims and later rule of Malta."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-198",
+    "reason": "Third Crusade is translated kolmas ristisõda and Richard the Lionheart is Richard Lõvisüda. England is Inglismaa; both prompts ask for Richard's kingdom."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-237",
+    "reason": "William Wilberforce is a personal name and remains identical. MP is translated parlamendisaadik and Westminster is inflected Westminsteris; the parliamentary campaign against the slave trade is preserved."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-237",
+    "reason": "William Wilberforce is a personal name and remains identical. MP is translated parlamendisaadik and Westminster is inflected Westminsteris; the parliamentary campaign against the slave trade is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-240",
+    "reason": "Slavery Abolition Act is translated orjanduse kaotamise seadus and British Empire is Briti impeerium. Both prompts retain 1833 and the qualification that abolition applied to most colonies."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-270",
+    "reason": "Iwo Jima is the unchanged island name in both answer fields. The flag-raising photograph and volcanic island clues are translated consistently."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-playable-corpus-296",
+    "reason": "Alfred Nobel is a personal name and is correctly identical in both answer fields. Which Swedish inventor becomes Milline Rootsi leiutaja; the will-funded international awards retain the same subjects."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-playable-corpus-296",
+    "reason": "Alfred Nobel is a personal name and is correctly identical in both answer fields. Which Swedish inventor becomes Milline Rootsi leiutaja; the will-funded international awards retain the same subjects."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-all-level-expansion-0120",
+    "reason": "The Pony Express is the proper name Pony Express without the English article in Estonian. Both prompts preserve the Missouri–California route, horseback relays and dates 1860–1861."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-all-level-expansion-0143",
+    "reason": "HMS Beagle is a ship name with its naval prefix and is correctly retained in both answers. Royal Navy is translated Briti merevägi and Charles Darwin is inflected Charles Darwini; both prompts preserve the 1831–1836 voyage."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-history-all-level-expansion-0143",
+    "reason": "HMS Beagle is a ship name with its naval prefix and is correctly retained in both answers. Royal Navy is translated Briti merevägi and Charles Darwin is inflected Charles Darwini; both prompts preserve the 1831–1836 voyage."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-history-all-level-expansion-0156",
+    "reason": "The Hanseatic League is conventionally Hansaliit. Lübeck, Novgorod, London and Bergen retain their identities with ordinary Estonian case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-005",
+    "reason": "Niger River becomes Nigeri jõgi, the river's name plus the Estonian common noun and genitive ending. Bamako remains the same capital in both answers."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-006",
+    "reason": "St Peter's Basilica is Püha Peetruse basiilika; Vatican City is conventionally Vatikan, with Vatikani Linnriik an accepted formal alternative. Both prompts identify the same sovereign enclave in Rome."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-020",
+    "reason": "The Pedja becomes Pedja jõgi; Estonian adds the common noun river and omits the English article. Jõgeva is correctly unchanged as the city name."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-148",
+    "reason": "The Netherlands is conventionally Madalmaad, with Holland retained as a familiar accepted alternative. European becomes Euroopa; both prompts identify the country through polders."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-014",
+    "reason": "Kruger National Park becomes Krugeri rahvuspark, preserving the park name through Estonian genitive inflection. South African is Lõuna-Aafrika and Mozambique is Mosambiik; the same border and animals remain."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-099",
+    "reason": "The Baltic Sea is conventionally Läänemeri, with Balti meri a real alternative. Stockholm becomes Stockholmi and Sweden becomes Rootsi; both prompts locate the same archipelago and sea."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-109",
+    "reason": "Lake Titicaca is Titicaca järv, with a translated common noun. Peru and Bolivia become Peruu and Boliivia; both prompts preserve the high-altitude border lake."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-126",
+    "reason": "Afrikaans is afrikaani keel in Estonian. Germanic is germaani, South Africa is Lõuna-Aafrika Vabariik and Namibia is Namiibia; both prompts describe the same language and locations."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-127",
+    "reason": "Hungarian is ungari keel and Uralic is uurali. Budapest becomes Budapesti through genitive inflection; both prompts ask the language spoken by most residents."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-accessible-corpus-130",
+    "reason": "Dutch is hollandi keel, West Germanic is läänegermaani and the Netherlands is Madalmaad. Both prompts ask the same country's principal official language."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-172",
+    "reason": "Gulf of Riga is conventionally Liivi laht in Estonian, with Riia laht another real accepted name. Saaremaa and Ruhnu remain unchanged, and both prompts locate the same gulf between Estonia and Latvia."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-173",
+    "reason": "Lake Kaali is Kaali järv; the place name is preserved and lake is translated. Both prompts preserve Saaremaa and the largest meteorite crater."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-174",
+    "reason": "Tallinn Airport is Tallinna lennujaam and Lake Ülemiste is Ülemiste järv. Both names retain their place identity with Estonian common nouns and case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-217",
+    "reason": "Ebro Delta and Ebro delta name the same feature; Estonian lowercases the common noun delta. Spanish is Hispaania and Mediterranean is Vahemeri, while rice fields, lagoons and wetlands remain equivalent."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-geography-playable-corpus-217",
+    "reason": "Ebro Delta and Ebro delta name the same feature; Estonian lowercases the common noun delta. Spanish is Hispaania and Mediterranean is Vahemeri, while rice fields, lagoons and wetlands remain equivalent."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-219",
+    "reason": "Laptev Sea is conventionally Laptevite meri and Lena Delta is Leena delta. Both prompts preserve the Siberian tundra channels and the same delta's location."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-playable-corpus-220",
+    "reason": "Inner Niger Delta is Nigeri sisemaa delta, also accepted as Nigeri sisedelta. Both prompts preserve the inland Mali floodplain and its seasonal lakes."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-all-level-expansion-0092",
+    "reason": "North Africa is Põhja-Aafrika and Morocco is Maroko. Ceuta and Melilla remain unchanged; both prompts ask for the country surrounding those enclaves."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-geography-all-level-expansion-0149",
+    "reason": "The Empty Quarter and Rub al-Khali are the English descriptive and Arabic names of the same Arabian sand desert. The Estonian answer uses the Arabic proper name; its localized prompt locates the same desert by its four countries rather than repeating that answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-004",
+    "reason": "Solar System is conventionally translated Päikesesüsteem; possessive wording changes naturally. Asteroids and Asteroidid refer to the same bodies."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-007",
+    "reason": "Great Red Spot has the established Estonian name Suur Punane Laik. Jupiter remains identical."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-008",
+    "reason": "Solar System is Päikesesüsteem in Estonian. Io is preserved, and Jupiter's moon Io is correctly localized Jupiteri kuu Io."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-playable-corpus-065",
+    "reason": "Nobel Prize in Physics is conventionally translated Nobeli füüsikaauhind; Graphene is the established Estonian scientific term Grafeen. Both prompts retain 2010."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-accessible-corpus-071",
+    "reason": "South American is translated Lõuna-Ameerika; Amazon rainforest is Amazonase vihmamets, with the geographic Amazon root preserved."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-science-nature-accessible-corpus-124",
+    "reason": "Charles Darwin is the naturalist's personal name and is correctly unchanged in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-playable-corpus-244",
+    "reason": "Which U-shaped is an interrogative plus a shape adjective, translated Milline U-kujuline, rather than an omitted proper name. Loop of Henle is Henle ling (also Henle aas); both prompts preserve the nephron segment, kidney medulla and salt gradient."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-playable-corpus-310",
+    "reason": "Northern/Southern Hemisphere become põhja-/lõunapoolkera. Coriolis effect becomes Coriolisi efekt, with the personal name in the Estonian genitive."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0052",
+    "reason": "South America is the established place name Lõuna-Ameerika; the anteater is correctly localized Sipelgaõgija."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0102",
+    "reason": "North Africa is Põhja-Aafrika; jerboa is the standard animal term Hüpikhiir."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0157",
+    "reason": "La Niña is the international name of the climate phase and is appropriately preserved including ñ."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0159",
+    "reason": "Intertropical Convergence Zone is translated Troopikasisene koondumisvöönd, the same meteorological belt."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0169",
+    "reason": "Heinrich Hertz is a personal name, correctly unchanged in both responses."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-157",
+    "reason": "Count Dracula becomes krahv Dracula; Count is a rank, not an invariant name. Transylvanian becomes Transilvaania and Which becomes Milline. Dracula is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-167",
+    "reason": "The Three Musketeers is correctly localized to the published title Kolm musketäri; the genuine French and English titles remain accepted. The prompt character names take normal Estonian inflections."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-168",
+    "reason": "The Divine Comedy is correctly localized Jumalik komöödia; the original Italian and English titles remain accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-169",
+    "reason": "The Name of the Rose is correctly localized Roosi nimi; the original Italian and English titles remain accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-170",
+    "reason": "One Hundred Years of Solitude is correctly localized Sada aastat üksildust; the Spanish and English originals remain accepted. Buendía is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-035",
+    "reason": "Nils Holgersson is the character's name, correctly unchanged. What Swedish is a scanner grouping of the question word and national adjective, correctly rendered Milline Rootsi."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-accessible-corpus-035",
+    "reason": "Nils Holgersson is the character's name, correctly unchanged. What Swedish is a scanner grouping of the question word and national adjective, correctly rendered Milline Rootsi."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-042",
+    "reason": "The Germanic languages is translated Germaani keeled; English/German/Swedish/Dutch are standard localized language names."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-043",
+    "reason": "The Semitic languages is translated Semiidi keeled; Arabic and Hebrew have their standard Estonian language names. Both clues now correctly ask for a branch within Afroasiatic."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-020",
+    "reason": "Julio Cortázar is retained as Julio Cortázari with the Estonian genitive; Which is a question word. Hopscotch is the published Estonian title Keksumäng."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-051",
+    "reason": "The story and collection titles have established translations: The Tale of the Three Brothers to Lugu kolmest vennast; The Tales of Beedle the Bard to Bard Beedle’i lood. Deathly Hallows is surma vägised, and Hermione/Hermionele is normal case inflection."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-accessible-corpus-114",
+    "reason": "The German is a capitalized article plus adjective, translated saksakeelne. The shared linguistic example Kindergarten/Garten is intentionally retained; Garden/Aed is the correctly translated answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-086",
+    "reason": "The Diary of a Young Girl is the same work published in Estonian as Anne Franki päevik. Both original English titles remain accepted, and father Otto is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-106",
+    "reason": "Elizabeth Gilbert/Gilberti is normal genitive. Eat, Pray, Love has the publisher-verified Estonian title Söö, palveta, armasta; genuine English titles remain accepted. Italy, India and Indonesia use their standard Estonian names."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-111",
+    "reason": "Nita Prose/Prose’i uses normal genitive. The Maid is the published Estonian title Toateenija, with the English title accepted. Molly Gray remains intact."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-117",
+    "reason": "Michael Cunningham/Cunninghami is normal Estonian genitive. The Hours is the published Estonian title Tunnid, with the original English title accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-127",
+    "reason": "Shirley Jackson/Jacksoni is normal genitive and Dr/doktor is a translated title. The Haunting of Hill House has the verified published Estonian title Kummituslik Hilli maja; genuine English title variants remain accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-201",
+    "reason": "Donna Tartt/Tartti and Hampden College/Hampdeni kolledž use natural Estonian inflection/localization. The Secret History has the verified published title Salajane ajalugu; both titles are accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-202",
+    "reason": "Kingsley Amis/Amise uses normal genitive. Lucky Jim has the verified published Estonian title Õnneseen Jim; both published titles are accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-playable-corpus-205",
+    "reason": "Cape Town and South Africa use the established Estonian names Kaplinn and Lõuna-Aafrika. Disgrace has the verified published Estonian title Häbi; both titles are accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-easy-expansion-042",
+    "reason": "Which SI groups an English question word with the invariant acronym. Estonian Millise ... SI-ühiku preserves SI and the unit symbol V; volt is correctly used in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0016",
+    "reason": "Puss in Boots is the familiar published tale title Saabastega kass, naturally inflected Saabastega kassis. Perrault is preserved with Estonian genitive punctuation."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0158",
+    "reason": "Northanger Abbey has the published Estonian title Northangeri klooster. Catherine Morland remains the character name, inflected Catherine Morlandil; both prompts preserve the confusion between ordinary life and Gothic fiction."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0159",
+    "reason": "The Woman in White has the published Estonian title Naine valges. Wilkie Collins becomes Wilkie Collinsi and Walter Hartright remains unchanged; both prompts retain the drawing teacher's encounter with a woman escaped from an asylum."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0160",
+    "reason": "The Moonstone has the published Estonian title Kuukivi, inflected Kuukivis in the prompt. Franklin Blake becomes Franklin Blake’ile and Laudanum is localized Laudaanum; the drug and trance-mediated removal of the diamond remain equivalent."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0183",
+    "reason": "The Motif-Index of Folk-Literature is correctly described in Estonian as Rahvakirjanduse motiiviregister. Stith Thompson/Thompsoni uses normal genitive."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-literature-language-all-level-expansion-0188",
+    "reason": "Vladimir Nabokov is a personal name correctly unchanged. United States is Ameerika Ühendriigid in Estonian, and Russian-born becomes Venemaal sündinud. The two book titles Conclusive Evidence and Speak, Memory are retained accurately."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-literature-language-all-level-expansion-0188",
+    "reason": "Vladimir Nabokov is a personal name correctly unchanged. United States is Ameerika Ühendriigid in Estonian, and Russian-born becomes Venemaal sündinud. The two book titles Conclusive Evidence and Speak, Memory are retained accurately."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0006",
+    "reason": "Town Hall Square is Raekoja plats and the Brotherhood of the Blackheads is Mustpeade vennaskond. Which Estonian is a question word/adjective grouping. Both responses identify Tallinn."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0010",
+    "reason": "Bear Hunt in Pärnumaa is the English film-title rendering of Karujaht Pärnumaal. Johannes Pääsuke/Pääsukese is normal genitive. The prompt preserves 1914 and does not print either title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0011",
+    "reason": "Visit Estonia is the tourism brand, retained in ET; its English possessive suffix is naturally absent. English approximate 2,000 and Estonian umbes 2000 denote the same rounded count, with exact 2,317/2317 accepted."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0014",
+    "reason": "Old Town is the established vanalinn. UNESCO World Heritage List is UNESCO maailmapärandi nimekiri, retaining UNESCO and the same 1997 date."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0033",
+    "reason": "Ado Kosk is inflected Ado Kose in the Estonian prompt. Which Estonian is a question word plus nationality; the sport name kiiking is correctly retained."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0058",
+    "reason": "Carmen Kass is an Estonian personal name and is correctly identical in both answer fields. The Paide birthplace, international modelling career and brief political involvement are translated consistently."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0060",
+    "reason": "Eesti Ekspress is the newspaper's proper title, correctly unchanged rather than translated literally."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0124",
+    "reason": "Ewert and The Two Dragons is the band's official name and is correctly unchanged. Which Tallinn includes the translated question word Milline; Tallinn becomes Tallinna in genitive."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0124",
+    "reason": "Ewert and The Two Dragons is the band's official name and is correctly unchanged. Which Tallinn includes the translated question word Milline; Tallinn becomes Tallinna in genitive."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0150",
+    "reason": "Kanuti Gildi SAAL is the venue's official name, correctly unchanged including its capitalization. Which Tallinn becomes Milline Tallinna, the normal genitive."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0150",
+    "reason": "Kanuti Gildi SAAL is the venue's official name, correctly unchanged including its capitalization. Which Tallinn becomes Milline Tallinna, the normal genitive."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0188",
+    "reason": "Border State is the English title of the Estonian novel Piiririik, inflected Piiririigi in the prompt. Tõnu Õnnepalu is correctly retained in both answers, including the letter Õ which is the clue's subject."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0188",
+    "reason": "Border State is the English title of the Estonian novel Piiririik, inflected Piiririigi in the prompt. Tõnu Õnnepalu is correctly retained in both answers, including the letter Õ which is the clue's subject."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0216",
+    "reason": "Lennart Meri remains unchanged; Tallinn Airport becomes Tallinna lennujaam. Accepted Lennart Meri is the same person's name in both languages."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0216",
+    "reason": "Lennart Meri remains unchanged; Tallinn Airport becomes Tallinna lennujaam. Accepted Lennart Meri is the same person's name in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0255",
+    "reason": "Erkki-Sven Tüür is the composer’s unchanged personal name. Symphony No. 4 is correctly localized neljas sümfoonia / 4. sümfoonia; Which Estonian is a question-word/nationality phrase."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0255",
+    "reason": "Erkki-Sven Tüür is the composer’s unchanged personal name. Symphony No. 4 is correctly localized neljas sümfoonia / 4. sümfoonia; Which Estonian is a question-word/nationality phrase."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0281",
+    "reason": "The Estonian Academy of Arts is the institution's English name for Eesti Kunstiakadeemia. Tallinn/Tallinna is normal genitive, and EKA remains accepted in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0303",
+    "reason": "Which Estonia-developed is a question word with a localized national adjective. eKool and Stuudium are the actual platform names, retained in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0315",
+    "reason": "North American is translated Põhja-Ameerika. Clevon is unchanged and both prompts retain Fort Worth and the same 2022 first-delivery scope."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0321",
+    "reason": "Which Estonian is translated Milline Eesti. ESTCube-2 is preserved exactly; both prompts retain 2023 and explicitly describe the intended experiment, while the explanation states deployment failed."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0327",
+    "reason": "Ahja River is Ahja jõgi and Taevaskoda outcrops is Taevaskojad. The named Suur/Väike Taevaskoda alternatives are preserved, with and translated ja."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0335",
+    "reason": "Rail Baltica’s English possessive is localized Rail Balticu; it denotes the same project. The answers 1,435 millimetres and 1435 millimeetrit preserve the same gauge."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0342",
+    "reason": "Government of the Republic is the institution's English name for Vabariigi Valitsus; cabinet is correctly translated Valitsus."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0345",
+    "reason": "Chancellor of Justice is the official English title for Õiguskantsler; the institution and its ombudsman function are the same."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0354",
+    "reason": "The Estonian is a capitalized article plus national adjective, correctly translated Eesti. The actual town names Valga and Valka are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0355",
+    "reason": "South Estonian is translated Lõuna-Eesti. Võro is the language's unchanged proper name, and Võro keel simply adds the Estonian word for language."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0406",
+    "reason": "Urvaste Parish is Urvaste vald, inflected Urvaste vallas in the prompt. An oak is Tamm; both prompts preserve the location and the question about the tree's species."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0419",
+    "reason": "Kabli Bird Station is Kabli linnujaam; Pärnu County is Pärnu maakond, with normal genitive inflection. Both responses name the same institution and retain 1969."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0427",
+    "reason": "Andrus Veerpalu is a personal name correctly unchanged. Which Estonian is a translated question word/national adjective and both prompts retain 2002/2006."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0427",
+    "reason": "Andrus Veerpalu is a personal name correctly unchanged. Which Estonian is a translated question word/national adjective and both prompts retain 2002/2006."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0435",
+    "reason": "Urmo Aava is a personal name correctly unchanged. World Rally Championship is ralli MM-sari and Acropolis Rally is Akropolise ralli, standard event terminology for the same 2008 result."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0435",
+    "reason": "Urmo Aava is a personal name correctly unchanged. World Rally Championship is ralli MM-sari and Acropolis Rally is Akropolise ralli, standard event terminology for the same 2008 result."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0443",
+    "reason": "FC Flora is the club's official proper name, correctly unchanged. Tallinn/Tallinna and Flora Tallinn/Tallinna Flora are natural locale ordering/inflection for the same club."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0443",
+    "reason": "FC Flora is the club's official proper name, correctly unchanged. Tallinn/Tallinna and Flora Tallinn/Tallinna Flora are natural locale ordering/inflection for the same club."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0444",
+    "reason": "Lilleküla Stadium is Lilleküla staadion. A. Le Coq Arena is the actual sponsor name and is correctly accepted unchanged in both languages."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0444",
+    "reason": "Lilleküla Stadium is Lilleküla staadion. A. Le Coq Arena is the actual sponsor name and is correctly accepted unchanged in both languages."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0445",
+    "reason": "Rapla Basketball Club is Rapla korvpalliklubi, and Rapla KK is the same unchanged club abbreviation. Both locales retain the corrected 2017 final result."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0445",
+    "reason": "Rapla Basketball Club is Rapla korvpalliklubi, and Rapla KK is the same unchanged club abbreviation. Both locales retain the corrected 2017 final result."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0457",
+    "reason": "Ragnar Klavan is a personal name correctly unchanged. Which Estonian is a question word/nationality phrase; Liverpool, Augsburg and 2016 are preserved."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-estonia-clue-0457",
+    "reason": "Ragnar Klavan is a personal name correctly unchanged. Which Estonian is a question word/nationality phrase; Liverpool, Augsburg and 2016 are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0465",
+    "reason": "Maiasmokk is the cafe’s unchanged proper name. Tallinn/Tallinna and Georg Stude/Stude are normal Estonian inflections and the 1864 date is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0476",
+    "reason": "Which Estonian word is translated Milline eesti sõna, an interrogative rather than a proper name. Palun is the Estonian word being requested and is appropriately retained in the English answer; both prompts describe its polite request and response-to-thanks uses."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0479",
+    "reason": "Comitative case is the established Estonian term Kaasaütlev kääne. The example sõbraga and suffix -ga are preserved; Which Estonian is translated question-word/nationality text."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0480",
+    "reason": "Abessive case is the established Estonian term Ilmaütlev kääne. The example rahata and suffix -ta are preserved; Which Estonian is translated question-word/nationality text."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0499",
+    "reason": "Palmse Manor is Palmse mõis; Lahemaa National Park is Lahemaa rahvuspark. Baroque is conventionally translated barokk, with normal case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-estonia-clue-0500",
+    "reason": "Opinion Festival is the event's English name for Arvamusfestival. Sweden’s Almedalen is Rootsi Almedaleni, with possessive/genitive inflection; Paide and 2013 remain intact."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0001",
+    "reason": "Mount Vesuvius is conventionally Vesuuvi; Pompeii is Pompei; Villa of the Mysteries is Müsteeriumide villa. English AD 79 becomes 79. aastal in the unambiguous Roman-era context, preserving the eruption year, casts and frescoes."
+  }
+]

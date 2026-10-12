@@ -1,0 +1,601 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-history-accessible-corpus-011",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Armstrong stepped onto the lunar surface during the first crewed Moon landing in 1969.",
+        "explanation_et": "Armstrong astus Kuu pinnale esimese mehitatud kuulennu ajal 1969. aastal."
+      },
+      "reviewNotes": "A-HIS-001: remove the sibling programme name from the public explanation.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nasa.gov/history/55-years-ago-apollo-11s-one-small-step-one-giant-leap/",
+          "observation": "NASA records Armstrong's first lunar steps in July 1969."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-016",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "The term was used for British campaigners who pursued militant methods to win voting rights for women.",
+        "explanation_et": "Nimetust kasutati Briti aktivistide kohta, kes rakendasid naiste hääleõiguse saavutamiseks võitluslikke meetodeid."
+      },
+      "reviewNotes": "A-HIS-002: explain the term without naming the founder sought by tier4.",
+      "sourceVerification": [
+        {
+          "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/womenvote/overview/campaign/",
+          "observation": "Parliament distinguishes militant suffragettes from other suffrage campaigners."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-098",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which landmark US law of 1964 banned racial discrimination in public accommodations and employment?",
+        "clue_et": "Milline 1964. aasta USA ajalooline seadus keelas rassilise diskrimineerimise avalikes teeninduskohtades ja tööhõives?",
+        "response_en": "The Civil Rights Act of 1964",
+        "response_et": "1964. aasta kodanikuõiguste seadus",
+        "accepted_variants_en": "Civil Rights Act;1964 Civil Rights Act",
+        "accepted_variants_et": "Kodanikuõiguste seadus;Civil Rights Act of 1964",
+        "explanation_en": "The law prohibited discrimination in public accommodations and employment and strengthened federal enforcement.",
+        "explanation_et": "Seadus keelas diskrimineerimise avalikes teeninduskohtades ja tööhõives ning tugevdas föderaalset järelevalvet.",
+        "source_title": "Civil Rights Act of 1964 — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-003: replace the repeated bus-boycott event with an independent national legislative milestone. Original factual wording; sources cited as references.",
+      "sourceVerification": [
+        {
+          "url": "https://www.archives.gov/milestone-documents/civil-rights-act",
+          "observation": "The enrolled 1964 act addresses public accommodations and equal employment opportunity."
+        }
+      ],
+      "subjectKey": "law:civil-rights-act-1964",
+      "factFamily": "history:civil-rights-federal-law"
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-099",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "At which 1963 mass demonstration near the Lincoln Memorial was the speech \"I Have a Dream\" delivered?",
+        "clue_et": "Millisel 1963. aasta massimeeleavaldusel Lincolni memoriaali juures peeti kõne „I Have a Dream“?"
+      },
+      "reviewNotes": "Whole-set check for A-HIS-003: remove King's name, which otherwise supplies the tier1 answer; the speech hook still identifies this independent event.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-004",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "The Great Ziggurat of Ur was dedicated to which moon god?",
+        "accepted_variants_en": "Sin;Suen;Su'en;Nanna-Suen",
+        "accepted_variants_et": "Sin;Suen;Nanna-Suen"
+      },
+      "reviewNotes": "A-HIS-004: supply the named temple context missing from EN and add attested deity names.",
+      "sourceVerification": [
+        {
+          "url": "https://oracc.museum.upenn.edu/amgg/listofdeities/nannasuen/index.html",
+          "observation": "ORACC names Nanna in Sumerian and Su'en/Sin in Akkadian and identifies his ziggurat at Ur."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-064",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which red-sandstone city near Agra briefly served as a Mughal capital in the late sixteenth century?",
+        "clue_et": "Milline punasest liivakivist linn Agra lähedal oli 16. sajandi lõpul lühikest aega Mogulite pealinn?"
+      },
+      "reviewNotes": "A-HIS-005: remove Akbar's name from the place-identification prompt while retaining independent architectural and location hooks.",
+      "sourceVerification": [
+        {
+          "url": "https://whc.unesco.org/en/list/255/",
+          "observation": "UNESCO identifies the city as a short-lived sixteenth-century Mughal capital near Agra."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-071",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which scientist wrote a dialogue comparing Earth-centred and Sun-centred world systems, later banned by the Roman Inquisition?",
+        "clue_et": "Milline teadlane kirjutas Maa-keskset ja Päikese-keskset maailmapilti võrdleva dialoogi, mille Rooma inkvisitsioon hiljem keelas?"
+      },
+      "reviewNotes": "A-HIS-006: remove both eponymous cosmology names; the book-and-trial fact identifies Galileo independently.",
+      "sourceVerification": [
+        {
+          "url": "https://catalogue.museogalileo.it/indepth/SentenceCondemnationGalileo.html",
+          "observation": "The museum reproduces the 1633 sentence prohibiting Galileo's Dialogues."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-076",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "The defenestration of 1618 triggered a revolt against Habsburg rule and the opening phase of the war.",
+        "explanation_et": "1618. aasta defenestratsioon vallandas ülestõusu Habsburgide võimu vastu ning sõja algusjärgu."
+      },
+      "reviewNotes": "A-HIS-007: remove the place-name hook from the public explanation.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-077",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "What collective name is given to the peace settlements signed at Münster and Osnabrück in 1648 that ended the Thirty Years' War?",
+        "clue_et": "Millise üldnimega tuntakse 1648. aastal Münsteris ja Osnabrückis sõlmitud rahulepinguid, mis lõpetasid Kolmekümneaastase sõja?",
+        "response_en": "The Peace of Westphalia",
+        "response_et": "Vestfaali rahu",
+        "accepted_variants_en": "Peace of Westphalia;Westphalian peace",
+        "accepted_variants_et": "Vestfaali rahulepingud;Westphalian peace",
+        "explanation_en": "The settlements ended the war in the Holy Roman Empire and rearranged political and religious rights.",
+        "explanation_et": "Rahulepingud lõpetasid sõja Saksa-Rooma riigis ning korraldasid ümber poliitilised ja usulised õigused.",
+        "source_title": "Peace of Westphalia — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Peace_of_Westphalia",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-007: replace the Prague answer, also exposed by tier5's Peace of Prague, with an independent major diplomatic outcome. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=795&url_tabelle=tab_chronologie&url_zaehler_blaettern=36",
+          "observation": "The regional history institution dates the Münster and Osnabrück peace to 24 October 1648 and states it ended the Thirty Years' War."
+        }
+      ],
+      "subjectKey": "event:peace-of-westphalia",
+      "factFamily": "history:1648-war-settlement"
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-113",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which South American leader, known as the Liberator, led campaigns for independence in Venezuela and Colombia?",
+        "clue_et": "Milline Lõuna-Ameerika juht, keda tuntakse Vabastajana, juhtis Venezuela ja Colombia iseseisvuskampaaniaid?"
+      },
+      "reviewNotes": "A-HIS-008: replace an underdetermined several-countries hook with Bolívar-specific geography and epithet.",
+      "sourceVerification": [
+        {
+          "url": "https://www.museonacional.gov.co/Publicaciones/cuadernos-iconograficos/Documents/El%20Libertador%20Simon%20Bolivar.pdf",
+          "observation": "Colombia's National Museum identifies Bolívar as El Libertador and recounts the Venezuelan and New Granada campaigns."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-116",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which Bolshevik leader organised the Red Army during the Russian Civil War?",
+        "clue_et": "Milline bolševike juht organiseeris Venemaa kodusõja ajal Punaarmee?"
+      },
+      "reviewNotes": "A-HIS-009: remove the false tsarist-minister premise.",
+      "sourceVerification": [
+        {
+          "url": "https://www.marxists.org/archive/trotsky/1918/military/ch14.htm",
+          "observation": "Trotsky's contemporary 1918 speech addresses organising the Red Army and its military structure."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-109",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which Chartist demand would give all adult men the vote, regardless of property ownership?",
+        "clue_et": "Milline tšartistide nõudmine annaks kõigile täiskasvanud meestele hääleõiguse sõltumata vara omamisest?"
+      },
+      "reviewNotes": "A-HIS-010: select one of the Charter's six demands rather than asking a broad question with several valid answers.",
+      "sourceVerification": [
+        {
+          "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
+          "observation": "Parliament lists universal male suffrage among the People's Charter's six demands."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-097",
+      "batchId": "01-history",
+      "changes": {
+        "clue_et": "Milline Belgia kuningas valitses isiklikult Kongo Vaba Riiki?"
+      },
+      "reviewNotes": "A-HIS-011: correct the historical state name in ET; this was not the later Congo Republic.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-240",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which empire abolished slavery in most of its colonies through the Slavery Abolition Act of 1833?",
+        "clue_et": "Milline impeerium kaotas 1833. aasta orjanduse kaotamise seadusega orjanduse enamikus oma kolooniates?"
+      },
+      "reviewNotes": "A-HIS-012: name the act and year instead of relying on a hidden source title.",
+      "sourceVerification": [
+        {
+          "url": "https://researchbriefings.files.parliament.uk/documents/LLN-2019-0104/LLN-2019-0104.pdf",
+          "observation": "The Lords briefing identifies the 1833 act as emancipating enslaved people in the British Empire from 1834."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-085",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which writer argued for equal education for women in \"A Vindication of the Rights of Woman\"?",
+        "clue_et": "Milline autor kaitses naiste võrdset haridust teoses „Naiste õiguste õigustus“ („A Vindication of the Rights of Woman“)?"
+      },
+      "reviewNotes": "A-HIS-013: identify the work in both languages, rather than referring to an unnamed argument.",
+      "sourceVerification": [
+        {
+          "url": "https://shop.bl.uk/products/a-vindication-of-the-rights-of-woman-1",
+          "observation": "The British Library edition describes Mary Wollstonecraft's 1792 work and its call for equal education."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-296",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which Swedish inventor left most of his fortune in his will to fund international awards in science, literature and peace?",
+        "clue_et": "Milline Rootsi leiutaja jättis testamendiga suurema osa oma varast rahastama rahvusvahelisi auhindu teaduse, kirjanduse ja rahu vallas?",
+        "response_en": "Alfred Nobel",
+        "response_et": "Alfred Nobel",
+        "accepted_variants_en": "Nobel",
+        "accepted_variants_et": "Nobel",
+        "explanation_en": "His 1895 will established the funding for the prizes first awarded in 1901.",
+        "explanation_et": "Tema 1895. aasta testament pani aluse auhindade rahastamisele; esimesed auhinnad anti välja 1901. aastal.",
+        "source_title": "Alfred Nobel — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Alfred_Nobel",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-014: replace the three-kingdom answer pool with an independent Nordic social-history subject. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nobelprize.org/alfred-nobel/",
+          "observation": "The Nobel organisation describes the 1895 will, the bulk of his fortune and the prizes first awarded in 1901."
+        }
+      ],
+      "subjectKey": "person:alfred-nobel",
+      "factFamily": "history:nobel-prize-bequest"
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-182",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "What Latin name describes the long period of relative peace during the early Roman Empire?",
+        "clue_et": "Millise ladinakeelse nimega tuntakse varase Rooma keisririigi pikka suhtelise rahu aega?"
+      },
+      "reviewNotes": "A-HIS-015: remove Augustus, the sibling identity answer, from the prompt.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-197",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which crusading order began by caring for sick pilgrims and later ruled Malta?",
+        "clue_et": "Milline ristisõdade ajal tegutsenud ordu alustas haigete palverändurite hooldamisest ja valitses hiljem Maltat?",
+        "response_en": "The Knights Hospitaller",
+        "response_et": "Johanniitide ordu",
+        "accepted_variants_en": "Hospitallers;Order of Saint John;Knights of Saint John",
+        "accepted_variants_et": "Johanniidid;Püha Johannese ordu;Malta ordu",
+        "explanation_en": "The order combined hospital care with military duties and later established its base on Malta.",
+        "explanation_et": "Ordu ühendas haigete hooldamise sõjaliste ülesannetega ning rajas hiljem oma keskuse Maltale.",
+        "source_title": "Knights Hospitaller — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Knights_Hospitaller",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-016: replace the overlapping recapture-of-Jerusalem fact with another recognisable crusading institution. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.orderofmalta.int/history/",
+          "observation": "The order's official history describes its hospital origins and later rule on Malta."
+        }
+      ],
+      "subjectKey": "organization:knights-hospitaller",
+      "factFamily": "history:hospitaller-hospital-and-malta"
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-198",
+      "batchId": "01-history",
+      "changes": {
+        "explanation_en": "Richard led one of the principal European armies in the Third Crusade.",
+        "explanation_et": "Richard juhtis kolmandas ristisõjas üht Euroopa peamist armeed."
+      },
+      "reviewNotes": "Whole-set check for A-HIS-016: remove Jerusalem from this public explanation as well.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-history-playable-corpus-214",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "At which imperial assembly in 1521 was a leading German reformer ordered to recant his writings?",
+        "clue_et": "Millisel 1521. aasta riigipäeval nõuti tuntud Saksa reformaatorilt oma kirjutistest lahtiütlemist?",
+        "explanation_en": "The reformer refused to recant, and the assembly's edict placed him under an imperial ban.",
+        "explanation_et": "Reformaator keeldus oma kirjutistest lahti ütlemast ning riigipäeva edikt kuulutas ta riigivande alla."
+      },
+      "reviewNotes": "A-HIS-017: remove Luther's name from both prompt and public explanation, retaining the distinctive 1521 assembly fact.",
+      "sourceVerification": [
+        {
+          "url": "https://www.luther2017.de/de/wiki/stationen-der-reformation/1521-luther-auf-dem-reichstag-in-worms/index.html",
+          "observation": "The official Reformation anniversary source records the 1521 assembly and imperial ban."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0118",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "What code represents letters and numbers as sequences of short and long signals, traditionally called dots and dashes?",
+        "clue_et": "Milline kood tähistab tähti ja numbreid lühikeste ja pikkade signaalide jadadena, mida nimetatakse punktideks ja kriipsudeks?",
+        "response_en": "Morse code",
+        "response_et": "Morse kood",
+        "accepted_variants_en": "International Morse code",
+        "accepted_variants_et": "Morse tähestik;Morse",
+        "explanation_en": "Telegraph operators used timed short and long signals to transmit letters and numbers.",
+        "explanation_et": "Telegraafioperaatorid edastasid tähti ja numbreid kindla pikkusega lühikeste ja pikkade signaalide abil.",
+        "source_title": "Morse code — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Morse_code",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-018: replace the second pigeon identity with an independent message-encoding system. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.si.edu/object/telegraph-key:nmah_713632",
+          "observation": "Smithsonian's object description explains the short-dot and longer-dash signals and the letters and numbers they represent."
+        }
+      ],
+      "subjectKey": "system:morse-code",
+      "factFamily": "history:telegraph-signal-encoding"
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0120",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which short-lived mail service used relay riders on horseback between Missouri and California in 1860–1861?",
+        "clue_et": "Milline lühikest aega tegutsenud postiteenus edastas aastatel 1860–1861 Missouri ja California vahel posti ratsakullerite kaudu?",
+        "response_en": "The Pony Express",
+        "response_et": "Pony Express",
+        "accepted_variants_en": "Pony Express",
+        "accepted_variants_et": "Pony Expressi postiteenus",
+        "explanation_en": "The service relayed mail using fresh horses and riders at stations along its route.",
+        "explanation_et": "Teenus edastas posti, vahetades teeäärsetes jaamades hobuseid ja ratsanikke.",
+        "source_title": "Pony Express — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/Pony_Express",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Whole-set calibration for A-HIS-018: replace the tautological medium-tier5 town-crier clue with a recognisable historical service. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.nps.gov/poex/faqs.htm",
+          "observation": "NPS dates the service from April 1860 to November 1861 and identifies the route between Missouri and California."
+        }
+      ],
+      "subjectKey": "service:pony-express",
+      "factFamily": "history:pony-express-relay"
+    },
+    {
+      "clueId": "built-in-history-all-level-expansion-0143",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which Royal Navy survey ship carried Charles Darwin on a five-year voyage from 1831 to 1836?",
+        "clue_et": "Milline Briti mereväe mõõdistuslaev viis Charles Darwini aastatel 1831–1836 viis aastat kestnud reisile?",
+        "response_en": "HMS Beagle",
+        "response_et": "HMS Beagle",
+        "accepted_variants_en": "Beagle",
+        "accepted_variants_et": "Beagle",
+        "explanation_en": "Darwin travelled as a naturalist on the ship's second surveying expedition.",
+        "explanation_et": "Darwin osales loodusteadlasena laeva teisel mõõdistusekspeditsioonil.",
+        "source_title": "HMS Beagle — Wikipedia",
+        "source_url": "https://en.wikipedia.org/wiki/HMS_Beagle",
+        "source_license": "CC-BY-SA-4.0",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "A-HIS-019: replace HMS Discovery to remove the reusable Discovery answer while keeping a familiar scientific-voyage fact. Original factual wording; citations only.",
+      "sourceVerification": [
+        {
+          "url": "https://www.rmg.co.uk/stories/ocean/charles-darwin-one-britains-most-celebrated-naturalists",
+          "observation": "Royal Museums Greenwich dates Darwin's Beagle voyage to 1831–1836 and identifies it as the second surveying expedition."
+        }
+      ],
+      "subjectKey": "ship:hms-beagle",
+      "factFamily": "history:darwin-beagle-voyage"
+    },
+    {
+      "clueId": "built-in-history-accessible-corpus-044",
+      "batchId": "01-history",
+      "changes": {
+        "clue_en": "Which song, set by Gustav Ernesaks to Lydia Koidula's poem, became an unofficial Estonian anthem and a traditional Song Festival finale?",
+        "clue_et": "Milline Gustav Ernesaksa Lydia Koidula sõnadele loodud laul kujunes Eesti mitteametlikuks hümniks ja traditsiooniliseks laulupeo lõpulauluks?"
+      },
+      "reviewNotes": "A-HIS-020: distinguish the intended song from the official national anthem through its composer and poet.",
+      "sourceVerification": [
+        {
+          "url": "https://2025.laulupidu.ee/en/general-information/history-of-song-festivals/",
+          "observation": "The Song Festival Foundation names Ernesaks, Koidula and the song's unofficial-anthem/finale role."
+        }
+      ]
+    }
+  ],
+  "categories": [],
+  "resolutions": [
+    {
+      "findingId": "A-HIS-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-accessible-corpus-011",
+        "built-in-history-accessible-corpus-014"
+      ],
+      "reason": "Removed Apollo programme name from Armstrong explanation."
+    },
+    {
+      "findingId": "A-HIS-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-accessible-corpus-016",
+        "built-in-history-accessible-corpus-019"
+      ],
+      "reason": "Removed founder name from suffragette explanation."
+    },
+    {
+      "findingId": "A-HIS-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-accessible-corpus-097",
+        "built-in-history-accessible-corpus-098"
+      ],
+      "reason": "Replaced repeated bus boycott fact; removed King from sibling event prompt."
+    },
+    {
+      "findingId": "A-HIS-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-004"
+      ],
+      "reason": "Added the named Ur temple context and attested deity aliases."
+    },
+    {
+      "findingId": "A-HIS-005",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-061",
+        "built-in-history-playable-corpus-064"
+      ],
+      "reason": "Removed Akbar from architectural identity prompt."
+    },
+    {
+      "findingId": "A-HIS-006",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-071",
+        "built-in-history-playable-corpus-073"
+      ],
+      "reason": "Removed Copernican eponym from sibling prompt."
+    },
+    {
+      "findingId": "A-HIS-007",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-076",
+        "built-in-history-playable-corpus-077"
+      ],
+      "reason": "Replaced Prague identity with independent Westphalia settlement; removed place-name from defenestration explanation."
+    },
+    {
+      "findingId": "A-HIS-008",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-accessible-corpus-113",
+        "built-in-history-accessible-corpus-114"
+      ],
+      "reason": "Added Bolívar-specific independence geography and epithet."
+    },
+    {
+      "findingId": "A-HIS-009",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-116"
+      ],
+      "reason": "Removed false tsarist-minister premise."
+    },
+    {
+      "findingId": "A-HIS-010",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-109"
+      ],
+      "reason": "Specified suffrage among the Charter's six demands."
+    },
+    {
+      "findingId": "A-HIS-011",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-097"
+      ],
+      "reason": "Corrected Congo Free State's historical Estonian name."
+    },
+    {
+      "findingId": "A-HIS-012",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-240"
+      ],
+      "reason": "Supplied Slavery Abolition Act 1833 context."
+    },
+    {
+      "findingId": "A-HIS-013",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-085"
+      ],
+      "reason": "Supplied the book title in both languages."
+    },
+    {
+      "findingId": "A-HIS-014",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-296",
+        "built-in-history-playable-corpus-299"
+      ],
+      "reason": "Replaced three-kingdom list with Nobel bequest fact, eliminating closed-country-pool shortcut."
+    },
+    {
+      "findingId": "A-HIS-015",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-181",
+        "built-in-history-playable-corpus-182"
+      ],
+      "reason": "Removed Augustus from the Pax Romana prompt."
+    },
+    {
+      "findingId": "A-HIS-016",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-196",
+        "built-in-history-playable-corpus-197"
+      ],
+      "reason": "Replaced Jerusalem recapture with Hospitaller institution and removed other Jerusalem disclosure."
+    },
+    {
+      "findingId": "A-HIS-017",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-playable-corpus-211",
+        "built-in-history-playable-corpus-214"
+      ],
+      "reason": "Removed Luther from assembly prompt and explanation."
+    },
+    {
+      "findingId": "A-HIS-018",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-all-level-expansion-0116",
+        "built-in-history-all-level-expansion-0118"
+      ],
+      "reason": "Replaced repeated pigeon answer with Morse code and calibrated the upper-tier service clue."
+    },
+    {
+      "findingId": "A-HIS-019",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-all-level-expansion-0143",
+        "built-in-history-all-level-expansion-0145"
+      ],
+      "reason": "Replaced one Discovery ship with Beagle."
+    },
+    {
+      "findingId": "A-HIS-020",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-history-accessible-corpus-044"
+      ],
+      "reason": "Added Ernesaks/Koidula identifiers to distinguish the song."
+    }
+  ]
+}

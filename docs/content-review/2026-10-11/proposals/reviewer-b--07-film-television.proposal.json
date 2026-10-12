@@ -1,0 +1,279 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-film-television-playable-corpus-012",
+      "batchId": "07-film-television",
+      "changes": {
+        "response_en": "Kill Bill",
+        "response_et": "Kill Bill",
+        "accepted_variants_en": "Kill Bill: Volume 1;Kill Bill Vol. 1;Kill Bill Volume 1;Kill Bill: Volume 2;Kill Bill Vol. 2;Kill Bill Volume 2",
+        "accepted_variants_et": "Kill Bill: Volume 1;Kill Bill Vol. 1;Kill Bill Volume 1;Kill Bill: Volume 2;Kill Bill Vol. 2;Kill Bill Volume 2"
+      },
+      "reviewNotes": "Keeps the broad weapon identifier and admits both volumes; the host may judge a film-series answer without requiring a volume that the prompt never distinguishes.",
+      "sourceVerification": []
+    },
+    {
+      "clueId": "built-in-film-television-playable-corpus-019",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Early in which film does a bicycle courier wake from a coma in a London hospital and find the city’s streets deserted?",
+        "clue_et": "Millise filmi algusosas ärkab jalgrattakuller Londoni haiglas koomast ja leiab linna tänavad inimtühjana?",
+        "source_title": "Sony Pictures: 28 Days Later",
+        "source_url": "https://www.sonypictures.com/movies/28dayslater",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Primary distributor synopsis confirms that the laboratory outbreak precedes Jim’s awakening; eliminates the inaccurate exact opening-position claim. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.sonypictures.com/movies/28dayslater",
+          "observation": "Synopsis first describes infected chimpanzees being released, then Jim waking in a London hospital 28 days later."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-playable-corpus-023",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Which 2018 animated superhero film introduces Miles Morales’s first Spider-Man adventure, layering drawn lines, painted textures and comic-book dots over computer animation?",
+        "clue_et": "Milline 2018. aasta superkangelase-animafilm tutvustab Miles Moralesi esimest Ämblikmehe-seiklust ning lisab arvutianimatsioonile joonestust, maalitud tekstuure ja koomiksipunkte?",
+        "source_title": "Sony Pictures Animation: Spider-Man: Into the Spider-Verse",
+        "source_url": "https://www.sonypicturesanimation.com/projects/films/spider-man-spider-verse",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds the first Miles Morales animated-film anchor to distinguish the original from its sequel. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.sonypicturesanimation.com/projects/films/spider-man-spider-verse",
+          "observation": "Studio identifies this film as introducing Brooklyn teenager Miles Morales and its comic-book visual style; Sony’s official 2018 trailer announces its Christmas 2018 release."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-accessible-corpus-026",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Which first film in Peter Jackson’s trilogy sends Frodo Baggins on a quest to destroy a powerful ring at Mount Doom?",
+        "clue_et": "Milline Peter Jacksoni triloogia esimene film saadab Frodo Bagginsi Hukatuse mäele võimast sõrmust hävitama?",
+        "source_title": "Warner Bros. Japan: The Lord of the Rings: The Fellowship of the Ring",
+        "source_url": "https://www.warnerbros.co.jp/home_entertainment/zth_us38wpju/",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the unverified companion count and the disputed Shire-departure chronology; primary-supported first-film quest identifier remains familiar. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.warnerbros.co.jp/home_entertainment/zth_us38wpju/",
+          "observation": "Official synopsis identifies Peter Jackson’s first trilogy film and Frodo Baggins’s quest to destroy the Ring at Mount Doom."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-playable-corpus-103",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Matt Murdock fights his way through a basement hallway in the second episode, in a sequence filmed as a continuous shot. Which television series?",
+        "clue_et": "Matt Murdock võitleb end teises osas läbi keldrikoridori stseenis, mis on filmitud ühe katkematu võttena. Milline telesari?",
+        "source_title": "American Society of Cinematographers: Without Fear: Daredevil",
+        "source_url": "https://theasc.com/article/without-fear-daredevil/",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "The production interview actually describes a nearly six-minute take and trafficking victims, so the proposed three-minute/one-boy factual correction cannot be treated as confirmed. Removes unnecessary duration and victim-number claims and retains the primary-supported second-episode hallway long take. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://theasc.com/article/without-fear-daredevil/",
+          "observation": "Interview with cinematographer Matthew Lloyd and director Phil Abraham describes the second episode’s basement-hallway fight as a continuous take; the article itself uses nearly six minutes and victims plural."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-playable-corpus-146",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "In which 2019 film does struggling musician Jack Malik discover that the people around him do not recognize the Beatles’ songs and begin presenting them as his own?",
+        "clue_et": "Millises 2019. aasta filmis avastab läbilööki ootav muusik Jack Malik, et inimesed tema ümber ei tunne Beatlesi laule ära, ning hakkab neid enda omadena esitama?",
+        "explanation_en": "Jack gains fame by performing Beatles songs as his own, then faces the personal cost of that borrowed success.",
+        "explanation_et": "Jack saab kuulsaks, esitades Beatlesi laule enda omadena, ning seisab seejärel silmitsi laenatud edu isikliku hinnaga.",
+        "source_title": "Universal Pictures At Home: Yesterday",
+        "source_url": "https://www.universalpicturesathome.com/movies/yesterday",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes the absolute claim that no one else remembers. The official marketing synopsis uses that simplification but supports Jack’s borrowed-song fame; the revised clue does not depend on confirming a later reveal. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://www.universalpicturesathome.com/movies/yesterday",
+          "observation": "Independently opened the live Universal Pictures Home Entertainment page on 2026-10-11: synopsis names Jack Malik, his fame passing off Beatles songs, and Ellie; details confirm the 2019 release and footer states All rights reserved. Replaces the dead Universal Pictures theatrical URL."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-playable-corpus-192",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Which adventure game show sends teams into a fortress off France’s Atlantic coast for physical and mental trials and a treasure-room finale?",
+        "clue_et": "Milline seikluslik telemäng saadab võistkonnad Prantsusmaa Atlandi ranniku lähedal asuvasse kindlusse füüsilisi ja nuputamisülesandeid lahendama ning aardekambrifinaali?",
+        "explanation_en": "Fort Boyard’s teams tackle challenges inside the sea fortress before the treasure-room finale.",
+        "explanation_et": "„Fort Boyardi“ võistkonnad lahendavad meres asuvas kindluses ülesandeid enne aardekambrifinaali.",
+        "source_title": "France Télévisions: Fort Boyard 2026",
+        "source_url": "https://ftvpro.francetv.fr/contenu-de-presse/77525145",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Removes current tiger and key-count assertions. The verified production format still supplies the familiar fortress, trials and treasure-room identifier without requiring confirmation of the precise tiger-retirement season. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://ftvpro.francetv.fr/contenu-de-presse/77525145",
+          "observation": "Official 2026 broadcaster format describes teams taking on trials in the fort and a final treasure-room stage, without requiring live tigers."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-accessible-corpus-100",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_en": "Which 2017 circus musical includes the self-acceptance anthem This Is Me, led by Keala Settle as Lettie Lutz?",
+        "clue_et": "Millises 2017. aasta tsirkusemuusikalis kõlab enese aktsepteerimise hümn „This Is Me“, mille eeslaulja on Keala Settle Lettie Lutzi rollis?",
+        "source_title": "20th Century Studios: The Greatest Showman",
+        "source_url": "https://family.20thcenturystudios.com/movies/the-greatest-showman",
+        "source_license": "All rights reserved",
+        "source_retrieved_at": "2026-10-11"
+      },
+      "reviewNotes": "Adds year, circus setting and lead performer to distinguish the two songs sharing this title. Source used as a factual reference; clue wording is newly authored and no source text or media is reused.",
+      "sourceVerification": [
+        {
+          "url": "https://family.20thcenturystudios.com/movies/the-greatest-showman",
+          "observation": "Studio page gives the 2017 release and its This Is Me video featuring Keala Settle; Academy’s 2018 ceremony identifies This Is Me from this film."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-film-television-all-level-expansion-0138",
+      "batchId": "07-film-television",
+      "changes": {
+        "clue_et": "Milline Frank Darabonti õudusfilm jätab linnaelanikud supermarketisse lõksu, kui väljas leviv seletamatu nähtus varjab kummalisi olendeid?"
+      },
+      "reviewNotes": "Preserves the director, supermarket and creature premise while avoiding the requested Estonian title as a literal descriptor.",
+      "sourceVerification": []
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-film-television-set-118",
+      "batchId": "07-film-television",
+      "changes": {
+        "category_name_en": "Television Classics of the 1980s and 1990s"
+      },
+      "reviewNotes": "Removes the prime-time restriction to match the daytime soap and existing Estonian scope."
+    },
+    {
+      "categoryId": "built-in-film-television-set-138",
+      "batchId": "07-film-television",
+      "changes": {
+        "category_name_en": "Crime characters beyond the case",
+        "category_name_et": "Krimilugude tegelased ja nende taust"
+      },
+      "reviewNotes": "Includes investigators, criminals and their backgrounds or professions."
+    },
+    {
+      "categoryId": "built-in-film-television-set-146",
+      "batchId": "07-film-television",
+      "changes": {
+        "category_name_en": "Literature reimagined for film",
+        "category_name_et": "Kirjandus filmi jaoks ümbermõelduna"
+      },
+      "reviewNotes": "Includes adaptations that preserve the setting as well as relocated stories."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "B-048",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-012"
+      ],
+      "reason": "Canonical response is Kill Bill and both volumes are accepted under the retained broad sword clue."
+    },
+    {
+      "findingId": "B-049",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-019"
+      ],
+      "reason": "Sony’s primary synopsis confirms the preceding laboratory outbreak; early in the film replaces opens this way."
+    },
+    {
+      "findingId": "B-050",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-023"
+      ],
+      "reason": "2018 and Miles’s first adventure distinguish Into the Spider-Verse from Across the Spider-Verse."
+    },
+    {
+      "findingId": "B-051",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-accessible-corpus-026"
+      ],
+      "reason": "Companion count and initial departure location removed. Warner Bros.’ primary synopsis supports the retained first-film identification, so no disputed scene detail remains."
+    },
+    {
+      "findingId": "B-052",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-103"
+      ],
+      "reason": "Primary production interview supports the published duration/plural wording rather than the candidate correction. Both unnecessary claims are removed, leaving a verified continuous-shot hallway identifier."
+    },
+    {
+      "findingId": "B-053",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-146"
+      ],
+      "reason": "Only-he-remembers absolute removed from both public explanations and the premise limited to people around Jack; later-scene exclusivity is no longer asserted."
+    },
+    {
+      "findingId": "B-054",
+      "status": "qualified",
+      "clueIds": [
+        "built-in-film-television-playable-corpus-192"
+      ],
+      "reason": "Tiger claim removed from prompt and reveal. Current official broadcaster format supports the retained fort, challenges and treasure-room facts; exact retirement year is unnecessary."
+    },
+    {
+      "findingId": "B-055",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-accessible-corpus-100"
+      ],
+      "reason": "2017 circus musical and Keala Settle anchor excludes Camp Rock’s different song."
+    },
+    {
+      "findingId": "B-056",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-easy-expansion-089"
+      ],
+      "reason": "English title now includes daytime television and matches the Estonian scope."
+    },
+    {
+      "findingId": "B-057",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-all-level-expansion-0088"
+      ],
+      "reason": "Both titles now include Walter White without replacing a recognizable question."
+    },
+    {
+      "findingId": "B-058",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-film-television-all-level-expansion-0129"
+      ],
+      "reason": "Broader titles include Oliver! and all four other literary adaptations."
+    }
+  ]
+}

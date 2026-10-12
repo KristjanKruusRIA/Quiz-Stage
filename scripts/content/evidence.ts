@@ -48,7 +48,7 @@ export const contentEvidenceSchema = z.object({
   factKey: nonEmptyString,
   subjectKey: nonEmptyString.optional(),
   assertion: nonEmptyString,
-  origin: z.enum(['openTdbInspired', 'wikidata', 'compatibleOpen']),
+  origin: z.enum(['openTdbInspired', 'wikidata', 'compatibleOpen', 'original']),
   authoring: z.object({
     author: nonEmptyString,
     authoredAt: dateTimeSchema,

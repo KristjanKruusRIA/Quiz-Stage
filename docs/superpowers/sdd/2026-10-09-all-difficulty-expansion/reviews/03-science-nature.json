@@ -1,0 +1,1611 @@
+{
+  "batchId": "03-science-nature",
+  "bankSha256": "82693a33d5aba9fce895f3106c13c1f2b9daaac5475196c5401cdb0740145c41",
+  "reviewedClueIds": [
+    "built-in-science-nature-all-level-expansion-0001",
+    "built-in-science-nature-all-level-expansion-0002",
+    "built-in-science-nature-all-level-expansion-0003",
+    "built-in-science-nature-all-level-expansion-0004",
+    "built-in-science-nature-all-level-expansion-0005",
+    "built-in-science-nature-all-level-expansion-0006",
+    "built-in-science-nature-all-level-expansion-0007",
+    "built-in-science-nature-all-level-expansion-0008",
+    "built-in-science-nature-all-level-expansion-0009",
+    "built-in-science-nature-all-level-expansion-0010",
+    "built-in-science-nature-all-level-expansion-0011",
+    "built-in-science-nature-all-level-expansion-0012",
+    "built-in-science-nature-all-level-expansion-0013",
+    "built-in-science-nature-all-level-expansion-0014",
+    "built-in-science-nature-all-level-expansion-0015",
+    "built-in-science-nature-all-level-expansion-0016",
+    "built-in-science-nature-all-level-expansion-0017",
+    "built-in-science-nature-all-level-expansion-0018",
+    "built-in-science-nature-all-level-expansion-0019",
+    "built-in-science-nature-all-level-expansion-0020",
+    "built-in-science-nature-all-level-expansion-0021",
+    "built-in-science-nature-all-level-expansion-0022",
+    "built-in-science-nature-all-level-expansion-0023",
+    "built-in-science-nature-all-level-expansion-0024",
+    "built-in-science-nature-all-level-expansion-0025",
+    "built-in-science-nature-all-level-expansion-0026",
+    "built-in-science-nature-all-level-expansion-0027",
+    "built-in-science-nature-all-level-expansion-0028",
+    "built-in-science-nature-all-level-expansion-0029",
+    "built-in-science-nature-all-level-expansion-0030",
+    "built-in-science-nature-all-level-expansion-0031",
+    "built-in-science-nature-all-level-expansion-0032",
+    "built-in-science-nature-all-level-expansion-0033",
+    "built-in-science-nature-all-level-expansion-0034",
+    "built-in-science-nature-all-level-expansion-0035",
+    "built-in-science-nature-all-level-expansion-0036",
+    "built-in-science-nature-all-level-expansion-0037",
+    "built-in-science-nature-all-level-expansion-0038",
+    "built-in-science-nature-all-level-expansion-0039",
+    "built-in-science-nature-all-level-expansion-0040",
+    "built-in-science-nature-all-level-expansion-0041",
+    "built-in-science-nature-all-level-expansion-0042",
+    "built-in-science-nature-all-level-expansion-0043",
+    "built-in-science-nature-all-level-expansion-0044",
+    "built-in-science-nature-all-level-expansion-0045",
+    "built-in-science-nature-all-level-expansion-0046",
+    "built-in-science-nature-all-level-expansion-0047",
+    "built-in-science-nature-all-level-expansion-0048",
+    "built-in-science-nature-all-level-expansion-0049",
+    "built-in-science-nature-all-level-expansion-0050",
+    "built-in-science-nature-all-level-expansion-0051",
+    "built-in-science-nature-all-level-expansion-0052",
+    "built-in-science-nature-all-level-expansion-0053",
+    "built-in-science-nature-all-level-expansion-0054",
+    "built-in-science-nature-all-level-expansion-0055",
+    "built-in-science-nature-all-level-expansion-0056",
+    "built-in-science-nature-all-level-expansion-0057",
+    "built-in-science-nature-all-level-expansion-0058",
+    "built-in-science-nature-all-level-expansion-0059",
+    "built-in-science-nature-all-level-expansion-0060",
+    "built-in-science-nature-all-level-expansion-0061",
+    "built-in-science-nature-all-level-expansion-0062",
+    "built-in-science-nature-all-level-expansion-0063",
+    "built-in-science-nature-all-level-expansion-0064",
+    "built-in-science-nature-all-level-expansion-0065",
+    "built-in-science-nature-all-level-expansion-0066",
+    "built-in-science-nature-all-level-expansion-0067",
+    "built-in-science-nature-all-level-expansion-0068",
+    "built-in-science-nature-all-level-expansion-0069",
+    "built-in-science-nature-all-level-expansion-0070",
+    "built-in-science-nature-all-level-expansion-0071",
+    "built-in-science-nature-all-level-expansion-0072",
+    "built-in-science-nature-all-level-expansion-0073",
+    "built-in-science-nature-all-level-expansion-0074",
+    "built-in-science-nature-all-level-expansion-0075",
+    "built-in-science-nature-all-level-expansion-0076",
+    "built-in-science-nature-all-level-expansion-0077",
+    "built-in-science-nature-all-level-expansion-0078",
+    "built-in-science-nature-all-level-expansion-0079",
+    "built-in-science-nature-all-level-expansion-0080",
+    "built-in-science-nature-all-level-expansion-0081",
+    "built-in-science-nature-all-level-expansion-0082",
+    "built-in-science-nature-all-level-expansion-0083",
+    "built-in-science-nature-all-level-expansion-0084",
+    "built-in-science-nature-all-level-expansion-0085",
+    "built-in-science-nature-all-level-expansion-0086",
+    "built-in-science-nature-all-level-expansion-0087",
+    "built-in-science-nature-all-level-expansion-0088",
+    "built-in-science-nature-all-level-expansion-0089",
+    "built-in-science-nature-all-level-expansion-0090",
+    "built-in-science-nature-all-level-expansion-0091",
+    "built-in-science-nature-all-level-expansion-0092",
+    "built-in-science-nature-all-level-expansion-0093",
+    "built-in-science-nature-all-level-expansion-0094",
+    "built-in-science-nature-all-level-expansion-0095",
+    "built-in-science-nature-all-level-expansion-0096",
+    "built-in-science-nature-all-level-expansion-0097",
+    "built-in-science-nature-all-level-expansion-0098",
+    "built-in-science-nature-all-level-expansion-0099",
+    "built-in-science-nature-all-level-expansion-0100",
+    "built-in-science-nature-all-level-expansion-0101",
+    "built-in-science-nature-all-level-expansion-0102",
+    "built-in-science-nature-all-level-expansion-0103",
+    "built-in-science-nature-all-level-expansion-0104",
+    "built-in-science-nature-all-level-expansion-0105",
+    "built-in-science-nature-all-level-expansion-0106",
+    "built-in-science-nature-all-level-expansion-0107",
+    "built-in-science-nature-all-level-expansion-0108",
+    "built-in-science-nature-all-level-expansion-0109",
+    "built-in-science-nature-all-level-expansion-0110",
+    "built-in-science-nature-all-level-expansion-0111",
+    "built-in-science-nature-all-level-expansion-0112",
+    "built-in-science-nature-all-level-expansion-0113",
+    "built-in-science-nature-all-level-expansion-0114",
+    "built-in-science-nature-all-level-expansion-0115",
+    "built-in-science-nature-all-level-expansion-0116",
+    "built-in-science-nature-all-level-expansion-0117",
+    "built-in-science-nature-all-level-expansion-0118",
+    "built-in-science-nature-all-level-expansion-0119",
+    "built-in-science-nature-all-level-expansion-0120",
+    "built-in-science-nature-all-level-expansion-0121",
+    "built-in-science-nature-all-level-expansion-0122",
+    "built-in-science-nature-all-level-expansion-0123",
+    "built-in-science-nature-all-level-expansion-0124",
+    "built-in-science-nature-all-level-expansion-0125",
+    "built-in-science-nature-all-level-expansion-0126",
+    "built-in-science-nature-all-level-expansion-0127",
+    "built-in-science-nature-all-level-expansion-0128",
+    "built-in-science-nature-all-level-expansion-0129",
+    "built-in-science-nature-all-level-expansion-0130",
+    "built-in-science-nature-all-level-expansion-0131",
+    "built-in-science-nature-all-level-expansion-0132",
+    "built-in-science-nature-all-level-expansion-0133",
+    "built-in-science-nature-all-level-expansion-0134",
+    "built-in-science-nature-all-level-expansion-0135",
+    "built-in-science-nature-all-level-expansion-0136",
+    "built-in-science-nature-all-level-expansion-0137",
+    "built-in-science-nature-all-level-expansion-0138",
+    "built-in-science-nature-all-level-expansion-0139",
+    "built-in-science-nature-all-level-expansion-0140",
+    "built-in-science-nature-all-level-expansion-0141",
+    "built-in-science-nature-all-level-expansion-0142",
+    "built-in-science-nature-all-level-expansion-0143",
+    "built-in-science-nature-all-level-expansion-0144",
+    "built-in-science-nature-all-level-expansion-0145",
+    "built-in-science-nature-all-level-expansion-0146",
+    "built-in-science-nature-all-level-expansion-0147",
+    "built-in-science-nature-all-level-expansion-0148",
+    "built-in-science-nature-all-level-expansion-0149",
+    "built-in-science-nature-all-level-expansion-0150",
+    "built-in-science-nature-all-level-expansion-0151",
+    "built-in-science-nature-all-level-expansion-0152",
+    "built-in-science-nature-all-level-expansion-0153",
+    "built-in-science-nature-all-level-expansion-0154",
+    "built-in-science-nature-all-level-expansion-0155",
+    "built-in-science-nature-all-level-expansion-0156",
+    "built-in-science-nature-all-level-expansion-0157",
+    "built-in-science-nature-all-level-expansion-0158",
+    "built-in-science-nature-all-level-expansion-0159",
+    "built-in-science-nature-all-level-expansion-0160",
+    "built-in-science-nature-all-level-expansion-0161",
+    "built-in-science-nature-all-level-expansion-0162",
+    "built-in-science-nature-all-level-expansion-0163",
+    "built-in-science-nature-all-level-expansion-0164",
+    "built-in-science-nature-all-level-expansion-0165",
+    "built-in-science-nature-all-level-expansion-0166",
+    "built-in-science-nature-all-level-expansion-0167",
+    "built-in-science-nature-all-level-expansion-0168",
+    "built-in-science-nature-all-level-expansion-0169",
+    "built-in-science-nature-all-level-expansion-0170",
+    "built-in-science-nature-all-level-expansion-0171",
+    "built-in-science-nature-all-level-expansion-0172",
+    "built-in-science-nature-all-level-expansion-0173",
+    "built-in-science-nature-all-level-expansion-0174",
+    "built-in-science-nature-all-level-expansion-0175",
+    "built-in-science-nature-all-level-expansion-0176",
+    "built-in-science-nature-all-level-expansion-0177",
+    "built-in-science-nature-all-level-expansion-0178",
+    "built-in-science-nature-all-level-expansion-0179",
+    "built-in-science-nature-all-level-expansion-0180",
+    "built-in-science-nature-all-level-expansion-0181",
+    "built-in-science-nature-all-level-expansion-0182",
+    "built-in-science-nature-all-level-expansion-0183",
+    "built-in-science-nature-all-level-expansion-0184",
+    "built-in-science-nature-all-level-expansion-0185",
+    "built-in-science-nature-all-level-expansion-0186",
+    "built-in-science-nature-all-level-expansion-0187",
+    "built-in-science-nature-all-level-expansion-0188",
+    "built-in-science-nature-all-level-expansion-0189",
+    "built-in-science-nature-all-level-expansion-0190",
+    "built-in-science-nature-all-level-expansion-0191",
+    "built-in-science-nature-all-level-expansion-0192",
+    "built-in-science-nature-all-level-expansion-0193",
+    "built-in-science-nature-all-level-expansion-0194",
+    "built-in-science-nature-all-level-expansion-0195",
+    "built-in-science-nature-all-level-expansion-0196",
+    "built-in-science-nature-all-level-expansion-0197",
+    "built-in-science-nature-all-level-expansion-0198",
+    "built-in-science-nature-all-level-expansion-0199",
+    "built-in-science-nature-all-level-expansion-0200",
+    "built-in-science-nature-all-level-expansion-0201",
+    "built-in-science-nature-all-level-expansion-0202",
+    "built-in-science-nature-all-level-expansion-0203",
+    "built-in-science-nature-all-level-expansion-0204",
+    "built-in-science-nature-all-level-expansion-0205",
+    "built-in-science-nature-all-level-expansion-0206",
+    "built-in-science-nature-all-level-expansion-0207",
+    "built-in-science-nature-all-level-expansion-0208",
+    "built-in-science-nature-all-level-expansion-0209",
+    "built-in-science-nature-all-level-expansion-0210",
+    "built-in-science-nature-all-level-expansion-0211",
+    "built-in-science-nature-all-level-expansion-0212",
+    "built-in-science-nature-all-level-expansion-0213",
+    "built-in-science-nature-all-level-expansion-0214",
+    "built-in-science-nature-all-level-expansion-0215",
+    "built-in-science-nature-all-level-expansion-0216",
+    "built-in-science-nature-all-level-expansion-0217",
+    "built-in-science-nature-all-level-expansion-0218",
+    "built-in-science-nature-all-level-expansion-0219",
+    "built-in-science-nature-all-level-expansion-0220",
+    "built-in-science-nature-all-level-expansion-0221",
+    "built-in-science-nature-all-level-expansion-0222",
+    "built-in-science-nature-all-level-expansion-0223",
+    "built-in-science-nature-all-level-expansion-0224",
+    "built-in-science-nature-all-level-expansion-0225",
+    "built-in-science-nature-all-level-expansion-0226",
+    "built-in-science-nature-all-level-expansion-0227",
+    "built-in-science-nature-all-level-expansion-0228",
+    "built-in-science-nature-all-level-expansion-0229",
+    "built-in-science-nature-all-level-expansion-0230",
+    "built-in-science-nature-all-level-expansion-0231",
+    "built-in-science-nature-all-level-expansion-0232",
+    "built-in-science-nature-all-level-expansion-0233",
+    "built-in-science-nature-all-level-expansion-0234",
+    "built-in-science-nature-all-level-expansion-0235",
+    "built-in-science-nature-all-level-expansion-0236",
+    "built-in-science-nature-all-level-expansion-0237",
+    "built-in-science-nature-all-level-expansion-0238",
+    "built-in-science-nature-all-level-expansion-0239",
+    "built-in-science-nature-all-level-expansion-0240",
+    "built-in-science-nature-all-level-expansion-0241",
+    "built-in-science-nature-all-level-expansion-0242",
+    "built-in-science-nature-all-level-expansion-0243",
+    "built-in-science-nature-all-level-expansion-0244",
+    "built-in-science-nature-all-level-expansion-0245",
+    "built-in-science-nature-all-level-expansion-0246",
+    "built-in-science-nature-all-level-expansion-0247",
+    "built-in-science-nature-all-level-expansion-0248",
+    "built-in-science-nature-all-level-expansion-0249",
+    "built-in-science-nature-all-level-expansion-0250"
+  ],
+  "issues": [],
+  "factualReview": {
+    "reviewer": "Codex Root, independent Science and Nature reviewer",
+    "reviewedAt": "2026-10-09T13:47:29.811Z",
+    "decision": "approved",
+    "notes": "Independently read all250 bilingual records and actual cached supporting passages. Followed up missing predicates with full paragraphs; the root source-read log binds68 targeted paragraph groups. Independently read Purdue corn morphology, Natural History Museum harbour-seal whisker tracking, Smithsonian insect-zoo acacia/ant exhibit, guttation and Schrödinger-cat introductions. Verified crocodile/alligator accepted aliases against Smithsonian animal-care passages. Removed unsupported explanatory details and refined taxonomic scope rather than approving vaguely related citations."
+  },
+  "editorialReview": {
+    "reviewer": "Codex Root, independent Science and Nature reviewer",
+    "reviewedAt": "2026-10-09T13:47:29.811Z",
+    "decision": "approved",
+    "notes": "Read all250 questions,50 category titles and every final old/new collision pair against the complete8374-record baseline including Finals. Replaced repeated underlying facts with new queried facts; explicitly separated shared subjects with distinct intended information, such as Curie Nobel disciplines versus mobile X-rays, Pasteur swan-neck contamination experiment versus pasteurization naming, and Lyell/Harvey work scope. Checked exact allocation, five distinct primary subjects, title scope, unique sets and zero final answer-giving aliases."
+  },
+  "translationReview": {
+    "reviewer": "Codex Root, independent Science and Nature reviewer",
+    "reviewedAt": "2026-10-09T13:47:29.811Z",
+    "decision": "approved",
+    "notes": "Independently read every English/Estonian clue, response, explanation and variant, then all329 grouped translation diagnostics. Corrected animal taxonomic names, number spacing, plant terminology, phrasing and response specificity. Confirmed Hääletu kevad from the Estonian National Library catalogue and kärniguaan terminology in official EU Estonian material. Used plain dance wording where an Estonian technical label was uncertain. Scientific names are paired across languages; reviewed diagnostic exceptions are field-specific."
+  },
+  "resolvedFindings": [
+    "Replaced Mendel pea inheritance with Brown pollen movement; Pasteur heat-treatment naming with the swan-neck broth experiment.",
+    "Replaced repeated Nobel/dynamite with1875gelignite; Wegener/continental drift with the1906balloon endurance flight with Kurt Wegener.",
+    "Replaced rhubarb toxic-leaves/stalks with Purdue-supported corn tassels and silk-bearing ears; replaced leaf-cuticle waterproofing with root-pressure guttation.",
+    "Changed flying-squirrel generic gliding to its wrist-cartilage wingtip support; changed mangrove oxygen roots to seeds germinating on the parent, keeping the separate pneumatophore question distinct.",
+    "Clarified pit-viper rather than generic snake heat organs, Phrynosoma horned lizards, crocodilian mothers, male-only emperor-penguin incubation and only some caddisfly larvae.",
+    "Removed unsupported Röntgen ring, musk-ox undercoat, meerkat progressive-scaffold, direct leaf-eating and Harvey consumption details; kept the star-nose clue about touch rather than disputed electroreception.",
+    "Bound Planck quanta, Becquerel dark plates, Volta stacked-metal battery and Faraday coil/magnet induction to actual supporting source paragraphs.",
+    "Corrected seal whisker citation, swollen-thorn acacia common-name scope and Schrödinger hypothetical-cat citation to passages containing the exact claims.",
+    "Removed Voltaic-pile and annual-sediment-layer answer aliases from clues that would give those accepted answers; repaired carrot, koala, lungfish, mangrove and climate phrasing.",
+    "Corrected honeyguide from meelind to meenäitur, star-nosed mole wording, merikuradilised scope, varve/speleothem Estonian terminology and Vervet species specificity.",
+    "Qualified climax-community wording as a classical model, carrying capacity as maximum, and C4 mechanism with reduced photorespiration in hot conditions."
+  ],
+  "translationExceptions": [
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0001:category_name_en",
+      "reason": "Independently read category title “Scientists Behind Familiar Ideas” → “Teadlased tuntud ideede taga”. Flagged title capitalization (Scientists Behind Familiar Ideas) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0001:explanation_en",
+      "reason": "Independent bilingual field review: “Dmitri Mendeleev left gaps in his periodic table for elements not yet discovered.” → “Dmitri Mendelejev jättis oma perioodilisustabelisse lünki veel avastamata elementide jaoks.”. Flagged forms (Dmitri Mendeleev) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0001:response_en",
+      "reason": "Independent bilingual field review: “Dmitri Mendeleev” → “Dmitri Mendelejev”. Flagged forms (Dmitri Mendeleev) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0002:category_name_en",
+      "reason": "Independently read category title “Scientists Behind Familiar Ideas” → “Teadlased tuntud ideede taga”. Flagged title capitalization (Scientists Behind Familiar Ideas) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0002:response_en",
+      "reason": "Independent bilingual review: “Robert Brown” correctly remains “Robert Brown” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0003:category_name_en",
+      "reason": "Independently read category title “Scientists Behind Familiar Ideas” → “Teadlased tuntud ideede taga”. Flagged title capitalization (Scientists Behind Familiar Ideas) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0003:response_en",
+      "reason": "Independent bilingual review: “Louis Pasteur” correctly remains “Louis Pasteur” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0004:category_name_en",
+      "reason": "Independently read category title “Scientists Behind Familiar Ideas” → “Teadlased tuntud ideede taga”. Flagged title capitalization (Scientists Behind Familiar Ideas) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0004:explanation_en",
+      "reason": "Independent bilingual field review: “Carl Linnaeus popularised the two-part scientific naming system for species.” → “Carl von Linné muutis liikide kaheosalise teadusliku nimetamise süsteemi laialdaselt kasutatavaks.”. Flagged forms (Carl Linnaeus) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0004:response_en",
+      "reason": "Independent bilingual field review: “Carl Linnaeus” → “Carl von Linné”. Flagged forms (Carl Linnaeus) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0005:category_name_en",
+      "reason": "Independently read category title “Scientists Behind Familiar Ideas” → “Teadlased tuntud ideede taga”. Flagged title capitalization (Scientists Behind Familiar Ideas) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0005:response_en",
+      "reason": "Independent bilingual review: “Robert Hooke” correctly remains “Robert Hooke” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0006:category_name_en",
+      "reason": "Independently read category title “Survival Tools in Familiar Animals” → “Tuntud loomade ellujäämisvahendid”. Flagged title capitalization (Survival Tools, Familiar Animals) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0007:category_name_en",
+      "reason": "Independently read category title “Survival Tools in Familiar Animals” → “Tuntud loomade ellujäämisvahendid”. Flagged title capitalization (Survival Tools, Familiar Animals) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0008:category_name_en",
+      "reason": "Independently read category title “Survival Tools in Familiar Animals” → “Tuntud loomade ellujäämisvahendid”. Flagged title capitalization (Survival Tools, Familiar Animals) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0009:category_name_en",
+      "reason": "Independently read category title “Survival Tools in Familiar Animals” → “Tuntud loomade ellujäämisvahendid”. Flagged title capitalization (Survival Tools, Familiar Animals) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0010:category_name_en",
+      "reason": "Independently read category title “Survival Tools in Familiar Animals” → “Tuntud loomade ellujäämisvahendid”. Flagged title capitalization (Survival Tools, Familiar Animals) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0010:clue_en",
+      "reason": "Independent bilingual field review: “Which Arctic bear has black skin beneath its light-coloured fur?” → “Millisel Arktika karul on heleda karvastiku all must nahk?”. Flagged forms (Which Arctic) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0011:category_name_en",
+      "reason": "Independently read category title “The Planet's Building Materials” → “Planeedi ehitusmaterjalid”. Flagged title capitalization (The Planet's Building Materials) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0012:category_name_en",
+      "reason": "Independently read category title “The Planet's Building Materials” → “Planeedi ehitusmaterjalid”. Flagged title capitalization (The Planet's Building Materials) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0013:category_name_en",
+      "reason": "Independently read category title “The Planet's Building Materials” → “Planeedi ehitusmaterjalid”. Flagged title capitalization (The Planet's Building Materials) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0014:category_name_en",
+      "reason": "Independently read category title “The Planet's Building Materials” → “Planeedi ehitusmaterjalid”. Flagged title capitalization (The Planet's Building Materials) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0015:category_name_en",
+      "reason": "Independently read category title “The Planet's Building Materials” → “Planeedi ehitusmaterjalid”. Flagged title capitalization (The Planet's Building Materials) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0016:category_name_en",
+      "reason": "Independently read category title “Discovery Through Observation” → “Avastamine vaatluse kaudu”. Flagged title capitalization (Discovery Through Observation) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0016:response_en",
+      "reason": "Independent bilingual review: “Jane Goodall” correctly remains “Jane Goodall” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0017:category_name_en",
+      "reason": "Independently read category title “Discovery Through Observation” → “Avastamine vaatluse kaudu”. Flagged title capitalization (Discovery Through Observation) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0017:response_en",
+      "reason": "Independent bilingual review: “Dian Fossey” correctly remains “Dian Fossey” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0018:category_name_en",
+      "reason": "Independently read category title “Discovery Through Observation” → “Avastamine vaatluse kaudu”. Flagged title capitalization (Discovery Through Observation) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0018:clue_en",
+      "reason": "Independent bilingual field review: “Who warned about pesticide effects on nature in Silent Spring?” → “Kes hoiatas raamatus „Hääletu kevad“ pestitsiidide mõju eest loodusele?”. Flagged forms (Silent Spring) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0018:explanation_en",
+      "reason": "Independent bilingual field review: “Rachel Carson warned about pesticide effects on nature in Silent Spring.” → “Rachel Carson hoiatas raamatus „Hääletu kevad“ pestitsiidide mõju eest loodusele.”. Flagged forms (Silent Spring) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0018:response_en",
+      "reason": "Independent bilingual review: “Rachel Carson” correctly remains “Rachel Carson” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0019:category_name_en",
+      "reason": "Independently read category title “Discovery Through Observation” → “Avastamine vaatluse kaudu”. Flagged title capitalization (Discovery Through Observation) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0019:clue_en",
+      "reason": "Independent bilingual field review: “Who became known for finding fossil marine reptiles along England's Jurassic Coast?” → “Kes sai tuntuks mereroomajate fossiilide leidmisega Inglismaa Juura rannikul?”. Flagged forms (England's Jurassic Coast) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0019:explanation_en",
+      "reason": "Independent bilingual field review: “Mary Anning became known for finding fossil marine reptiles along England's Jurassic Coast.” → “Mary Anning sai tuntuks mereroomajate fossiilide leidmisega Inglismaa Juura rannikul.”. Flagged forms (England's Jurassic Coast) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0019:response_en",
+      "reason": "Independent bilingual review: “Mary Anning” correctly remains “Mary Anning” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0020:category_name_en",
+      "reason": "Independently read category title “Discovery Through Observation” → “Avastamine vaatluse kaudu”. Flagged title capitalization (Discovery Through Observation) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0020:response_en",
+      "reason": "Independent bilingual review: “Charles Darwin” correctly remains “Charles Darwin” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0021:category_name_en",
+      "reason": "Independently read category title “Protective Coats and Coverings” → “Kaitsvad katted ja kasukad”. Flagged title capitalization (Protective Coats) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0022:category_name_en",
+      "reason": "Independently read category title “Protective Coats and Coverings” → “Kaitsvad katted ja kasukad”. Flagged title capitalization (Protective Coats) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0023:category_name_en",
+      "reason": "Independently read category title “Protective Coats and Coverings” → “Kaitsvad katted ja kasukad”. Flagged title capitalization (Protective Coats) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0024:category_name_en",
+      "reason": "Independently read category title “Protective Coats and Coverings” → “Kaitsvad katted ja kasukad”. Flagged title capitalization (Protective Coats) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0025:category_name_en",
+      "reason": "Independently read category title “Protective Coats and Coverings” → “Kaitsvad katted ja kasukad”. Flagged title capitalization (Protective Coats) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0025:clue_en",
+      "reason": "Independent bilingual field review: “Which Arctic hoofed mammal produces highly valued wool called qiviut?” → “Milline Arktika sõraline annab kõrgelt hinnatud villa nimega qiviut?”. Flagged forms (Which Arctic) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0031:category_name_en",
+      "reason": "Independently read category title “Discovering What We Cannot See” → “Nähtamatu avastamine”. Flagged title capitalization (Discovering What We Cannot See) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0031:response_en",
+      "reason": "Independent bilingual review: “Antonie van Leeuwenhoek” correctly remains “Antonie van Leeuwenhoek” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0032:category_name_en",
+      "reason": "Independently read category title “Discovering What We Cannot See” → “Nähtamatu avastamine”. Flagged title capitalization (Discovering What We Cannot See) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0032:clue_en",
+      "reason": "Independent bilingual field review: “Who made an early X-ray image of his wife Anna Bertha's hand?” → “Kes tegi varase röntgenülesvõtte oma abikaasa Anna Bertha käest?”. Flagged forms (Anna Bertha's) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0032:explanation_en",
+      "reason": "Independent bilingual field review: “Wilhelm Röntgen made an early radiograph of his wife Anna Bertha's hand.” → “Wilhelm Röntgen tegi varase röntgenülesvõtte oma abikaasa Anna Bertha käest.”. Flagged forms (Anna Bertha's) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0032:response_en",
+      "reason": "Independent bilingual review: “Wilhelm Röntgen” correctly remains “Wilhelm Röntgen” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0033:category_name_en",
+      "reason": "Independently read category title “Discovering What We Cannot See” → “Nähtamatu avastamine”. Flagged title capitalization (Discovering What We Cannot See) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0033:response_en",
+      "reason": "Independent bilingual review: “William Herschel” correctly remains “William Herschel” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0034:category_name_en",
+      "reason": "Independently read category title “Discovering What We Cannot See” → “Nähtamatu avastamine”. Flagged title capitalization (Discovering What We Cannot See) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0034:response_en",
+      "reason": "Independent bilingual review: “Alexander Fleming” correctly remains “Alexander Fleming” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0035:category_name_en",
+      "reason": "Independently read category title “Discovering What We Cannot See” → “Nähtamatu avastamine”. Flagged title capitalization (Discovering What We Cannot See) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0035:clue_en",
+      "reason": "Independent bilingual field review: “Which British woman chemist used X-ray diffraction to investigate DNA fibres?” → “Milline Briti naiskeemik uuris DNA kiude röntgendifraktsiooni abil?”. Flagged forms (Which British) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0035:response_en",
+      "reason": "Independent bilingual review: “Rosalind Franklin” correctly remains “Rosalind Franklin” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0038:clue_en",
+      "reason": "Independent bilingual field review: “Which Australian marsupial gives its young a special faecal material called pap to acquire gut microbes?” → “Millise Austraalia kukkurlooma pojad saavad soolemikroobide omandamiseks emalt erilist väljaheitemassi nimega pap?”. Flagged forms (Which Australian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0046:category_name_en",
+      "reason": "Independently read category title “People Who Changed the Laboratory” → “Laborit muutnud inimesed”. Flagged title capitalization (People Who Changed) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0046:clue_en",
+      "reason": "Independent bilingual field review: “Which Swedish inventor developed gelignite in 1875?” → “Milline Rootsi leiutaja töötas 1875. aastal välja geligniidi?”. Flagged forms (Which Swedish) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0046:response_en",
+      "reason": "Independent bilingual review: “Alfred Nobel” correctly remains “Alfred Nobel” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0047:category_name_en",
+      "reason": "Independently read category title “People Who Changed the Laboratory” → “Laborit muutnud inimesed”. Flagged title capitalization (People Who Changed) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0047:response_en",
+      "reason": "Independent bilingual review: “Anders Celsius” correctly remains “Anders Celsius” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0048:category_name_en",
+      "reason": "Independently read category title “People Who Changed the Laboratory” → “Laborit muutnud inimesed”. Flagged title capitalization (People Who Changed) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0048:response_en",
+      "reason": "Independent bilingual review: “Robert Bunsen” correctly remains “Robert Bunsen” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0049:category_name_en",
+      "reason": "Independently read category title “People Who Changed the Laboratory” → “Laborit muutnud inimesed”. Flagged title capitalization (People Who Changed) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0049:response_en",
+      "reason": "Independent bilingual review: “Michael Faraday” correctly remains “Michael Faraday” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0050:category_name_en",
+      "reason": "Independently read category title “People Who Changed the Laboratory” → “Laborit muutnud inimesed”. Flagged title capitalization (People Who Changed) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0050:response_en",
+      "reason": "Independent bilingual review: “James Watt” correctly remains “James Watt” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0051:category_name_en",
+      "reason": "Independently read category title “Natural Tools for Finding Food” → “Looduslikud vahendid toidu leidmiseks”. Flagged title capitalization (Natural Tools, Finding Food) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0052:category_name_en",
+      "reason": "Independently read category title “Natural Tools for Finding Food” → “Looduslikud vahendid toidu leidmiseks”. Flagged title capitalization (Natural Tools, Finding Food) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0053:category_name_en",
+      "reason": "Independently read category title “Natural Tools for Finding Food” → “Looduslikud vahendid toidu leidmiseks”. Flagged title capitalization (Natural Tools, Finding Food) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0054:category_name_en",
+      "reason": "Independently read category title “Natural Tools for Finding Food” → “Looduslikud vahendid toidu leidmiseks”. Flagged title capitalization (Natural Tools, Finding Food) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0055:category_name_en",
+      "reason": "Independently read category title “Natural Tools for Finding Food” → “Looduslikud vahendid toidu leidmiseks”. Flagged title capitalization (Natural Tools, Finding Food) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0056:category_name_en",
+      "reason": "Independently read category title “Plants on the Dinner Plate” → “Taimed söögilaual”. Flagged title capitalization (Dinner Plate) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0057:category_name_en",
+      "reason": "Independently read category title “Plants on the Dinner Plate” → “Taimed söögilaual”. Flagged title capitalization (Dinner Plate) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0058:category_name_en",
+      "reason": "Independently read category title “Plants on the Dinner Plate” → “Taimed söögilaual”. Flagged title capitalization (Dinner Plate) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0059:category_name_en",
+      "reason": "Independently read category title “Plants on the Dinner Plate” → “Taimed söögilaual”. Flagged title capitalization (Dinner Plate) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0060:category_name_en",
+      "reason": "Independently read category title “Plants on the Dinner Plate” → “Taimed söögilaual”. Flagged title capitalization (Dinner Plate) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0061:category_name_en",
+      "reason": "Independently read category title “Discoveries From Experiments” → “Avastused katsetest”. Flagged title capitalization (Discoveries From Experiments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0061:clue_en",
+      "reason": "Independent bilingual field review: “Who won his Nobel Prize for work on digestion rather than the dog-conditioning experiments he is best known for?” → “Kes sai Nobeli auhinna seedimist käsitleva töö eest, kuigi teda tuntakse ka koerte tingitud reflekside uurimise kaudu?”. Flagged forms (Nobel Prize) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0061:explanation_en",
+      "reason": "Independent bilingual field review: “Ivan Pavlov won his Nobel Prize for work on digestion rather than the dog-conditioning experiments he is best known for.” → “Ivan Pavlov sai Nobeli auhinna seedimise uurimise eest; koerte tingitud reflekside katsed on teine tuntud osa tema tööst.”. Flagged forms (Nobel Prize) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0061:response_en",
+      "reason": "Independent bilingual review: “Ivan Pavlov” correctly remains “Ivan Pavlov” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0062:category_name_en",
+      "reason": "Independently read category title “Discoveries From Experiments” → “Avastused katsetest”. Flagged title capitalization (Discoveries From Experiments) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0062:response_en",
+      "reason": "Independent bilingual review: “Alessandro Volta” correctly remains “Alessandro Volta” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0063:category_name_en",
+      "reason": "Independently read category title “Discoveries From Experiments” → “Avastused katsetest”. Flagged title capitalization (Discoveries From Experiments) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0063:response_en",
+      "reason": "Independent bilingual review: “Hans Christian Ørsted” correctly remains “Hans Christian Ørsted” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0064:category_name_en",
+      "reason": "Independently read category title “Discoveries From Experiments” → “Avastused katsetest”. Flagged title capitalization (Discoveries From Experiments) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0064:response_en",
+      "reason": "Independent bilingual review: “Joseph Priestley” correctly remains “Joseph Priestley” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0065:category_name_en",
+      "reason": "Independently read category title “Discoveries From Experiments” → “Avastused katsetest”. Flagged title capitalization (Discoveries From Experiments) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0065:response_en",
+      "reason": "Independent bilingual review: “Antoine Lavoisier” correctly remains “Antoine Lavoisier” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0071:category_name_en",
+      "reason": "Independently read category title “Earth's Deep Interior” → “Maa sügav sisemus”. Flagged title capitalization (Earth's Deep Interior) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0072:category_name_en",
+      "reason": "Independently read category title “Earth's Deep Interior” → “Maa sügav sisemus”. Flagged title capitalization (Earth's Deep Interior) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0073:category_name_en",
+      "reason": "Independently read category title “Earth's Deep Interior” → “Maa sügav sisemus”. Flagged title capitalization (Earth's Deep Interior) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0074:category_name_en",
+      "reason": "Independently read category title “Earth's Deep Interior” → “Maa sügav sisemus”. Flagged title capitalization (Earth's Deep Interior) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0075:category_name_en",
+      "reason": "Independently read category title “Earth's Deep Interior” → “Maa sügav sisemus”. Flagged title capitalization (Earth's Deep Interior) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0081:category_name_en",
+      "reason": "Independently read category title “Science and the People Behind It” → “Teadus ja inimesed selle taga”. Flagged title capitalization (People Behind It) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0081:response_en",
+      "reason": "Independent bilingual review: “Johannes Kepler” correctly remains “Johannes Kepler” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0082:category_name_en",
+      "reason": "Independently read category title “Science and the People Behind It” → “Teadus ja inimesed selle taga”. Flagged title capitalization (People Behind It) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0082:clue_en",
+      "reason": "Independent bilingual field review: “Who used Cepheid stars to show that the Andromeda nebula lay beyond the Milky Way?” → “Kes kasutas tsefeide näitamaks, et Andromeeda udukogu asub Linnuteest väljaspool?”. Flagged forms (Milky Way) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0082:explanation_en",
+      "reason": "Independent bilingual field review: “Edwin Hubble used Cepheid stars to show that the Andromeda nebula lay beyond the Milky Way.” → “Edwin Hubble kasutas tsefeide näitamaks, et Andromeeda udukogu asub Linnuteest väljaspool.”. Flagged forms (Milky Way) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0082:response_en",
+      "reason": "Independent bilingual review: “Edwin Hubble” correctly remains “Edwin Hubble” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0083:category_name_en",
+      "reason": "Independently read category title “Science and the People Behind It” → “Teadus ja inimesed selle taga”. Flagged title capitalization (People Behind It) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0083:clue_en",
+      "reason": "Independent bilingual field review: “Which German meteorologist set a balloon endurance record in 1906 with his brother Kurt?” → “Milline Saksa meteoroloog püstitas 1906. aastal koos oma venna Kurtiga õhupallilennu kestusrekordi?”. Flagged forms (Which German) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0083:response_en",
+      "reason": "Independent bilingual review: “Alfred Wegener” correctly remains “Alfred Wegener” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0084:category_name_en",
+      "reason": "Independently read category title “Science and the People Behind It” → “Teadus ja inimesed selle taga”. Flagged title capitalization (People Behind It) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0084:response_en",
+      "reason": "Independent bilingual review: “Charles Lyell” correctly remains “Charles Lyell” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0085:category_name_en",
+      "reason": "Independently read category title “Science and the People Behind It” → “Teadus ja inimesed selle taga”. Flagged title capitalization (People Behind It) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0085:response_en",
+      "reason": "Independent bilingual review: “Alfred Russel Wallace” correctly remains “Alfred Russel Wallace” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0086:category_name_en",
+      "reason": "Independently read category title “Ways Animals Sense the World” → “Loomade maailmatajumise viisid”. Flagged title capitalization (Ways Animals Sense) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0087:category_name_en",
+      "reason": "Independently read category title “Ways Animals Sense the World” → “Loomade maailmatajumise viisid”. Flagged title capitalization (Ways Animals Sense) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0088:category_name_en",
+      "reason": "Independently read category title “Ways Animals Sense the World” → “Loomade maailmatajumise viisid”. Flagged title capitalization (Ways Animals Sense) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0089:category_name_en",
+      "reason": "Independently read category title “Ways Animals Sense the World” → “Loomade maailmatajumise viisid”. Flagged title capitalization (Ways Animals Sense) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0090:category_name_en",
+      "reason": "Independently read category title “Ways Animals Sense the World” → “Loomade maailmatajumise viisid”. Flagged title capitalization (Ways Animals Sense) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0091:category_name_en",
+      "reason": "Independently read category title “Living Relationships” → “Elusolendite suhted”. Flagged title capitalization (Living Relationships) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0092:category_name_en",
+      "reason": "Independently read category title “Living Relationships” → “Elusolendite suhted”. Flagged title capitalization (Living Relationships) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0093:category_name_en",
+      "reason": "Independently read category title “Living Relationships” → “Elusolendite suhted”. Flagged title capitalization (Living Relationships) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0094:category_name_en",
+      "reason": "Independently read category title “Living Relationships” → “Elusolendite suhted”. Flagged title capitalization (Living Relationships) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0095:category_name_en",
+      "reason": "Independently read category title “Living Relationships” → “Elusolendite suhted”. Flagged title capitalization (Living Relationships) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0096:category_name_en",
+      "reason": "Independently read category title “Chemistry's Turning Points” → “Keemia pöördepunktid”. Flagged title capitalization (Chemistry's Turning Points) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0096:response_en",
+      "reason": "Independent bilingual review: “Friedrich Wöhler” correctly remains “Friedrich Wöhler” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0097:category_name_en",
+      "reason": "Independently read category title “Chemistry's Turning Points” → “Keemia pöördepunktid”. Flagged title capitalization (Chemistry's Turning Points) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0097:response_en",
+      "reason": "Independent bilingual review: “August Kekulé” correctly remains “August Kekulé” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0098:category_name_en",
+      "reason": "Independently read category title “Chemistry's Turning Points” → “Keemia pöördepunktid”. Flagged title capitalization (Chemistry's Turning Points) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0098:response_en",
+      "reason": "Independent bilingual review: “John Dalton” correctly remains “John Dalton” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0099:category_name_en",
+      "reason": "Independently read category title “Chemistry's Turning Points” → “Keemia pöördepunktid”. Flagged title capitalization (Chemistry's Turning Points) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0099:response_en",
+      "reason": "Independent bilingual review: “Amedeo Avogadro” correctly remains “Amedeo Avogadro” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0100:category_name_en",
+      "reason": "Independently read category title “Chemistry's Turning Points” → “Keemia pöördepunktid”. Flagged title capitalization (Chemistry's Turning Points) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0100:response_en",
+      "reason": "Independent bilingual review: “Henry Cavendish” correctly remains “Henry Cavendish” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0101:category_name_en",
+      "reason": "Independently read category title “Animal Movement With a Purpose” → “Loomade eesmärgipärane liikumine”. Flagged title capitalization (Animal Movement With) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0102:category_name_en",
+      "reason": "Independently read category title “Animal Movement With a Purpose” → “Loomade eesmärgipärane liikumine”. Flagged title capitalization (Animal Movement With) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0103:category_name_en",
+      "reason": "Independently read category title “Animal Movement With a Purpose” → “Loomade eesmärgipärane liikumine”. Flagged title capitalization (Animal Movement With) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0104:category_name_en",
+      "reason": "Independently read category title “Animal Movement With a Purpose” → “Loomade eesmärgipärane liikumine”. Flagged title capitalization (Animal Movement With) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0105:category_name_en",
+      "reason": "Independently read category title “Animal Movement With a Purpose” → “Loomade eesmärgipärane liikumine”. Flagged title capitalization (Animal Movement With) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0106:category_name_en",
+      "reason": "Independently read category title “How Plants Keep Growing” → “Kuidas taimed edasi kasvavad”. Flagged title capitalization (How Plants Keep Growing) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0107:category_name_en",
+      "reason": "Independently read category title “How Plants Keep Growing” → “Kuidas taimed edasi kasvavad”. Flagged title capitalization (How Plants Keep Growing) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0108:category_name_en",
+      "reason": "Independently read category title “How Plants Keep Growing” → “Kuidas taimed edasi kasvavad”. Flagged title capitalization (How Plants Keep Growing) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0109:category_name_en",
+      "reason": "Independently read category title “How Plants Keep Growing” → “Kuidas taimed edasi kasvavad”. Flagged title capitalization (How Plants Keep Growing) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0110:category_name_en",
+      "reason": "Independently read category title “How Plants Keep Growing” → “Kuidas taimed edasi kasvavad”. Flagged title capitalization (How Plants Keep Growing) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0111:category_name_en",
+      "reason": "Independently read category title “Discovering Hidden Particles” → “Varjatud osakeste avastamine”. Flagged title capitalization (Discovering Hidden Particles) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0111:response_en",
+      "reason": "Independent bilingual review: “J. J. Thomson” correctly remains “J. J. Thomson” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0112:category_name_en",
+      "reason": "Independently read category title “Discovering Hidden Particles” → “Varjatud osakeste avastamine”. Flagged title capitalization (Discovering Hidden Particles) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0112:response_en",
+      "reason": "Independent bilingual review: “Ernest Rutherford” correctly remains “Ernest Rutherford” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0113:category_name_en",
+      "reason": "Independently read category title “Discovering Hidden Particles” → “Varjatud osakeste avastamine”. Flagged title capitalization (Discovering Hidden Particles) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0113:response_en",
+      "reason": "Independent bilingual review: “James Chadwick” correctly remains “James Chadwick” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0114:category_name_en",
+      "reason": "Independently read category title “Discovering Hidden Particles” → “Varjatud osakeste avastamine”. Flagged title capitalization (Discovering Hidden Particles) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0114:response_en",
+      "reason": "Independent bilingual review: “Henri Becquerel” correctly remains “Henri Becquerel” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0115:category_name_en",
+      "reason": "Independently read category title “Discovering Hidden Particles” → “Varjatud osakeste avastamine”. Flagged title capitalization (Discovering Hidden Particles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0115:clue_en",
+      "reason": "Independent bilingual field review: “Who received Nobel Prizes in both physics and chemistry?” → “Kes sai Nobeli auhinna nii füüsikas kui ka keemias?”. Flagged forms (Nobel Prizes) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0115:explanation_en",
+      "reason": "Independent bilingual field review: “Marie Curie received Nobel Prizes in both physics and chemistry.” → “Marie Curie sai Nobeli auhinna nii füüsikas kui ka keemias.”. Flagged forms (Nobel Prizes) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0115:response_en",
+      "reason": "Independent bilingual review: “Marie Curie” correctly remains “Marie Curie” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0116:category_name_en",
+      "reason": "Independently read category title “Natural Defences in Action” → “Looduslik kaitse tegevuses”. Flagged title capitalization (Natural Defences) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0117:category_name_en",
+      "reason": "Independently read category title “Natural Defences in Action” → “Looduslik kaitse tegevuses”. Flagged title capitalization (Natural Defences) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0118:category_name_en",
+      "reason": "Independently read category title “Natural Defences in Action” → “Looduslik kaitse tegevuses”. Flagged title capitalization (Natural Defences) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0119:category_name_en",
+      "reason": "Independently read category title “Natural Defences in Action” → “Looduslik kaitse tegevuses”. Flagged title capitalization (Natural Defences) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0120:category_name_en",
+      "reason": "Independently read category title “Natural Defences in Action” → “Looduslik kaitse tegevuses”. Flagged title capitalization (Natural Defences) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0121:category_name_en",
+      "reason": "Independently read category title “When Air Masses Move” → “Kui õhumassid liiguvad”. Flagged title capitalization (When Air Masses Move) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0122:category_name_en",
+      "reason": "Independently read category title “When Air Masses Move” → “Kui õhumassid liiguvad”. Flagged title capitalization (When Air Masses Move) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0123:category_name_en",
+      "reason": "Independently read category title “When Air Masses Move” → “Kui õhumassid liiguvad”. Flagged title capitalization (When Air Masses Move) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0124:category_name_en",
+      "reason": "Independently read category title “When Air Masses Move” → “Kui õhumassid liiguvad”. Flagged title capitalization (When Air Masses Move) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0125:category_name_en",
+      "reason": "Independently read category title “When Air Masses Move” → “Kui õhumassid liiguvad”. Flagged title capitalization (When Air Masses Move) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0126:category_name_en",
+      "reason": "Independently read category title “Genes and Their Discoverers” → “Geenid ja nende avastajad”. Flagged title capitalization (Their Discoverers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0126:response_en",
+      "reason": "Independent bilingual review: “Thomas Hunt Morgan” correctly remains “Thomas Hunt Morgan” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0127:category_name_en",
+      "reason": "Independently read category title “Genes and Their Discoverers” → “Geenid ja nende avastajad”. Flagged title capitalization (Their Discoverers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0127:response_en",
+      "reason": "Independent bilingual review: “Barbara McClintock” correctly remains “Barbara McClintock” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0128:category_name_en",
+      "reason": "Independently read category title “Genes and Their Discoverers” → “Geenid ja nende avastajad”. Flagged title capitalization (Their Discoverers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0128:response_en",
+      "reason": "Independent bilingual review: “Oswald Avery” correctly remains “Oswald Avery” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0129:category_name_en",
+      "reason": "Independently read category title “Genes and Their Discoverers” → “Geenid ja nende avastajad”. Flagged title capitalization (Their Discoverers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0129:response_en",
+      "reason": "Independent bilingual review: “Francis Crick” correctly remains “Francis Crick” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0130:category_name_en",
+      "reason": "Independently read category title “Genes and Their Discoverers” → “Geenid ja nende avastajad”. Flagged title capitalization (Their Discoverers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0130:response_en",
+      "reason": "Independent bilingual review: “Frederick Sanger” correctly remains “Frederick Sanger” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0131:category_name_en",
+      "reason": "Independently read category title “Plants and Animals Working Together” → “Taimed ja loomad koos tegutsemas”. Flagged title capitalization (Animals Working Together) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0132:category_name_en",
+      "reason": "Independently read category title “Plants and Animals Working Together” → “Taimed ja loomad koos tegutsemas”. Flagged title capitalization (Animals Working Together) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0133:category_name_en",
+      "reason": "Independently read category title “Plants and Animals Working Together” → “Taimed ja loomad koos tegutsemas”. Flagged title capitalization (Animals Working Together) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0134:category_name_en",
+      "reason": "Independently read category title “Plants and Animals Working Together” → “Taimed ja loomad koos tegutsemas”. Flagged title capitalization (Animals Working Together) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0134:clue_en",
+      "reason": "Independent bilingual field review: “Which Southeast Asian parasitic plant genus has no ordinary stems, leaves or roots and makes flesh-scented flowers that attract flies?” → “Millisel Kagu-Aasia parasiittaimede perekonnal puuduvad tavalised varred, lehed ja juured ning tema roiskuva liha lõhnaga õied meelitavad kärbseid?”. Flagged forms (Which Southeast Asian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0135:category_name_en",
+      "reason": "Independently read category title “Plants and Animals Working Together” → “Taimed ja loomad koos tegutsemas”. Flagged title capitalization (Animals Working Together) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0136:category_name_en",
+      "reason": "Independently read category title “Counting Life in a Habitat” → “Elu arvestamine elupaigas”. Flagged title capitalization (Counting Life) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0137:category_name_en",
+      "reason": "Independently read category title “Counting Life in a Habitat” → “Elu arvestamine elupaigas”. Flagged title capitalization (Counting Life) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0138:category_name_en",
+      "reason": "Independently read category title “Counting Life in a Habitat” → “Elu arvestamine elupaigas”. Flagged title capitalization (Counting Life) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0139:category_name_en",
+      "reason": "Independently read category title “Counting Life in a Habitat” → “Elu arvestamine elupaigas”. Flagged title capitalization (Counting Life) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0140:category_name_en",
+      "reason": "Independently read category title “Counting Life in a Habitat” → “Elu arvestamine elupaigas”. Flagged title capitalization (Counting Life) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0141:category_name_en",
+      "reason": "Independently read category title “Physics Beyond Everyday Intuition” → “Füüsika argise intuitsiooni taga”. Flagged title capitalization (Physics Beyond Everyday Intuition) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0141:response_en",
+      "reason": "Independent bilingual review: “Max Planck” correctly remains “Max Planck” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0142:category_name_en",
+      "reason": "Independently read category title “Physics Beyond Everyday Intuition” → “Füüsika argise intuitsiooni taga”. Flagged title capitalization (Physics Beyond Everyday Intuition) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0142:response_en",
+      "reason": "Independent bilingual review: “Niels Bohr” correctly remains “Niels Bohr” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0143:category_name_en",
+      "reason": "Independently read category title “Physics Beyond Everyday Intuition” → “Füüsika argise intuitsiooni taga”. Flagged title capitalization (Physics Beyond Everyday Intuition) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0143:response_en",
+      "reason": "Independent bilingual review: “Louis de Broglie” correctly remains “Louis de Broglie” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0144:category_name_en",
+      "reason": "Independently read category title “Physics Beyond Everyday Intuition” → “Füüsika argise intuitsiooni taga”. Flagged title capitalization (Physics Beyond Everyday Intuition) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0144:response_en",
+      "reason": "Independent bilingual review: “Werner Heisenberg” correctly remains “Werner Heisenberg” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0145:category_name_en",
+      "reason": "Independently read category title “Physics Beyond Everyday Intuition” → “Füüsika argise intuitsiooni taga”. Flagged title capitalization (Physics Beyond Everyday Intuition) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0145:response_en",
+      "reason": "Independent bilingual review: “Erwin Schrödinger” correctly remains “Erwin Schrödinger” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0146:category_name_en",
+      "reason": "Independently read category title “Ingenious Ways to Feed” → “Leidlikud toitumisviisid”. Flagged title capitalization (Ingenious Ways) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0147:category_name_en",
+      "reason": "Independently read category title “Ingenious Ways to Feed” → “Leidlikud toitumisviisid”. Flagged title capitalization (Ingenious Ways) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0148:category_name_en",
+      "reason": "Independently read category title “Ingenious Ways to Feed” → “Leidlikud toitumisviisid”. Flagged title capitalization (Ingenious Ways) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0148:explanation_en",
+      "reason": "Independent bilingual field review: “The New Caledonian crow makes hooked tools to extract insects from wood.” → “Uus-Kaledoonia vares valmistab konksuga tööriistu puidust putukate kättesaamiseks.”. Flagged forms (The New Caledonian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0148:response_en",
+      "reason": "Independent bilingual field review: “The New Caledonian crow” → “Uus-Kaledoonia vares”. Flagged forms (The New Caledonian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0149:category_name_en",
+      "reason": "Independently read category title “Ingenious Ways to Feed” → “Leidlikud toitumisviisid”. Flagged title capitalization (Ingenious Ways) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0150:category_name_en",
+      "reason": "Independently read category title “Ingenious Ways to Feed” → “Leidlikud toitumisviisid”. Flagged title capitalization (Ingenious Ways) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0151:category_name_en",
+      "reason": "Independently read category title “Plant Life Cycles” → “Taimede elutsüklid”. Flagged title capitalization (Plant Life Cycles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0152:category_name_en",
+      "reason": "Independently read category title “Plant Life Cycles” → “Taimede elutsüklid”. Flagged title capitalization (Plant Life Cycles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0153:category_name_en",
+      "reason": "Independently read category title “Plant Life Cycles” → “Taimede elutsüklid”. Flagged title capitalization (Plant Life Cycles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0154:category_name_en",
+      "reason": "Independently read category title “Plant Life Cycles” → “Taimede elutsüklid”. Flagged title capitalization (Plant Life Cycles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0155:category_name_en",
+      "reason": "Independently read category title “Plant Life Cycles” → “Taimede elutsüklid”. Flagged title capitalization (Plant Life Cycles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0156:category_name_en",
+      "reason": "Independently read category title “Large-Scale Climate Patterns” → “Ulatuslikud kliimamustrid”. Flagged title capitalization (Large-Scale Climate Patterns) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0156:clue_en",
+      "reason": "Independent bilingual field review: “What takes its Spanish name from the Christ Child because fishermen noticed it around Christmas?” → “Mis sai hispaaniakeelse nime Jeesuslapselt, sest kalurid märkasid seda jõulude paiku?”. Flagged forms (Christ Child) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0156:explanation_en",
+      "reason": "Independent bilingual field review: “El Niño takes its Spanish name from the Christ Child because fishermen noticed it around Christmas.” → “El Niño sai hispaaniakeelse nime Jeesuslapselt, sest kalurid märkasid seda jõulude paiku.”. Flagged forms (Christ Child) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0156:response_en",
+      "reason": "Independent bilingual review: “El Niño” correctly remains “El Niño” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0157:category_name_en",
+      "reason": "Independently read category title “Large-Scale Climate Patterns” → “Ulatuslikud kliimamustrid”. Flagged title capitalization (Large-Scale Climate Patterns) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0157:response_en",
+      "reason": "Independent bilingual review: “La Niña” correctly remains “La Niña” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0158:category_name_en",
+      "reason": "Independently read category title “Large-Scale Climate Patterns” → “Ulatuslikud kliimamustrid”. Flagged title capitalization (Large-Scale Climate Patterns) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0159:category_name_en",
+      "reason": "Independently read category title “Large-Scale Climate Patterns” → “Ulatuslikud kliimamustrid”. Flagged title capitalization (Large-Scale Climate Patterns) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0159:explanation_en",
+      "reason": "Independent bilingual field review: “The Intertropical Convergence Zone is the near-equatorial belt where trade winds meet and rising air encourages rain.” → “Troopikasisene koondumisvöönd on ekvaatorilähedane vöönd, kus passaadid kohtuvad ja tõusev õhk soodustab vihma.”. Flagged forms (The Intertropical Convergence Zone) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0159:response_en",
+      "reason": "Independent bilingual field review: “The Intertropical Convergence Zone” → “Troopikasisene koondumisvöönd”. Flagged forms (The Intertropical Convergence Zone) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0160:category_name_en",
+      "reason": "Independently read category title “Large-Scale Climate Patterns” → “Ulatuslikud kliimamustrid”. Flagged title capitalization (Large-Scale Climate Patterns) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0161:category_name_en",
+      "reason": "Independently read category title “Plants in Their Environments” → “Taimed eri keskkondades”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0162:category_name_en",
+      "reason": "Independently read category title “Plants in Their Environments” → “Taimed eri keskkondades”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0163:category_name_en",
+      "reason": "Independently read category title “Plants in Their Environments” → “Taimed eri keskkondades”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0164:category_name_en",
+      "reason": "Independently read category title “Plants in Their Environments” → “Taimed eri keskkondades”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0165:category_name_en",
+      "reason": "Independently read category title “Plants in Their Environments” → “Taimed eri keskkondades”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0166:category_name_en",
+      "reason": "Independently read category title “Experiments That Separated Theories” → “Teooriaid eristanud katsed”. Flagged title capitalization (Experiments That Separated Theories) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0166:response_en",
+      "reason": "Independent bilingual review: “Léon Foucault” correctly remains “Léon Foucault” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0167:category_name_en",
+      "reason": "Independently read category title “Experiments That Separated Theories” → “Teooriaid eristanud katsed”. Flagged title capitalization (Experiments That Separated Theories) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0167:response_en",
+      "reason": "Independent bilingual review: “Albert A. Michelson” correctly remains “Albert A. Michelson” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0168:category_name_en",
+      "reason": "Independently read category title “Experiments That Separated Theories” → “Teooriaid eristanud katsed”. Flagged title capitalization (Experiments That Separated Theories) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0168:response_en",
+      "reason": "Independent bilingual review: “James Clerk Maxwell” correctly remains “James Clerk Maxwell” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0169:category_name_en",
+      "reason": "Independently read category title “Experiments That Separated Theories” → “Teooriaid eristanud katsed”. Flagged title capitalization (Experiments That Separated Theories) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0169:response_en",
+      "reason": "Independent bilingual review: “Heinrich Hertz” correctly remains “Heinrich Hertz” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0170:category_name_en",
+      "reason": "Independently read category title “Experiments That Separated Theories” → “Teooriaid eristanud katsed”. Flagged title capitalization (Experiments That Separated Theories) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0170:clue_en",
+      "reason": "Independent bilingual field review: “Which Quaker astronomer worked with Frank Dyson to test relativity using starlight near the eclipsed Sun?” → “Milline kveekerist astronoom töötas koos Frank Dysoniga, et varjutatud Päikese lähedal nähtava tähevalguse abil relatiivsusteooriat kontrollida?”. Flagged forms (Which Quaker) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0170:response_en",
+      "reason": "Independent bilingual review: “Arthur Eddington” correctly remains “Arthur Eddington” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0171:category_name_en",
+      "reason": "Independently read category title “Extreme Bodies, Familiar Principles” → “Äärmuslikud kehad, tuttavad põhimõtted”. Flagged title capitalization (Extreme Bodies, Familiar Principles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0172:category_name_en",
+      "reason": "Independently read category title “Extreme Bodies, Familiar Principles” → “Äärmuslikud kehad, tuttavad põhimõtted”. Flagged title capitalization (Extreme Bodies, Familiar Principles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0173:category_name_en",
+      "reason": "Independently read category title “Extreme Bodies, Familiar Principles” → “Äärmuslikud kehad, tuttavad põhimõtted”. Flagged title capitalization (Extreme Bodies, Familiar Principles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0173:clue_en",
+      "reason": "Independent bilingual field review: “Which animal has African and South American members that survive seasonal drying by burrowing into mud?” → “Millise kalarühma Aafrika ja Lõuna-Ameerika liigid elavad hooajalise kuivamise üle mutta kaevudes?”. Flagged forms (South American) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0173:explanation_en",
+      "reason": "Independent bilingual field review: “The lungfish has African and South American members that survive seasonal drying by burrowing into mud.” → “Aafrika ja Lõuna-Ameerika kopsukalad võivad hooajalise kuivamise üle elada mutta kaevudes.”. Flagged forms (South American) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0174:category_name_en",
+      "reason": "Independently read category title “Extreme Bodies, Familiar Principles” → “Äärmuslikud kehad, tuttavad põhimõtted”. Flagged title capitalization (Extreme Bodies, Familiar Principles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0175:category_name_en",
+      "reason": "Independently read category title “Extreme Bodies, Familiar Principles” → “Äärmuslikud kehad, tuttavad põhimõtted”. Flagged title capitalization (Extreme Bodies, Familiar Principles) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0176:category_name_en",
+      "reason": "Independently read category title “Plants That Break the Rules” → “Taimed, mis murravad reegleid”. Flagged title capitalization (Plants That Break) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0177:category_name_en",
+      "reason": "Independently read category title “Plants That Break the Rules” → “Taimed, mis murravad reegleid”. Flagged title capitalization (Plants That Break) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0178:category_name_en",
+      "reason": "Independently read category title “Plants That Break the Rules” → “Taimed, mis murravad reegleid”. Flagged title capitalization (Plants That Break) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0179:category_name_en",
+      "reason": "Independently read category title “Plants That Break the Rules” → “Taimed, mis murravad reegleid”. Flagged title capitalization (Plants That Break) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0180:category_name_en",
+      "reason": "Independently read category title “Plants That Break the Rules” → “Taimed, mis murravad reegleid”. Flagged title capitalization (Plants That Break) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0181:category_name_en",
+      "reason": "Independently read category title “Theories Built From Numbers” → “Arvudest kasvanud teooriad”. Flagged title capitalization (Theories Built From Numbers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0181:response_en",
+      "reason": "Independent bilingual review: “Srinivasa Ramanujan” correctly remains “Srinivasa Ramanujan” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0182:category_name_en",
+      "reason": "Independently read category title “Theories Built From Numbers” → “Arvudest kasvanud teooriad”. Flagged title capitalization (Theories Built From Numbers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0182:response_en",
+      "reason": "Independent bilingual review: “Emmy Noether” correctly remains “Emmy Noether” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0183:category_name_en",
+      "reason": "Independently read category title “Theories Built From Numbers” → “Arvudest kasvanud teooriad”. Flagged title capitalization (Theories Built From Numbers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0183:response_en",
+      "reason": "Independent bilingual review: “Alan Turing” correctly remains “Alan Turing” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0184:category_name_en",
+      "reason": "Independently read category title “Theories Built From Numbers” → “Arvudest kasvanud teooriad”. Flagged title capitalization (Theories Built From Numbers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0184:response_en",
+      "reason": "Independent bilingual review: “Ada Lovelace” correctly remains “Ada Lovelace” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0185:category_name_en",
+      "reason": "Independently read category title “Theories Built From Numbers” → “Arvudest kasvanud teooriad”. Flagged title capitalization (Theories Built From Numbers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0185:response_en",
+      "reason": "Independent bilingual review: “John von Neumann” correctly remains “John von Neumann” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0186:category_name_en",
+      "reason": "Independently read category title “Partners in Animal Survival” → “Partnerid loomade ellujäämises”. Flagged title capitalization (Animal Survival) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0187:category_name_en",
+      "reason": "Independently read category title “Partners in Animal Survival” → “Partnerid loomade ellujäämises”. Flagged title capitalization (Animal Survival) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0188:category_name_en",
+      "reason": "Independently read category title “Partners in Animal Survival” → “Partnerid loomade ellujäämises”. Flagged title capitalization (Animal Survival) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0189:category_name_en",
+      "reason": "Independently read category title “Partners in Animal Survival” → “Partnerid loomade ellujäämises”. Flagged title capitalization (Animal Survival) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0190:category_name_en",
+      "reason": "Independently read category title “Partners in Animal Survival” → “Partnerid loomade ellujäämises”. Flagged title capitalization (Animal Survival) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0191:category_name_en",
+      "reason": "Independently read category title “Climate Records Without Thermometers” → “Kliimaandmed termomeetriteta”. Flagged title capitalization (Climate Records Without Thermometers) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0192:category_name_en",
+      "reason": "Independently read category title “Climate Records Without Thermometers” → “Kliimaandmed termomeetriteta”. Flagged title capitalization (Climate Records Without Thermometers) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0193:category_name_en",
+      "reason": "Independently read category title “Climate Records Without Thermometers” → “Kliimaandmed termomeetriteta”. Flagged title capitalization (Climate Records Without Thermometers) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0194:category_name_en",
+      "reason": "Independently read category title “Climate Records Without Thermometers” → “Kliimaandmed termomeetriteta”. Flagged title capitalization (Climate Records Without Thermometers) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0195:category_name_en",
+      "reason": "Independently read category title “Climate Records Without Thermometers” → “Kliimaandmed termomeetriteta”. Flagged title capitalization (Climate Records Without Thermometers) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0196:response_en",
+      "reason": "Independent bilingual review: “Lynn Margulis” correctly remains “Lynn Margulis” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0197:response_en",
+      "reason": "Independent bilingual review: “Carl Woese” correctly remains “Carl Woese” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0198:response_en",
+      "reason": "Independent bilingual review: “Kary Mullis” correctly remains “Kary Mullis” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0199:response_en",
+      "reason": "Independent bilingual review: “Jennifer Doudna” correctly remains “Jennifer Doudna” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0200:response_en",
+      "reason": "Independent bilingual review: “Tu Youyou” correctly remains “Tu Youyou” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0201:category_name_en",
+      "reason": "Independently read category title “Animal Architecture Beyond Nests” → “Loomade ehitised väljaspool pesi”. Flagged title capitalization (Animal Architecture Beyond Nests) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0202:category_name_en",
+      "reason": "Independently read category title “Animal Architecture Beyond Nests” → “Loomade ehitised väljaspool pesi”. Flagged title capitalization (Animal Architecture Beyond Nests) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0203:category_name_en",
+      "reason": "Independently read category title “Animal Architecture Beyond Nests” → “Loomade ehitised väljaspool pesi”. Flagged title capitalization (Animal Architecture Beyond Nests) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0204:category_name_en",
+      "reason": "Independently read category title “Animal Architecture Beyond Nests” → “Loomade ehitised väljaspool pesi”. Flagged title capitalization (Animal Architecture Beyond Nests) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0205:category_name_en",
+      "reason": "Independently read category title “Animal Architecture Beyond Nests” → “Loomade ehitised väljaspool pesi”. Flagged title capitalization (Animal Architecture Beyond Nests) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0206:category_name_en",
+      "reason": "Independently read category title “Species and Their Environments” → “Liigid ja nende keskkonnad”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0207:category_name_en",
+      "reason": "Independently read category title “Species and Their Environments” → “Liigid ja nende keskkonnad”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0208:category_name_en",
+      "reason": "Independently read category title “Species and Their Environments” → “Liigid ja nende keskkonnad”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0209:category_name_en",
+      "reason": "Independently read category title “Species and Their Environments” → “Liigid ja nende keskkonnad”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0210:category_name_en",
+      "reason": "Independently read category title “Species and Their Environments” → “Liigid ja nende keskkonnad”. Flagged title capitalization (Their Environments) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0211:category_name_en",
+      "reason": "Independently read category title “Space Signals and Their Interpreters” → “Kosmosesignaalid ja nende tõlgendajad”. Flagged title capitalization (Space Signals, Their Interpreters) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0211:response_en",
+      "reason": "Independent bilingual review: “Jocelyn Bell Burnell” correctly remains “Jocelyn Bell Burnell” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0212:category_name_en",
+      "reason": "Independently read category title “Space Signals and Their Interpreters” → “Kosmosesignaalid ja nende tõlgendajad”. Flagged title capitalization (Space Signals, Their Interpreters) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0212:response_en",
+      "reason": "Independent bilingual review: “Cecilia Payne-Gaposchkin” correctly remains “Cecilia Payne-Gaposchkin” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0213:category_name_en",
+      "reason": "Independently read category title “Space Signals and Their Interpreters” → “Kosmosesignaalid ja nende tõlgendajad”. Flagged title capitalization (Space Signals, Their Interpreters) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0213:response_en",
+      "reason": "Independent bilingual review: “Henrietta Swan Leavitt” correctly remains “Henrietta Swan Leavitt” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0214:category_name_en",
+      "reason": "Independently read category title “Space Signals and Their Interpreters” → “Kosmosesignaalid ja nende tõlgendajad”. Flagged title capitalization (Space Signals, Their Interpreters) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0214:response_en",
+      "reason": "Independent bilingual review: “Vera Rubin” correctly remains “Vera Rubin” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0215:category_name_en",
+      "reason": "Independently read category title “Space Signals and Their Interpreters” → “Kosmosesignaalid ja nende tõlgendajad”. Flagged title capitalization (Space Signals, Their Interpreters) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0215:response_en",
+      "reason": "Independent bilingual review: “Georges Lemaître” correctly remains “Georges Lemaître” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0216:category_name_en",
+      "reason": "Independently read category title “Signals That Change Animal Behaviour” → “Loomade käitumist muutvad signaalid”. Flagged title capitalization (Signals That Change Animal Behaviour) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0217:category_name_en",
+      "reason": "Independently read category title “Signals That Change Animal Behaviour” → “Loomade käitumist muutvad signaalid”. Flagged title capitalization (Signals That Change Animal Behaviour) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0217:clue_en",
+      "reason": "Independent bilingual field review: “Which colonial North American burrowing rodent gives alarm calls that vary with different predators?” → “Milline kolooniates elav Põhja-Ameerika urunäriline annab eri kiskjate puhul erinevaid häirehüüdeid?”. Flagged forms (North American) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0218:accepted_variants_en",
+      "reason": "Independent bilingual review: “Chlorocebus pygerythrus” correctly remains “Chlorocebus pygerythrus” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0218:category_name_en",
+      "reason": "Independently read category title “Signals That Change Animal Behaviour” → “Loomade käitumist muutvad signaalid”. Flagged title capitalization (Signals That Change Animal Behaviour) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0219:category_name_en",
+      "reason": "Independently read category title “Signals That Change Animal Behaviour” → “Loomade käitumist muutvad signaalid”. Flagged title capitalization (Signals That Change Animal Behaviour) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0220:category_name_en",
+      "reason": "Independently read category title “Signals That Change Animal Behaviour” → “Loomade käitumist muutvad signaalid”. Flagged title capitalization (Signals That Change Animal Behaviour) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0221:category_name_en",
+      "reason": "Independently read category title “Unusual Plant Structures” → “Ebatavalised taimestruktuurid”. Flagged title capitalization (Unusual Plant Structures) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0222:category_name_en",
+      "reason": "Independently read category title “Unusual Plant Structures” → “Ebatavalised taimestruktuurid”. Flagged title capitalization (Unusual Plant Structures) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0223:category_name_en",
+      "reason": "Independently read category title “Unusual Plant Structures” → “Ebatavalised taimestruktuurid”. Flagged title capitalization (Unusual Plant Structures) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0224:category_name_en",
+      "reason": "Independently read category title “Unusual Plant Structures” → “Ebatavalised taimestruktuurid”. Flagged title capitalization (Unusual Plant Structures) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0225:category_name_en",
+      "reason": "Independently read category title “Unusual Plant Structures” → “Ebatavalised taimestruktuurid”. Flagged title capitalization (Unusual Plant Structures) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0226:category_name_en",
+      "reason": "Independently read category title “Discoveries Through Unlikely Clues” → “Avastused ootamatute vihjete kaudu”. Flagged title capitalization (Discoveries Through Unlikely Clues) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0226:clue_en",
+      "reason": "Independent bilingual field review: “Which Australian doctor worked with Robin Warren to show that Helicobacter pylori can cause peptic ulcers?” → “Milline Austraalia arst näitas koos Robin Warreniga, et Helicobacter pylori võib põhjustada peptilisi haavandeid?”. Flagged forms (Which Australian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0226:response_en",
+      "reason": "Independent bilingual review: “Barry Marshall” correctly remains “Barry Marshall” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0227:category_name_en",
+      "reason": "Independently read category title “Discoveries Through Unlikely Clues” → “Avastused ootamatute vihjete kaudu”. Flagged title capitalization (Discoveries Through Unlikely Clues) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0227:response_en",
+      "reason": "Independent bilingual review: “John Snow” correctly remains “John Snow” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0228:category_name_en",
+      "reason": "Independently read category title “Discoveries Through Unlikely Clues” → “Avastused ootamatute vihjete kaudu”. Flagged title capitalization (Discoveries Through Unlikely Clues) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0228:clue_en",
+      "reason": "Independent bilingual field review: “Which Hungarian doctor's explanation for childbed fever focused on cadaverous material carried from autopsy work?” → “Milline Ungari arst seletas sünnituspalavikku lahkamisruumidest edasi kantava surnukehadelt pärineva materjaliga?”. Flagged forms (Which Hungarian) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0228:response_en",
+      "reason": "Independent bilingual review: “Ignaz Semmelweis” correctly remains “Ignaz Semmelweis” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0229:category_name_en",
+      "reason": "Independently read category title “Discoveries Through Unlikely Clues” → “Avastused ootamatute vihjete kaudu”. Flagged title capitalization (Discoveries Through Unlikely Clues) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0229:clue_en",
+      "reason": "Independent bilingual field review: “Which English physician published De Motu Cordis, explaining the heart’s pumping role in blood circulation?” → “Milline Inglise arst avaldas teose De Motu Cordis, selgitades südame pumpamise rolli vereringes?”. Flagged forms (Which English) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0229:response_en",
+      "reason": "Independent bilingual review: “William Harvey” correctly remains “William Harvey” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0230:category_name_en",
+      "reason": "Independently read category title “Discoveries Through Unlikely Clues” → “Avastused ootamatute vihjete kaudu”. Flagged title capitalization (Discoveries Through Unlikely Clues) is translated descriptive wording."
+    },
+    {
+      "id": "UNCHANGED_TRANSLATION:built-in-science-nature-all-level-expansion-0230:response_en",
+      "reason": "Independent bilingual review: “Santiago Ramón y Cajal” correctly remains “Santiago Ramón y Cajal” as an established proper name or scientific taxon."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0231:category_name_en",
+      "reason": "Independently read category title “Nature's Cooperative Societies” → “Looduse koostöised ühiskonnad”. Flagged title capitalization (Nature's Cooperative Societies) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0232:category_name_en",
+      "reason": "Independently read category title “Nature's Cooperative Societies” → “Looduse koostöised ühiskonnad”. Flagged title capitalization (Nature's Cooperative Societies) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0233:category_name_en",
+      "reason": "Independently read category title “Nature's Cooperative Societies” → “Looduse koostöised ühiskonnad”. Flagged title capitalization (Nature's Cooperative Societies) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0233:explanation_en",
+      "reason": "Independent bilingual field review: “The African wild dog hunts cooperatively and can regurgitate food for pups and other pack members.” → “Aafrika hüäänkoer jahib koostöös ning võib poegadele ja teistele karjaliikmetele toitu tagasi oksendada.”. Flagged forms (The African) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0233:response_en",
+      "reason": "Independent bilingual field review: “The African wild dog” → “Aafrika hüäänkoer”. Flagged forms (The African) are valid Estonian terminology, name translation or inflection; both fields preserve the same intended fact."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0234:category_name_en",
+      "reason": "Independently read category title “Nature's Cooperative Societies” → “Looduse koostöised ühiskonnad”. Flagged title capitalization (Nature's Cooperative Societies) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0235:category_name_en",
+      "reason": "Independently read category title “Nature's Cooperative Societies” → “Looduse koostöised ühiskonnad”. Flagged title capitalization (Nature's Cooperative Societies) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0241:category_name_en",
+      "reason": "Independently read category title “Ecology Across Time” → “Ökoloogia läbi aja”. Flagged title capitalization (Ecology Across Time) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0242:category_name_en",
+      "reason": "Independently read category title “Ecology Across Time” → “Ökoloogia läbi aja”. Flagged title capitalization (Ecology Across Time) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0243:category_name_en",
+      "reason": "Independently read category title “Ecology Across Time” → “Ökoloogia läbi aja”. Flagged title capitalization (Ecology Across Time) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0244:category_name_en",
+      "reason": "Independently read category title “Ecology Across Time” → “Ökoloogia läbi aja”. Flagged title capitalization (Ecology Across Time) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0245:category_name_en",
+      "reason": "Independently read category title “Ecology Across Time” → “Ökoloogia läbi aja”. Flagged title capitalization (Ecology Across Time) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0246:category_name_en",
+      "reason": "Independently read category title “Hidden Chemistry in Plants” → “Taimede varjatud keemia”. Flagged title capitalization (Hidden Chemistry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0247:category_name_en",
+      "reason": "Independently read category title “Hidden Chemistry in Plants” → “Taimede varjatud keemia”. Flagged title capitalization (Hidden Chemistry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0248:category_name_en",
+      "reason": "Independently read category title “Hidden Chemistry in Plants” → “Taimede varjatud keemia”. Flagged title capitalization (Hidden Chemistry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0249:category_name_en",
+      "reason": "Independently read category title “Hidden Chemistry in Plants” → “Taimede varjatud keemia”. Flagged title capitalization (Hidden Chemistry) is translated descriptive wording."
+    },
+    {
+      "id": "SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-science-nature-all-level-expansion-0250:category_name_en",
+      "reason": "Independently read category title “Hidden Chemistry in Plants” → “Taimede varjatud keemia”. Flagged title capitalization (Hidden Chemistry) is translated descriptive wording."
+    }
+  ],
+  "artifactHashes": {
+    "authored": "ac4cb96e73fbc05a9c82affdaaa0da9c5f39b4b3b4426f599de5b604a2a1a4cc",
+    "generated": "3a75164404f5c2a3fd3fc44acfaf8c340cb8ff81320c6188d619d87cea7b85cd",
+    "evidence": "9aa8d727d01d84c8739a228db5f29af8982d02e41ab48ee491a343e0e84c37d9"
+  }
+}

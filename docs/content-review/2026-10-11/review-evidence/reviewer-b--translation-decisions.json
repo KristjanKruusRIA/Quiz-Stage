@@ -1,0 +1,742 @@
+[
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-030",
+    "reason": "Impression Sunrise is the painting named „Impressioon. Tõusev päike” in the Estonian response; Impressionist Painting is accurately impressionistlik maalikunst. Category “Art & Architecture: Impressionist Painting” → “Kunst ja arhitektuur: Impressionistlik maalikunst” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-033",
+    "reason": "The Persistence of Memory is translated „Mälu püsivus” in response and explanation. Salvador Dalí is unchanged; the heuristic includes the English question word Which as part of his name. Category “Art & Architecture: Famous Paintings at a Glance” → “Kunst ja arhitektuur: Kuulsad maalid ühe pilguga” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-036",
+    "reason": "Spanish Civil War is accurately Hispaania kodusõda. Modern Art and Artists is moodne kunst ja kunstnikud; these are translated subject labels, not altered personal names. Category “Art & Architecture: Modern Art and Artists” → “Kunst ja arhitektuur: Moodne kunst ja kunstnikud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-037",
+    "reason": "Pop artist becomes popkunstnik and Campbell’s becomes the ordinary Estonian possessive Campbelli. The soup-can and celebrity-portrait identifying facts remain the same. Category “Art & Architecture: Modern Art and Artists” → “Kunst ja arhitektuur: Moodne kunst ja kunstnikud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-037",
+    "reason": "Manually checked identical name/title field(s): “Andy Warhol”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-038",
+    "reason": "Mexican is accurately Mehhiko. The complete self-portrait, eyebrow, animal and plant description is translated; Frida Kahlo remains the same artist. Category “Art & Architecture: Modern Art and Artists” → “Kunst ja arhitektuur: Moodne kunst ja kunstnikud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-038",
+    "reason": "Manually checked identical name/title field(s): “Frida Kahlo”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-039",
+    "reason": "Dutch is accurately Hollandi and the black grids and four colours are preserved. Piet Mondrian remains the same artist. Category “Art & Architecture: Modern Art and Artists” → “Kunst ja arhitektuur: Moodne kunst ja kunstnikud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-039",
+    "reason": "Manually checked identical name/title field(s): “Piet Mondrian”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-040",
+    "reason": "Japanese is accurately Jaapani and Infinity Mirror Rooms is translated lõpmatuse peegelruumid. Yayoi Kusama and the repeated-dot facts are unchanged. Category “Art & Architecture: Modern Art and Artists” → “Kunst ja arhitektuur: Moodne kunst ja kunstnikud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-040",
+    "reason": "Manually checked identical name/title field(s): “Yayoi Kusama”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-051",
+    "reason": "Leonardo and La Gioconda are retained in the translated prompt. Which Leonardo is an accidental capitalized phrase containing an English question word; no name is missing. Category “Art & Architecture: Famous Portraits” → “Kunst ja arhitektuur: Kuulsad portreed” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-051",
+    "reason": "Manually checked identical name/title field(s): “Mona Lisa”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-071",
+    "reason": "Rome’s Pantheon becomes Rooma Pantheoni and The Pantheon’s becomes Pantheoni. The same roof, circular hall and central opening are described with normal Estonian case endings."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-088",
+    "reason": "Gothic Duomo is rendered gooti stiilis Duomo; Milan Cathedral becomes Milano toomkirik. The question now asks the city from the same white-marble roof, spires and statues. Category “Art & Architecture: Great Cathedrals” → “Kunst ja arhitektuur: Suured katedraalid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-091",
+    "reason": "Chicago and Sears Tower are retained in the prompt. The answer alias Willis Tower is translated Willise torn, preserving the same building and the 2009 renaming fact. Category “Art & Architecture: Famous Skyscrapers” → “Kunst ja arhitektuur: Kuulsad pilvelõhkujad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-118",
+    "reason": "Art Nouveau is conventionally juugendstiil. Barcelona and Casa Batlló remain in the translated prompt; the heuristic accidentally includes Which with the city. Category “Art & Architecture: Art Nouveau” → “Kunst ja arhitektuur: Juugendstiil” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-accessible-corpus-118",
+    "reason": "Manually checked identical name/title field(s): “Antoni Gaudí”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-132",
+    "reason": "Art Nouveau is conventionally juugend; Riga’s Alberta Street becomes Riia Alberta tänav. Baltic Region is Baltimaad in this Baltic-country architectural set. The date and decorative features are preserved. Category “Art & Architecture: Architecture of the Baltic Region” → “Kunst ja arhitektuur: Baltimaade arhitektuur” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-133",
+    "reason": "Vilnius’s Saint Anne’s Church becomes Vilniuse Püha Anna kirik. Both prompts preserve 33 brick types and the reddish clay material; Baltic Region is Baltimaad here. Category “Art & Architecture: Architecture of the Baltic Region” → “Kunst ja arhitektuur: Baltimaade arhitektuur” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-137",
+    "reason": "Marcel Breuer becomes Marcel Breueri in the prompt. Wassily Chair is Wassily tool, and Breuer’s Model B3 is Breueri mudel B3; the same chair, frame and straps are identified. Category “Art & Architecture: Design Objects at Home” → “Kunst ja arhitektuur: Disainesemed kodus” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-playable-corpus-071",
+    "reason": "Helsinki becomes Helsingi and Sibelius Monument becomes Sibeliuse monument. The steel-pipe cluster and composer portrait are both translated."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-playable-corpus-083",
+    "reason": "Tartu Cathedral and Tartu Dome Church are localized as Tartu toomkirik and Tartu toom, with the original cathedral title also retained as an alias. Both explanations preserve the choir conversion and 1806 library move."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-playable-corpus-169",
+    "reason": "Banksy’s Girl with Balloon becomes Banksy teosele „Girl with Balloon“; the original work title is retained, with Estonian grammar replacing the English possessive. Sotheby’s and the 2018 partial shredding event remain."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-playable-corpus-169",
+    "reason": "Manually checked identical name/title field(s): “Love is in the Bin”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-playable-corpus-242",
+    "reason": "Manually checked identical name/title field(s): “The Gates, Central Park, New York, 1979–2005”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-playable-corpus-292",
+    "reason": "Long Room is rendered Pikk saal, Trinity College Long Room as Trinity College’i pikk saal, and Old Library as vana raamatukogu. Both prompts preserve Dublin, 65 metres, 1712–1732 and 200,000 books."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0001",
+    "reason": "US becomes USA and Lincoln Memorial becomes Lincolni memoriaal. National Mall is retained with the Estonian case ending Malli; the seated Abraham Lincoln figure is the same."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0001",
+    "reason": "Manually checked identical name/title field(s): “Abraham Lincoln”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0018",
+    "reason": "Nelson’s Column and Trafalgar Square are accurately Nelsoni sammas and Trafalgari väljak. Edwin Landseer is retained as Landseeri; both explanations preserve four bronze lions."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0019",
+    "reason": "Florence becomes Firenze with the locative Firenzes; Il Porcellino is retained. Both prompts ask which wild pig the fountain depicts from its shiny snout."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0020",
+    "reason": "The Fountain of Neptune becomes Neptuni purskkaev. Bologna is retained; both prompts and explanations ask for the three-pronged weapon, kolmhark."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0090",
+    "reason": "The Motherland Calls is translated „Kodumaa kutsub”, and Winged Victory of Samothrace is conventionally Samothrake Nike. Both versions describe the same ancient sculpture and inspiration relationship."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0097",
+    "reason": "Cellini’s Perseus becomes Cellini Perseus, Florence’s becomes Firenze, and Loggia dei Lanzi takes the Estonian locative Lanzis. Palazzo Vecchio and the city question are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0098",
+    "reason": "Natural History becomes „Looduslugu”, Pliny the Elder becomes Plinius Vanem, and Laocoön becomes Laokooni in the Estonian case form. Both versions ask the same ancient writer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0099",
+    "reason": "Capitoline Wolf is accurately Kapitooliumi hunt. Both prompts identify the alloy and both explanations preserve the later addition of the infant figures."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0196",
+    "reason": "Kensington Palace is accurately Kensingtoni palee. Diana is retained, and Sunken Garden is retained with the Estonian case ending Gardeni; the same statue location is given."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0197",
+    "reason": "World War II becomes Teine maailmasõda and London’s Anteros statue becomes Londoni Anterose kuju. Both versions preserve the wartime removal and 1947 return to Piccadilly Circus."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-art-architecture-all-level-expansion-0197",
+    "reason": "Manually checked identical name/title field(s): “Piccadilly Circus”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0198",
+    "reason": "Menin Gate is accurately Meneni värav. The military call retains its original name „Last Post”; the English article The is omitted naturally. Ypres and remembrance of the fallen are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0199",
+    "reason": "London Bridge becomes Londoni sild, while Lake Havasu City is retained with Citys/Citysse case endings and US becomes USA. Arizona and the relocation are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-009",
+    "reason": "Italian term is accurately itaaliakeelne termin; singing without instrumental accompaniment is täielikult translated as laulmine ilma pillisaateta. Singing Voices and Techniques is lauluhääled ja lauluvõtted. Category “Music: Singing Voices and Techniques” → “Muusika: Lauluhääled ja lauluvõtted” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-009",
+    "reason": "The established Italian musical term “a cappella” and its accepted spelling “a capella” are used unchanged in Estonian. Both prompts fully translate singing without instrumental accompaniment."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-048",
+    "reason": "Sibelius becomes Sibeliuse. The Finnish press celebrations, Russian censorship and pre-existing hymn-like section becoming a national symbol are accurately preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-071",
+    "reason": "American city is USA linn and African American is afroameerika. New Orleans is retained with Orleansi case ending; both explanations preserve the same origin context and period."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-071",
+    "reason": "Manually checked identical name/title field(s): “New Orleans”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-073",
+    "reason": "Manually checked identical name/title field(s): “Louis Armstrong”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-075",
+    "reason": "First Lady of Song is accurately laulu esileedi. The same agile scat-singing clue is translated virtuoosne scat-laul."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-075",
+    "reason": "Manually checked identical name/title field(s): “Ella Fitzgerald”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-081",
+    "reason": "British-American becomes Briti-Ameerika; Rumours is retained as the original album title. Classic Rock Bands is klassikalise roki ansamblid. Category “Music: Classic Rock Bands” → “Muusika: Klassikalise roki ansamblid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-081",
+    "reason": "Manually checked identical name/title field(s): “Fleetwood Mac”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-082",
+    "reason": "Irish becomes Iiri and the original album title The Joshua Tree is retained. Bono and the rock-band identification remain the same. Category “Music: Classic Rock Bands” → “Muusika: Klassikalise roki ansamblid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-083",
+    "reason": "British becomes Briti. The tongue-and-lips logo description is translated; The Rolling Stones remains the same band. Category “Music: Classic Rock Bands” → “Muusika: Klassikalise roki ansamblid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-083",
+    "reason": "Manually checked identical name/title field(s): “The Rolling Stones”; “Rolling Stones”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-084",
+    "reason": "Manually checked identical name/title field(s): “Pink Floyd”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-085",
+    "reason": "Manually checked identical name/title field(s): “Led Zeppelin”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-097",
+    "reason": "Barbadian is accurately Barbadose and Umbrella is retained as the original song title. Both prompts describe the same singer and worldwide hit."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-098",
+    "reason": "Manually checked identical name/title field(s): “Katy Perry”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-099",
+    "reason": "Colombian becomes Colombia. Hips Don’t Lie is retained and Wyclef Jean takes the Estonian comitative Jeaniga; the collaboration is unchanged."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-100",
+    "reason": "British becomes Briti and Back to Black is retained as the original album title. Both prompts ask for the same singer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-100",
+    "reason": "Manually checked identical name/title field(s): “Amy Winehouse”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-111",
+    "reason": "Manually checked identical name/title field(s): “Boney M.”; “Boney M”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-112",
+    "reason": "Danish-Norwegian becomes Taani-Norra; Barbie Girl is retained as the original song title. European Pop is accurately Euroopa popmuusika. Category “Music: European Pop” → “Muusika: Euroopa popmuusika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-113",
+    "reason": "Manually checked identical name/title field(s): “Ace of Base”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-114",
+    "reason": "Swedish becomes Rootsi and It Must Have Been Love is retained as the original song title. Both prompts ask for the same duo. Category “Music: European Pop” → “Muusika: Euroopa popmuusika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-accessible-corpus-115",
+    "reason": "Icelandic becomes Islandi. Debut and Post are retained as the original album titles, and both prompts explicitly refer to the solo albums. Category “Music: European Pop” → “Muusika: Euroopa popmuusika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-accessible-corpus-125",
+    "reason": "Manually checked identical name/title field(s): “Guitar Hero”; “Rock Band”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-091",
+    "reason": "Pink Floyd takes the Estonian case ending Floydi. Both prompts describe the same title-free cover with two businessmen shaking hands, one on fire."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-091",
+    "reason": "Manually checked identical name/title field(s): “Wish You Were Here”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-092",
+    "reason": "Beatles becomes Beatlesi. Both versions preserve the bright military uniforms and life-size celebrity cut-outs as the album-cover description."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-092",
+    "reason": "Manually checked identical name/title field(s): “Sgt. Pepper’s Lonely Hearts Club Band”; “Sgt Pepper’s Lonely Hearts Club Band”; “Sgt. Pepper”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-093",
+    "reason": "LP is rendered debüütalbum, Elvis Presley’s as Elvis Presley, Pennie Smith’s as Pennie Smithi and Ray Lowry’s Elvis-inspired as Ray Lowry Elvisest inspireeritud. Both versions preserve the same cover photograph and typography facts."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-093",
+    "reason": "Manually checked identical name/title field(s): “London Calling”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-095",
+    "reason": "King Crimson becomes King Crimsoni and Barry Godber’s becomes Barry Godberi. Both prompts preserve the title-free debut cover and terrified screaming face."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-095",
+    "reason": "Manually checked identical name/title field(s): “In the Court of the Crimson King”; “Court of the Crimson King”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-138",
+    "reason": "Europe becomes Europe’i and Joey Tempest’s becomes Joey Tempesti. Both versions preserve the synthesizer fanfare and imagined departure from Earth/Maalt."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-138",
+    "reason": "Manually checked identical name/title field(s): “The Final Countdown”; “Final Countdown”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-140",
+    "reason": "North Star/Polaris is Põhjanael and Deep Space Network is süvakosmosevõrk. NASA is retained; Beatles takes Beatlesi. Both versions preserve the February 2008 transmission and fortieth anniversary."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-140",
+    "reason": "Manually checked identical name/title field(s): “Across the Universe”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-208",
+    "reason": "Guns N’ Roses takes the Estonian case ending Rosesi and Slash’s becomes Slashi. Appetite for Destruction is retained as the original album title; both prompts preserve the distinctive opening riff."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-208",
+    "reason": "Manually checked identical name/title field(s): “Sweet Child o’ Mine”; “Sweet Child o' Mine”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-321",
+    "reason": "Manually checked identical name/title field(s): “Don’t Worry, Be Happy”; “Don't Worry, Be Happy”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-322",
+    "reason": "Suzanne Vega’s becomes Suzanne Vega. DNA is retained as the act’s name, and both versions preserve the unaccompanied original vocal and later dance beat."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-322",
+    "reason": "Manually checked identical name/title field(s): “Tom’s Diner”; “Tom's Diner”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-323",
+    "reason": "Richard Wright’s becomes Richard Wrighti and Pink Floyd’s becomes Pink Floydi. Clare Torry and the original song title are retained, preserving the improvised wordless vocal and piano-composition facts."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-323",
+    "reason": "Manually checked identical name/title field(s): “The Great Gig in the Sky”; “Great Gig in the Sky”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-playable-corpus-324",
+    "reason": "Manually checked identical name/title field(s): “Hide and Seek”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-playable-corpus-333",
+    "reason": "Ravel’s becomes Raveli, Mussorgsky becomes Mussorgski, Viktor Hartmann’s becomes Viktor Hartmanni and Promenade becomes „Promenaad”. Both versions preserve the suite, orchestration and recurring musical-picture link."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-easy-expansion-012",
+    "reason": "Afro-Cuban is accurately Afro-Kuuba; Latin American Rhythms is Ladina-Ameerika rütmid. Guaguancó, yambú and columbia retain their names with Estonian grammatical endings. Category “Latin American Rhythms” → “Ladina-Ameerika rütmid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0017",
+    "reason": "West Coast US becomes USA läänerannik and Summer of Love becomes armastuse suvi. Scott McKenzie and San Francisco are retained; both versions preserve the flowers-in-the-hair advice. Category “Places You Can Sing About” → “Paigad, millest laulda” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0017",
+    "reason": "Manually checked identical name/title field(s): “San Francisco”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0081",
+    "reason": "Belgian-born Romani becomes Belgias sündinud roma. Both prompts preserve the guitarist and gypsy-jazz identification, and Django Reinhardt is unchanged."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0081",
+    "reason": "Manually checked identical name/title field(s): “Django Reinhardt”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0082",
+    "reason": "Manually checked identical name/title field(s): “Benny Goodman”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0083",
+    "reason": "Manually checked identical name/title field(s): “Nat King Cole”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0084",
+    "reason": "Manually checked identical name/title field(s): “Sarah Vaughan”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0085",
+    "reason": "Manually checked identical name/title field(s): “Herbie Hancock”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0130",
+    "reason": "Beatles takes Beatlesi and Ravi Shankar takes Shankari. Indian classical music becomes India klassikaline muusika and Western pop audiences lääne poppublik; the learning relationship is unchanged."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0130",
+    "reason": "Manually checked identical name/title field(s): “George Harrison”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0142",
+    "reason": "The Magic Flute becomes „Võluflööt”, Queen of the Night becomes Öökuninganna, and Mozart takes Mozarti. The same opera character and demanding coloratura arias are described. Category “Opera's Unexpected Heroes” → “Ooperi ootamatud kangelased” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0156",
+    "reason": "Manually checked identical name/title field(s): “John Coltrane”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0157",
+    "reason": "Manually checked identical name/title field(s): “Dave Brubeck”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0158",
+    "reason": "Manually checked identical name/title field(s): “Ornette Coleman”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0159",
+    "reason": "Manually checked identical name/title field(s): “Thelonious Monk”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0160",
+    "reason": "Orval Faubus’s becomes Orval Faubusi and Fables of Faubus takes the Estonian case form Faubuse. Both prompts preserve the Arkansas governor and opposition to racial integration."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0160",
+    "reason": "Manually checked identical name/title field(s): “Charles Mingus”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0191",
+    "reason": "The Swan becomes „Luik”/„Luige” and The Carnival of the Animals becomes „Loomade karneval”. Both explanations preserve Saint-Saëns, solo cello and two accompanying pianos."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0192",
+    "reason": "The Swan of Tuonela is conventionally „Toonela luik” with locative „Toonela luiges”, and Sibelius takes Sibeliuse. English horn is accurately inglissarv, preserving the featured solo."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0193",
+    "reason": "Prokofiev’s Peter and the Wolf becomes Prokofjevi „Petja ja hunt” in the inflected title „Petjas ja hundis”. Both versions preserve the duck and double-reed identification."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0194",
+    "reason": "Rimsky-Korsakov becomes Rimski-Korsakov, Flight of the Bumblebee becomes „Kimalase lend” and The Tale of Tsar Saltan becomes „Muinasjutt tsaar Saltanist”. Both versions preserve the opera relationship."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0195",
+    "reason": "Manually checked identical name/title field(s): “Ludwig Wittgenstein”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0235",
+    "reason": "Manually checked identical name/title field(s): “Rob Reiner”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0241",
+    "reason": "Sixth Symphony becomes kuues sümfoonia, Beethoven’s becomes Beethoveni and Pastoral becomes „Pastoraalne”. Both versions preserve the storm and shepherds’ thanksgiving."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0242",
+    "reason": "Unfinished Symphony becomes „Lõpetamata sümfoonia” with normal case forms. Schubert takes Schuberti; both prompts contrast the completed movements with the usual four."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0243",
+    "reason": "Enigma Variations becomes „Enigma variatsioonid”. Both versions preserve Elgar’s dedication to the friends pictured within the work."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0244",
+    "reason": "Mahler’s Second Symphony becomes Mahleri teine sümfoonia and Resurrection Symphony becomes „Ülestõusmissümfoonia”. Both prompts ask for the same after-death event."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-music-all-level-expansion-0245",
+    "reason": "Holyrood Palace becomes Holyroodi palee, Mendelssohn’s Third Symphony becomes Mendelssohni kolmas sümfoonia, and Scottish Symphony becomes „Šoti sümfoonia”. The chapel, Edinburgh visit and country question are preserved."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-music-all-level-expansion-0249",
+    "reason": "Manually checked identical name/title field(s): “Mongo Santamaría”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-film-television-playable-corpus-012",
+    "reason": "Manually checked identical name/title field(s): “Kill Bill”; “Kill Bill: Volume 1”; “Kill Bill Vol. 1”; “Kill Bill Volume 1”; “Kill Bill: Volume 2”; “Kill Bill Vol. 2”; “Kill Bill Volume 2”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-playable-corpus-019",
+    "reason": "28 Days Later is accurately „28 päeva hiljem”. Both explanations retain Jim and 28 days after the infected chimpanzees were released."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-playable-corpus-023",
+    "reason": "Miles Morales takes Moralesi and Spider-Man becomes Ämblikmees. The film’s Estonian title is „Ämblikmees: Uus universum”, with original Spider-Verse aliases retained. CGI is accurately arvutigraafika; the 2018 date and line, paint and comic-dot technique are preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-026",
+    "reason": "The Fellowship of the Ring becomes „Sõrmuse vennaskond”, The Lord of the Rings becomes Sõrmuste isand and Mount Doom becomes Hukatuse mägi. Peter Jackson and Frodo Baggins retain names with Estonian endings; both prompts ask the first trilogy film. Category “Film & Television: Fantasy Films” → “Film ja televisioon: Fantaasiafilmid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-playable-corpus-192",
+    "reason": "France’s Atlantic coast becomes Prantsusmaa Atlandi rannik and Fort Boyard’s becomes „Fort Boyardi”. Both versions preserve the fortress, physical and mental trials and treasure-room finale."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-film-television-playable-corpus-192",
+    "reason": "Manually checked identical name/title field(s): “Fort Boyard”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-accessible-corpus-100",
+    "reason": "The Greatest Showman is conventionally „Suurim showmees”, with the inflected „Suurima showmehe” in the explanation. Both versions preserve the ensemble’s self-acceptance song context. Category “Film & Television: Memorable Film Music” → “Film ja televisioon: Meeldejääv filmimuusika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-easy-expansion-089",
+    "reason": "The Bold and the Beautiful is conventionally „Vaprad ja ilusad”. Forrester family becomes Forresterite pere and Los Angeles takes Los Angeleses; both versions preserve the fashion business and relationships. Category “Television Classics of the 1980s and 1990s” → “1980. ja 1990. aastate teleklassika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-easy-expansion-090",
+    "reason": "Twins Brandon and Brenda Walsh becomes Kaksikud Brandon ja Brenda Walsh. Minnesota and California have Estonian case forms Minnesotast/Californiasse. The 1980s/1990s television category and wealthy high-school context are fully translated. Category “Television Classics of the 1980s and 1990s” → “1980. ja 1990. aastate teleklassika” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-film-television-easy-expansion-090",
+    "reason": "Manually checked identical name/title field(s): “Beverly Hills, 90210”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0086",
+    "reason": "The X-Files is conventionally „Salatoimikud”, with locative „Salatoimikutes”. Dana Scully and FBI are retained; both versions ask her medical qualification and explain that she is also an FBI agent."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0087",
+    "reason": "Sherlock Holmes’s becomes Sherlock Holmesi. BBC is retained and both prompts ask the first name of the same elder brother."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0090",
+    "reason": "Murder, She Wrote is conventionally „Mõrv sai teoks”. Jessica Fletcher is retained; both prompts ask her writing profession while she is not solving crimes."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0126",
+    "reason": "Jane Austen becomes Jane Austeni and Beverly Hills becomes Beverly Hillsi. Clueless retains its original film title; both prompts ask the same adapted novel."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0127",
+    "reason": "10 Things I Hate About You becomes „10 põhjust sind vihata”, The Taming of the Shrew becomes „Tõrksa taltsutus”, and Shakespeare takes Shakespeare’i. Both versions preserve the school-romance adaptation."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0128",
+    "reason": "Apocalypse Now is conventionally „Tänapäeva apokalüpsis”, Vietnam War becomes Vietnami sõda and Joseph Conrad takes Conradi. Heart of Darkness becomes „Pimeduse süda” in the inflected form „Pimeduse südamest”; the Congo-to-Vietnam adaptation is preserved."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0129",
+    "reason": "Charles Dickens takes Charles Dickensi and Dickens’s Oliver Twist becomes Dickensi „Oliver Twisti”. Oliver! retains its musical title; both versions preserve the orphan and criminal gang."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0130",
+    "reason": "King Lear becomes „Kuningas Lear”, Shakespeare takes Shakespeare’i and Ran takes „Ranis”. Akira Kurosawa is retained; both explanations preserve replacing daughters with sons."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-film-television-all-level-expansion-0138",
+    "reason": "The Mist is conventionally „Udu” and Frank Darabont takes Darabonti. The Estonian prompt intentionally describes the concealing phenomenon rather than printing the response word udu; its explanation preserves the supernatural fog and supermarket confinement. Category “Stories in Confined Spaces” → “Lood piiratud ruumis” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-159",
+    "reason": "CATAN becomes Catani through normal capitalization and Estonian case. Both prompts identify terrain with neither a production number nor a resource; Around the Game Table is accurately Ümber mängulaua. Category “Sports & Games: Around the Game Table” → “Sport ja mängud: Ümber mängulaua” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-013",
+    "reason": "Mario Götze’s becomes Mario Götze. Both prompts preserve the extra-time goal and 2014 trophy; Football World Cup Nations is accurately Jalgpalli maailmameistrivõistluste riigid. Category “Sports & Games: Football World Cup Nations” → “Sport ja mängud: Jalgpalli maailmameistrivõistluste riigid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-015",
+    "reason": "South American becomes Lõuna-Ameerika and Montevideo’s Estadio Centenario becomes Montevideo Estadio Centenariol. Both versions preserve the inaugural 1930 host/winner and final venue. Category “Sports & Games: Football World Cup Nations” → “Sport ja mängud: Jalgpalli maailmameistrivõistluste riigid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-027",
+    "reason": "French Open becomes Prantsusmaa lahtised, Tennis Grand Slams becomes tennise suure slämmi turniirid, Paris becomes Pariisi and Roland-Garros takes Roland-Garrosi. Both versions preserve the red-clay major. Category “Sports & Games: Tennis Grand Slams” → “Sport ja mängud: Tennise suure slämmi turniirid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-030",
+    "reason": "Calendar Grand Slam becomes kalendriaasta suure slämmi võit. Both explanations explicitly preserve all four major singles titles within one calendar year; the translated category uses suure slämmi turniirid. Category “Sports & Games: Tennis Grand Slams” → “Sport ja mängud: Tennise suure slämmi turniirid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-018",
+    "reason": "Australian becomes Austraalia. Both prompts preserve Sydney 2000, lighting the opening-ceremony cauldron and winning the women’s 400 metres; the Olympic-stories title is translated. Category “Olympic Stories That Made History” → “Ajalukku läinud olümpialood” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-playable-corpus-018",
+    "reason": "Manually checked identical name/title field(s): “Cathy Freeman”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-040",
+    "reason": "The Game of Life is rendered Elumäng. Both explanations describe the same board-game life choices and chance events; the category is translated Lauamängud mängulaual olevate esemete järgi. Category “Board Games from the Pieces on the Table” → “Lauamängud mängulaual olevate esemete järgi” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-059",
+    "reason": "FIBA is retained, and Rules That Stop the Action becomes Reeglid, mis mängu peatavad. Both prompts preserve expiry of shooting time, release before the signal, and the ball then touching the rim or entering the basket. Category “Rules That Stop the Action” → “Reeglid, mis mängu peatavad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-064",
+    "reason": "Dutch Formula One becomes Hollandi vormel 1 and Max Verstappen’s becomes Max Verstappeni. Both versions preserve the controversial 2021 Abu Dhabi final-lap pass and first championship. Category “Formula One Household Names” → “Vormel 1 üldtuntud nimed” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-playable-corpus-064",
+    "reason": "Manually checked identical name/title field(s): “Max Verstappen”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-playable-corpus-126",
+    "reason": "Manually checked identical name/title field(s): “Dungeons & Dragons”; “Dungeons and Dragons”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-142",
+    "reason": "Microsoft becomes Microsofti and Kinect becomes Kinecti. Xbox 360 is retained; both prompts preserve the 2005 launch and later controller-free motion system. The console-generation category is translated. Category “Consoles That Defined a Generation” → “Konsoolid, mis määrasid põlvkonna” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-playable-corpus-147",
+    "reason": "Manually checked identical name/title field(s): “Street Fighter II”; “Street Fighter 2”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-057",
+    "reason": "French term becomes prantsuskeelne termin and Road Cycling becomes maanteerattasõit. Both prompts describe the main group of riders travelling together. Category “Sports & Games: Road Cycling” → “Sport ja mängud: Maanteerattasõit” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-112",
+    "reason": "Mushroom Kingdom becomes Seenekuningriik and Princess Toadstool becomes printsess Toadstool. Mario and Nintendo are retained; both prompts preserve the 1985 platform-game rescue. Category “Sports & Games: Classic Video Games” → “Sport ja mängud: Klassikalised videomängud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-accessible-corpus-112",
+    "reason": "Manually checked identical name/title field(s): “Super Mario Bros.”; “Super Mario Brothers”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-accessible-corpus-116",
+    "reason": "Stone Age becomes kiviaegne. Both prompts preserve the 1997 real-time strategy game and advancement of the tribe through ancient ages; Video Games of the 1990s is translated. Category “Sports & Games: Video Games of the 1990s” → “Sport ja mängud: 1990. aastate videomängud” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-accessible-corpus-116",
+    "reason": "Manually checked identical name/title field(s): “Age of Empires”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-playable-corpus-327",
+    "reason": "Harmonix becomes Harmonixi. Both prompts preserve the 2007 rhythm-game series, guitar, bass, drums and microphone; Music Games from the Controller becomes Muusikamängud juhtimisviisi järgi. Category “Music Games from the Controller” → “Muusikamängud juhtimisviisi järgi” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-playable-corpus-327",
+    "reason": "Manually checked identical name/title field(s): “Rock Band”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-easy-expansion-083",
+    "reason": "Alexander Ovechkin is conventionally transliterated Aleksandr Ovetškin. Russian becomes Venemaa and Washington Capitals takes Capitalsi. Great Eight is retained and also translated Suur Kaheksa; the same player is identified. Category “Ice-Hockey Stars” → “Jäähokitähed” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0024",
+    "reason": "Manually checked identical name/title field(s): “Aku Aku”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0027",
+    "reason": "Caribbean becomes Kariibi mere. Usain Bolt is retained and both prompts ask the country represented in his Olympic sprint victories; the athletics category is accurately translated. Category “Athletics Around the Track and Field” → “Kergejõustik rajal ja väljakul” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0071",
+    "reason": "Australian becomes Austraalia, Summer Olympics becomes suveolümpiamängud and Southern Hemisphere becomes lõunapoolkera. Melbourne and 1956 are retained; the host-city/ceremony title is translated. Category “Olympic Host Cities and Their Ceremonies” → “Olümpialinnad ja nende tseremooniad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0072",
+    "reason": "Summer Olympics becomes suveolümpiamängud, and Asia becomes Aasia. Tokyo and 1964 are retained; both prompts preserve the first Asian Summer Games. Category “Olympic Host Cities and Their Ceremonies” → “Olümpialinnad ja nende tseremooniad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0073",
+    "reason": "Barcelona’s Olympic cauldron becomes Barcelona olümpiakatel. Antonio Rebollo is retained; both prompts ask the same flaming projectile aimed toward the cauldron. Category “Olympic Host Cities and Their Ceremonies” → “Olümpialinnad ja nende tseremooniad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0074",
+    "reason": "Queen Elizabeth II becomes kuninganna Elizabeth II and The London opening ceremony becomes Londoni avatseremoonia. James Bond is retained with the ending Bondiga; both versions preserve the filmed escort scene. Category “Olympic Host Cities and Their Ceremonies” → “Olümpialinnad ja nende tseremooniad” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0074",
+    "reason": "Manually checked identical name/title field(s): “James Bond”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0103",
+    "reason": "United States becomes Ameerika Ühendriigid and The Solheim Cup becomes Solheim Cup with the case ending Cupil. Both versions preserve the biennial Europe-versus-US women’s golf teams. Category “Cups Beyond the Usual Shelf” → “Karikad tavalisest riiulist kaugemal” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0113",
+    "reason": "Team Europe and Team World become Euroopa võistkond and maailma võistkond. The Laver Cup retains Laver Cup with the ending Cupil; both versions preserve the men’s team-tennis matchup. Category “Tennis Cups and Court Rules” → “Tennisekarikad ja väljakureeglid” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0121",
+    "reason": "North American becomes Põhja-Ameerika and Scrabble takes Scrabble’i. Both versions preserve all tiles from a full rack played in a single bonus-scoring turn; the turn-rule category is translated. Category “Rules That Change a Turn” → “Reeglid, mis muudavad käiku” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0173",
+    "reason": "Uwe Rosenberg becomes Uwe Rosenbergi. Both prompts preserve the farming game’s two family members, two-room wooden hut and feeding requirement; the table-worlds category is translated. Category “Different Worlds on the Table” → “Erinevad maailmad laual” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0207",
+    "reason": "British becomes Briti. Both prompts preserve the first legal eighteen-metre triple jump and 1995 world title with two world records; Track and Field Have Their Stories is translated Kergejõustikualadel on oma lood. Category “Track and Field Have Their Stories” → “Kergejõustikualadel on oma lood” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0207",
+    "reason": "Manually checked identical name/title field(s): “Jonathan Edwards”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0208",
+    "reason": "American becomes Ameerika. Both prompts preserve four consecutive Olympic discus gold medals from Melbourne through Mexico City, with normal Estonian case endings. Category “Track and Field Have Their Stories” → “Kergejõustikualadel on oma lood” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0208",
+    "reason": "Manually checked identical name/title field(s): “Al Oerter”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-sports-games-all-level-expansion-0209",
+    "reason": "British becomes Briti and Moscow Olympic title becomes Moskva olümpiatiitel. Los Angeles takes Los Angeleses; both prompts preserve the 1984 title defence. Category “Track and Field Have Their Stories” → “Kergejõustikualadel on oma lood” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0209",
+    "reason": "Manually checked identical name/title field(s): “Daley Thompson”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-sports-games-all-level-expansion-0240",
+    "reason": "Manually checked identical name/title field(s): “Zola Budd”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0066",
+    "reason": "Beethoven’s Ninth Symphony becomes Beethoveni üheksas sümfoonia, Schiller’s Ode to Joy becomes Schilleri „Ood rõõmule”, and Choral Symphony becomes Koraalsümfoonia. Both versions preserve the final-movement choral setting and ninth-symphony number."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0089",
+    "reason": "What English term is accurately millise ingliskeelse nimetusega. Both prompts explicitly request the English technique name, and the monitor-to-film recording method is translated. Television Recorded on Film becomes Televisioon filmilindil. Category “Television Recorded on Film” → “Televisioon filmilindil” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-finals-final-0089",
+    "reason": "Both prompts explicitly ask for the English technical name “kinescope recording”; it is intentionally retained in the Estonian answer. The recording process and explanation are translated, avoiding confusion with Estonian kineskoop, the display tube."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0094",
+    "reason": "The Tour de France retains the race’s proper name Tour de France with Estonian case forms; the English article The is omitted naturally. The Yellow Jersey becomes Kollane särk, and both versions preserve the general-classification leader. Category “The Yellow Jersey” → “Kollane särk” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-finals-final-0124",
+    "reason": "The Manchester Baby retains its established nickname Manchester Baby without the English article. A British Computer Experiment is accurately Briti arvutikatsetus; both explanations preserve the first stored electronic program and 1948. Category “A British Computer Experiment” → “Briti arvutikatsetus” is a faithful localized topic title."
+  },
+  {
+    "id": "translation:UNCHANGED_TRANSLATION:built-in-finals-final-0124",
+    "reason": "Manually checked identical name/title field(s): “Small-Scale Experimental Machine”. These are the same artist/person, place, work, game or formal machine name in both languages; the surrounding question and explanation are translated. Retaining these exact identifiers preserves the intended answer."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-accessible-corpus-139",
+    "reason": "Paris World Exposition becomes Pariisi maailmanäitus and Finnish becomes Soome. Iittala is retained as the maker. Aalto vase and Savoy vase are translated Aalto vaas and Savoy vaas with the case form vaasiks in the explanation. Both languages preserve the wavy glass form, 1937 Paris exhibition and the same object. Design Objects at Home is faithfully Disainesemed kodus."
+  },
+  {
+    "id": "translation:SUSPICIOUS_PROPER_NOUN_CHANGE:built-in-art-architecture-all-level-expansion-0191",
+    "reason": "Sydney Opera House is conventionally Sydney ooperimaja and Utzon’s becomes Utzon with Estonian sentence grammar. Both languages preserve the final roof-shell solution based on sections of a sphere/sfäär. Ideas and People Behind Architecture is accurately Arhitektuuri ideed ja inimesed. The localized building name and translated title do not change an entity or identifying fact."
+  }
+]

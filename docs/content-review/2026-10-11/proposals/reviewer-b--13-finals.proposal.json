@@ -1,0 +1,102 @@
+{
+  "questions": [
+    {
+      "clueId": "built-in-finals-final-0089",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "What English term names the technique used to preserve early live television by filming the image on a monitor onto film?",
+        "clue_et": "Millise ingliskeelse nimetusega võtet kasutati varajaste otsetelesaadete säilitamiseks, filmides monitoripildi filmilindile?",
+        "response_en": "kinescope recording",
+        "response_et": "kinescope recording",
+        "accepted_variants_en": "kinescope;teletranscription",
+        "accepted_variants_et": "kinescope;teletranscription",
+        "explanation_en": "Kinescope recording preserved a television image by photographing it from a monitor onto motion-picture film.",
+        "explanation_et": "Kinescope recording tähendab telepildi jäädvustamist monitorilt filmikaameraga filmilindile."
+      },
+      "reviewNotes": "Asks explicitly for the English name in both languages because EKI kineskoop denotes a display tube; no verified standard Estonian recording-term equivalent was found. The English recording term is sourced directly to the Library of Congress, with newly authored explanation. Existing factual-source metadata remains in place.",
+      "sourceVerification": [
+        {
+          "url": "https://www.loc.gov/static/programs/national-film-preservation-board/documents/tvlc.pdf",
+          "observation": "Library of Congress describes filming a television monitor with a motion-picture camera and calls the result a kinescope recording."
+        },
+        {
+          "url": "https://sonaveeb.ee/search/unif/est%2Crus/eki/kineskoop/1/est?uilang=en",
+          "observation": "EKI defines Estonian kineskoop as the older display component converting an electron-beam signal into a visible image."
+        }
+      ]
+    },
+    {
+      "clueId": "built-in-finals-final-0094",
+      "batchId": "13-finals",
+      "changes": {
+        "clue_en": "Which annual three-week cycling stage race, held mainly in France, awards a yellow jersey to the overall leader?",
+        "clue_et": "Millises iga-aastases peamiselt Prantsusmaal peetavas kolmenädalases mitmepäevases jalgrattavõistluses kannab üldliider kollast särki?"
+      },
+      "reviewNotes": "Adds the French three-week race context to distinguish other races with yellow leader jerseys. Existing source metadata retained; organizer pages corroborate the yellow-jersey rule and three-week format.",
+      "sourceVerification": [
+        {
+          "url": "https://www.letour.fr/en/the-jerseys-tour-de-france/the-yellow-jersey",
+          "observation": "Organizer identifies the yellow jersey as the individual general-classification leader’s jersey."
+        },
+        {
+          "url": "https://www.letour.fr/en/news/2026/how-to-follow-the-tour-1/1333178",
+          "observation": "Organizer’s 2026 race guide describes three weeks and 21 stages."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": "built-in-finals-final-set-0066",
+      "batchId": "13-finals",
+      "changes": {
+        "category_name_en": "Music and Joy",
+        "category_name_et": "Muusika ja rõõm"
+      },
+      "reviewNotes": "Removes the requested symphony number and all response aliases from the title."
+    },
+    {
+      "categoryId": "built-in-finals-final-set-0124",
+      "batchId": "13-finals",
+      "changes": {
+        "category_name_en": "A British Computer Experiment",
+        "category_name_et": "Briti arvutikatsetus"
+      },
+      "reviewNotes": "Removes the Manchester Baby nickname from the title."
+    }
+  ],
+  "resolutions": [
+    {
+      "findingId": "ROOT-FINALS-002",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0066"
+      ],
+      "reason": "Neutral music-and-joy title no longer gives Ninth."
+    },
+    {
+      "findingId": "B-FINAL-001",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0124"
+      ],
+      "reason": "Neutral title no longer supplies Baby."
+    },
+    {
+      "findingId": "ROOT-FINALS-003",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0089"
+      ],
+      "reason": "Both languages now request the sourced English recording-technique term; the false CRT-device translation is removed."
+    },
+    {
+      "findingId": "ROOT-FINALS-004",
+      "status": "fixed",
+      "clueIds": [
+        "built-in-finals-final-0094"
+      ],
+      "reason": "France and three-week stage-race format distinguish the Tour de France from the Tour de Suisse."
+    }
+  ]
+}

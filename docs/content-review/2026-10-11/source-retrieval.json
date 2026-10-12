@@ -1,0 +1,1629 @@
+{
+  "checkedAt": "2026-10-11T16:38:07.974Z",
+  "results": [
+    {
+      "url": "https://agriculture.gouv.fr/le-brie-de-meaux-et-le-brie-de-melun-les-deux-fromages-aop-de-la-region-parisienne",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:11.470Z",
+      "code": null,
+      "finalUrl": "https://agriculture.gouv.fr/le-brie-de-meaux-et-le-brie-de-melun-les-deux-fromages-aop-de-la-region-parisienne"
+    },
+    {
+      "url": "https://almanac.upenn.edu/archive/v42/n18/eniac.html",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://almanac.upenn.edu/archive/v42/n18/eniac.html"
+    },
+    {
+      "url": "https://americanhistory.si.edu/explore/exhibitions/inventing-in-america/innovation-prototypes-II",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://americanhistory.si.edu/explore/exhibitions/inventing-in-america/innovation-prototypes-II"
+    },
+    {
+      "url": "https://arvamusfestival.ee/mis-on-arvamusfestival/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:11.791Z",
+      "code": null,
+      "finalUrl": "https://arvamusfestival.ee/mis-on-arvamusfestival/"
+    },
+    {
+      "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:11.507Z",
+      "code": null,
+      "finalUrl": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf"
+    },
+    {
+      "url": "https://australian.museum/learn/animals/mammals/platypus/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.076Z",
+      "code": null,
+      "finalUrl": "https://australian.museum/learn/animals/mammals/platypus/"
+    },
+    {
+      "url": "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:11.474Z",
+      "code": null,
+      "finalUrl": "https://blog.scienceandmediamuseum.org.uk/the-story-of-the-cottingley-fairies-shows-that-image-manipulation-is-nothing-new/"
+    },
+    {
+      "url": "https://blog.tivo.com/tivo-for-consumer/celebrating-25-years-of-tivotainment/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.673Z",
+      "code": null,
+      "finalUrl": "https://blog.tivo.com/tivo-for-consumer/celebrating-25-years-of-tivotainment/"
+    },
+    {
+      "url": "https://brunswick.ces.ncsu.edu/news/basil-and-pesto/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.116Z",
+      "code": null,
+      "finalUrl": "https://brunswick.ces.ncsu.edu/news/basil-and-pesto/"
+    },
+    {
+      "url": "https://captown.capcom.com/en/classic_games/23",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://captown.capcom.com/en/classic_games/23"
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co50928",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://collection.sciencemuseumgroup.org.uk/objects/co50928"
+    },
+    {
+      "url": "https://dev.goturkiye.com/branding/press-releases/istanbuls-grand-bazaar-hosts-almost-40-million-visitors-in-2022",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://dev.goturkiye.com/branding/press-releases/istanbuls-grand-bazaar-hosts-almost-40-million-visitors-in-2022"
+    },
+    {
+      "url": "https://dictionary.apa.org/attachment-theory",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:11.939Z",
+      "code": null,
+      "finalUrl": "https://dictionary.apa.org/attachment-theory"
+    },
+    {
+      "url": "https://dictionary.apa.org/eriksons-eight-stages-of-psychosocial-development",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.284Z",
+      "code": null,
+      "finalUrl": "https://dictionary.apa.org/eriksons-eight-stages-of-psychosocial-development"
+    },
+    {
+      "url": "https://dictionary.apa.org/positive-regard",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.633Z",
+      "code": null,
+      "finalUrl": "https://dictionary.apa.org/positive-regard"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/%C3%9Clo_%C3%95un",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.140Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/%C3%9Clo_%C3%95un"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Alfred_Nobel",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T12:53:15.927Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Alfred_Nobel"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Alvar",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.232Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Alvar"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Asteroid",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.331Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Asteroid"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Aurora",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:15:54.604Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Aurora"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.419Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Baltic_Sea"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Barometer",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:16:40.718Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Barometer"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Biodiversity",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.516Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Biodiversity"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:21:25.686Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cloudberry",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.526Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Cloudberry"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Coriolis_force",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:22:51.269Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Coriolis_force"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Diamond",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.611Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Diamond"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dragonfly",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:25:34.059Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Dragonfly"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Eat_Pray_Love_(book)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:44.904Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Eat_Pray_Love_(book)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Estonian_grammar",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:28:02.529Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Estonian_grammar"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Fable",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:45.001Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Fable"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Fjord",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T13:18:40.666Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Fjord"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Graphene",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:45.103Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Graphene"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.696Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Gravity"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Gulf_of_Riga",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T13:18:42.172Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Gulf_of_Riga"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/HMS_Beagle",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:33:38.755Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/HMS_Beagle"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Helium",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:34:20.741Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Helium"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Helsinki",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.781Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Helsinki"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Hemodialysis",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:34:21.092Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Hemodialysis"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Io_(moon)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:36:12.011Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Io_(moon)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Jupiter",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:45.189Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Jupiter"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Jutland",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.865Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Jutland"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Kaali_crater",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:37:10.417Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Kaali_crater"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Knights_Hospitaller",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.952Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Knights_Hospitaller"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/LP_record",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.049Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/LP_record"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Lake_%C3%9Clemiste",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.653Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Lake_%C3%9Clemiste"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Maiasmokk",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.742Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Maiasmokk"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Melatonin",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:42:21.811Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Melatonin"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mercury_(element)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.828Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Mercury_(element)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Methane",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.914Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Methane"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Morse_code",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:43:40.571Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Morse_code"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ozone",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.000Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Ozone"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Palmse",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.093Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Palmse"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Peace_of_Westphalia",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.177Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Peace_of_Westphalia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Pergamon",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.927Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Pergamon"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Pompeii",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:49:42.962Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Pompeii"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Pony_Express",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.014Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Pony_Express"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Puff_pastry",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.098Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Puff_pastry"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rainbow",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T13:44:46.787Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Rainbow"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rapla_KK",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.545Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Rapla_KK"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Speak,_Memory",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:45.279Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Speak,_Memory"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sublimation_(phase_transition)",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-09T10:57:40.940Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Sublimation_(phase_transition)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tallinn",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.627Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Tallinn"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Urmo_Aava",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.870Z",
+      "code": null,
+      "finalUrl": "https://en.wikipedia.org/wiki/Urmo_Aava"
+    },
+    {
+      "url": "https://fallingwater.org/history/the-kaufmanns-fallingwater/designing-fallingwater/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.022Z",
+      "code": null,
+      "finalUrl": "https://fallingwater.org/history/the-kaufmanns-fallingwater/designing-fallingwater/"
+    },
+    {
+      "url": "https://family.20thcenturystudios.com/movies/the-greatest-showman",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.524Z",
+      "code": null,
+      "finalUrl": "https://family.20thcenturystudios.com/movies/the-greatest-showman"
+    },
+    {
+      "url": "https://finland.fi/arts-culture/finlandia-by-jean-sibelius/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.060Z",
+      "code": null,
+      "finalUrl": "https://finland.fi/arts-culture/finlandia-by-jean-sibelius/"
+    },
+    {
+      "url": "https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.506Z",
+      "code": null,
+      "finalUrl": "https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf"
+    },
+    {
+      "url": "https://fromm-online.org/en/life/important-dates/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.762Z",
+      "code": null,
+      "finalUrl": "https://fromm-online.org/en/life/important-dates/"
+    },
+    {
+      "url": "https://ftvpro.francetv.fr/contenu-de-presse/77525145",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.292Z",
+      "code": null,
+      "finalUrl": "https://ftvpro.francetv.fr/contenu-de-presse/77525145"
+    },
+    {
+      "url": "https://games.tactic.net/en/tuote/original-alias/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.654Z",
+      "code": null,
+      "finalUrl": "https://games.tactic.net/en/tuote/original-alias/"
+    },
+    {
+      "url": "https://gear.bethesda.net/products/classic-doom-helmet-collector-s-bundle",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.857Z",
+      "code": null,
+      "finalUrl": "https://gear.bethesda.net/products/classic-doom-helmet-collector-s-bundle"
+    },
+    {
+      "url": "https://handbook.fide.com/chapter/e012023",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:12.979Z",
+      "code": null,
+      "finalUrl": "https://handbook.fide.com/chapter/e012023"
+    },
+    {
+      "url": "https://hirshhorn.si.edu/kusama/infinity-rooms/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://hirshhorn.si.edu/kusama/infinity-rooms/"
+    },
+    {
+      "url": "https://home.cern/science/computing/the-birth-of-the-web/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.464Z",
+      "code": null,
+      "finalUrl": "https://home.cern/science/computing/the-birth-of-the-web/"
+    },
+    {
+      "url": "https://humanidades.pucmm.edu.do/comunicacion/Documents/publicaciones/revista/CASABE%20ENTREGA.pdf",
+      "ok": false,
+      "status": null,
+      "retrievedAt": null,
+      "code": "SOURCE_REQUEST_FAILED",
+      "finalUrl": "https://humanidades.pucmm.edu.do/comunicacion/Documents/publicaciones/revista/CASABE%20ENTREGA.pdf"
+    },
+    {
+      "url": "https://jr.nba.com/how-to-shoot-a-jump-shot/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.873Z",
+      "code": null,
+      "finalUrl": "https://jr.nba.com/how-to-shoot-a-jump-shot/"
+    },
+    {
+      "url": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:13.709Z",
+      "code": null,
+      "finalUrl": "https://kosmos.ut.ee/en/news/ut-tartu-observatory-develop-estcube-3-satellite-support-european-space-agency"
+    },
+    {
+      "url": "https://magazine.amstat.org/blog/2026/01/01/statistics-january/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://magazine.amstat.org/blog/2026/01/01/statistics-january/"
+    },
+    {
+      "url": "https://makingscience.royalsociety.org/items/el_l1_69/letter-from-antoni-van-leeuwenhoek-to-francis-aston-dated-at-delft",
+      "ok": false,
+      "status": null,
+      "retrievedAt": null,
+      "code": "SOURCE_REQUEST_FAILED",
+      "finalUrl": "https://makingscience.royalsociety.org/items/el_l1_69/letter-from-antoni-van-leeuwenhoek-to-francis-aston-dated-at-delft"
+    },
+    {
+      "url": "https://mathworld.wolfram.com/Cylinder.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.236Z",
+      "code": null,
+      "finalUrl": "https://mathworld.wolfram.com/Cylinder.html"
+    },
+    {
+      "url": "https://media.nhl.com/site/vasset/public/attachments/2019/04/13098/Regular%20Season%20Recap%20-%20Chapter%202.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.024Z",
+      "code": null,
+      "finalUrl": "https://media.nhl.com/site/vasset/public/attachments/2019/04/13098/Regular%20Season%20Recap%20-%20Chapter%202.pdf"
+    },
+    {
+      "url": "https://news.gallup.com/opinion/polling-matters/169682/years-ago-first-gallup-poll.aspx",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.615Z",
+      "code": null,
+      "finalUrl": "https://news.gallup.com/opinion/polling-matters/169682/years-ago-first-gallup-poll.aspx"
+    },
+    {
+      "url": "https://news.microsoft.com/source/1997/10/23/microsoft-age-of-empires-close-combat-a-bridge-too-far-and-sidewinder-precision-pro-hit-street/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.386Z",
+      "code": null,
+      "finalUrl": "https://news.microsoft.com/source/1997/10/23/microsoft-age-of-empires-close-combat-a-bridge-too-far-and-sidewinder-precision-pro-hit-street/"
+    },
+    {
+      "url": "https://news.xbox.com/en-us/2016/04/20/xbox-360-celebrating-10-years/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.456Z",
+      "code": null,
+      "finalUrl": "https://news.xbox.com/en-us/2016/04/20/xbox-360-celebrating-10-years/"
+    },
+    {
+      "url": "https://newsroom.hasbro.com/node/35026/pdf",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://newsroom.hasbro.com/node/35026/pdf"
+    },
+    {
+      "url": "https://parisjetaime.com/eng/shopping/marche-biron-p4073",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://parisjetaime.com/eng/shopping/marche-biron-p4073"
+    },
+    {
+      "url": "https://philharmonia.co.uk/resources/instruments/percussion/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.011Z",
+      "code": null,
+      "finalUrl": "https://philharmonia.co.uk/resources/instruments/percussion/"
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/leucippus/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.995Z",
+      "code": null,
+      "finalUrl": "https://plato.stanford.edu/entries/leucippus/"
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/plato-friendship/index.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.462Z",
+      "code": null,
+      "finalUrl": "https://plato.stanford.edu/entries/plato-friendship/index.html"
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?gl=gb&hl=en-gb&id=me.pou.app",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.652Z",
+      "code": null,
+      "finalUrl": "https://play.google.com/store/apps/details?gl=gb&hl=en-gb&id=me.pou.app"
+    },
+    {
+      "url": "https://player.bfi.org.uk/rentals/film/watch-the-blair-witch-project-1999-online",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.008Z",
+      "code": null,
+      "finalUrl": "https://player.bfi.org.uk/rentals/film/watch-the-blair-witch-project-1999-online"
+    },
+    {
+      "url": "https://pontdugard.fr/en/discover/monument",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:14.931Z",
+      "code": null,
+      "finalUrl": "https://pontdugard.fr/en/discover/monument"
+    },
+    {
+      "url": "https://portal.usahockey.com/forms/learn-to-skate-program.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.651Z",
+      "code": null,
+      "finalUrl": "https://portal.usahockey.com/forms/learn-to-skate-program.pdf"
+    },
+    {
+      "url": "https://professional.dolby.com/siteassets/content-creation/dolby-atmos/why-dolby-atmos-white-paper.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.171Z",
+      "code": null,
+      "finalUrl": "https://professional.dolby.com/siteassets/content-creation/dolby-atmos/why-dolby-atmos-white-paper.pdf"
+    },
+    {
+      "url": "https://pubs.usgs.gov/myb/vol1/2019/myb1-2019-pumice.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:48.328Z",
+      "code": null,
+      "finalUrl": "https://pubs.usgs.gov/myb/vol1/2019/myb1-2019-pumice.pdf"
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/outlook/mail/save-an-outlook-message-as-a-eml-file-a-pdf-file-or-as-a-draft",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.293Z",
+      "code": null,
+      "finalUrl": "https://support.microsoft.com/en-us/outlook/mail/save-an-outlook-message-as-a-eml-file-a-pdf-file-or-as-a-draft"
+    },
+    {
+      "url": "https://theasc.com/article/without-fear-daredevil/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.131Z",
+      "code": null,
+      "finalUrl": "https://theasc.com/article/without-fear-daredevil/"
+    },
+    {
+      "url": "https://time.com/4728994/ellen-degeneres-1997-coming-out-cover/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:15.635Z",
+      "code": null,
+      "finalUrl": "https://time.com/4728994/ellen-degeneres-1997-coming-out-cover/"
+    },
+    {
+      "url": "https://twinings.co.uk/blogs/news/how-to-make-a-cup-of-tea-perfectly",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.010Z",
+      "code": null,
+      "finalUrl": "https://twinings.co.uk/blogs/news/how-to-make-a-cup-of-tea-perfectly"
+    },
+    {
+      "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:17.559Z",
+      "code": null,
+      "finalUrl": "https://usbgf.org/backgammon-basics-how-to-play/"
+    },
+    {
+      "url": "https://utlib.ut.ee/en/content/history-university-tartu-library",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.223Z",
+      "code": null,
+      "finalUrl": "https://utlib.ut.ee/en/content/history-university-tartu-library"
+    },
+    {
+      "url": "https://webapps.ilo.org/public/english/download/glance.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.292Z",
+      "code": null,
+      "finalUrl": "https://webapps.ilo.org/public/english/download/glance.pdf"
+    },
+    {
+      "url": "https://worldathletics.org/disciplines/jumps/high-jump",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.569Z",
+      "code": null,
+      "finalUrl": "https://worldathletics.org/disciplines/jumps/high-jump"
+    },
+    {
+      "url": "https://worldsquashofficiating.com/rules-of-squash/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.093Z",
+      "code": null,
+      "finalUrl": "https://worldsquashofficiating.com/rules-of-squash/"
+    },
+    {
+      "url": "https://www.acbl.org/learn/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.626Z",
+      "code": null,
+      "finalUrl": "https://www.acbl.org/learn/"
+    },
+    {
+      "url": "https://www.adobe.com/learn/lightroom-cc/web/make-colors-pop",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.adobe.com/learn/lightroom-cc/web/make-colors-pop"
+    },
+    {
+      "url": "https://www.bafta.org/awards/full-list-of-bafta-fellows/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.bafta.org/awards/full-list-of-bafta-fellows/"
+    },
+    {
+      "url": "https://www.bfi.org.uk/features/alien-40-ridley-scott-sigourney-weaver",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.625Z",
+      "code": null,
+      "finalUrl": "https://www.bfi.org.uk/features/alien-40-ridley-scott-sigourney-weaver"
+    },
+    {
+      "url": "https://www.bfi.org.uk/lists/10-great-robot-films",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:16.728Z",
+      "code": null,
+      "finalUrl": "https://www.bfi.org.uk/lists/10-great-robot-films"
+    },
+    {
+      "url": "https://www.canada.ca/en/health-canada/services/food-guide/eating-support/kitchen/cooking-skills/how-blanch-vegetables.html",
+      "ok": false,
+      "status": null,
+      "retrievedAt": null,
+      "code": "SOURCE_REQUEST_FAILED",
+      "finalUrl": "https://www.canada.ca/en/health-canada/services/food-guide/eating-support/kitchen/cooking-skills/how-blanch-vegetables.html"
+    },
+    {
+      "url": "https://www.catan.com/sites/default/files/2021-07/catan-25th-rules_eng-200313.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:17.804Z",
+      "code": null,
+      "finalUrl": "https://www.catan.com/sites/default/files/2021-07/catan-25th-rules_eng-200313.pdf"
+    },
+    {
+      "url": "https://www.cdc.gov/fellowships/php/training-education/index.html",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.cdc.gov/fellowships/php/training-education/index.html"
+    },
+    {
+      "url": "https://www.cheesesfromswitzerland.com/en/cheeses-from-switzerland/emmentaler-aop",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.746Z",
+      "code": null,
+      "finalUrl": "https://www.cheesesfromswitzerland.com/en/cheeses-from-switzerland/emmentaler-aop"
+    },
+    {
+      "url": "https://www.cribbage.org/NewSite/tips/glossary.asp",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:17.298Z",
+      "code": null,
+      "finalUrl": "https://www.cribbage.org/NewSite/tips/glossary.asp"
+    },
+    {
+      "url": "https://www.criterion.com/films/184-le-samoura",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.criterion.com/films/184-le-samoura"
+    },
+    {
+      "url": "https://www.criterion.com/films/317-this-is-spinal-tap",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.criterion.com/films/317-this-is-spinal-tap"
+    },
+    {
+      "url": "https://www.duomomilano.it/en/art-and-culture/the-cathedral/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:17.638Z",
+      "code": null,
+      "finalUrl": "https://www.duomomilano.it/en/art-and-culture/the-cathedral/"
+    },
+    {
+      "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.en.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:17.798Z",
+      "code": null,
+      "finalUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.en.html"
+    },
+    {
+      "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.019Z",
+      "code": null,
+      "finalUrl": "https://www.ecb.europa.eu/euro/intro/html/index.en.html"
+    },
+    {
+      "url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/voting-person",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/voting-person"
+    },
+    {
+      "url": "https://www.english-heritage.org.uk/learn/story-of-england/medieval/architecture/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.105Z",
+      "code": null,
+      "finalUrl": "https://www.english-heritage.org.uk/learn/story-of-england/medieval/architecture/"
+    },
+    {
+      "url": "https://www.eno.org/discover-opera/opera-glossary/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.364Z",
+      "code": null,
+      "finalUrl": "https://www.eno.org/discover-opera/articles/opera-glossary/"
+    },
+    {
+      "url": "https://www.fao.org/4/y5118e/y5118e04a.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.286Z",
+      "code": null,
+      "finalUrl": "https://www.fao.org/4/y5118e/y5118e04a.pdf"
+    },
+    {
+      "url": "https://www.fdic.gov/consumer-resource-center/2012-debit-credit-and-prepaid-cards-there-are-differences",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.568Z",
+      "code": null,
+      "finalUrl": "https://www.fdic.gov/consumer-resource-center/2012-debit-credit-and-prepaid-cards-there-are-differences"
+    },
+    {
+      "url": "https://www.fdjunited.com/history/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.739Z",
+      "code": null,
+      "finalUrl": "https://www.fdjunited.com/history/"
+    },
+    {
+      "url": "https://www.festival-cannes.com/en/2020/palme-d-or-the-1990s/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.430Z",
+      "code": null,
+      "finalUrl": "https://www.festival-cannes.com/en/2020/palme-d-or-the-1990s/"
+    },
+    {
+      "url": "https://www.filmratings.com/resources-faq/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.704Z",
+      "code": null,
+      "finalUrl": "https://www.filmratings.com/resources-faq/"
+    },
+    {
+      "url": "https://www.folklore.ee/Berta/tahtpaev-kadripaev.php",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:18.782Z",
+      "code": null,
+      "finalUrl": "https://www.folklore.ee/Berta/tahtpaev-kadripaev.php"
+    },
+    {
+      "url": "https://www.fortnite.com/news/fortnite-creative-v22-30-update",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.fortnite.com/news/fortnite-creative-v22-30-update"
+    },
+    {
+      "url": "https://www.gdpes.gov.af/index.php/en/node/1185",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:32.160Z",
+      "code": null,
+      "finalUrl": "https://www.gdpes.gov.af/index.php/en/node/1185"
+    },
+    {
+      "url": "https://www.ghirardelli.com/recipes/ghirardelli-recipes/classic-chocolate-brownies-rec1048",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.166Z",
+      "code": null,
+      "finalUrl": "https://www.ghirardelli.com/recipes/ghirardelli-recipes/classic-chocolate-brownies-rec1048"
+    },
+    {
+      "url": "https://www.gov.uk/government/organisations/civil-service/about",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.544Z",
+      "code": null,
+      "finalUrl": "https://www.gov.uk/government/organisations/civil-service/about"
+    },
+    {
+      "url": "https://www.govilnius.lt/api/files/5e7aa8d7aff50997346e466a",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.659Z",
+      "code": null,
+      "finalUrl": "https://www.govilnius.lt/api/files/5e7aa8d7aff50997346e466a"
+    },
+    {
+      "url": "https://www.guinnessworldrecords.com/news/icons/jeanne-calment-the-oldest-person-ever",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.950Z",
+      "code": null,
+      "finalUrl": "https://www.guinnessworldrecords.com/news/icons/jeanne-calment-the-oldest-person-ever"
+    },
+    {
+      "url": "https://www.guitarworld.com/artists/guitarists/the-story-of-guns-n-roses-sweet-child-o-mine",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:19.951Z",
+      "code": null,
+      "finalUrl": "https://www.guitarworld.com/artists/guitarists/the-story-of-guns-n-roses-sweet-child-o-mine"
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/10148/pg10148-images.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.113Z",
+      "code": null,
+      "finalUrl": "https://www.gutenberg.org/cache/epub/10148/pg10148-images.html"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.651Z",
+      "code": null,
+      "finalUrl": "https://www.gutenberg.org/files/1251/1251-h/1251-h.htm"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/5186/5186-h/5186-h.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.191Z",
+      "code": null,
+      "finalUrl": "https://www.gutenberg.org/files/5186/5186-h/5186-h.htm"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/57/57-h/57-h.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.732Z",
+      "code": null,
+      "finalUrl": "https://www.gutenberg.org/files/57/57-h/57-h.htm"
+    },
+    {
+      "url": "https://www.gutenberg.org/files/66372/66372-h/66372-h.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:38.544Z",
+      "code": null,
+      "finalUrl": "https://www.gutenberg.org/files/66372/66372-h/66372-h.htm"
+    },
+    {
+      "url": "https://www.hamhelsinki.fi/en/sculptures/sibelius-monumentti-sibelius-monument/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:20.103Z",
+      "code": null,
+      "finalUrl": "https://www.hamhelsinki.fi/en/sculptures/sibelius-monumentti-sibelius-monument/"
+    },
+    {
+      "url": "https://www.hansemuseum.eu/en/exhibition/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:50.749Z",
+      "code": null,
+      "finalUrl": "https://www.hansemuseum.eu/en/exhibition/"
+    },
+    {
+      "url": "https://www.harmonixmusic.com/games/rock-band",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:20.571Z",
+      "code": null,
+      "finalUrl": "https://www.harmonixmusic.com/games/rock-band"
+    },
+    {
+      "url": "https://www.harmonixmusic.com/past-games",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:20.743Z",
+      "code": null,
+      "finalUrl": "https://www.harmonixmusic.com/past-games"
+    },
+    {
+      "url": "https://www.hasbro.com/common/documents/DAD2886D1C4311DDBD0B0800200C9A66/F56A63AE8FA145D9B82A5FA3919CA3A5.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.614Z",
+      "code": null,
+      "finalUrl": "https://www.hasbro.com/common/documents/DAD2886D1C4311DDBD0B0800200C9A66/F56A63AE8FA145D9B82A5FA3919CA3A5.pdf"
+    },
+    {
+      "url": "https://www.hersheyland.com/stories/our-best-hot-cocoa-recipe-hacks.html",
+      "ok": false,
+      "status": 406,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.hersheyland.com/stories/our-best-hot-cocoa-recipe-hacks.html"
+    },
+    {
+      "url": "https://www.hillwood.com/newsroom/press-releases/clevon-completes-first-north-american-autonomous-delivery-in-fort-worth/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:47.555Z",
+      "code": null,
+      "finalUrl": "https://www.hillwood.com/newsroom/press-releases/clevon-completes-first-north-american-autonomous-delivery-in-fort-worth/"
+    },
+    {
+      "url": "https://www.iis.fraunhofer.de/content/dam/iis/de/doc/ame/conference/AES-17-Conference_mp3-and-AAC-explained_AES17.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.422Z",
+      "code": null,
+      "finalUrl": "https://www.iis.fraunhofer.de/content/dam/iis/de/doc/ame/conference/AES-17-Conference_mp3-and-AAC-explained_AES17.pdf"
+    },
+    {
+      "url": "https://www.ilo.org/resource/news/when-morals-become-actions-%E2%80%93-ilo%E2%80%99s-nobel-peace-prize",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.673Z",
+      "code": null,
+      "finalUrl": "https://www.ilo.org/resource/news/when-morals-become-actions-%E2%80%93-ilo%E2%80%99s-nobel-peace-prize"
+    },
+    {
+      "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.866Z",
+      "code": null,
+      "finalUrl": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+    },
+    {
+      "url": "https://www.itu.int/rec/T-REC-H.265",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:21.896Z",
+      "code": null,
+      "finalUrl": "https://www.itu.int/rec/T-REC-H.265"
+    },
+    {
+      "url": "https://www.iwbf-europe.org/wp-content/uploads/2024/09/IWBF_2024_OWBRI_ver_1_def.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:23.920Z",
+      "code": null,
+      "finalUrl": "https://www.iwbf-europe.org/wp-content/uploads/2024/09/IWBF_2024_OWBRI_ver_1_def.pdf"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/nasa-and-the-beatles-celebrate-anniversaries-by-beaming-song-across-the-universe-into-deep-space/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.jpl.nasa.gov/news/nasa-and-the-beatles-celebrate-anniversaries-by-beaming-song-across-the-universe-into-deep-space/"
+    },
+    {
+      "url": "https://www.keskkonnaagentuur.ee/en/goals-activities/bird-ringing-information-and-bird-observations",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.038Z",
+      "code": null,
+      "finalUrl": "https://www.keskkonnaagentuur.ee/en/goals-activities/bird-ringing-information-and-bird-observations"
+    },
+    {
+      "url": "https://www.kidney.org/kidney-topics/hemodialysis",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.kidney.org/kidney-topics/hemodialysis"
+    },
+    {
+      "url": "https://www.knoll.com/design-plan/product/wassily-chair?section=design",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.925Z",
+      "code": null,
+      "finalUrl": "https://www.knoll.com/design-plan/product/wassily-chair?section=design"
+    },
+    {
+      "url": "https://www.laphil.com/works/pictures-at-an-exhibition-modest-mussorgsky-zs2phpn9",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.803Z",
+      "code": null,
+      "finalUrl": "https://www.laphil.com/works/pictures-at-an-exhibition-modest-mussorgsky-zs2phpn9"
+    },
+    {
+      "url": "https://www.liveriga.com/en/7971-art-nouveau/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:22.970Z",
+      "code": null,
+      "finalUrl": "https://www.liveriga.com/en/7971-art-nouveau/"
+    },
+    {
+      "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000017.shtml",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:23.139Z",
+      "code": null,
+      "finalUrl": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000017.shtml"
+    },
+    {
+      "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000354.shtml",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:23.389Z",
+      "code": null,
+      "finalUrl": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000354.shtml"
+    },
+    {
+      "url": "https://www.lookout-spiele.de/upload/de_agricola.html_Rules_Agricola_EN.pdf",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.lookout-spiele.de/upload/de_agricola.html_Rules_Agricola_EN.pdf"
+    },
+    {
+      "url": "https://www.maff.go.jp/j/shokusan/gaisyoku/pamphlet/pdf/washoku_english.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:23.836Z",
+      "code": null,
+      "finalUrl": "https://www.maff.go.jp/j/shokusan/gaisyoku/pamphlet/pdf/washoku_english.pdf"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/salaam",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.merriam-webster.com/dictionary/salaam"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/436730",
+      "ok": false,
+      "status": 429,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.metmuseum.org/art/collection/search/436730"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/700485",
+      "ok": false,
+      "status": 429,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.metmuseum.org/art/collection/search/700485"
+    },
+    {
+      "url": "https://www.metmuseum.org/exhibitions/listings/2005/the-gates",
+      "ok": false,
+      "status": 429,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.metmuseum.org/exhibitions/listings/2005/the-gates"
+    },
+    {
+      "url": "https://www.nasa.gov/history/telstar-opened-era-of-global-satellite-television/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.071Z",
+      "code": null,
+      "finalUrl": "https://www.nasa.gov/history/telstar-opened-era-of-global-satellite-television/"
+    },
+    {
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4407-etuv3.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:25.125Z",
+      "code": null,
+      "finalUrl": "https://www.nasa.gov/wp-content/uploads/2023/04/sp-4407-etuv3.pdf"
+    },
+    {
+      "url": "https://www.nationalgallery.org.uk/podcast/colour-stories-blue",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.224Z",
+      "code": null,
+      "finalUrl": "https://www.nationalgallery.org.uk/podcast/colour-stories-blue"
+    },
+    {
+      "url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-shutter-speed",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:25.932Z",
+      "code": null,
+      "finalUrl": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-shutter-speed"
+    },
+    {
+      "url": "https://www.nintendo.com/jp/character/mario/en/history/smb/index.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.393Z",
+      "code": null,
+      "finalUrl": "https://www.nintendo.com/jp/character/mario/en/history/smb/index.html"
+    },
+    {
+      "url": "https://www.nps.gov/places/haymarket-martyr-s-monument.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.396Z",
+      "code": null,
+      "finalUrl": "https://www.nps.gov/places/haymarket-martyr-s-monument.htm"
+    },
+    {
+      "url": "https://www.nps.gov/ston/learn/historyculture.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.443Z",
+      "code": null,
+      "finalUrl": "https://www.nps.gov/ston/learn/historyculture.htm"
+    },
+    {
+      "url": "https://www.olympics.com.au/olympians/cathy-freeman/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.889Z",
+      "code": null,
+      "finalUrl": "https://www.olympics.com.au/olympians/cathy-freeman/"
+    },
+    {
+      "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/january",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:47.984Z",
+      "code": null,
+      "finalUrl": "https://www.oxfordlearnersdictionaries.com/us/definition/english/january"
+    },
+    {
+      "url": "https://www.parliament.uk/site-information/glossary/cabinet/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.parliament.uk/site-information/glossary/cabinet/"
+    },
+    {
+      "url": "https://www.parliament.uk/site-information/glossary/constitution/",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.parliament.uk/site-information/glossary/constitution/"
+    },
+    {
+      "url": "https://www.philips.com/a-w/about/news/archive/standard/news/articles/2021/20210310-lou-ottens-loved-technology-when-he-talked-about-it-his-eyes-would-twinkle.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:24.762Z",
+      "code": null,
+      "finalUrl": "https://www.philips.com/a-w/about/news/archive/standard/news/articles/2021/20210310-lou-ottens-loved-technology-when-he-talked-about-it-his-eyes-would-twinkle.html"
+    },
+    {
+      "url": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:25.705Z",
+      "code": null,
+      "finalUrl": "https://www.royaltalens.com/blogs/colour-stories/colour-mixing-theory"
+    },
+    {
+      "url": "https://www.si.edu/object/experimental-farnsworth-image-dissector:nmah_1288388",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.si.edu/object/experimental-farnsworth-image-dissector:nmah_1288388"
+    },
+    {
+      "url": "https://www.sonypictures.com/movies/28dayslater",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:25.210Z",
+      "code": null,
+      "finalUrl": "https://www.sonypictures.com/movies/28dayslater"
+    },
+    {
+      "url": "https://www.sonypicturesanimation.com/projects/films/spider-man-spider-verse",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.037Z",
+      "code": null,
+      "finalUrl": "https://www.sonypicturesanimation.com/projects/films/spider-man-spider-verse"
+    },
+    {
+      "url": "https://www.sothebys.com/en/articles/latest-banksy-artwork-love-is-in-the-bin-created-live-at-auction",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.357Z",
+      "code": null,
+      "finalUrl": "https://www.sothebys.com/en/articles/latest-banksy-artwork-love-is-in-the-bin-created-live-at-auction"
+    },
+    {
+      "url": "https://www.stiftung-berliner-mauer.de/de/east-side-gallery/historischer-ort/laengste-open-air-galerie",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:25.961Z",
+      "code": null,
+      "finalUrl": "https://www.stiftung-berliner-mauer.de/de/east-side-gallery/historischer-ort/laengste-open-air-galerie"
+    },
+    {
+      "url": "https://www.swimming.org/masters/choosing-the-right-swimming-goggles/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.870Z",
+      "code": null,
+      "finalUrl": "https://www.swimming.org/masters/choosing-the-right-swimming-goggles/"
+    },
+    {
+      "url": "https://www.swimming.org/sport/competitive-pool-swimming/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:27.731Z",
+      "code": null,
+      "finalUrl": "https://www.swimming.org/sport/competitive-pool-swimming/"
+    },
+    {
+      "url": "https://www.tallink.com/ee-en/travelling/one-way/helsinki-tallinn-ferry",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.227Z",
+      "code": null,
+      "finalUrl": "https://www.tallink.com/ee-en/travelling/one-way/helsinki-tallinn-ferry"
+    },
+    {
+      "url": "https://www.theoi.com/Text/HesiodTheogony.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.116Z",
+      "code": null,
+      "finalUrl": "https://www.theoi.com/Text/HesiodTheogony.html"
+    },
+    {
+      "url": "https://www.ti.com/product-category/dlp-products/display-projection-dmds/overview.html?locale=en-US",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.347Z",
+      "code": null,
+      "finalUrl": "https://www.ti.com/product-category/dlp-products/display-projection-dmds/overview.html?locale=en-US"
+    },
+    {
+      "url": "https://www.tourismthailand.org/Attraction/damnoen-saduak-floating-market",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.tourismthailand.org/Attraction/damnoen-saduak-floating-market"
+    },
+    {
+      "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/literature/religious/bdfront.html",
+      "ok": false,
+      "status": 403,
+      "retrievedAt": null,
+      "code": "SOURCE_HTTP_STATUS",
+      "finalUrl": "https://www.ucl.ac.uk/museums-static/digitalegypt/literature/religious/bdfront.html"
+    },
+    {
+      "url": "https://www.universalpicturesathome.com/movies/yesterday",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:49.143Z",
+      "code": null,
+      "finalUrl": "https://www.universalpicturesathome.com/movies/yesterday"
+    },
+    {
+      "url": "https://www.vam.ac.uk/blog/caring-for-our-collections/a-blueprint-for-the-future-cyanotypes-by-anna-atkins",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:27.581Z",
+      "code": null,
+      "finalUrl": "https://www.vam.ac.uk/blog/caring-for-our-collections/a-blueprint-for-the-future-cyanotypes-by-anna-atkins"
+    },
+    {
+      "url": "https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:37:48.258Z",
+      "code": null,
+      "finalUrl": "https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square"
+    },
+    {
+      "url": "https://www.visittrinity.ie/book-of-kells/old-library-redevelopment-project/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.895Z",
+      "code": null,
+      "finalUrl": "https://www.visittrinity.ie/book-of-kells/old-library-redevelopment-project/"
+    },
+    {
+      "url": "https://www.w3.org/TR/png/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:26.442Z",
+      "code": null,
+      "finalUrl": "https://www.w3.org/TR/png/"
+    },
+    {
+      "url": "https://www.warnerbros.co.jp/home_entertainment/zth_us38wpju/",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:27.408Z",
+      "code": null,
+      "finalUrl": "https://www.warnerbros.co.jp/home_entertainment/zth_us38wpju/"
+    },
+    {
+      "url": "https://www.worldvision.org/charitable-giving-news-stories/what-is-world-vision",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:27.217Z",
+      "code": null,
+      "finalUrl": "https://www.worldvision.org/charitable-giving-news-stories/what-is-world-vision"
+    },
+    {
+      "url": "https://www.wto.org/english/theWTO_e/whatis_e/inbrief_e/inbr00_e.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:28.298Z",
+      "code": null,
+      "finalUrl": "https://www.wto.org/english/theWTO_e/whatis_e/inbrief_e/inbr00_e.htm"
+    },
+    {
+      "url": "https://www.yamaha.com/en/musical_instrument_guide/trumpet/mechanism/mechanism002.html",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:28.262Z",
+      "code": null,
+      "finalUrl": "https://www.yamaha.com/en/musical_instrument_guide/trumpet/mechanism/mechanism002.html"
+    },
+    {
+      "url": "https://www3.epa.gov/recyclecity/recovery.htm",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:29.996Z",
+      "code": null,
+      "finalUrl": "https://www3.epa.gov/recyclecity/recovery.htm"
+    },
+    {
+      "url": "https://zenith.com/wp-content/uploads/2013/05/IEEE-Newsletter-on-Remote-Controls.pdf",
+      "ok": true,
+      "status": 200,
+      "retrievedAt": "2026-10-11T16:06:28.384Z",
+      "code": null,
+      "finalUrl": "https://zenith.com/wp-content/uploads/2013/05/IEEE-Newsletter-on-Remote-Controls.pdf"
+    }
+  ]
+}

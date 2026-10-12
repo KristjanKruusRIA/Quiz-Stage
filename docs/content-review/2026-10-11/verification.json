@@ -1,0 +1,541 @@
+{
+  "completedAt": "2026-10-11T17:02:26.115Z",
+  "status": "applied-and-verified-with-environment-and-source-retrieval-limitations",
+  "content": {
+    "verifiedAt": "2026-10-11T16:46:28.184Z",
+    "decision": "passed-local-content-and-packaged-attribution",
+    "reviewedArtifacts": 45,
+    "changedQuestions": 589,
+    "renamedTopics": 55,
+    "changedCluesIncludingTitleOnly": 780,
+    "evidenceRecords": 11374,
+    "openTdbProvenanceRecords": 1200,
+    "seed": {
+      "fileSha256": "54eebcb372b926fcdd9551ff8e69aa4932c81797469a31d8300551f6c09b6d24",
+      "inventory": {
+        "boardClues": 11200,
+        "categorySets": 2240,
+        "finalClues": 174,
+        "distinctCategoryNames": 2240,
+        "easySets": 907,
+        "mediumSets": 667,
+        "hardSets": 666,
+        "builtInPacks": 15
+      }
+    },
+    "validation": {
+      "blocking": false,
+      "errors": 0,
+      "warnings": 7116,
+      "inventory": {
+        "boardClues": 11200,
+        "categorySets": 2240,
+        "distinctCategoryNames": 2240,
+        "finalClues": 174,
+        "easySets": 907,
+        "mediumSets": 667,
+        "hardSets": 666,
+        "builtInPacks": 15
+      }
+    },
+    "freshTranslationDecisions": 468,
+    "acceptedLexicalMatches": 33,
+    "originalOriginCorrections": [
+      {
+        "id": "built-in-history-all-level-expansion-0156",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-002",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-003",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-004",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-075",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-079",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-080",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-132",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-accessible-corpus-133",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-all-level-expansion-0195",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-easy-expansion-010",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-art-architecture-playable-corpus-083",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-accessible-corpus-007",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-accessible-corpus-009",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-accessible-corpus-010",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-accessible-corpus-025",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-accessible-corpus-035",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-all-level-expansion-0235",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-easy-expansion-012",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-easy-expansion-015",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-playable-corpus-048",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-playable-corpus-140",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-playable-corpus-208",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-music-playable-corpus-333",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-film-television-playable-corpus-192",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-accessible-corpus-054",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-accessible-corpus-098",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-accessible-corpus-100",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-accessible-corpus-118",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-all-level-expansion-0234",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-easy-expansion-063",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-sports-games-playable-corpus-059",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-accessible-corpus-029",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-accessible-corpus-030",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-accessible-corpus-062",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-all-level-expansion-0062",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-playable-corpus-280",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-food-drink-playable-corpus-334",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-technology-inventions-accessible-corpus-034",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-technology-inventions-accessible-corpus-052",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-technology-inventions-all-level-expansion-0126",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-technology-inventions-playable-corpus-025",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-technology-inventions-playable-corpus-248",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-politics-economics-society-accessible-corpus-062",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-politics-economics-society-accessible-corpus-065",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-mythology-religion-philosophy-all-level-expansion-0100",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-mythology-religion-philosophy-easy-expansion-066",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-mythology-religion-philosophy-playable-corpus-014",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-mythology-religion-philosophy-playable-corpus-244",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-mythology-religion-philosophy-playable-corpus-294",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-finals-final-0142",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0017",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0127",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0235",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0343",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0344",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0345",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0348",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0350",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0354",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0355",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0359",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0360",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0364",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0375",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0379",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0380",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0389",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0390",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0400",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0414",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0415",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0459",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0460",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0464",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0465",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0479",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0494",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0495",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0499",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-adult-clue-0500",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-estonia-clue-0006",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-estonia-clue-0321",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-estonia-clue-0419",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-estonia-clue-0420",
+        "before": "compatibleOpen",
+        "after": "original"
+      },
+      {
+        "id": "built-in-estonia-clue-0500",
+        "before": "compatibleOpen",
+        "after": "original"
+      }
+    ],
+    "changedSourceRetrieval": {
+      "checkedAt": "2026-10-11T16:38:07.974Z",
+      "urls": 203,
+      "passed": 171,
+      "unresolved": 32
+    },
+    "packagedCredits": {
+      "result": "passed",
+      "questions": 11374,
+      "inspirationRecords": 1200,
+      "noticesByteMatch": true,
+      "screenshot": "content-credits.png",
+      "note": "Actual packaged Windows executable, fresh user profile; source title, URL, licence, OpenTDB candidate ID and general attribution visible. Built-in SQLite used for read-only fixture query to avoid native addon lifecycle interference with packaging."
+    }
+  },
+  "originalFindings": {
+    "total": 304,
+    "fixed": 298,
+    "qualified": 6,
+    "unresolved": 0
+  },
+  "tests": {
+    "files": 136,
+    "total": 1454,
+    "passed": 1436,
+    "failed": 10,
+    "skipped": 8,
+    "durationSeconds": 144.79,
+    "failures": [
+      "|node| tests/integration/content/devSeedBuilder.test.ts > development seed builder > rejects a dangling destination symlink without following or replacing it",
+      "|node| tests/integration/security/offlineRenderer.test.ts > offline renderer session policy > canonicalizes a packaged-shaped renderer root and rejects junction escapes and broken links",
+      "|node| tests/unit/content/contentCliCompatibility.test.ts > npm 11 content CLI compatibility > source checker rejects report symlinks and non-file cache destinations before publication",
+      "|node| tests/unit/content/evidence.test.ts > content evidence > rejects symlink evidence inputs",
+      "|node| tests/unit/content/productionValidator.test.ts > validator CLI boundaries and report publication > atomically merges validation while preserving siblings and rejects symlink destinations",
+      "|node| tests/unit/content/verifyBatch.test.ts > batch publication boundary > rejects a symlinked work report without changing its external target",
+      "|node| tests/unit/media/mediaService.test.ts > MediaService > rejects symlinks and hard links outside the owned directory",
+      "|node| tests/unit/release/checksums.test.ts > release checksums > rejects a symbolic-link artifact whose canonical path escapes the package root",
+      "|node| tests/unit/release/checksums.test.ts > release checksums > emits the declared artifact path for an in-root symbolic link",
+      "|node| tests/unit/release/checksums.test.ts > release checksums > rejects a symbolic-link checksum destination without changing its outside target"
+    ],
+    "failureReason": "Existing Windows EPERM during symbolic-link creation, before the relevant assertions.",
+    "finalAdditionalAssertion": {
+      "passed": 1,
+      "excludedByNameFilter": 6,
+      "durationSeconds": 72.65,
+      "note": "Full suite began before a final test-only persistence assertion. That saved assertion passed in a fresh focused run and independently passed reviewer B’s focused run. Production code and content did not change."
+    }
+  },
+  "lint": "passed on final files",
+  "typecheck": "passed on final files",
+  "diffCheck": "passed; Git line-ending conversion notices are not whitespace errors",
+  "packagedApp": "Windows x64 package built; actual credits runtime test passed with exact source/provenance readback and matching seed/notices",
+  "sourceRetrieval": {
+    "changedUrls": 203,
+    "passed": 171,
+    "unresolved": 32,
+    "cachedWholeBankCommand": "incomplete: 32 cache misses plus 4 older stale entries",
+    "noFabricatedSuccesses": true
+  },
+  "limitations": [
+    "Editorial difficulty calibration has no representative player study.",
+    "Some primary sites restrict automated retrieval; direct and indexed observations are distinguished in independent reviews.",
+    "Ten existing symlink tests require privileges unavailable to this VM process.",
+    "Automatic approval review blocked removal of C:\\Users\\Codex\\AppData\\Local\\Temp\\quiz-stage-credits-e2e-dCqCDR with blocked by policy; final successful credits test cleaned up its own profile."
+  ],
+  "publication": "No commit, push or release publication"
+}

@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
-import { afterEach, describe, expect, test } from 'vitest';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 import { publishBatch } from '../../../scripts/content/publishBatch';
 import {
   buildEasyExpansionTranslationClueIds,
@@ -20,6 +20,31 @@ import { parseBatchVerificationReport, verifyBatch } from '../../../scripts/cont
 import type { ContentEvidence } from '../../../scripts/content/evidence';
 import type { SourceCheckDependencies } from '../../../scripts/content/sourceCheck';
 import { CSV_COLUMNS } from '../../../src/shared/content/csvColumns';
+
+// These tests exercise the completed 500-to-600 phase against its frozen allocation.
+vi.mock('../../../scripts/content/productionBatches', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../../../scripts/content/productionBatches')>();
+  const rounds = [
+    [[27, 27], [17, 16], [16, 17]], [[27, 27], [16, 17], [17, 16]],
+    [[27, 27], [17, 16], [16, 17]], [[27, 27], [16, 17], [17, 16]],
+    [[27, 26], [17, 17], [16, 17]], [[26, 27], [17, 17], [17, 16]],
+    [[27, 26], [17, 17], [16, 17]], [[26, 27], [17, 17], [17, 16]],
+    [[27, 26], [16, 17], [17, 17]], [[26, 27], [17, 16], [17, 17]],
+    [[27, 26], [16, 17], [17, 17]], [[26, 27], [17, 16], [17, 17]],
+  ];
+  const batches = Object.freeze(actual.PRODUCTION_BATCHES.map((batch, index) => index >= 12 ? batch : Object.freeze({
+    ...batch,
+    boardClues: 600,
+    distribution: Object.freeze(Object.fromEntries(['easy', 'medium', 'hard'].map((difficulty, difficultyIndex) => [difficulty, Object.freeze({
+      roundOne: rounds[index][difficultyIndex][0], roundTwo: rounds[index][difficultyIndex][1],
+    })]))) as ProductionBatchDefinition['distribution'],
+  })));
+  return {
+    ...actual,
+    PRODUCTION_BATCHES: batches,
+    getProductionBatch: (id: string) => batches.find((batch) => batch.id === id) ?? actual.getProductionBatch(id),
+  };
+});
 
 const ORIGINAL_BATCH_IDS = [
   '01-history',
@@ -595,47 +620,16 @@ describe('Easy expansion provisional verification', () => {
     ]));
   }, 30_000);
 
-  test('CLI requires --batch, defaults its work root, and accepts a sealed baseline root', () => {
+  test('CLI requires --batch and rejects the retired 600-row target for the expanded catalog', () => {
     const root = temporaryDirectory('quiz-stage-easy-expansion-cli-');
-    const provisional = buildProvisionalEasyExpansionBatch('01-history');
-    const fixture = createPassingWork(join(root, 'fixture'), provisional);
-    const expectedDirectory = join(root, 'content', 'work', 'easy-expansion', '01-history');
-    mkdirSync(expectedDirectory, { recursive: true });
-    for (const name of ['authored.csv', 'generated.en-et.csv', 'evidence.jsonl']) {
-      writeFileSync(join(expectedDirectory, name), readFileSync(join(fixture.workRoot, '01-history', name)));
-    }
-    const baselineRoot = join(root, 'sealed-baseline');
-    seedAcceptedBaseline(baselineRoot, fixture.workRoot, provisional.id);
-    const cachePath = join(root, 'source-cache.json');
-    const cacheDocument = {
-      version: 1,
-      entries: {
-        [fixture.sourceUrl]: {
-          version: 1,
-          expiresAt: '2099-01-01T00:00:00.000Z',
-          result: {
-            url: fixture.sourceUrl, ok: true, status: 200, retrievedAt: '2026-08-13T12:00:00.000Z',
-            code: null, finalUrl: fixture.sourceUrl,
-          },
-        },
-      },
-    };
-    writeFileSync(cachePath, `${JSON.stringify(cacheDocument)}\n`);
     const script = resolve('scripts/content/verifyEasyExpansion.ts');
     const tsxCli = createRequire(import.meta.url).resolve('tsx/cli');
-
     const missingBatch = spawnSync(process.execPath, [tsxCli, script], { cwd: root, encoding: 'utf8' });
     expect(missingBatch.status).toBe(2);
     expect(missingBatch.stderr).toMatch(/--batch is required/i);
-
-    const result = spawnSync(process.execPath, [
-      tsxCli, script, '--batch', '01-history', '--baseline-root', baselineRoot,
-      '--source-cache', cachePath,
-    ], { cwd: root, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
-    expect(result.status, `${result.stdout}\n${result.stderr}`).toBe(0);
-    expect(JSON.parse(result.stdout)).toMatchObject({ batchId: '01-history', blocking: false });
-    expect(JSON.parse(readFileSync(join(expectedDirectory, 'report.json'), 'utf8')))
-      .toMatchObject({ batchId: '01-history', blocking: false });
-    expect(readFileSync(cachePath, 'utf8')).toBe(`${JSON.stringify(cacheDocument, null, 2)}\n`);
+    const result = spawnSync(process.execPath, [tsxCli, script, '--batch', '01-history'], { cwd: root, encoding: 'utf8' });
+    expect(result.status).toBe(2);
+    expect(result.stderr).toMatch(/500-row baseline or 600-row target/i);
+    expect(existsSync(join(root, 'content', 'work', 'easy-expansion', '01-history', 'report.json'))).toBe(false);
   }, 30_000);
 });

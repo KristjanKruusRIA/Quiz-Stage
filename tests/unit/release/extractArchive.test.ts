@@ -11,6 +11,7 @@ import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import { holdWindowsFile } from '../../support/windowsFileLock';
 import {
   archiveExtractionCommand,
   createPackageTemporaryDirectory,
@@ -147,6 +148,25 @@ describe('portable executable containment', () => {
 });
 
 describe('owned package temporary directories', () => {
+  it.skipIf(process.platform !== 'win32')('removes an owned directory after a transient file handle is released', async () => {
+    const owned = createPackageTemporaryDirectory('quiz-stage-package-test-locked-');
+    temporaryDirectories.push(owned.path);
+    const lockedFile = path.join(owned.path, 'locked.txt');
+    writeFileSync(lockedFile, 'package fixture');
+    const locker = await holdWindowsFile(lockedFile);
+
+    try {
+      expect(() => rmSync(lockedFile)).toThrow();
+      locker.release();
+
+      expect(() => removePackageTemporaryDirectory(owned)).not.toThrow();
+      expect(existsSync(owned.path)).toBe(false);
+    } finally {
+      locker.release();
+      expect(await locker.exited).toBe(0);
+    }
+  }, 15_000);
+
   it('refuses to remove a replacement at an owned pathname', () => {
     const owned = createPackageTemporaryDirectory('quiz-stage-package-test-owned-');
     const original = `${owned.path}-original`;

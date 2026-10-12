@@ -1,0 +1,39 @@
+{
+  "author": "B",
+  "reviewer": "C",
+  "reviewedAt": "2026-10-11T16:42:53.846069+00:00",
+  "status": "approved",
+  "decisionFile": {
+    "path": "reviewer-b/translation-decisions.json",
+    "sha256": "e9cb16f4e38b99f5d07aeb3e3937e9a5da5cbee9cfa5c38ff7b1b2e7a4499fcd"
+  },
+  "diagnosticFile": {
+    "path": "fresh-translation-review.json",
+    "sha256": "976298b2eabd3fbde256a58704f1992d623f69753c0a94ca902fdb4f9fb0c0fe"
+  },
+  "proposalBindings": [
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/05-art-architecture.proposal.json",
+      "sha256": "fb7576560c1e1da8c44450ec88b95c038504d3b26b0dbc56c3de97d27656779b"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/06-music.proposal.json",
+      "sha256": "d364bb97f22eb721c0a3bfd752d243261bbbd41dd4b269b2679ca19093ccd586"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/07-film-television.proposal.json",
+      "sha256": "d0a9c32dea13d532db66d9e033011ee457cc0ccc08989b6d31efb062a31a47af"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/08-sports-games.proposal.json",
+      "sha256": "e29123d75a043cde2bc1c9f31a14497a5b27050ca339b560522b94fd84b6acb3"
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/reviewer-b/13-finals.proposal.json",
+      "sha256": "114b7e809c936cf6a49eab3c67700807263c9f09d15b291ddb20fe76f3f15225"
+    }
+  ],
+  "exceptionCount": 185,
+  "method": "Read all 185 literal per-ID explanations against current bilingual identities, inflections, localized work titles and technical terms. All 131 affected categories and 639 siblings previously independently read in full. Exact current error-ID coverage checked; final Aalto-vase and Sydney-roof title delta reread. English kinescope recording is intentionally requested by both prompts, with translated process text and distinction from the Estonian display-tube noun. This approval covers actual names/terms/translated topic headings, not a blanket historical-waiver reuse.",
+  "openIssues": []
+}

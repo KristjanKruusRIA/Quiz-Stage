@@ -78,24 +78,33 @@ function createUpgradeWorkspace(): OwnedUpgradeWorkspace {
 }
 
 function removeUpgradeWorkspace(owned: OwnedUpgradeWorkspace): void {
-  const stats = lstatSync(owned.path);
-  const resolved = realpathSync(owned.path);
-  const temporaryRoot = realpathSync(tmpdir());
-  const relative = path.relative(temporaryRoot, resolved);
-  const isTemporaryChild = relative !== ''
-    && relative !== '..'
-    && !relative.startsWith(`..${path.sep}`)
-    && !path.isAbsolute(relative);
-  if (
-    stats.isSymbolicLink()
-    || stats.dev !== owned.dev
-    || stats.ino !== owned.ino
-    || !isTemporaryChild
-    || !path.basename(resolved).startsWith('quiz-stage-upgrade-check-')
-  ) {
-    throw new Error(`UNSAFE_UPGRADE_WORKSPACE:${owned.path}`);
+  for (let attempt = 0; ; attempt += 1) {
+    const stats = lstatSync(owned.path);
+    const resolved = realpathSync(owned.path);
+    const temporaryRoot = realpathSync(tmpdir());
+    const relative = path.relative(temporaryRoot, resolved);
+    const isTemporaryChild = relative !== ''
+      && relative !== '..'
+      && !relative.startsWith(`..${path.sep}`)
+      && !path.isAbsolute(relative);
+    if (
+      stats.isSymbolicLink()
+      || stats.dev !== owned.dev
+      || stats.ino !== owned.ino
+      || !isTemporaryChild
+      || !path.basename(resolved).startsWith('quiz-stage-upgrade-check-')
+    ) {
+      throw new Error(`UNSAFE_UPGRADE_WORKSPACE:${owned.path}`);
+    }
+    try {
+      rmSync(resolved, { recursive: true, force: true });
+      return;
+    } catch (error: unknown) {
+      const code = (error as NodeJS.ErrnoException).code;
+      if (attempt >= 50 || (code !== 'EPERM' && code !== 'EBUSY' && code !== 'ENOTEMPTY')) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 200);
+    }
   }
-  rmSync(resolved, { recursive: true, force: true, maxRetries: 20, retryDelay: 200 });
 }
 
 function fixtureHashes(fixtureRoot: string): FixtureHashes {

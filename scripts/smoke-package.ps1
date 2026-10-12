@@ -103,7 +103,7 @@ function Invoke-InstallerPackage {
   try {
     Write-Host "Installing installer package from $setup"
     $installArguments = @('/S')
-    $installProcess = Start-Process -FilePath $setup -ArgumentList $installArguments -PassThru -Wait
+    $installProcess = Start-Process -FilePath $setup -ArgumentList $installArguments -PassThru -Wait -WindowStyle Hidden
     if ($installProcess.ExitCode -ne 0) {
       throw "Install failed with exit code $($installProcess.ExitCode)"
     }
@@ -131,7 +131,7 @@ function Invoke-InstallerPackage {
       throw "No Squirrel updater found under $installRoot"
     }
 
-    $uninstallProcess = Start-Process -FilePath $updater -ArgumentList '--uninstall' -PassThru -Wait
+    $uninstallProcess = Start-Process -FilePath $updater -ArgumentList '--uninstall' -PassThru -Wait -WindowStyle Hidden
     if ($uninstallProcess.ExitCode -ne 0) {
       throw "Uninstall failed with exit code $($uninstallProcess.ExitCode)"
     }
@@ -142,7 +142,7 @@ function Invoke-InstallerPackage {
   finally {
     $updater = Join-Path $installRoot 'Update.exe'
     if (Test-Path -LiteralPath $updater) {
-      Start-Process -FilePath $updater -ArgumentList '--uninstall' -Wait -ErrorAction SilentlyContinue
+      Start-Process -FilePath $updater -ArgumentList '--uninstall' -Wait -WindowStyle Hidden -ErrorAction SilentlyContinue
     }
     if (Test-Path -LiteralPath (Join-Path $installRoot '.dead')) {
       Remove-Item -Path $installRoot -Recurse -Force -ErrorAction SilentlyContinue

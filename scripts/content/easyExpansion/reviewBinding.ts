@@ -1,8 +1,10 @@
 import { createHash } from "node:crypto";
 import { lstatSync, readdirSync, readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { relative, resolve } from "node:path";
+import { parse } from "csv-parse/sync";
 
-import { acceptedBatchPaths, PRODUCTION_BATCHES } from "../productionBatches";
+import { acceptedBatchPaths, getProductionBatch, PRODUCTION_BATCHES } from "../productionBatches";
+import { approvedHistoricalHash } from "../contentRepairReview";
 
 export const EASY_EXPANSION_BATCH_IDS = [
   "01-history",
@@ -85,8 +87,26 @@ function readStableRegularFile(path: string): Buffer {
   return bytes;
 }
 
-function sha256(path: string): string {
-  return createHash("sha256").update(readStableRegularFile(path)).digest("hex");
+function historicalArtifactHash(path: string, artifact: typeof ARTIFACT_NAMES[number], packId: string, repositoryRoot: string): string {
+  const bytes = readStableRegularFile(path);
+  const currentHash = createHash("sha256").update(bytes).digest("hex");
+  const reviewedHash = approvedHistoricalHash(relative(repositoryRoot, path), currentHash, repositoryRoot, true);
+  if (reviewedHash !== currentHash) return reviewedHash;
+  const additionId = new RegExp(`^${packId}-all-level-expansion-\\d{4}$`, "u");
+  const digest = createHash("sha256");
+  if (artifact === "evidence") {
+    for (const line of bytes.toString("utf8").match(/[^\n]*\n|[^\n]+$/gu) ?? []) {
+      if (!additionId.test(JSON.parse(line).clueId)) digest.update(line);
+    }
+  } else {
+    let start = 0;
+    for (const row of parse(bytes, { info: true }) as unknown as Array<{ record: string[]; info: { bytes: number } }>) {
+      if (!additionId.test(row.record[0])) digest.update(bytes.subarray(start, row.info.bytes));
+      start = row.info.bytes;
+    }
+    digest.update(bytes.subarray(start));
+  }
+  return digest.digest("hex");
 }
 
 function assertExactNumbers(
@@ -135,7 +155,7 @@ function artifactHashesAt(
 function assertEligibleBatchInventory(repositoryRoot: string): void {
   const expectedIds = [...EASY_EXPANSION_BATCH_IDS];
   const productionIds = PRODUCTION_BATCHES.filter(
-    ({ boardClues }) => boardClues === 600,
+      ({ id, boardClues }) => EASY_EXPANSION_BATCH_IDS.includes(id as typeof EASY_EXPANSION_BATCH_IDS[number]) && boardClues >= 600,
   ).map(({ id }) => id);
   if (JSON.stringify(productionIds) !== JSON.stringify(expectedIds)) {
     throw new Error(
@@ -211,7 +231,7 @@ export function loadAcceptedEasyExpansionReviews(
     const acceptedPaths = acceptedBatchPaths(batchId);
     for (const artifact of ARTIFACT_NAMES) {
       if (
-        sha256(resolve(repositoryRoot, acceptedPaths[artifact])) !==
+          historicalArtifactHash(resolve(repositoryRoot, acceptedPaths[artifact]), artifact, getProductionBatch(batchId).packId, repositoryRoot) !==
         artifactHashes[artifact]
       ) {
         throw new Error(`${path} does not match accepted ${artifact} bytes`);
@@ -241,7 +261,7 @@ function batchIdFromExceptionId(id: string): string | undefined {
   const clueId = match?.[1];
   if (clueId === undefined) return undefined;
   for (const batch of PRODUCTION_BATCHES.filter(
-    ({ boardClues }) => boardClues === 600,
+      ({ id }) => EASY_EXPANSION_BATCH_IDS.includes(id as typeof EASY_EXPANSION_BATCH_IDS[number]),
   )) {
     if (
       new RegExp(

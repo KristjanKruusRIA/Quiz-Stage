@@ -199,6 +199,24 @@ export function expectedEasyExpansionTranslationClueIds(
   );
 }
 
+export function expectedAllDifficultyExpansionTranslationClueIds(
+  batch: ProductionBatchDefinition,
+): string[] {
+  if (!/^(?:0[1-9]|1[0-2])-/u.test(batch.id) || batch.boardClues !== 850) {
+    throw new Error(`All-difficulty append verification is not available for ${batch.id}`);
+  }
+  return Array.from(
+    { length: 250 },
+    (_, index) => `${batch.packId}-all-level-expansion-${(index + 1).toString().padStart(4, '0')}`,
+  );
+}
+
+function expectedScopedTranslationClueIds(batch: ProductionBatchDefinition): string[] {
+  return batch.boardClues === 850
+    ? expectedAllDifficultyExpansionTranslationClueIds(batch)
+    : expectedEasyExpansionTranslationClueIds(batch);
+}
+
 function rowIndex(pack: ParsedPack, label: string): ReadonlyMap<string, ParsedPack['rows'][number]> {
   const rows = new Map<string, ParsedPack['rows'][number]>();
   for (const row of pack.rows) {
@@ -220,10 +238,10 @@ export function compareAcceptedTranslationBaseline(options: {
   evidence: ReadonlyMap<string, ContentEvidence>;
   translationDiagnosticClueIds: readonly string[];
 }): BatchArtifactHashes {
-  const expectedScope = expectedEasyExpansionTranslationClueIds(options.batch);
+  const expectedScope = expectedScopedTranslationClueIds(options.batch);
   const actualScope = [...options.translationDiagnosticClueIds];
   if (JSON.stringify(actualScope) !== JSON.stringify(expectedScope)) {
-    throw new Error('Accepted baseline comparison requires the exact 100 Easy-expansion clue IDs');
+    throw new Error(`Accepted baseline comparison requires the exact ${expectedScope.length} expansion clue IDs`);
   }
   const scope = new Set(actualScope);
   const acceptedRoot = resolve(options.acceptedRoot);
@@ -259,17 +277,18 @@ export function compareAcceptedTranslationBaseline(options: {
   const baselineGenerated = rowIndex(acceptedGenerated, 'generated');
   const sortedIds = (values: Iterable<string>): string[] => [...values].sort(compareCodeUnits);
   const candidateAllIds = sortedIds(candidateGenerated.keys());
-  if (candidateAllIds.length !== 600
+  if (candidateAllIds.length !== options.batch.boardClues
     || JSON.stringify(candidateAllIds) !== JSON.stringify(sortedIds(candidateAuthored.keys()))
     || JSON.stringify(candidateAllIds) !== JSON.stringify(sortedIds(options.evidence.keys()))) {
-    throw new Error('Accepted baseline comparison requires matching 600-row candidate inventories');
+    throw new Error(`Accepted baseline comparison requires matching ${options.batch.boardClues}-row candidate inventories`);
   }
   const baselineAllIds = sortedIds(baselineGenerated.keys());
-  if (baselineAllIds.length !== 500
+  const baselineCount = options.batch.boardClues - expectedScope.length;
+  if (baselineAllIds.length !== baselineCount
     || baselineAllIds.some((clueId) => scope.has(clueId))
     || JSON.stringify(baselineAllIds) !== JSON.stringify(sortedIds(baselineAuthored.keys()))
     || JSON.stringify(baselineAllIds) !== JSON.stringify(sortedIds(acceptedEvidence.keys()))) {
-    throw new Error('Accepted baseline comparison requires matching 500-row pre-expansion inventories');
+    throw new Error(`Accepted baseline comparison requires matching ${baselineCount}-row pre-expansion inventories`);
   }
   for (const clueId of expectedScope) {
     if (!candidateAuthored.has(clueId) || !candidateGenerated.has(clueId) || !options.evidence.has(clueId)) {
@@ -466,9 +485,9 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
     ? undefined
     : [...options.translationDiagnosticClueIds].sort(compareCodeUnits);
   if (translationDiagnosticClueIds !== undefined) {
-    const expected = expectedEasyExpansionTranslationClueIds(batch);
+      const expected = expectedScopedTranslationClueIds(batch);
     if (JSON.stringify(translationDiagnosticClueIds) !== JSON.stringify(expected)) {
-      throw new Error('Translation diagnostic scope must contain the exact 100 Easy-expansion clue IDs');
+        throw new Error(`Translation diagnostic scope must contain the exact ${expected.length} expansion clue IDs`);
     }
     if (options.batchDefinition === undefined && options.baselineRoot === undefined) {
       throw new Error('Canonical translation diagnostic scope requires an accepted baseline root');
@@ -603,7 +622,10 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
     message: `Expected translation-diagnostic clue appears more than once in generated.en-et.csv: ${clueId}`,
   });
 
-  const urls = [...new Set([...evidence.values()].filter((item) => item.batchId === batch.id)
+  const appendScope = batch.boardClues === 850 && translationDiagnosticClueIds !== undefined
+    ? new Set(translationDiagnosticClueIds) : null;
+  const urls = [...new Set([...evidence.values()].filter((item) => item.batchId === batch.id
+    && (appendScope === null || appendScope.has(item.clueId)))
     .map((item) => item.supportingSource.url))].sort(compareCodeUnits);
   const sourceOptions = { ...options.sourceCheckOptions, ...(options.sourceCache === undefined ? {} : { cache: options.sourceCache }) };
   const sources = (options.sourceDependencies === undefined
@@ -637,7 +659,7 @@ export async function verifyBatch(options: VerifyBatchOptions): Promise<BatchVer
 }
 
 async function runCli(argv = process.argv.slice(2)): Promise<number> {
-  argv = restoreNpmRunArgs(argv, ['--batch', '--work-root', '--source-cache']);
+  argv = restoreNpmRunArgs(argv, ['--batch', '--work-root', '--source-cache', '--translation-scope', '--baseline-root']);
   const value = (name: string) => {
     const index = argv.indexOf(name);
     return index < 0 ? undefined : argv[index + 1];
@@ -647,8 +669,18 @@ async function runCli(argv = process.argv.slice(2)): Promise<number> {
   const workRoot = value('--work-root') ?? resolve('content/work');
   const sourceCachePath = value('--source-cache');
   const sourceCache = sourceCachePath === undefined ? undefined : openFileSourceCache(sourceCachePath);
+  const translationScope = value('--translation-scope');
+  if (translationScope !== undefined && translationScope !== 'all-difficulty-expansion') {
+    throw new Error('--translation-scope must be all-difficulty-expansion');
+  }
+  const baselineRoot = value('--baseline-root');
+  if (translationScope !== undefined && baselineRoot === undefined) throw new Error('--baseline-root is required for append verification');
   const report = await verifyBatch({
     batchId, workRoot,
+    ...(translationScope === undefined ? {} : {
+      translationDiagnosticClueIds: new Set(expectedAllDifficultyExpansionTranslationClueIds(getProductionBatch(batchId))),
+      baselineRoot,
+    }),
     ...(sourceCache === undefined ? {} : {
       sourceCache,
       reportDependencies: { beforeRename: () => sourceCache.publish() },

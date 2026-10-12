@@ -1,0 +1,588 @@
+{
+  "version": 1,
+  "reviewer": "repair_content_b",
+  "verifiedAt": "2026-10-11T16:45:42.161040+00:00",
+  "decision": "approved",
+  "scope": "Applied attribution data, source terms, selective derivation origins, packaged notice bytes, citation/editor backward compatibility and bilingual Settings credits UI. Root separately owns final packaged runtime E2E.",
+  "evidence": {
+    "seedPath": "resources/content/seed.sqlite",
+    "seedSha256": "54eebcb372b926fcdd9551ff8e69aa4932c81797469a31d8300551f6c09b6d24",
+    "packagedSeedSha256": "54eebcb372b926fcdd9551ff8e69aa4932c81797469a31d8300551f6c09b6d24",
+    "acceptedRepairsPath": "docs/content-review/2026-10-11/accepted-repairs.json",
+    "acceptedRepairsSha256": "925713e9815db838a9c995ff89a090f195274be16401e7cbef9839cb645793c6",
+    "acceptedReviewEvidenceSha256": "2bcf9f772cd7f15085ff40c998428867e33d8a7e52873737a8bf564af354fe19",
+    "evidenceFiles": [
+      {
+        "path": "content/evidence/01-history.jsonl",
+        "sha256": "d4278962a3ad2e8d3f6521cf985603111d0ac3c9db9c74966019cfed1913cf7f"
+      },
+      {
+        "path": "content/evidence/02-geography.jsonl",
+        "sha256": "33e66780f133e8ac4ef8f4c8e84e153ccb9b32b8b5efff95bbba04079535697c"
+      },
+      {
+        "path": "content/evidence/03-science-nature.jsonl",
+        "sha256": "f2577ec3dac959a7124d6a1a7c2a3244e7780f76ecd5d5c55b3b6030e3e946d9"
+      },
+      {
+        "path": "content/evidence/04-literature-language.jsonl",
+        "sha256": "6b79e856da354b773730c7f05f3c7884dac11224feaeb84da689907bb7e9cf07"
+      },
+      {
+        "path": "content/evidence/05-art-architecture.jsonl",
+        "sha256": "fe9bc9f7354143aed56a9a6ef896a96290b467886c9d60aca2a630e76f5ea82d"
+      },
+      {
+        "path": "content/evidence/06-music.jsonl",
+        "sha256": "421996d3f2115dd8fa047d26db713e3396b6923171f4f817a4bd69959243fdf8"
+      },
+      {
+        "path": "content/evidence/07-film-television.jsonl",
+        "sha256": "d1b516a09f5b0da6bdd8739cdb8270e5d4daf48e48db6e2f97656182017f3ad6"
+      },
+      {
+        "path": "content/evidence/08-sports-games.jsonl",
+        "sha256": "dc49fee87787d782a78a1d1e2b69853079b1efaf64ef9e04507de20d9a469deb"
+      },
+      {
+        "path": "content/evidence/09-food-drink.jsonl",
+        "sha256": "cbf0dca86493c1b3193f60b9f81fffdf3d62a067a432a865d119c715077fab73"
+      },
+      {
+        "path": "content/evidence/10-technology-inventions.jsonl",
+        "sha256": "7b10011698872143664584391db2dd273f8b6e9819d414ca63a0be60180f2362"
+      },
+      {
+        "path": "content/evidence/11-politics-economics-society.jsonl",
+        "sha256": "54fe78bf50cbc259e9b48f5c7ad953552367316a2c0d52e527769ef98f8a60ce"
+      },
+      {
+        "path": "content/evidence/12-mythology-religion-philosophy.jsonl",
+        "sha256": "1c18e969cd037604f4c0416bb97720c5ec5a4e18a2f6a43e5500e1d0e26f4590"
+      },
+      {
+        "path": "content/evidence/13-finals.jsonl",
+        "sha256": "11a851331d567863cf84bc885d1d2091a7338f34fe90f3b7a76d6ab8c131f334"
+      },
+      {
+        "path": "content/evidence/14-adult.jsonl",
+        "sha256": "a0309b2156d979df7dab2883fca15ffd1c74d219f59fb5c4237774dc8fc8eda8"
+      },
+      {
+        "path": "content/evidence/15-estonia.jsonl",
+        "sha256": "d013081ddf7390b0c68089aef32e7731e0eedf961992fc8de2a24b6a68d6c302"
+      }
+    ],
+    "bankArtifacts": [
+      {
+        "path": "content/authored/01-history.csv",
+        "sha256": "0ca99a722f628c96a2f918a9d9b4c9171f874f582f2275ff6c1d0cfa212fee18",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/02-geography.csv",
+        "sha256": "88ef37ac7f24523a3933210a41aa28bd1ed2cb277f52d3d8e6dace493c0c6bb6",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/03-science-nature.csv",
+        "sha256": "5f0adc1ccb5050dc118237d0bac9ee94255ed809fa318ef36e3d89b048d14e26",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/04-literature-language.csv",
+        "sha256": "5f0ec4efb901096f72fe6d5e94058235316cb4740dc0ae16b5b78eadfe6aed50",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/05-art-architecture.csv",
+        "sha256": "b107829fca3a9a42834fdff430ae1a0a6b86711a35c03f5f4a791777efd997d5",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/06-music.csv",
+        "sha256": "66a2ec460ba395047cc9c7e3e8b54b4b0f05e621cc269d3fd9fe3ab553c3e333",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/07-film-television.csv",
+        "sha256": "0bdef5525072661dfe5749440c3dac825f55b5e61d0f2f0cab7186803306f2d8",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/08-sports-games.csv",
+        "sha256": "6e9dd25e673ad29b5f20581b420d54f28d72684e10a89b4d34d3e673b9480bab",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/09-food-drink.csv",
+        "sha256": "7baa5abe9fbef5f3bee7155c85323e07d6c781b360458b9b35d6385ffff257cd",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/10-technology-inventions.csv",
+        "sha256": "b579ed1736eedc1a7d88c6673b6fe13ce40419d59964dc6c90a52a7854a725dd",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/11-politics-economics-society.csv",
+        "sha256": "13b50d9e518eb97c10c5ff9b528b415a58662c171bb4949f88416a1f74760002",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/12-mythology-religion-philosophy.csv",
+        "sha256": "ee26318fe1117ff94061ceadc3d1fb8848c8e9fd14aa5d1f43ca1972486afb90",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/13-finals.csv",
+        "sha256": "4cacc27d4c3556237180f4a013c2e9434766fd534f84b112d804a2815b0e2651",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/14-adult.csv",
+        "sha256": "4466945aa7f89f19627e36fab77b6ad83c642ef2c0829e65c2b82d26a8141c3a",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/authored/15-estonia.csv",
+        "sha256": "865fe095882d7520861a490cd10d5514da0ef23e996b51e6931743db358707ee",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/01-history.en-et.csv",
+        "sha256": "8b6a4e1757a16bc970e63b6d96152cf726bf889b5f4623f305e96cb374378253",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/02-geography.en-et.csv",
+        "sha256": "e6368f0db6e232b2d7f0c2b7fd4db8393c5e697401344b695d28fd89c0cd7a83",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/03-science-nature.en-et.csv",
+        "sha256": "afde79e9d7f4e1cb6e5784dbf567a270853b36886a665e9d5042fe11bcabbc8e",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/04-literature-language.en-et.csv",
+        "sha256": "42c55df7059a504f831f5410c893d34ca887446651a056b32ec80579c5542e80",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/05-art-architecture.en-et.csv",
+        "sha256": "ae6886271a75898b3733084e19d1f0ad61219ea7c72c5bdb5255a8c55dc1512a",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/06-music.en-et.csv",
+        "sha256": "fc052f4f094a7cc87095f4944b3ed1099bf3a1e9ade94d2325fc64f0f859595b",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/07-film-television.en-et.csv",
+        "sha256": "fa4a7e09a677bcf28d729e176fe01c9f878e7c4d9b137773d406f91fce37cfeb",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/08-sports-games.en-et.csv",
+        "sha256": "2cbc95ed4bd28c19f046eedff4f4d4c65ba6201a23a473d15d49461e22f0f26a",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/09-food-drink.en-et.csv",
+        "sha256": "f6ba0630f8d368257ce3782234353754e0420f567bdda71a944673ec199cf1ad",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/10-technology-inventions.en-et.csv",
+        "sha256": "e03255e15641aef0bc252c657aed4d1c89ccab55811d5d2704f0a89a88c7b7a3",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/11-politics-economics-society.en-et.csv",
+        "sha256": "a64acd1b21dbcbb7084afd9515b495da443d9676865f948dab0b78cf403ba5a2",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/12-mythology-religion-philosophy.en-et.csv",
+        "sha256": "c552938cd8fa27ef42f85f1883eda3150795805fc7e1f7420aecba0e33d9fe01",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/13-finals.en-et.csv",
+        "sha256": "f22791655ab236dee7ea17e42eb4c47c8ff50cf059d28fdcd5ef42c25d0923d4",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/14-adult.en-et.csv",
+        "sha256": "1a598fd0677e99af7b2b901331b1a57e474ab98f783be50cbc95654960a2343b",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/generated/15-estonia.en-et.csv",
+        "sha256": "bef562412cb3d9efad4a7c52d4b71390ee6ecd4f21bf86044b7c858ef0dac769",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/01-history.jsonl",
+        "sha256": "d4278962a3ad2e8d3f6521cf985603111d0ac3c9db9c74966019cfed1913cf7f",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/02-geography.jsonl",
+        "sha256": "33e66780f133e8ac4ef8f4c8e84e153ccb9b32b8b5efff95bbba04079535697c",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/03-science-nature.jsonl",
+        "sha256": "f2577ec3dac959a7124d6a1a7c2a3244e7780f76ecd5d5c55b3b6030e3e946d9",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/04-literature-language.jsonl",
+        "sha256": "6b79e856da354b773730c7f05f3c7884dac11224feaeb84da689907bb7e9cf07",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/05-art-architecture.jsonl",
+        "sha256": "fe9bc9f7354143aed56a9a6ef896a96290b467886c9d60aca2a630e76f5ea82d",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/06-music.jsonl",
+        "sha256": "421996d3f2115dd8fa047d26db713e3396b6923171f4f817a4bd69959243fdf8",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/07-film-television.jsonl",
+        "sha256": "d1b516a09f5b0da6bdd8739cdb8270e5d4daf48e48db6e2f97656182017f3ad6",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/08-sports-games.jsonl",
+        "sha256": "dc49fee87787d782a78a1d1e2b69853079b1efaf64ef9e04507de20d9a469deb",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/09-food-drink.jsonl",
+        "sha256": "cbf0dca86493c1b3193f60b9f81fffdf3d62a067a432a865d119c715077fab73",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/10-technology-inventions.jsonl",
+        "sha256": "7b10011698872143664584391db2dd273f8b6e9819d414ca63a0be60180f2362",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/11-politics-economics-society.jsonl",
+        "sha256": "54fe78bf50cbc259e9b48f5c7ad953552367316a2c0d52e527769ef98f8a60ce",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/12-mythology-religion-philosophy.jsonl",
+        "sha256": "1c18e969cd037604f4c0416bb97720c5ec5a4e18a2f6a43e5500e1d0e26f4590",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/13-finals.jsonl",
+        "sha256": "11a851331d567863cf84bc885d1d2091a7338f34fe90f3b7a76d6ab8c131f334",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/14-adult.jsonl",
+        "sha256": "a0309b2156d979df7dab2883fca15ffd1c74d219f59fb5c4237774dc8fc8eda8",
+        "matchesAcceptedManifest": true
+      },
+      {
+        "path": "content/evidence/15-estonia.jsonl",
+        "sha256": "d013081ddf7390b0c68089aef32e7731e0eedf961992fc8de2a24b6a68d6c302",
+        "matchesAcceptedManifest": true
+      }
+    ]
+  },
+  "checks": {
+    "readOnlySeedIntegrity": "ok",
+    "clues": 11374,
+    "sourceParityRows": 11374,
+    "sourceParityMismatches": [],
+    "openTdbEvidenceRows": 1200,
+    "openTdbSeedRows": 1200,
+    "openTdbBatchQuotas": {
+      "01-history": 100,
+      "02-geography": 100,
+      "03-science-nature": 100,
+      "04-literature-language": 100,
+      "05-art-architecture": 100,
+      "06-music": 100,
+      "07-film-television": 100,
+      "08-sports-games": 100,
+      "09-food-drink": 100,
+      "10-technology-inventions": 100,
+      "11-politics-economics-society": 100,
+      "12-mythology-religion-philosophy": 100
+    },
+    "candidateIdsAndLicencesExact": true,
+    "originalOriginRows": 86,
+    "selectiveOriginalOriginsErrors": [],
+    "originalOriginClueIds": [
+      "built-in-adult-clue-0017",
+      "built-in-adult-clue-0127",
+      "built-in-adult-clue-0235",
+      "built-in-adult-clue-0343",
+      "built-in-adult-clue-0344",
+      "built-in-adult-clue-0345",
+      "built-in-adult-clue-0348",
+      "built-in-adult-clue-0350",
+      "built-in-adult-clue-0354",
+      "built-in-adult-clue-0355",
+      "built-in-adult-clue-0359",
+      "built-in-adult-clue-0360",
+      "built-in-adult-clue-0364",
+      "built-in-adult-clue-0375",
+      "built-in-adult-clue-0379",
+      "built-in-adult-clue-0380",
+      "built-in-adult-clue-0389",
+      "built-in-adult-clue-0390",
+      "built-in-adult-clue-0400",
+      "built-in-adult-clue-0414",
+      "built-in-adult-clue-0415",
+      "built-in-adult-clue-0459",
+      "built-in-adult-clue-0460",
+      "built-in-adult-clue-0464",
+      "built-in-adult-clue-0465",
+      "built-in-adult-clue-0479",
+      "built-in-adult-clue-0494",
+      "built-in-adult-clue-0495",
+      "built-in-adult-clue-0499",
+      "built-in-adult-clue-0500",
+      "built-in-art-architecture-accessible-corpus-002",
+      "built-in-art-architecture-accessible-corpus-003",
+      "built-in-art-architecture-accessible-corpus-004",
+      "built-in-art-architecture-accessible-corpus-075",
+      "built-in-art-architecture-accessible-corpus-079",
+      "built-in-art-architecture-accessible-corpus-080",
+      "built-in-art-architecture-accessible-corpus-132",
+      "built-in-art-architecture-accessible-corpus-133",
+      "built-in-art-architecture-all-level-expansion-0195",
+      "built-in-art-architecture-easy-expansion-010",
+      "built-in-art-architecture-playable-corpus-083",
+      "built-in-estonia-clue-0006",
+      "built-in-estonia-clue-0321",
+      "built-in-estonia-clue-0419",
+      "built-in-estonia-clue-0420",
+      "built-in-estonia-clue-0500",
+      "built-in-film-television-playable-corpus-192",
+      "built-in-finals-final-0142",
+      "built-in-food-drink-accessible-corpus-029",
+      "built-in-food-drink-accessible-corpus-030",
+      "built-in-food-drink-accessible-corpus-062",
+      "built-in-food-drink-all-level-expansion-0062",
+      "built-in-food-drink-playable-corpus-280",
+      "built-in-food-drink-playable-corpus-334",
+      "built-in-history-all-level-expansion-0156",
+      "built-in-music-accessible-corpus-007",
+      "built-in-music-accessible-corpus-009",
+      "built-in-music-accessible-corpus-010",
+      "built-in-music-accessible-corpus-025",
+      "built-in-music-accessible-corpus-035",
+      "built-in-music-all-level-expansion-0235",
+      "built-in-music-easy-expansion-012",
+      "built-in-music-easy-expansion-015",
+      "built-in-music-playable-corpus-048",
+      "built-in-music-playable-corpus-140",
+      "built-in-music-playable-corpus-208",
+      "built-in-music-playable-corpus-333",
+      "built-in-mythology-religion-philosophy-all-level-expansion-0100",
+      "built-in-mythology-religion-philosophy-easy-expansion-066",
+      "built-in-mythology-religion-philosophy-playable-corpus-014",
+      "built-in-mythology-religion-philosophy-playable-corpus-244",
+      "built-in-mythology-religion-philosophy-playable-corpus-294",
+      "built-in-politics-economics-society-accessible-corpus-062",
+      "built-in-politics-economics-society-accessible-corpus-065",
+      "built-in-sports-games-accessible-corpus-054",
+      "built-in-sports-games-accessible-corpus-098",
+      "built-in-sports-games-accessible-corpus-100",
+      "built-in-sports-games-accessible-corpus-118",
+      "built-in-sports-games-all-level-expansion-0234",
+      "built-in-sports-games-easy-expansion-063",
+      "built-in-sports-games-playable-corpus-059",
+      "built-in-technology-inventions-accessible-corpus-034",
+      "built-in-technology-inventions-accessible-corpus-052",
+      "built-in-technology-inventions-all-level-expansion-0126",
+      "built-in-technology-inventions-playable-corpus-025",
+      "built-in-technology-inventions-playable-corpus-248"
+    ],
+    "originalOriginCriteria": "Previous compatibleOpen, all four bilingual prompt/explanation fields rewritten, changed factual URL, restricted factual-source terms, no OpenTDB inspiration. Other origins are preserved exactly.",
+    "wikidataOriginRowsInBaseline": 0,
+    "placeholderLicenceIds": [],
+    "placeholderTitleIds": [],
+    "remainingNcSourceIds": [],
+    "wikipediaLicenceMismatches": [],
+    "specifiedRepairReadback": [
+      {
+        "clueId": "built-in-adult-clue-0075",
+        "origin": "compatibleOpen",
+        "supportingSource": {
+          "sourceId": "adult-source:built-in-adult-clue-0075:2ef5d461f6e59b41",
+          "title": "Wendy Darling — Peter Pan character",
+          "url": "https://en.wikipedia.org/wiki/Wendy_Darling",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28"
+        },
+        "storedSource": {
+          "format": "quiz-stage-csv-v2",
+          "title": "Wendy Darling — Peter Pan character",
+          "url": "https://en.wikipedia.org/wiki/Wendy_Darling",
+          "license": "CC-BY-SA-4.0",
+          "retrievedAt": "2026-08-28",
+          "translationStatus": "reviewed",
+          "sourceId": "adult-source:built-in-adult-clue-0075:2ef5d461f6e59b41",
+          "factualVerifiedAt": "2026-10-11T16:08:51.437Z"
+        }
+      },
+      {
+        "clueId": "built-in-adult-clue-0460",
+        "origin": "original",
+        "supportingSource": {
+          "sourceId": "repair-source:f2fb4bc6f40da7112daa135e",
+          "title": "Important Dates — Erich Fromm Institute",
+          "url": "https://fromm-online.org/en/life/important-dates/",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11"
+        },
+        "storedSource": {
+          "format": "quiz-stage-csv-v2",
+          "title": "Important Dates — Erich Fromm Institute",
+          "url": "https://fromm-online.org/en/life/important-dates/",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11",
+          "translationStatus": "reviewed",
+          "sourceId": "repair-source:f2fb4bc6f40da7112daa135e",
+          "factualVerifiedAt": "2026-10-11T16:08:51.437Z"
+        }
+      },
+      {
+        "clueId": "built-in-sports-games-playable-corpus-036",
+        "origin": "compatibleOpen",
+        "supportingSource": {
+          "sourceId": "hasbro:classic-operation-game-b2176",
+          "title": "Classic Operation Game — Hasbro Games",
+          "url": "https://consumercare.hasbro.com/en-gb/product/classic-operation-game/03B9FF5E-5056-9047-F5FF-D57592C4E2FE",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11"
+        },
+        "storedSource": {
+          "format": "quiz-stage-csv-v2",
+          "title": "Classic Operation Game — Hasbro Games",
+          "url": "https://consumercare.hasbro.com/en-gb/product/classic-operation-game/03B9FF5E-5056-9047-F5FF-D57592C4E2FE",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11",
+          "translationStatus": "reviewed",
+          "sourceId": "hasbro:classic-operation-game-b2176",
+          "factualVerifiedAt": "2026-10-11T16:35:45.057Z"
+        }
+      },
+      {
+        "clueId": "built-in-sports-games-playable-corpus-040",
+        "origin": "compatibleOpen",
+        "supportingSource": {
+          "sourceId": "hasbro:the-game-of-life-f0800",
+          "title": "The Game of Life Family Board Game — Hasbro Games",
+          "url": "https://instructions.hasbro.com/en-us/instruction/the-game-of-life-family-board-game",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11"
+        },
+        "storedSource": {
+          "format": "quiz-stage-csv-v2",
+          "title": "The Game of Life Family Board Game — Hasbro Games",
+          "url": "https://instructions.hasbro.com/en-us/instruction/the-game-of-life-family-board-game",
+          "license": "All rights reserved",
+          "retrievedAt": "2026-10-11",
+          "translationStatus": "reviewed",
+          "sourceId": "hasbro:the-game-of-life-f0800",
+          "factualVerifiedAt": "2026-10-11T16:35:45.057Z"
+        }
+      },
+      {
+        "clueId": "built-in-politics-economics-society-easy-expansion-086",
+        "origin": "compatibleOpen",
+        "supportingSource": {
+          "sourceId": "repair-source:f37f8b11b01d804430f9d4d6",
+          "title": "CDC: Training and Education",
+          "url": "https://www.cdc.gov/fellowships/php/training-education/index.html",
+          "license": "Public domain (CDC agency materials terms)",
+          "retrievedAt": "2026-10-11"
+        },
+        "storedSource": {
+          "format": "quiz-stage-csv-v2",
+          "title": "CDC: Training and Education",
+          "url": "https://www.cdc.gov/fellowships/php/training-education/index.html",
+          "license": "Public domain (CDC agency materials terms)",
+          "retrievedAt": "2026-10-11",
+          "translationStatus": "reviewed",
+          "sourceId": "repair-source:f37f8b11b01d804430f9d4d6",
+          "factualVerifiedAt": "2026-10-11T16:14:53.984Z"
+        }
+      }
+    ],
+    "notices": [
+      {
+        "authoredPath": "content/THIRD_PARTY_NOTICES.md",
+        "packagedPath": "out/Quiz Stage-win32-x64/resources/THIRD_PARTY_NOTICES.md",
+        "sha256": "fec2136483b460b57080924afc53acc28bcf9c5aaf62f31a669f6a1c2309cc03",
+        "byteIdentical": true
+      },
+      {
+        "authoredPath": "content/LICENSE-CC-BY-SA-4.0.txt",
+        "packagedPath": "out/Quiz Stage-win32-x64/resources/LICENSE-CC-BY-SA-4.0.txt",
+        "sha256": "2461d25548502feb53f9c591aef0a54ed0a543c8ccc332a4cdc9a066196f70b1",
+        "byteIdentical": true
+      }
+    ],
+    "noticeContentsIncludeAttributionLicenceAndChanges": true
+  },
+  "codeReview": [
+    {
+      "path": "forge.config.ts",
+      "observation": "extraResource packages both content notice files; current actual resource copies are byte identical."
+    },
+    {
+      "path": "src/renderer/features/settings/ContentCredits.tsx",
+      "observation": "Discoverable Settings button lazy-loads existing content data; board and Final sources show titles, URLs, individual licences and separate OpenTDB candidateId/licence. Includes Wikipedia attribution, CC URL and adaptation/translation notices."
+    },
+    {
+      "path": "src/main/content/contentEditorService.ts",
+      "observation": "parseSource exposes optional v2 provenance and retains it when the factual citation receives a v1 override; old source formats remain supported."
+    },
+    {
+      "path": "src/shared/content/sourceCitation.ts",
+      "observation": "Strict optional OpenTDB object preserves system/candidateId/CC-BY-SA-4.0 without making old v1/v2 citations invalid."
+    },
+    {
+      "path": "content/work/2026-10-content-repairs/materialize.cjs",
+      "observation": "Inspected selective original-origin rule and independently checked its concrete effects against baseline and applied deltas."
+    }
+  ],
+  "tests": [
+    {
+      "command": "npx vitest run --configLoader runner tests/unit/content/sourceCitation.test.ts tests/unit/renderer/SettingsScreen.test.tsx tests/integration/content/contentEditor.test.ts",
+      "exitCode": 0,
+      "filesPassed": 3,
+      "testsPassed": 49,
+      "observedOutput": "Test Files 3 passed (3); Tests 49 passed (49); Duration 3.32s",
+      "coverage": "Legacy v1 and old v2 parsing, strict inspiration round-trip, preservation across host citation edit, English/Estonian Settings credits display including Final provenance and change notice."
+    },
+    {
+      "command": "python -X utf8 content/work/2026-10-content-repairs/reviewer-b/verify_applied_attribution.py",
+      "exitCode": 0,
+      "coverage": "Read-only current seed/evidence/generated parity over11374 rows;1200 exact provenance objects and100 per12batches; all86 original conversions;45 manifest hashes; actual packaged seed and licence/notice byte equality."
+    }
+  ],
+  "limitations": [
+    "URL availability and primary factual review were performed earlier; this audit does not repeat network requests or claim to reverify every external site licence independently.",
+    "Selective original classification intentionally covers newly rewritten restricted-reference rows. Older untouched compatibleOpen records with restricted factual citation terms retain their historical origins; this report does not certify a new derivation review for those legacy rows.",
+    "The final packaged runtime UI test is being run by root and is not claimed as a result of this independent audit."
+  ],
+  "protectedBankBytesChangedByAudit": false
+}

@@ -4,8 +4,43 @@ import { describe, expect, it, vi } from 'vitest';
 import { I18nProvider } from '../../../src/renderer/i18n';
 import { SettingsScreen } from '../../../src/renderer/features/settings/SettingsScreen';
 import { defaultAudioSettings } from '../../../src/shared/media/contracts';
+import type { EditorLibrary } from '../../../src/shared/content/editor';
 
 describe('SettingsScreen', () => {
+  it.each([
+    ['en' as const, 'Content credits', 'Content pack', 'edited and translated into Estonian'],
+    ['et' as const, 'Sisu allikad ja litsentsid', 'Sisupakett', 'toimetatud ja eesti keelde tõlgitud'],
+  ])('loads %s source credits on demand, including final clues and OpenTDB provenance', async (locale, label, packLabel, changes) => {
+    const library: EditorLibrary = { reports: [], packs: [{
+      id: 'pack', name: 'Music', ownership: 'bundled', enabled: true, revision: '1', categorySets: [],
+      finalClues: [{
+        id: 'final', packId: 'pack', categoryId: 'category', revision: '1', ownership: 'bundled',
+        difficulty: 'easy', categoryName: { en: 'Songs' }, macroTopic: 'music', enabled: true,
+        eligibility: { en: true, et: false }, clue: {
+          id: 'clue', tier: 0, value: 0, prompt: { en: 'Prompt' }, response: { en: 'Response' },
+          explanation: { en: 'Explanation' }, enabled: true, reported: false, source: {
+            title: 'Wikipedia contributors — Song', url: 'https://en.wikipedia.org/wiki/Song',
+            license: 'CC-BY-SA-4.0', retrievedAt: '2026-10-11', translationStatus: 'reviewed',
+            inspiration: { system: 'OpenTDB', candidateId: 'opentdb:42', license: 'CC-BY-SA-4.0' },
+          },
+        },
+      }],
+    }] };
+    const load = vi.fn(async () => library);
+    render(<I18nProvider locale={locale}><SettingsScreen settings={defaultAudioSettings}
+      onSave={vi.fn()} onBack={vi.fn()} loadContent={load} /></I18nProvider>);
+    expect(load).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole('button', { name: label }));
+    expect(await screen.findByText('Wikipedia contributors — Song')).toBeInTheDocument();
+    expect(screen.getByRole('combobox', { name: packLabel })).toHaveValue('pack');
+    expect(screen.getByText('https://en.wikipedia.org/wiki/Song')).toBeInTheDocument();
+    expect(screen.getByText(/opentdb:42/)).toHaveTextContent('CC-BY-SA-4.0');
+    expect(screen.getByText(new RegExp(changes))).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: label }));
+    await userEvent.click(screen.getByRole('button', { name: label }));
+    expect(load).toHaveBeenCalledOnce();
+  });
+
   it.each([
     ['en' as const, ['Settings', 'Master volume', 'Music volume', 'Effects volume', 'Crowd volume', 'Mute all audio', 'Read English topics and clues aloud']],
     ['et' as const, ['Seaded', 'Põhihelitugevus', 'Muusika helitugevus', 'Efektide helitugevus', 'Publiku helitugevus', 'Vaigista kõik helid', 'Loe ingliskeelsed teemad ja vihjed ette']],

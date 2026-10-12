@@ -1,0 +1,29 @@
+{
+  "proposalSha256": "bb0fa9b93909eae5537a5052531ba6d4ce89e3436d644748a03d8cc9293c6fde",
+  "reviewer": "C",
+  "reviewedAt": "2026-10-11",
+  "decisions": [
+    {
+      "signature": "built-in-food-drink-set-009|built-in-food-drink-accessible-corpus-003|built-in-food-drink-accessible-corpus-003|en|prompt",
+      "status": "acceptable",
+      "reason": "Acceptable common-term match: orange is the peel colour here, rather than a supplied fruit name or translated-name pun. The parallel physical clue remains accessible at Easy tier 3; it describes a round citrus fruit with thick peel and juicy segments. No sibling reveals this fruit answer.",
+      "categoryId": "built-in-food-drink-set-009",
+      "exposedClueId": "built-in-food-drink-accessible-corpus-003",
+      "revealingClueId": "built-in-food-drink-accessible-corpus-003",
+      "language": "en",
+      "field": "prompt",
+      "answer": "Orange"
+    },
+    {
+      "signature": "built-in-politics-economics-society-set-156|built-in-politics-economics-society-all-level-expansion-0177|built-in-politics-economics-society-all-level-expansion-0178|et|prompt",
+      "status": "acceptable",
+      "reason": "False positive: selle is the Estonian demonstrative pronoun meaning of this, not the craft-status noun sell. Scanner treating final e as a declension suffix crosses unrelated words; the sentence supplies no apprentice/journeyman term.",
+      "categoryId": "built-in-politics-economics-society-set-156",
+      "exposedClueId": "built-in-politics-economics-society-all-level-expansion-0177",
+      "revealingClueId": "built-in-politics-economics-society-all-level-expansion-0178",
+      "language": "et",
+      "field": "prompt",
+      "answer": "sell"
+    }
+  ]
+}

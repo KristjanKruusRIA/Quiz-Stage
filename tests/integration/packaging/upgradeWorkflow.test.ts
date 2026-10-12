@@ -12,6 +12,7 @@ import {
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { holdWindowsFile } from '../../support/windowsFileLock';
 import { resolvePackagedExecutable } from '../../../scripts/release/packageLayout';
 import { releaseTargetForId, type ReleaseTarget } from '../../../scripts/release/targets';
 import {
@@ -182,13 +183,45 @@ describe('upgrade verification arguments', () => {
 });
 
 describe('package upgrade verification', () => {
-  it('keeps a bounded extended retry window for transient workspace locks', () => {
-    const source = readFileSync('scripts/verify-upgrade.ts', 'utf8');
+  it.skipIf(process.platform !== 'win32')('cleans the workspace after a transient file handle is released', async () => {
+    const target = releaseTargetForId('windows-x64');
+    let workspace = '';
+    let lockedFile = '';
+    let locker: Awaited<ReturnType<typeof holdWindowsFile>> | undefined;
 
-    expect(source).toContain(
-      'rmSync(resolved, { recursive: true, force: true, maxRetries: 20, retryDelay: 200 });',
-    );
-  });
+    try {
+      await verifyUpgrade(workflowOptions(target, copiedFixture(), {
+        extractPackage: (_platform, _archive, destination) => {
+          workspace = path.dirname(destination);
+          temporaryDirectories.push(workspace);
+          lockedFile = path.join(workspace, 'locked.txt');
+          writeFileSync(lockedFile, 'upgrade fixture');
+          writeExtractedApplication(destination, target);
+        },
+        spawnApplication: (_executable, args) => {
+          const userDataDirectory = args[0]!.slice('--user-data-dir='.length);
+          const backupDirectory = path.join(userDataDirectory, 'backups');
+          mkdirSync(backupDirectory, { recursive: true });
+          copyFileSync(
+            path.join(userDataDirectory, 'quiz-stage.sqlite'),
+            path.join(backupDirectory, 'pre-migration.bak'),
+          );
+          return runningChild();
+        },
+        stopApplication: async () => {
+          locker = await holdWindowsFile(lockedFile);
+          expect(() => rmSync(lockedFile)).toThrow();
+          locker.release();
+        },
+      }));
+      expect(existsSync(workspace)).toBe(false);
+    } finally {
+      if (locker !== undefined) {
+        locker.release();
+        expect(await locker.exited).toBe(0);
+      }
+    }
+  }, 15_000);
 
   it('runs the Linux package from the Maker ZIP top-level directory', async () => {
     const target = releaseTargetForId('ubuntu-x64');
